@@ -131,6 +131,9 @@ import '../styles/tailwind.css';
       padding-bottom: 1rem;
     }
 
+    /* O caderno precisa funcionar como dossier: conteudo sempre visivel, sem depender do gatilho de animacao. */
+    [data-aos] { opacity: 1 !important; transform: none !important; }
+
     .nav-link.nav-active { color: var(--ouro); }
     .nav-link.nav-active::after {
       content: '';
@@ -443,7 +446,7 @@ import '../styles/tailwind.css';
       </div>
     </section>
 
-    <section id="por-que" class="paper py-20 sm:py-28 overflow-hidden">
+    <section id="por-que" class="paper py-14 sm:py-20 overflow-hidden">
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <div class="mb-12 grid lg:grid-cols-[0.82fr_1.18fr] gap-10 items-end">
           <div data-aos="fade-up">
