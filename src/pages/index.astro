@@ -108,6 +108,13 @@ import '../styles/tailwind.css';
     .real-strip{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.75rem}.real-strip::-webkit-scrollbar{height:10px}.real-strip::-webkit-scrollbar-track{background:rgba(246,237,215,.12);border-radius:999px}.real-strip::-webkit-scrollbar-thumb{background:var(--ouro);border-radius:999px}.real-frame{overflow:hidden;border-radius:1.8rem;background:#111;position:relative;min-width:min(82vw,520px);height:420px;scroll-snap-align:start}.real-frame img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.05) contrast(1.02)}.real-frame figcaption{position:absolute;left:1rem;right:1rem;bottom:1rem;border-radius:1rem;background:rgba(17,19,15,.74);backdrop-filter:blur(10px);padding:.85rem;color:var(--areia);font-size:.78rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}@media(min-width:900px){.real-frame{min-width:560px;height:520px}.real-frame.hero-frame{min-width:720px}}
     .proof-card{position:relative;overflow:hidden;border-radius:2rem;background:rgba(255,255,255,.62);border:1px solid rgba(17,19,15,.1);padding:1.35rem;color:var(--grafite)}
     .proof-card:before{content:"";position:absolute;inset:0 0 auto;height:5px;background:linear-gradient(90deg,var(--ouro),var(--barro),var(--verde))}.proof-card>*{position:relative;z-index:1}.proof-card blockquote{font-family:'IBM Plex Serif',serif;font-size:1.05rem;line-height:1.42;color:rgba(17,19,15,.72)}.proof-card .place{font-size:.72rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:rgba(17,19,15,.48)}
+
+    .join-card{position:relative;overflow:hidden;border-radius:2.4rem;border:1px solid rgba(246,237,215,.16);background:linear-gradient(145deg,rgba(246,237,215,.09),rgba(246,237,215,.035));padding:1.4rem;color:var(--areia)}
+    .join-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 10%,rgba(242,194,48,.18),transparent 15rem);pointer-events:none}.join-card>*{position:relative;z-index:1}
+    .join-role{display:grid;grid-template-columns:auto 1fr;gap:1rem;border-top:1px solid rgba(246,237,215,.14);padding-top:1rem}.join-role:first-child{border-top:0;padding-top:0}.join-role span{display:grid;place-items:center;width:2.7rem;height:2.7rem;border-radius:999px;background:var(--ouro);color:var(--grafite);font-size:.72rem;font-weight:950}.join-role strong{display:block;font-size:1.08rem;line-height:1.1;font-weight:950}.join-role p{margin-top:.35rem;font-size:.86rem;line-height:1.45;font-weight:800;color:rgba(246,237,215,.62)}
+    .convocation{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--ouro),#e8b82a);color:var(--grafite)}
+    .convocation:before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(17,19,15,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(17,19,15,.08) 1px,transparent 1px);background-size:54px 54px;mix-blend-mode:multiply;pointer-events:none}.convocation>*{position:relative;z-index:1}
+
     .contact-field{width:100%;border:2px solid rgba(17,19,15,.16);border-radius:1.15rem;background:rgba(255,255,255,.62);padding:1rem 1.05rem;color:var(--grafite);font:800 1rem/1.3 Manrope,sans-serif;outline:none;transition:border-color .18s ease,box-shadow .18s ease,background .18s ease}.contact-field:focus{border-color:var(--grafite);box-shadow:0 0 0 4px rgba(242,194,48,.34);background:white}.contact-label{display:block;margin-bottom:.5rem;font-size:.72rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:rgba(17,19,15,.56)}.contact-hint{font-size:.86rem;font-weight:800;line-height:1.45;color:rgba(17,19,15,.56)}.contact-option{display:flex;gap:.7rem;align-items:flex-start;border:2px solid rgba(17,19,15,.12);border-radius:1.1rem;background:rgba(255,255,255,.45);padding:.9rem;font-weight:900;color:rgba(17,19,15,.72)}.contact-option input{margin-top:.18rem;accent-color:var(--barro)}
 
     .abc-board{position:relative;overflow:hidden;border-radius:2.8rem;background:var(--grafite);color:var(--areia);box-shadow:0 30px 90px rgba(0,0,0,.24)}
@@ -157,7 +164,7 @@ import '../styles/tailwind.css';
         <a class="rounded-full px-4 py-3 hover:bg-white/10" href="#temporada">Temporada</a>
         <a class="rounded-full px-4 py-3 hover:bg-white/10" href="#partidas-comprovadas">Histórias reais</a>
         <a class="rounded-full px-4 py-3 hover:bg-white/10" href="/caderno/">Caderno do Time</a>
-        <a class="rounded-full bg-[var(--ouro)] px-5 py-3 text-[var(--grafite)]" href="#formulario">Levar o time</a>
+        <a class="rounded-full bg-[var(--ouro)] px-5 py-3 text-[var(--grafite)]" href="#formulario">Entrar para o Time</a>
       </nav>
     </div>
   </header>
@@ -172,18 +179,18 @@ import '../styles/tailwind.css';
             <span class="kicker text-[var(--ouro)]">Gondwana FC - Time da Educação</span>
           </div>
           <h1 class="display hero-title max-w-4xl">
-            O time que joga para aprender
+            Entre em campo com o Time da Educação
           </h1>
           <div class="mt-7 grid max-w-3xl gap-5 border-l-4 border-[var(--ouro)] pl-5 lg:grid-cols-[1.15fr_.85fr]">
-            <p class="serif text-lg leading-relaxed text-[var(--areia)]/90 sm:text-2xl sm:leading-snug">Uma bola no centro. Uma câmera ligada. Um grupo pronto para contar o que vive. O Gondwana FC entra em campo com escolas, clubes e projetos para transformar futebol em experiência de aprendizagem.</p>
-            <p class="text-sm font-extrabold uppercase leading-relaxed tracking-[.14em] text-[var(--ouro)]">Cada partida combina jogo, imagem, conversa e devolutiva. O grupo participa, registra, narra e sai com uma próxima jogada possível.</p>
+            <p class="serif text-lg leading-relaxed text-[var(--areia)]/90 sm:text-2xl sm:leading-snug">Uma bola no centro. Uma câmera ligada. Uma escola, clube ou projeto que decide jogar junto. O Gondwana FC entra em campo para criar experiências de aprendizagem com quem quer formar pessoas de outro jeito.</p>
+            <p class="text-sm font-extrabold uppercase leading-relaxed tracking-[.14em] text-[var(--ouro)]">Você pode chamar uma partida, abrir uma oficina, formar educadores ou construir uma parceria. O ponto de partida é simples: entrar para o Time da Educação.</p>
           </div>
         </div>
 
         <aside class="match-card">
           <img src="/legacy-assets/enviada-time-campo.jpg" alt="Atividade do Gondwana FC em campo" class="match-photo" />
           <div class="match-overlay">
-            <p class="kicker text-[var(--ouro)]">Próxima partida da educação</p>
+            <p class="kicker text-[var(--ouro)]">Convocação aberta</p>
             <div class="score-chip mt-4">
               <div><small>Mandante</small><strong>Escola ou projeto</strong></div>
               <div class="score-x">x</div>
@@ -192,7 +199,7 @@ import '../styles/tailwind.css';
             <div class="mt-4 rounded-[1.35rem] bg-[var(--areia)] p-5 text-[var(--grafite)]">
               <h2 class="display text-[clamp(1.55rem,2.6vw,2.2rem)] leading-none">Bola + câmera</h2>
               <p class="mt-3 text-sm font-extrabold leading-relaxed text-black/66">Uma experiência com escuta, jogo, registro audiovisual e devolutiva para continuar o trabalho depois do encontro.</p>
-              <a href="#formulario" class="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[var(--grafite)] px-5 py-3 text-sm font-black uppercase tracking-[.16em] text-[var(--areia)]">Levar o time</a>
+              <a href="#formulario" class="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[var(--grafite)] px-5 py-3 text-sm font-black uppercase tracking-[.16em] text-[var(--areia)]">Entrar para o Time</a>
             </div>
           </div>
         </aside>
@@ -278,6 +285,28 @@ import '../styles/tailwind.css';
             <div class="rounded-[2rem] border border-white/15 bg-black/20 p-6"><span class="metric display text-6xl text-[var(--ouro)]">02</span><h3 class="mt-4 text-2xl font-black">Autoria</h3><p class="mt-2 text-white/66">O que o grupo criou em imagem, relato, pergunta, mapa ou cena.</p></div>
             <div class="rounded-[2rem] border border-white/15 bg-black/20 p-6"><span class="metric display text-6xl text-[var(--ouro)]">03</span><h3 class="mt-4 text-2xl font-black">Vínculo</h3><p class="mt-2 text-white/66">Que relações, lideranças e tensões ficaram mais visíveis.</p></div>
             <div class="rounded-[2rem] border border-white/15 bg-black/20 p-6"><span class="metric display text-6xl text-[var(--ouro)]">04</span><h3 class="mt-4 text-2xl font-black">Continuidade</h3><p class="mt-2 text-white/66">Qual próxima jogada a instituição consegue assumir.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="entrar-para-o-time" class="bg-[var(--grafite)] py-16 text-[var(--areia)] sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[.92fr_1.08fr] lg:items-center">
+        <div>
+          <p class="kicker text-[var(--ouro)]">Convocação</p>
+          <h2 class="display section-title mt-4">O Time da Educação se monta com quem decide entrar em campo.</h2>
+          <p class="serif mt-6 max-w-2xl text-xl leading-relaxed text-[var(--areia)]/76 sm:text-2xl sm:leading-snug">Você pode participar como escola, clube, projeto social, educador, fundação, empresa ou rede pública. Cada entrada tem uma posição no jogo.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a href="#formulario" class="inline-flex min-h-14 items-center justify-center rounded-full bg-[var(--ouro)] px-7 py-4 text-sm font-black uppercase tracking-[.16em] text-[var(--grafite)]">Quero entrar para o time</a>
+            <a href="/caderno/" class="inline-flex min-h-14 items-center justify-center rounded-full border border-[var(--areia)]/30 px-7 py-4 text-sm font-black uppercase tracking-[.16em] text-[var(--areia)]">Conhecer o caderno</a>
+          </div>
+        </div>
+        <div class="join-card">
+          <div class="grid gap-4">
+            <article class="join-role"><span>01</span><div><strong>Chamar uma vivência</strong><p>Para abrir conversa com estudantes, equipes, famílias ou comunidades.</p></div></article>
+            <article class="join-role"><span>02</span><div><strong>Formar educadores</strong><p>Para levar bola, câmera e narrativa para a prática pedagógica.</p></div></article>
+            <article class="join-role"><span>03</span><div><strong>Criar uma temporada</strong><p>Para acompanhar um grupo em mais de um encontro, com registro e devolutiva.</p></div></article>
+            <article class="join-role"><span>04</span><div><strong>Patrocinar ou conectar</strong><p>Para apoiar uma escola, território ou rede que pode receber o Time da Educação.</p></div></article>
           </div>
         </div>
       </div>
@@ -444,12 +473,12 @@ import '../styles/tailwind.css';
     <section id="formulario" class="bg-[var(--areia)] py-16 text-[var(--grafite)] sm:py-24">
       <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[.82fr_1.18fr] lg:items-start">
         <div>
-          <p class="kicker text-[var(--barro)]">Formulário</p>
-          <h2 class="display section-title mt-4">Conte que partida você quer desenhar.</h2>
-          <p class="serif mt-6 text-xl leading-relaxed text-black/68">Este formulário ajuda o Time da Educação a entender seu contexto antes da primeira conversa: quem participa, onde acontece, qual desafio educativo está em jogo e que formato parece fazer sentido.</p>
+          <p class="kicker text-[var(--barro)]">Entrar para o Time</p>
+          <h2 class="display section-title mt-4">Conte qual posição você quer jogar.</h2>
+          <p class="serif mt-6 text-xl leading-relaxed text-black/68">Este formulário é a primeira conversa. Ele ajuda o Time da Educação a entender quem você forma, onde a partida pode acontecer e que tipo de experiência faria sentido para o seu grupo.</p>
           <div class="mt-8 rounded-[2rem] bg-[var(--grafite)] p-6 text-[var(--areia)]">
             <p class="kicker text-[var(--ouro)]">Como funciona agora</p>
-            <p class="mt-4 text-sm font-bold leading-relaxed text-white/70">Ao enviar, a página abre seu e-mail com a mensagem organizada. Assim o formulário já funciona dentro do site, sem expor dados em uma base pública.</p>
+            <p class="mt-4 text-sm font-bold leading-relaxed text-white/70">Ao enviar, a página abre seu e-mail com a mensagem organizada. Você sai com um pedido claro para começarmos a desenhar a primeira jogada juntos.</p>
           </div>
         </div>
 
@@ -462,7 +491,7 @@ import '../styles/tailwind.css';
           </div>
 
           <div class="mt-5">
-            <span class="contact-label">Formato de interesse</span>
+            <span class="contact-label">Como você quer entrar em campo?</span>
             <div class="grid gap-3 sm:grid-cols-2">
               <label class="contact-option"><input type="checkbox" name="formato" value="Vivência ABC" /> Vivência ABC</label>
               <label class="contact-option"><input type="checkbox" name="formato" value="Oficina Bola e Câmera" /> Oficina Bola e Câmera</label>
@@ -478,25 +507,25 @@ import '../styles/tailwind.css';
             <label><span class="contact-label">Quando</span><input class="contact-field" name="quando" placeholder="Mês, data ou período desejado" /></label>
           </div>
 
-          <label class="mt-5 block"><span class="contact-label">O que você quer trabalhar?</span><textarea class="contact-field" name="mensagem" rows="6" required placeholder="Conte o contexto, o desafio educativo e o que você imagina para esta partida."></textarea></label>
+          <label class="mt-5 block"><span class="contact-label">Que partida você imagina?</span><textarea class="contact-field" name="mensagem" rows="6" required placeholder="Conte o grupo, o território, o desafio educativo e como você imagina fazer parte do Time da Educação."></textarea></label>
 
           <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <button type="submit" class="inline-flex min-h-14 items-center justify-center rounded-full bg-[var(--grafite)] px-7 py-4 text-sm font-black uppercase tracking-[.16em] text-[var(--areia)]">Enviar pedido</button>
-            <p id="form-status" class="contact-hint" aria-live="polite">A mensagem será preparada no seu aplicativo de e-mail.</p>
+            <button type="submit" class="inline-flex min-h-14 items-center justify-center rounded-full bg-[var(--grafite)] px-7 py-4 text-sm font-black uppercase tracking-[.16em] text-[var(--areia)]">Entrar para o Time</button>
+            <p id="form-status" class="contact-hint" aria-live="polite">A mensagem será preparada para começarmos a conversa.</p>
           </div>
         </form>
       </div>
     </section>
 
-    <section id="convite" class="bg-[var(--ouro)] py-16 text-[var(--grafite)] sm:py-24">
+    <section id="convite" class="convocation py-16 text-[var(--grafite)] sm:py-24">
       <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_auto] lg:items-center">
         <div>
           <p class="kicker text-[var(--barro)]">Convite institucional</p>
-          <h2 class="display section-title mt-3 max-w-4xl">Leve o Time da Educação para sua escola, clube ou projeto.</h2>
-          <p class="serif mt-5 max-w-3xl text-xl leading-relaxed text-[var(--grafite)]/72">Use o formulário para chamar o Time da Educação. O Caderno do Time reúne manifesto, Método ABC, Copa de Gondwana, biografias e referências para quem quiser aprofundar além desta página.</p>
+          <h2 class="display section-title mt-3 max-w-4xl">Entre para o Time da Educação com sua escola, clube ou projeto.</h2>
+          <p class="serif mt-5 max-w-3xl text-xl leading-relaxed text-[var(--grafite)]/72">O Time da Educação começa quando alguém chama a partida. O Caderno reúne manifesto, Método ABC, Copa de Gondwana, biografias e referências para quem quer conhecer melhor antes de entrar em campo.</p>
         </div>
         <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:flex-wrap">
-          <a href="#formulario" class="inline-flex min-h-14 items-center justify-center rounded-full bg-[var(--grafite)] px-7 py-4 text-sm font-black uppercase tracking-[.16em] text-[var(--areia)]">Abrir formulário</a>
+          <a href="#formulario" class="inline-flex min-h-14 items-center justify-center rounded-full bg-[var(--grafite)] px-7 py-4 text-sm font-black uppercase tracking-[.16em] text-[var(--areia)]">Entrar para o Time</a>
           <a href="/caderno/" class="inline-flex min-h-14 items-center justify-center rounded-full border-2 border-[var(--grafite)] px-7 py-4 text-sm font-black uppercase tracking-[.16em] text-[var(--grafite)]">Abrir Caderno do Time</a>
         </div>
       </div>
