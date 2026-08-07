@@ -1,0 +1,151 @@
+---
+import '../styles/tailwind.css';
+---
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog - Gondwana FC Time da Educação</title>
+  <link rel="canonical" href="https://www.gondwanafc.com/blog/" />
+  <meta name="description" content="Blog editorial do Gondwana FC Time da Educação: futebol, aprendizagem, cultura, território, audiovisual e memória comunitária." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Gondwana FC - Time da Educação" />
+  <meta property="og:title" content="Blog - Gondwana FC Time da Educação" />
+  <meta property="og:description" content="Uma linha editorial sobre futebol como linguagem educativa, campo como método e comunidade como memória." />
+  <meta property="og:url" content="https://www.gondwanafc.com/blog/" />
+  <meta property="og:image" content="https://www.gondwanafc.com/legacy-assets/enviada-bolas.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog - Gondwana FC Time da Educação" />
+  <meta name="twitter:description" content="Futebol, aprendizagem, cultura, território, audiovisual e memória comunitária." />
+  <meta name="twitter:image" content="https://www.gondwanafc.com/legacy-assets/enviada-bolas.jpg" />
+  <link rel="icon" href="/legacy-assets/logo-gondwana-fc-icon-color.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,500&family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--grafite:#11130f;--areia:#f6edd7;--ouro:#f2c230;--barro:#9e4a2f;--verde:#2e6f46;--azul:#17243a;--osso:#faf8f1}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--grafite);color:var(--areia);font-family:Manrope,sans-serif;overflow-x:hidden}
+    .display{font-family:'Archivo Black',sans-serif;letter-spacing:-.035em;text-transform:uppercase;text-wrap:balance}
+    .serif{font-family:'IBM Plex Serif',serif}
+    .grain:before{content:"";position:fixed;inset:0;z-index:40;pointer-events:none;opacity:.1;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.62'/%3E%3C/svg%3E");mix-blend-mode:soft-light}
+    .field{background-image:linear-gradient(rgba(246,237,215,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(246,237,215,.08) 1px,transparent 1px);background-size:70px 70px}
+    .nav{background:rgba(17,19,15,.76);backdrop-filter:blur(18px)}
+    .kicker{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;font-weight:900}
+    .hero-title{font-size:clamp(3.2rem,8vw,7.2rem);line-height:.9}
+    .section-title{font-size:clamp(2.2rem,5vw,4.8rem);line-height:.95}
+    .editorial-card{border:1px solid rgba(246,237,215,.16);background:linear-gradient(145deg,rgba(246,237,215,.1),rgba(246,237,215,.035));box-shadow:0 28px 80px rgba(0,0,0,.22)}
+    .photo-card{position:relative;overflow:hidden;border-radius:2.4rem;min-height:420px;box-shadow:0 35px 90px rgba(0,0,0,.36)}
+    .photo-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.04) contrast(1.05)}
+    .photo-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,19,15,.1),rgba(17,19,15,.78))}
+    .photo-caption{position:absolute;inset:auto 0 0;z-index:2;padding:1.5rem}
+    .track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,360px);gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.25rem .25rem 1rem;scrollbar-color:var(--ouro) rgba(246,237,215,.14)}
+    .track>*{scroll-snap-align:start}
+    .track::-webkit-scrollbar{height:11px}.track::-webkit-scrollbar-thumb{background:var(--ouro);border-radius:999px}.track::-webkit-scrollbar-track{background:rgba(246,237,215,.14);border-radius:999px}
+    @media (max-width:720px){.photo-card{min-height:330px}.hero-title{font-size:clamp(3rem,16vw,4.6rem)}}
+  </style>
+</head>
+<body class="grain">
+  <header class="nav fixed left-0 right-0 top-0 z-50 border-b border-white/10">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+      <a href="/" class="flex min-h-12 items-center gap-3">
+        <img src="/legacy-assets/logo-gondwana-fc-badge-color.jpg" alt="Gondwana FC" class="h-11 w-11 rounded-full bg-[var(--areia)] object-cover p-1" />
+        <div class="leading-none">
+          <p class="kicker text-[var(--ouro)]">Gondwana FC</p>
+          <p class="text-xs font-black uppercase tracking-[.22em] text-[var(--areia)]/65">Blog do Time</p>
+        </div>
+      </a>
+      <nav class="hidden items-center gap-2 text-xs font-black uppercase tracking-[.14em] text-[var(--areia)]/72 md:flex">
+        <a class="rounded-full px-4 py-3 hover:bg-white/10" href="/">Início</a>
+        <a class="rounded-full px-4 py-3 hover:bg-white/10" href="/caderno/">Caderno</a>
+        <a class="rounded-full bg-[var(--ouro)] px-5 py-3 text-[var(--grafite)]" href="/#formulario">Entrar para o Time</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="field relative overflow-hidden bg-[var(--grafite)] pt-28">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_18%_22%,rgba(242,194,48,.25),transparent_26rem),radial-gradient(circle_at_86%_8%,rgba(46,111,70,.28),transparent_30rem)]"></div>
+      <div class="relative mx-auto grid min-h-[88vh] max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.03fr_.97fr]">
+        <div>
+          <p class="kicker text-[var(--ouro)]">Linha editorial</p>
+          <h1 class="display hero-title mt-5">O campo também pensa.</h1>
+          <p class="serif mt-7 max-w-2xl text-xl leading-relaxed text-[var(--areia)]/84 sm:text-2xl">O blog do Gondwana FC nasce para ler o futebol como linguagem educativa, território de memória, tecnologia de convivência e ferramenta de criação coletiva.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a href="#linha" class="inline-flex min-h-13 items-center justify-center rounded-full bg-[var(--ouro)] px-6 py-4 text-sm font-black uppercase tracking-[.16em] text-[var(--grafite)]">Ver linha editorial</a>
+            <a href="https://www.instagram.com/gondwana.fc/" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-13 items-center justify-center rounded-full border border-[var(--areia)]/24 px-6 py-4 text-sm font-black uppercase tracking-[.16em] text-[var(--areia)]">Seguir @gondwana.fc</a>
+          </div>
+        </div>
+        <figure class="photo-card">
+          <img src="/legacy-assets/enviada-bolas.jpg" alt="Bolas usadas em experiência educativa do Gondwana FC" />
+          <figcaption class="photo-caption">
+            <p class="kicker text-[var(--ouro)]">Blog como caderno público</p>
+            <h2 class="mt-3 text-3xl font-black leading-tight text-[var(--areia)] sm:text-4xl">Ideias que nascem da bola, da câmera e da conversa.</h2>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="linha" class="bg-[var(--areia)] py-16 text-[var(--grafite)] sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
+          <div>
+            <p class="kicker text-[var(--barro)]">O que este blog defende</p>
+            <h2 class="display section-title mt-4">Futebol é método quando ajuda um grupo a se ler.</h2>
+          </div>
+          <p class="serif text-xl leading-relaxed text-[var(--grafite)]/72 sm:text-2xl">A linha editorial parte de uma convicção: o futebol não é apenas tema, metáfora ou ferramenta de engajamento. Ele é uma linguagem social completa. Mostra relações, conflitos, lideranças, pertencimentos, memórias e formas de aprender junto.</p>
+        </div>
+        <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <article class="rounded-[2rem] bg-[var(--grafite)] p-6 text-[var(--areia)]"><p class="kicker text-[var(--ouro)]">01</p><h3 class="mt-4 text-2xl font-black leading-tight">Futebol como linguagem educativa</h3><p class="mt-4 text-sm font-bold leading-relaxed text-white/66">Textos sobre jogo, corpo, regra, conflito, cooperação, liderança e aprendizagem.</p></article>
+          <article class="rounded-[2rem] bg-[var(--verde)] p-6 text-white"><p class="kicker text-[var(--ouro)]">02</p><h3 class="mt-4 text-2xl font-black leading-tight">Câmera como ferramenta de autoria</h3><p class="mt-4 text-sm font-bold leading-relaxed text-white/72">Ensaios sobre imagem, registro, escuta, consentimento, memória e narrativa coletiva.</p></article>
+          <article class="rounded-[2rem] bg-[var(--barro)] p-6 text-white"><p class="kicker text-[var(--ouro)]">03</p><h3 class="mt-4 text-2xl font-black leading-tight">Território, cultura e ancestralidade</h3><p class="mt-4 text-sm font-bold leading-relaxed text-white/74">Leituras sobre futebol popular, Lei 10.639, cultura afro-brasileira e comunidades em movimento.</p></article>
+          <article class="rounded-[2rem] bg-[var(--ouro)] p-6 text-[var(--grafite)]"><p class="kicker text-[var(--barro)]">04</p><h3 class="mt-4 text-2xl font-black leading-tight">Práticas para quem forma</h3><p class="mt-4 text-sm font-black leading-relaxed text-black/62">Guias, perguntas e dispositivos para educadores, clubes, projetos sociais e parceiros.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[var(--grafite)] py-16 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="kicker text-[var(--ouro)]">Pautas inaugurais</p>
+            <h2 class="display section-title mt-4">Primeiras entradas do blog.</h2>
+          </div>
+          <p class="max-w-xl text-sm font-bold uppercase leading-relaxed tracking-[.14em] text-[var(--areia)]/58">A primeira temporada editorial deve sair em série, com posts curtos, compartilháveis e conectados ao Instagram.</p>
+        </div>
+        <div class="track">
+          <article class="editorial-card rounded-[2rem] p-6"><p class="kicker text-[var(--ouro)]">Manifesto</p><h3 class="mt-4 text-3xl font-black leading-tight">O campo também pensa</h3><p class="mt-4 text-[var(--areia)]/68">Texto de abertura do blog: por que futebol pode ser método, leitura de grupo e experiência educativa.</p></article>
+          <article class="editorial-card rounded-[2rem] p-6"><p class="kicker text-[var(--ouro)]">Método ABC</p><h3 class="mt-4 text-3xl font-black leading-tight">A bola chama, a câmera registra, a conversa organiza</h3><p class="mt-4 text-[var(--areia)]/68">Uma explicação simples da metodologia para públicos de escola, clube, projeto e fundação.</p></article>
+          <article class="editorial-card rounded-[2rem] p-6"><p class="kicker text-[var(--ouro)]">Memória</p><h3 class="mt-4 text-3xl font-black leading-tight">Lei 10.639 e futebol popular</h3><p class="mt-4 text-[var(--areia)]/68">Como o jogo abre caminhos para falar de ancestralidade, cultura afro-brasileira e currículo vivo.</p></article>
+          <article class="editorial-card rounded-[2rem] p-6"><p class="kicker text-[var(--ouro)]">Prática</p><h3 class="mt-4 text-3xl font-black leading-tight">Como desenhar uma partida educativa</h3><p class="mt-4 text-[var(--areia)]/68">Perguntas para planejar uma vivência com objetivo, cuidado, registro e devolutiva.</p></article>
+          <article class="editorial-card rounded-[2rem] p-6"><p class="kicker text-[var(--ouro)]">Campo</p><h3 class="mt-4 text-3xl font-black leading-tight">O que a experiência revela</h3><p class="mt-4 text-[var(--areia)]/68">Sinais observáveis em uma vivência: participação, autoria, vínculo, escuta e continuidade.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[var(--azul)] py-16 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[.95fr_1.05fr] lg:items-center">
+        <figure class="photo-card min-h-[360px]">
+          <img src="/legacy-assets/enviada-oficina-sala.jpg" alt="Oficina educativa com participantes reunidos em sala" />
+          <figcaption class="photo-caption"><p class="kicker text-[var(--ouro)]">Do blog para o campo</p><h2 class="mt-3 text-3xl font-black leading-tight">Cada texto deve terminar em uma pergunta praticável.</h2></figcaption>
+        </figure>
+        <div>
+          <p class="kicker text-[var(--ouro)]">Ritmo editorial</p>
+          <h2 class="display section-title mt-4">Uma publicação por semana. Uma conversa por post.</h2>
+          <div class="mt-6 grid gap-3 text-lg leading-relaxed text-[var(--areia)]/76">
+            <p><strong class="text-[var(--ouro)]">Segunda:</strong> pauta de método ou repertório.</p>
+            <p><strong class="text-[var(--ouro)]">Quarta:</strong> corte visual no Instagram com frase ou pergunta.</p>
+            <p><strong class="text-[var(--ouro)]">Sexta:</strong> chamada para escolas, clubes, projetos e parceiros.</p>
+          </div>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a href="/#formulario" class="inline-flex min-h-13 items-center justify-center rounded-full bg-[var(--ouro)] px-6 py-4 text-sm font-black uppercase tracking-[.16em] text-[var(--grafite)]">Propor uma parceria</a>
+            <a href="/caderno/" class="inline-flex min-h-13 items-center justify-center rounded-full border border-[var(--areia)]/28 px-6 py-4 text-sm font-black uppercase tracking-[.16em] text-[var(--areia)]">Abrir o caderno</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
