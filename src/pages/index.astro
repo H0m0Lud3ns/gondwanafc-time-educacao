@@ -105,8 +105,15 @@ import '../styles/tailwind.css';
     .tactic-card{position:relative;overflow:hidden;background:linear-gradient(145deg,rgba(246,237,215,.09),rgba(246,237,215,.035));border:1px solid rgba(246,237,215,.16);box-shadow:0 26px 80px rgba(0,0,0,.22)}
     .tactic-card:before{content:"";position:absolute;inset:18px;border:1px solid rgba(246,237,215,.14);border-radius:1.5rem}
     .tactic-dot{width:34px;height:34px;border-radius:999px;display:grid;place-items:center;background:var(--ouro);color:var(--grafite);font-size:.72rem;font-weight:900;box-shadow:0 14px 30px rgba(0,0,0,.28)}
-    .trust-carousel{position:relative;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,330px);gap:1rem;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;padding:.35rem .25rem 1rem;scrollbar-color:rgba(17,19,15,.28) transparent}
-    .trust-carousel::-webkit-scrollbar{height:8px}.trust-carousel::-webkit-scrollbar-thumb{background:rgba(17,19,15,.24);border-radius:999px}.trust-carousel::-webkit-scrollbar-track{background:transparent}
+    .trust-carousel-wrap{position:relative}
+    .trust-carousel-wrap:before,.trust-carousel-wrap:after{content:"";position:absolute;top:0;bottom:1rem;z-index:3;width:3.5rem;pointer-events:none}
+    .trust-carousel-wrap:before{left:-.25rem;background:linear-gradient(90deg,rgba(250,248,241,.92),transparent)}
+    .trust-carousel-wrap:after{right:-.25rem;background:linear-gradient(270deg,rgba(250,248,241,.92),transparent)}
+    .trust-carousel{position:relative;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,330px);gap:1rem;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;padding:.35rem 3.4rem 1rem .25rem;scrollbar-color:var(--barro) rgba(17,19,15,.12)}
+    .trust-carousel::-webkit-scrollbar{height:12px}.trust-carousel::-webkit-scrollbar-thumb{background:var(--barro);border-radius:999px;border:3px solid rgba(250,248,241,.78)}.trust-carousel::-webkit-scrollbar-track{background:rgba(17,19,15,.12);border-radius:999px}
+    .swipe-cue{display:inline-flex;align-items:center;gap:.75rem;border-radius:999px;background:var(--grafite);color:var(--areia);padding:.75rem 1rem;font-size:.72rem;font-weight:950;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 18px 45px rgba(17,19,15,.18)}
+    .swipe-cue .arrow{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:999px;background:var(--ouro);color:var(--grafite);animation:swipeNudge 1.4s ease-in-out infinite}
+    @keyframes swipeNudge{0%,100%{transform:translateX(0)}50%{transform:translateX(.55rem)}}
     .media-card{scroll-snap-align:start;min-height:208px;border:1px solid rgba(17,19,15,.13);background:rgba(255,255,255,.52);border-radius:1.65rem;padding:1.25rem;color:var(--grafite);display:flex;flex-direction:column;justify-content:space-between;transition:transform .2s ease,border-color .2s ease,background .2s ease}
     .media-card:hover{transform:translateY(-2px);border-color:rgba(158,74,47,.35);background:rgba(255,255,255,.72)}
     .media-logo{font-family:'Archivo Black',sans-serif;text-transform:uppercase;letter-spacing:-.035em;font-size:clamp(1.35rem,2.2vw,2rem);line-height:.95;color:var(--grafite)}
@@ -357,12 +364,12 @@ import '../styles/tailwind.css';
         </div>
 
         <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
-          <article class="rounded-[2rem] bg-[var(--grafite)] p-5 text-[var(--areia)]"><span class="display metric text-5xl text-[var(--ouro)]">93</span><p class="mt-3 text-sm font-black uppercase tracking-[.12em] text-white/68">registros mapeados</p></article>
-          <article class="rounded-[2rem] bg-[var(--azul)] p-5 text-white"><span class="display metric text-5xl text-[var(--ouro)]">18</span><p class="mt-3 text-sm font-black uppercase tracking-[.12em] text-white/68">aparições Tier 1</p></article>
-          <article class="rounded-[2rem] bg-[var(--verde)] p-5 text-white"><span class="display metric text-5xl text-[var(--ouro)]">68</span><p class="mt-3 text-sm font-black uppercase tracking-[.12em] text-white/72">menções positivas revisadas</p></article>
-          <article class="rounded-[2rem] bg-[var(--barro)] p-5 text-white"><span class="display metric text-5xl text-[var(--ouro)]">69</span><p class="mt-3 text-sm font-black uppercase tracking-[.12em] text-white/72">com mensagem-chave</p></article>
-          <article class="rounded-[2rem] bg-white/60 p-5"><span class="display metric text-5xl text-[var(--barro)]">10</span><p class="mt-3 text-sm font-black uppercase tracking-[.12em] text-black/58">institucionais</p></article>
-          <article class="rounded-[2rem] bg-white/60 p-5"><span class="display metric text-5xl text-[var(--barro)]">434,1</span><p class="mt-3 text-sm font-black uppercase tracking-[.12em] text-black/58">pontos revisados</p></article>
+          <article class="rounded-[2rem] bg-[var(--grafite)] p-5 text-[var(--areia)]"><span class="display metric text-5xl text-[var(--ouro)]">93</span><p class="mt-3 text-sm font-black uppercase tracking-[.12em] text-white/68">registros analisados</p></article>
+          <article class="rounded-[2rem] bg-[var(--azul)] p-5 text-white"><span class="display metric text-5xl text-[var(--ouro)]">18</span><p class="mt-3 text-sm font-black uppercase tracking-[.12em] text-white/68">aparições de maior alcance</p></article>
+          <article class="rounded-[2rem] bg-[var(--verde)] p-5 text-white"><span class="display metric text-5xl text-[var(--ouro)]">68</span><p class="mt-3 text-sm font-black uppercase tracking-[.12em] text-white/72">menções positivas</p></article>
+          <article class="rounded-[2rem] bg-[var(--barro)] p-5 text-white"><span class="display metric text-5xl text-[var(--ouro)]">69</span><p class="mt-3 text-sm font-black uppercase tracking-[.12em] text-white/72">registros alinhados à mensagem</p></article>
+          <article class="rounded-[2rem] bg-white/60 p-5"><span class="display metric text-5xl text-[var(--barro)]">10</span><p class="mt-3 text-sm font-black uppercase tracking-[.12em] text-black/58">registros institucionais</p></article>
+          <article class="rounded-[2rem] bg-white/60 p-5"><span class="display metric text-5xl text-[var(--barro)]">7</span><p class="mt-3 text-sm font-black uppercase tracking-[.12em] text-black/58">territórios na trajetória</p></article>
         </div>
 
         <div class="mt-8 rounded-[2rem] border border-black/10 bg-white/45 p-5 sm:p-7">
@@ -371,9 +378,13 @@ import '../styles/tailwind.css';
               <p class="kicker text-[var(--barro)]">Presença pública mapeada</p>
               <h3 class="mt-3 text-2xl font-black leading-tight sm:text-3xl">Veículos que já contaram essa história.</h3>
             </div>
-            <p class="max-w-md text-sm font-bold leading-relaxed text-black/55">Arraste para ver. Cada card abre a matéria ou registro original.</p>
+            <div class="grid gap-3 sm:justify-items-end">
+              <div class="swipe-cue" aria-hidden="true"><span>Deslize os cards</span><span class="arrow">→</span></div>
+              <p class="max-w-md text-sm font-bold leading-relaxed text-black/55">Arraste para o lado. Cada card abre a matéria ou registro original.</p>
+            </div>
           </div>
-          <div class="trust-carousel mt-6" aria-label="Carrossel de veículos de comunicação com links para matérias sobre Gondwana FC">
+          <div class="trust-carousel-wrap mt-6">
+          <div class="trust-carousel" aria-label="Carrossel de veículos de comunicação com links para matérias sobre Gondwana FC">
             <a class="media-card" href="https://www.uol.com.br/esporte/futebol/ultimas-noticias/2021/11/19/gondwana-curta-metragem-reconecta-futebol-a-cultura-afro-brasileira.htm" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">UOL</p><p class="media-meta mt-2">Tier 1 · Nacional</p></div><p class="media-title">Curta-metragem reconecta futebol a cultura afro-brasileira.</p></a>
             <a class="media-card" href="https://exame.com/colunistas/esporte-executivo/gondwana-fc-propoe-falar-sobre-cultura-e-aprendizagem-via-futebol/" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">Exame</p><p class="media-meta mt-2">Tier 1 · Negócios</p></div><p class="media-title">Cultura e aprendizagem via futebol como proposta pública.</p></a>
             <a class="media-card" href="https://agenciabrasil.ebc.com.br/geral/noticia/2023-07/projeto-expoe-presenca-africana-no-brasil-partir-do-futebol" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">Agência Brasil</p><p class="media-meta mt-2">Tier 1 · Pública</p></div><p class="media-title">Projeto expõe presença africana no Brasil a partir do futebol.</p></a>
@@ -385,7 +396,8 @@ import '../styles/tailwind.css';
             <a class="media-card" href="https://www.bahianoticias.com.br/esportes/noticia/60194-a-bola-conecta-curta-aborda-cultura-sob-o-olhar-do-futebol-no-mes-da-consciencia-negra" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">Bahia Notícias</p><p class="media-meta mt-2">Regional · Bahia</p></div><p class="media-title">A Bola Conecta aborda cultura sob o olhar do futebol.</p></a>
             <a class="media-card" href="https://www.folhape.com.br/esportes/criadores-do-projeto-gondwana-promovem-acao-envolvendo-futebol-e/224100/" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">Folha PE</p><p class="media-meta mt-2">Regional · Pernambuco</p></div><p class="media-title">Criadores do projeto promovem ação com futebol e cultura em escola pública.</p></a>
           </div>
-          <p class="mt-5 text-sm font-bold leading-relaxed text-black/58">O clipping reúne imprensa nacional, regional, internacional, esportiva, cultural e institucional. Cada registro ajuda a contar como a Gondwana circula entre futebol, educação, cultura e território.</p>
+          </div>
+          <p class="mt-5 text-sm font-bold leading-relaxed text-black/58">Levantamento editorial interno a partir de clipping, cartas e registros de arquivo. Cada registro ajuda a contar como a Gondwana circula entre futebol, educação, cultura e território.</p>
         </div>
       </div>
     </section>
