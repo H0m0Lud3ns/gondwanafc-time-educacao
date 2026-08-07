@@ -109,6 +109,17 @@ import '../styles/tailwind.css';
     .proof-card{position:relative;overflow:hidden;border-radius:2rem;background:rgba(255,255,255,.62);border:1px solid rgba(17,19,15,.1);padding:1.35rem;color:var(--grafite)}
     .proof-card:before{content:"";position:absolute;inset:0 0 auto;height:5px;background:linear-gradient(90deg,var(--ouro),var(--barro),var(--verde))}.proof-card>*{position:relative;z-index:1}.proof-card blockquote{font-family:'IBM Plex Serif',serif;font-size:1.05rem;line-height:1.42;color:rgba(17,19,15,.72)}.proof-card .place{font-size:.72rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:rgba(17,19,15,.48)}
     .contact-field{width:100%;border:2px solid rgba(17,19,15,.16);border-radius:1.15rem;background:rgba(255,255,255,.62);padding:1rem 1.05rem;color:var(--grafite);font:800 1rem/1.3 Manrope,sans-serif;outline:none;transition:border-color .18s ease,box-shadow .18s ease,background .18s ease}.contact-field:focus{border-color:var(--grafite);box-shadow:0 0 0 4px rgba(242,194,48,.34);background:white}.contact-label{display:block;margin-bottom:.5rem;font-size:.72rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:rgba(17,19,15,.56)}.contact-hint{font-size:.86rem;font-weight:800;line-height:1.45;color:rgba(17,19,15,.56)}.contact-option{display:flex;gap:.7rem;align-items:flex-start;border:2px solid rgba(17,19,15,.12);border-radius:1.1rem;background:rgba(255,255,255,.45);padding:.9rem;font-weight:900;color:rgba(17,19,15,.72)}.contact-option input{margin-top:.18rem;accent-color:var(--barro)}
+
+    .abc-board{position:relative;overflow:hidden;border-radius:2.8rem;background:var(--grafite);color:var(--areia);box-shadow:0 30px 90px rgba(0,0,0,.24)}
+    .abc-board:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 18% 20%,rgba(242,194,48,.24),transparent 20rem),radial-gradient(circle at 82% 16%,rgba(46,111,70,.2),transparent 22rem),linear-gradient(rgba(246,237,215,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(246,237,215,.06) 1px,transparent 1px);background-size:auto,auto,58px 58px,58px 58px;pointer-events:none}
+    .abc-photo{position:relative;min-height:520px;overflow:hidden;border-radius:2.1rem;background:#000}.abc-photo img{height:100%;min-height:520px;width:100%;object-fit:cover;filter:saturate(1.08) contrast(1.06);opacity:.9}.abc-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(17,19,15,.84))}
+    .abc-sequence{position:relative;z-index:1;display:grid;gap:.75rem}.abc-step{display:grid;grid-template-columns:auto 1fr;gap:1rem;border:1px solid rgba(246,237,215,.14);border-radius:1.45rem;background:rgba(246,237,215,.065);padding:1rem}.abc-step span{display:grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:999px;background:var(--ouro);color:var(--grafite);font-size:.78rem;font-weight:950}.abc-step h3{font-size:1.45rem;line-height:1;font-weight:950}.abc-step p{margin-top:.35rem;font-size:.9rem;line-height:1.45;font-weight:800;color:rgba(246,237,215,.64)}
+    .story-ledger{display:grid;gap:1px;overflow:hidden;border-radius:2.2rem;background:rgba(17,19,15,.16);border:1px solid rgba(17,19,15,.12)}
+    .ledger-row{display:grid;gap:1rem;background:rgba(255,255,255,.55);padding:1.1rem;color:var(--grafite)}
+    .ledger-row strong{font-size:1.25rem;line-height:1.1;font-weight:950}.ledger-row p{font-size:.86rem;line-height:1.42;font-weight:800;color:rgba(17,19,15,.58)}
+    .story-photo-card{position:relative;overflow:hidden;border-radius:2.2rem;background:#111;min-height:360px;box-shadow:0 24px 70px rgba(0,0,0,.24)}.story-photo-card img{height:100%;width:100%;object-fit:cover;filter:saturate(1.05) contrast(1.03)}.story-photo-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(17,19,15,.8))}.story-photo-card figcaption{position:absolute;left:1.2rem;right:1.2rem;bottom:1.2rem;z-index:1;color:var(--areia);font-size:.78rem;font-weight:950;letter-spacing:.12em;text-transform:uppercase}
+    @media(min-width:900px){.story-ledger{grid-template-columns:repeat(3,1fr)}.ledger-row{min-height:220px}.story-photo-card{min-height:480px}}
+
     .section-copy{max-width:52rem}.section-copy p{margin-top:1.35rem}.method-panel{position:relative;overflow:hidden;border-radius:2.4rem;background:rgba(255,255,255,.54);border:1px solid rgba(17,19,15,.1);padding:clamp(1.1rem,2vw,1.5rem)}.method-panel:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 14%,rgba(242,194,48,.26),transparent 18rem),radial-gradient(circle at 88% 10%,rgba(46,111,70,.16),transparent 20rem);pointer-events:none}.method-card{position:relative;z-index:1;min-height:220px;border-radius:1.7rem;background:rgba(255,255,255,.64);border:1px solid rgba(17,19,15,.1);padding:1.35rem;display:flex;flex-direction:column;justify-content:space-between}.method-card span{width:2.55rem;height:2.55rem;border-radius:999px;background:var(--grafite);color:var(--ouro);display:grid;place-items:center;font-size:.76rem;font-weight:900;letter-spacing:.08em}.method-card h3{margin-top:1.35rem;font-size:clamp(1.55rem,2.5vw,2.2rem);line-height:1;font-weight:900}.method-card p{margin-top:.75rem;font-size:.98rem;line-height:1.45;font-weight:800;color:rgba(17,19,15,.62)}.section-band{border-radius:2.4rem;padding:clamp(1.35rem,3vw,2.2rem)}
     @media (max-width:760px){
       .display{letter-spacing:-.022em;text-wrap:pretty}
@@ -210,18 +221,26 @@ import '../styles/tailwind.css';
 
     <section id="metodo" class="bg-[var(--areia)] py-16 text-[var(--grafite)] sm:py-24">
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
-        <div class="grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:gap-14 lg:items-start">
-          <div class="section-copy lg:sticky lg:top-28">
-            <p class="kicker text-[var(--barro)]">Método ABC</p>
-            <h2 class="display section-title mt-4 max-w-3xl">Audiovisual, bola e câmera para aprender com o corpo inteiro.</h2>
-            <p class="serif text-xl leading-relaxed text-black/68 sm:text-2xl sm:leading-snug">O Time da Educação cria uma partida educativa: o grupo joga, observa, registra, conversa e transforma a experiência em memória e próximos passos.</p>
-          </div>
-          <div class="method-panel">
-            <div class="relative z-10 grid gap-4 sm:grid-cols-2">
-              <article class="method-card"><div><span>01</span><h3>Jogar</h3><p>A bola abre presença, vínculo, regra, improviso e escuta coletiva.</p></div><strong class="kicker text-[var(--barro)]">corpo</strong></article>
-              <article class="method-card"><div><span>02</span><h3>Registrar</h3><p>A câmera muda o olhar: quem participa também aprende a observar.</p></div><strong class="kicker text-[var(--barro)]">imagem</strong></article>
-              <article class="method-card"><div><span>03</span><h3>Narrar</h3><p>O grupo dá nome ao que viveu: conflito, cooperação, memória, território.</p></div><strong class="kicker text-[var(--barro)]">voz</strong></article>
-              <article class="method-card"><div><span>04</span><h3>Continuar</h3><p>A instituição recebe registros, leitura do encontro e uma próxima jogada possível.</p></div><strong class="kicker text-[var(--barro)]">devolutiva</strong></article>
+        <div class="abc-board p-4 sm:p-6 lg:p-8">
+          <div class="relative z-10 grid gap-6 lg:grid-cols-[.82fr_1.18fr] lg:items-stretch">
+            <figure class="abc-photo">
+              <img src="/legacy-assets/enviada-oficina-sala.jpg" alt="Oficina do Método ABC com educadores e participantes" />
+              <figcaption class="absolute bottom-6 left-6 right-6 z-10">
+                <p class="kicker text-[var(--ouro)]">Método ABC</p>
+                <h2 class="display mt-3 text-[clamp(2rem,4.4vw,4.2rem)] leading-[1.02]">Bola, câmera, corpo inteiro.</h2>
+              </figcaption>
+            </figure>
+            <div class="flex flex-col justify-between gap-6 p-2 sm:p-4 lg:p-6">
+              <div>
+                <p class="kicker text-[var(--ouro)]">Como a partida vira aprendizagem</p>
+                <p class="serif mt-5 max-w-2xl text-xl leading-relaxed text-[var(--areia)]/78 sm:text-2xl sm:leading-snug">O grupo entra em movimento, aprende a olhar o que aconteceu, dá nome à experiência e sai com uma devolutiva para continuar.</p>
+              </div>
+              <div class="abc-sequence">
+                <article class="abc-step"><span>01</span><div><h3>Jogar</h3><p>A bola abre presença, regra, improviso, vínculo e escuta coletiva.</p></div></article>
+                <article class="abc-step"><span>02</span><div><h3>Registrar</h3><p>A câmera pausa o jogo e transforma participação em observação.</p></div></article>
+                <article class="abc-step"><span>03</span><div><h3>Narrar</h3><p>O grupo constrói palavra, imagem e sentido sobre o que viveu.</p></div></article>
+                <article class="abc-step"><span>04</span><div><h3>Continuar</h3><p>A instituição recebe leitura do encontro e uma próxima jogada possível.</p></div></article>
+              </div>
             </div>
           </div>
         </div>
@@ -343,25 +362,16 @@ import '../styles/tailwind.css';
           </div>
         </div>
 
-        <div class="mt-5 grid gap-4 md:grid-cols-3">
-          <article class="proof-card">
-            <p class="place">São Paulo/SP · Escola · 2023/2024</p>
-            <h3 class="mt-4 text-2xl font-black leading-tight">Escola Móbile</h3>
-            <blockquote class="mt-5">Oficinas de "Fútbol Callejero" e "Futebol, Bola e Câmera" reconhecidas em atestado profissional.</blockquote>
-            <p class="mt-5 text-sm font-black uppercase tracking-[.12em] text-[var(--barro)]">Carta · Móbile Convida · famílias e estudantes</p>
-          </article>
-          <article class="proof-card">
-            <p class="place">São Paulo/SP · Projeto social · 2024</p>
-            <h3 class="mt-4 text-2xl font-black leading-tight">Circo Social Grajaú</h3>
-            <blockquote class="mt-5">Crianças e adolescentes viveram uma experiência integrada a oficinas culturais e bem avaliada pelos participantes.</blockquote>
-            <p class="mt-5 text-sm font-black uppercase tracking-[.12em] text-[var(--barro)]">Cultura · esporte · pensamento crítico</p>
-          </article>
-          <article class="proof-card">
-            <p class="place">Pereiro/CE · Escola rural · 2025</p>
-            <h3 class="mt-4 text-2xl font-black leading-tight">Secretaria de Educação</h3>
-            <blockquote class="mt-5">Jovens do 9º ano trabalharam câmera e bola como ferramentas de habilidades socioemocionais.</blockquote>
-            <p class="mt-5 text-sm font-black uppercase tracking-[.12em] text-[var(--barro)]">Poder público · zona rural · carta recente</p>
-          </article>
+        <div class="mt-5 grid gap-5 lg:grid-cols-[.9fr_1.1fr]">
+          <div class="story-ledger">
+            <article class="ledger-row"><p class="kicker text-[var(--barro)]">São Paulo/SP · Escola</p><strong>Escola Móbile</strong><p>Oficinas de Fútbol Callejero e Futebol, Bola e Câmera reconhecidas em atestado profissional.</p></article>
+            <article class="ledger-row"><p class="kicker text-[var(--barro)]">São Paulo/SP · Projeto social</p><strong>Circo Social Grajaú</strong><p>Crianças e adolescentes viveram uma experiência integrada a oficinas culturais e bem avaliada pelos participantes.</p></article>
+            <article class="ledger-row"><p class="kicker text-[var(--barro)]">Pereiro/CE · Escola rural</p><strong>Secretaria de Educação</strong><p>Jovens do 9º ano trabalharam câmera e bola como ferramentas de habilidades socioemocionais.</p></article>
+          </div>
+          <figure class="story-photo-card">
+            <img src="/assets/curadoria/sesc-jundiai.jpg" alt="Registro visual de atividade educativa Gondwana" />
+            <figcaption>Arquivo visual · atividades, oficinas, cartas e depoimentos disponíveis para curadoria</figcaption>
+          </figure>
         </div>
 
         <div class="mt-8 rounded-[2.3rem] bg-[var(--ouro)] p-6 text-[var(--grafite)] sm:p-8">
