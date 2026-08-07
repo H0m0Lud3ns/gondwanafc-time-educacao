@@ -1,0 +1,517 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Gondwana FC - Time da Educação</title>
+  <link rel="canonical" href="https://www.gondwanafc.com/" />
+  <meta name="description" content="Gondwana FC - Time da Educação: futebol, câmera e território em experiências de aprendizagem para escolas, clubes e comunidades." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,500&family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --grafite:#11130f;
+      --areia:#f6edd7;
+      --ouro:#f2c230;
+      --barro:#9e4a2f;
+      --verde:#2e6f46;
+      --azul:#17243a;
+      --osso:#faf8f1;
+      --line:rgba(246,237,215,.16);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--grafite);
+      color:var(--areia);
+      font-family:Manrope,sans-serif;
+      overflow-x:hidden;
+    }
+    .display{font-family:'Archivo Black',sans-serif;letter-spacing:-.028em;text-transform:uppercase;text-wrap:balance}
+    .serif{font-family:'IBM Plex Serif',serif}
+    .section-title{font-size:clamp(2rem,4.15vw,3.85rem);line-height:1.04;letter-spacing:-.028em}
+    .hero-title{font-size:clamp(3rem,7.8vw,5.75rem);line-height:.96;letter-spacing:-.032em}
+    .card-title{font-size:clamp(1.75rem,3vw,2.45rem);line-height:1.03}
+    .story-title{font-size:clamp(1.9rem,3.8vw,3.35rem);line-height:1.04}
+    .grain:before{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:60;
+      pointer-events:none;
+      opacity:.11;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.62'/%3E%3C/svg%3E");
+      mix-blend-mode:soft-light;
+    }
+    .field-lines{
+      background-image:
+        linear-gradient(rgba(246,237,215,.09) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(246,237,215,.09) 1px,transparent 1px);
+      background-size:72px 72px;
+    }
+    .hero-bg{
+      background:
+        radial-gradient(circle at 14% 18%,rgba(242,194,48,.24),transparent 27rem),
+        radial-gradient(circle at 76% 6%,rgba(46,111,70,.24),transparent 26rem),
+        linear-gradient(120deg,rgba(17,19,15,.94),rgba(23,36,58,.72)),
+        url('/legacy-assets/enviada-time-campo.jpg') center/cover;
+    }
+    .cut-card{clip-path:polygon(0 0,100% 0,94% 100%,0 100%)}
+    .ticket{background:linear-gradient(135deg,var(--areia),#e6d5af);color:var(--grafite)}
+    .ticket:before,.ticket:after{content:"";position:absolute;top:50%;width:22px;height:22px;border-radius:999px;background:var(--grafite);transform:translateY(-50%)}
+    .ticket:before{left:-11px}.ticket:after{right:-11px}
+    .rule{border-top:1px solid var(--line)}
+    .tilt{transform:rotate(-1.2deg)}
+    .tilt-rev{transform:rotate(1.2deg)}
+    .photo-shadow{box-shadow:0 30px 90px rgba(0,0,0,.42)}
+    .nav-blur{background:rgba(17,19,15,.74);backdrop-filter:blur(18px)}
+    .kicker{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;font-weight:900}
+    .metric{font-variant-numeric:tabular-nums}
+    .club-section{min-height:calc(100vh - 72px);display:flex;align-items:center}
+    .club-title{font-size:clamp(2rem,4.45vw,4rem);line-height:1.04;letter-spacing:-.028em;max-width:13.5ch}
+    .ghost-badge{position:absolute;right:-8vw;top:8%;width:min(52vw,680px);opacity:.075;filter:grayscale(1) contrast(1.2)}
+    .tactic-card{position:relative;overflow:hidden;background:linear-gradient(145deg,rgba(246,237,215,.09),rgba(246,237,215,.035));border:1px solid rgba(246,237,215,.16);box-shadow:0 26px 80px rgba(0,0,0,.22)}
+    .tactic-card:before{content:"";position:absolute;inset:18px;border:1px solid rgba(246,237,215,.14);border-radius:1.5rem}
+    .tactic-dot{width:34px;height:34px;border-radius:999px;display:grid;place-items:center;background:var(--ouro);color:var(--grafite);font-size:.72rem;font-weight:900;box-shadow:0 14px 30px rgba(0,0,0,.28)}
+    .trust-carousel{position:relative;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,330px);gap:1rem;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;padding:.35rem .25rem 1rem;scrollbar-color:rgba(17,19,15,.28) transparent}
+    .trust-carousel::-webkit-scrollbar{height:8px}.trust-carousel::-webkit-scrollbar-thumb{background:rgba(17,19,15,.24);border-radius:999px}.trust-carousel::-webkit-scrollbar-track{background:transparent}
+    .media-card{scroll-snap-align:start;min-height:208px;border:1px solid rgba(17,19,15,.13);background:rgba(255,255,255,.52);border-radius:1.65rem;padding:1.25rem;color:var(--grafite);display:flex;flex-direction:column;justify-content:space-between;transition:transform .2s ease,border-color .2s ease,background .2s ease}
+    .media-card:hover{transform:translateY(-2px);border-color:rgba(158,74,47,.35);background:rgba(255,255,255,.72)}
+    .media-logo{font-family:'Archivo Black',sans-serif;text-transform:uppercase;letter-spacing:-.035em;font-size:clamp(1.35rem,2.2vw,2rem);line-height:.95;color:var(--grafite)}
+    .media-meta{font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.14em;color:rgba(17,19,15,.48)}
+    .media-title{font-size:.92rem;font-weight:800;line-height:1.35;color:rgba(17,19,15,.72)}
+    .mindmap{position:relative;display:grid;gap:1rem;grid-template-columns:1fr;isolation:isolate}
+    .mindmap:before{content:"";position:absolute;inset:3rem 1.5rem;border:1px dashed rgba(246,237,215,.18);border-radius:2rem;z-index:-1}
+    .mind-node{border:1px solid rgba(246,237,215,.16);background:linear-gradient(180deg,rgba(246,237,215,.075),rgba(246,237,215,.035));border-radius:1.6rem;padding:1.25rem;min-height:100%}
+    .mind-node strong{display:block;font-size:1.1rem;line-height:1.15;font-weight:900;color:var(--areia)}
+    .mind-node span{display:block;margin-top:.5rem;font-size:.84rem;line-height:1.45;font-weight:700;color:rgba(246,237,215,.62)}
+    .mind-center{background:linear-gradient(135deg,var(--ouro),#e6b522);color:var(--grafite);border-color:rgba(242,194,48,.7)}
+    .mind-center strong,.mind-center span{color:var(--grafite)}
+    @media (min-width:900px){.mindmap{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}.mind-center{grid-column:2;grid-row:1 / span 2}.mind-wide{grid-column:span 2}}
+    .roi-card{position:relative;overflow:hidden;border:1px solid rgba(246,237,215,.16);background:linear-gradient(180deg,rgba(246,237,215,.08),rgba(246,237,215,.035));border-radius:2rem;padding:1.5rem}
+    .roi-card:after{content:"";position:absolute;inset:auto 1.5rem 0;height:3px;background:var(--ouro)}
+    .site-door{position:relative;overflow:hidden;border:1px solid rgba(17,19,15,.12);border-radius:1.8rem;background:rgba(255,255,255,.52);padding:1.35rem;min-height:220px;display:flex;flex-direction:column;justify-content:space-between;color:var(--grafite)}
+    .site-door:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(242,194,48,.16),transparent 45%,rgba(46,111,70,.14));pointer-events:none}
+    .site-door>*{position:relative;z-index:1}.site-door small{font-size:.68rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:rgba(17,19,15,.48)}.site-door strong{display:block;margin-top:.9rem;font-size:1.8rem;line-height:1;font-weight:900}.site-door p{margin-top:.9rem;font-size:.92rem;line-height:1.42;font-weight:800;color:rgba(17,19,15,.64)}
+    .real-strip{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.75rem}.real-strip::-webkit-scrollbar{height:10px}.real-strip::-webkit-scrollbar-track{background:rgba(246,237,215,.12);border-radius:999px}.real-strip::-webkit-scrollbar-thumb{background:var(--ouro);border-radius:999px}.real-frame{overflow:hidden;border-radius:1.8rem;background:#111;position:relative;min-width:min(82vw,520px);height:420px;scroll-snap-align:start}.real-frame img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.05) contrast(1.02)}.real-frame figcaption{position:absolute;left:1rem;right:1rem;bottom:1rem;border-radius:1rem;background:rgba(17,19,15,.74);backdrop-filter:blur(10px);padding:.85rem;color:var(--areia);font-size:.78rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}@media(min-width:900px){.real-frame{min-width:560px;height:520px}.real-frame.hero-frame{min-width:720px}}
+    .proof-card{position:relative;overflow:hidden;border-radius:2rem;background:rgba(255,255,255,.62);border:1px solid rgba(17,19,15,.1);padding:1.35rem;color:var(--grafite)}
+    .proof-card:before{content:"";position:absolute;inset:0 0 auto;height:5px;background:linear-gradient(90deg,var(--ouro),var(--barro),var(--verde))}.proof-card>*{position:relative;z-index:1}.proof-card blockquote{font-family:'IBM Plex Serif',serif;font-size:1.05rem;line-height:1.42;color:rgba(17,19,15,.72)}.proof-card .place{font-size:.72rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:rgba(17,19,15,.48)}
+    .contact-field{width:100%;border:2px solid rgba(17,19,15,.16);border-radius:1.15rem;background:rgba(255,255,255,.62);padding:1rem 1.05rem;color:var(--grafite);font:800 1rem/1.3 Manrope,sans-serif;outline:none;transition:border-color .18s ease,box-shadow .18s ease,background .18s ease}.contact-field:focus{border-color:var(--grafite);box-shadow:0 0 0 4px rgba(242,194,48,.34);background:white}.contact-label{display:block;margin-bottom:.5rem;font-size:.72rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:rgba(17,19,15,.56)}.contact-hint{font-size:.86rem;font-weight:800;line-height:1.45;color:rgba(17,19,15,.56)}.contact-option{display:flex;gap:.7rem;align-items:flex-start;border:2px solid rgba(17,19,15,.12);border-radius:1.1rem;background:rgba(255,255,255,.45);padding:.9rem;font-weight:900;color:rgba(17,19,15,.72)}.contact-option input{margin-top:.18rem;accent-color:var(--barro)}
+    .section-copy{max-width:52rem}.section-copy p{margin-top:1.35rem}.method-panel{position:relative;overflow:hidden;border-radius:2.4rem;background:rgba(255,255,255,.54);border:1px solid rgba(17,19,15,.1);padding:clamp(1.1rem,2vw,1.5rem)}.method-panel:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 14%,rgba(242,194,48,.26),transparent 18rem),radial-gradient(circle at 88% 10%,rgba(46,111,70,.16),transparent 20rem);pointer-events:none}.method-card{position:relative;z-index:1;min-height:220px;border-radius:1.7rem;background:rgba(255,255,255,.64);border:1px solid rgba(17,19,15,.1);padding:1.35rem;display:flex;flex-direction:column;justify-content:space-between}.method-card span{width:2.55rem;height:2.55rem;border-radius:999px;background:var(--grafite);color:var(--ouro);display:grid;place-items:center;font-size:.76rem;font-weight:900;letter-spacing:.08em}.method-card h3{margin-top:1.35rem;font-size:clamp(1.55rem,2.5vw,2.2rem);line-height:1;font-weight:900}.method-card p{margin-top:.75rem;font-size:.98rem;line-height:1.45;font-weight:800;color:rgba(17,19,15,.62)}.section-band{border-radius:2.4rem;padding:clamp(1.35rem,3vw,2.2rem)}
+    @media (max-width:760px){
+      .display{letter-spacing:-.022em;text-wrap:pretty}
+      .section-title{font-size:clamp(1.65rem,6.4vw,2.15rem);line-height:1.12}
+      .club-title{font-size:clamp(1.7rem,6.8vw,2.2rem);line-height:1.12;max-width:14ch}
+      .hero-title{font-size:clamp(2.25rem,9vw,3rem);line-height:1.06;max-width:12ch}
+      .card-title{font-size:clamp(1.6rem,6.8vw,2rem);line-height:1.06}
+      .story-title{font-size:clamp(1.55rem,6.2vw,2.05rem);line-height:1.12}
+      .cut-card{clip-path:none;border-radius:2rem}
+      .tilt,.tilt-rev{transform:none}
+    }
+    @media (max-width:420px){
+      .section-title{font-size:clamp(1.65rem,7.1vw,2.05rem);line-height:1.1}
+      .club-title{font-size:clamp(1.7rem,7.2vw,2.15rem);line-height:1.1;max-width:13ch}
+      .hero-title{font-size:clamp(2rem,8.6vw,2.45rem);line-height:1.08;max-width:12ch}
+      .card-title{font-size:clamp(1.45rem,6.4vw,1.8rem)}
+      .story-title{font-size:clamp(1.6rem,7vw,2rem);line-height:1.1}
+      .kicker{letter-spacing:.16em}
+    }
+  </style>
+</head>
+<body class="grain">
+  <header class="fixed left-0 right-0 top-0 z-50 border-b border-white/10 nav-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+      <a href="#top" class="flex min-h-12 items-center gap-3">
+        <img src="/legacy-assets/logo-gondwana-fc-badge-color.jpg" alt="Gondwana FC" class="h-11 w-11 rounded-full bg-[var(--areia)] object-cover p-1" />
+        <div class="leading-none">
+          <p class="kicker text-[var(--ouro)]">Gondwana FC</p>
+          <p class="text-xs font-black uppercase tracking-[.22em] text-[var(--areia)]/65">Time da Educação</p>
+        </div>
+      </a>
+      <nav class="hidden items-center gap-2 lg:flex text-xs font-black uppercase tracking-[.14em] text-[var(--areia)]/72">
+        <a class="rounded-full px-4 py-3 hover:bg-white/10" href="#clube">Clube</a>
+        <a class="rounded-full px-4 py-3 hover:bg-white/10" href="#metodo">Método ABC</a>
+        <a class="rounded-full px-4 py-3 hover:bg-white/10" href="#temporada">Temporada</a>
+        <a class="rounded-full px-4 py-3 hover:bg-white/10" href="#partidas-comprovadas">Histórias reais</a>
+        <a class="rounded-full px-4 py-3 hover:bg-white/10" href="/caderno/">Caderno do Time</a>
+        <a class="rounded-full bg-[var(--ouro)] px-5 py-3 text-[var(--grafite)]" href="#formulario">Levar o time</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero-bg field-lines relative min-h-screen overflow-hidden pt-28">
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[rgba(17,19,15,.25)] to-[var(--grafite)]"></div>
+      <div class="relative mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[minmax(0,.95fr)_360px] lg:py-16">
+        <div>
+          <div class="mb-7 inline-flex items-center gap-3 rounded-full border border-[var(--ouro)]/40 bg-black/30 px-4 py-2 backdrop-blur">
+            <span class="h-2 w-2 rounded-full bg-[var(--ouro)]"></span>
+            <span class="kicker text-[var(--ouro)]">Gondwana FC - Time da Educação</span>
+          </div>
+          <h1 class="display hero-title max-w-4xl">
+            O time que joga para aprender
+          </h1>
+          <div class="mt-7 grid max-w-3xl gap-5 border-l-4 border-[var(--ouro)] pl-5 lg:grid-cols-[1.15fr_.85fr]">
+            <p class="serif text-lg leading-relaxed text-[var(--areia)]/90 sm:text-2xl sm:leading-snug">Uma bola no centro. Uma câmera ligada. Um grupo pronto para contar o que vive. O Gondwana FC entra em campo com escolas, clubes e projetos para transformar futebol em experiência de aprendizagem.</p>
+            <p class="text-sm font-extrabold uppercase leading-relaxed tracking-[.14em] text-[var(--ouro)]">Cada partida combina jogo, imagem, conversa e devolutiva. O grupo participa, registra, narra e sai com uma próxima jogada possível.</p>
+          </div>
+        </div>
+
+        <aside class="ticket relative rounded-[2rem] p-6 photo-shadow">
+          <p class="kicker text-[var(--barro)]">Próxima partida</p>
+          <div class="mt-5 grid grid-cols-[1fr_auto_1fr] items-center gap-3 text-center">
+            <div>
+              <p class="text-xs font-black uppercase tracking-[.18em] text-black/50">Mandante</p>
+              <p class="mt-2 text-lg font-black leading-tight">Escola ou projeto</p>
+            </div>
+            <div class="display text-4xl text-[var(--barro)]">x</div>
+            <div>
+              <p class="text-xs font-black uppercase tracking-[.18em] text-black/50">Visitante</p>
+              <p class="mt-2 text-lg font-black leading-tight">Gondwana FC</p>
+            </div>
+          </div>
+          <div class="my-6 border-t border-dashed border-black/25"></div>
+          <h2 class="display card-title">Bola + câmera</h2>
+          <p class="mt-4 text-sm font-bold leading-relaxed text-black/70">Uma experiência com escuta, jogo, registro audiovisual e devolutiva para continuar o trabalho depois do encontro.</p>
+          <a href="#formulario" class="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[var(--grafite)] px-5 py-3 text-sm font-black uppercase tracking-[.16em] text-[var(--areia)]">Levar o time</a>
+        </aside>
+      </div>
+    </section>
+
+    <section id="clube" class="club-section relative overflow-hidden bg-[var(--grafite)] py-20 sm:py-24">
+      <img src="/legacy-assets/logo-gondwana-fc-badge-white.jpg" alt="" aria-hidden="true" class="ghost-badge hidden lg:block" />
+      <div class="relative mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,.95fr)_minmax(320px,.72fr)] lg:items-center">
+        <div>
+          <p class="kicker text-[var(--ouro)]">O clube</p>
+          <h2 class="display club-title mt-5">Quando a educação entra em campo, todo mundo tem posição.</h2>
+          <p class="serif mt-8 max-w-2xl text-lg leading-relaxed text-[var(--areia)]/78 sm:text-xl">O Time da Educação joga junto com quem forma pessoas todos os dias: docentes, educadores, treinadores, famílias, gestores e comunidades.</p>
+        </div>
+        <aside class="tactic-card rounded-[2rem] p-6 sm:p-8">
+          <p class="kicker relative z-10 text-[var(--ouro)]">Como o time joga</p>
+          <div class="relative z-10 mt-8 grid gap-4">
+            <div class="grid grid-cols-[auto_1fr] gap-4 rounded-2xl bg-[var(--areia)] p-5 text-[var(--grafite)]"><span class="tactic-dot">01</span><div><h3 class="text-xl font-black">Escudo</h3><p class="mt-1 text-sm font-bold leading-relaxed text-black/62">Pertencimento para quem entra na partida.</p></div></div>
+            <div class="grid grid-cols-[auto_1fr] gap-4 rounded-2xl bg-[var(--verde)] p-5 text-white"><span class="tactic-dot">02</span><div><h3 class="text-xl font-black">Campo</h3><p class="mt-1 text-sm font-bold leading-relaxed text-white/70">Escola, quadra, rua, sala, museu ou clube.</p></div></div>
+            <div class="grid grid-cols-[auto_1fr] gap-4 rounded-2xl bg-[var(--barro)] p-5 text-white"><span class="tactic-dot">03</span><div><h3 class="text-xl font-black">Súmula</h3><p class="mt-1 text-sm font-bold leading-relaxed text-white/72">Registro, leitura e próxima jogada.</p></div></div>
+            <div class="grid grid-cols-[auto_1fr] gap-4 rounded-2xl bg-[var(--azul)] p-5 text-white"><span class="tactic-dot">04</span><div><h3 class="text-xl font-black">Arquivo</h3><p class="mt-1 text-sm font-bold leading-relaxed text-white/72">Memórias e perguntas para novas práticas.</p></div></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="metodo" class="bg-[var(--areia)] py-16 text-[var(--grafite)] sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:gap-14 lg:items-start">
+          <div class="section-copy lg:sticky lg:top-28">
+            <p class="kicker text-[var(--barro)]">Método ABC</p>
+            <h2 class="display section-title mt-4 max-w-3xl">Audiovisual, bola e câmera para aprender com o corpo inteiro.</h2>
+            <p class="serif text-xl leading-relaxed text-black/68 sm:text-2xl sm:leading-snug">O Time da Educação cria uma partida educativa: o grupo joga, observa, registra, conversa e transforma a experiência em memória e próximos passos.</p>
+          </div>
+          <div class="method-panel">
+            <div class="relative z-10 grid gap-4 sm:grid-cols-2">
+              <article class="method-card"><div><span>01</span><h3>Jogar</h3><p>A bola abre presença, vínculo, regra, improviso e escuta coletiva.</p></div><strong class="kicker text-[var(--barro)]">corpo</strong></article>
+              <article class="method-card"><div><span>02</span><h3>Registrar</h3><p>A câmera muda o olhar: quem participa também aprende a observar.</p></div><strong class="kicker text-[var(--barro)]">imagem</strong></article>
+              <article class="method-card"><div><span>03</span><h3>Narrar</h3><p>O grupo dá nome ao que viveu: conflito, cooperação, memória, território.</p></div><strong class="kicker text-[var(--barro)]">voz</strong></article>
+              <article class="method-card"><div><span>04</span><h3>Continuar</h3><p>A instituição recebe registros, leitura do encontro e uma próxima jogada possível.</p></div><strong class="kicker text-[var(--barro)]">devolutiva</strong></article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="temporada" class="bg-[var(--areia)] py-16 text-[var(--grafite)] sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid gap-10 lg:grid-cols-[1.05fr_.95fr] lg:items-center">
+          <div class="cut-card overflow-hidden bg-[var(--grafite)] photo-shadow">
+            <img src="/legacy-assets/enviada-oficina-sala.jpg" alt="Oficina Gondwana FC" class="h-[440px] w-full object-cover opacity-90" />
+          </div>
+          <div>
+            <p class="kicker text-[var(--barro)]">Temporada pedagógica</p>
+            <h2 class="display section-title mt-4">Uma temporada para aprender jogando.</h2>
+            <p class="mt-6 text-lg font-bold leading-relaxed text-black/67">Cada instituição pode chamar o time para uma entrada curta, uma oficina, uma jornada ou um laboratório territorial. O formato nasce do contexto e do grupo.</p>
+            <div class="mt-8 grid gap-3">
+              <div class="rounded-2xl bg-white/60 p-5"><strong>Vivência ABC</strong><span class="ml-3 text-black/50">encontro introdutório</span></div>
+              <div class="rounded-2xl bg-white/60 p-5"><strong>Oficina Bola e Câmera</strong><span class="ml-3 text-black/50">experiência prática</span></div>
+              <div class="rounded-2xl bg-white/60 p-5"><strong>Formação de Educadora/es</strong><span class="ml-3 text-black/50">metodologia e prática</span></div>
+              <div class="rounded-2xl bg-white/60 p-5"><strong>Consultoria e laboratório territorial</strong><span class="ml-3 text-black/50">desenho de projeto</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="placar" class="field-lines bg-[var(--azul)] py-16 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <p class="kicker text-[var(--ouro)]">Placar de aprendizagem</p>
+        <div class="mt-5 grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:items-start">
+          <h2 class="display section-title">O placar mostra o que a experiência deixa no grupo.</h2>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="rounded-[2rem] border border-white/15 bg-black/20 p-6"><span class="metric display text-6xl text-[var(--ouro)]">01</span><h3 class="mt-4 text-2xl font-black">Participação</h3><p class="mt-2 text-white/66">Quem entrou no jogo, como participou e que disponibilidade apareceu.</p></div>
+            <div class="rounded-[2rem] border border-white/15 bg-black/20 p-6"><span class="metric display text-6xl text-[var(--ouro)]">02</span><h3 class="mt-4 text-2xl font-black">Autoria</h3><p class="mt-2 text-white/66">O que o grupo criou em imagem, relato, pergunta, mapa ou cena.</p></div>
+            <div class="rounded-[2rem] border border-white/15 bg-black/20 p-6"><span class="metric display text-6xl text-[var(--ouro)]">03</span><h3 class="mt-4 text-2xl font-black">Vínculo</h3><p class="mt-2 text-white/66">Que relações, lideranças e tensões ficaram mais visíveis.</p></div>
+            <div class="rounded-[2rem] border border-white/15 bg-black/20 p-6"><span class="metric display text-6xl text-[var(--ouro)]">04</span><h3 class="mt-4 text-2xl font-black">Continuidade</h3><p class="mt-2 text-white/66">Qual próxima jogada a instituição consegue assumir.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="confianca" class="bg-[var(--areia)] py-16 text-[var(--grafite)] sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid gap-10 lg:grid-cols-[.9fr_1.1fr] lg:items-end">
+          <div>
+            <p class="kicker text-[var(--barro)]">Confiança em campo</p>
+            <h2 class="display section-title mt-4">A bola já circulou. A história também.</h2>
+          </div>
+          <p class="serif text-xl leading-relaxed text-black/68 sm:text-2xl sm:leading-snug">A história da Gondwana já circulou em imprensa nacional, regional, internacional, esportiva, cultural e institucional. Somada às cartas e depoimentos, essa presença mostra que o Time da Educação tem trajetória, parceiros e memória pública.</p>
+        </div>
+
+        <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+          <article class="rounded-[2rem] bg-[var(--grafite)] p-5 text-[var(--areia)]"><span class="display metric text-5xl text-[var(--ouro)]">93</span><p class="mt-3 text-sm font-black uppercase tracking-[.12em] text-white/68">registros mapeados</p></article>
+          <article class="rounded-[2rem] bg-[var(--azul)] p-5 text-white"><span class="display metric text-5xl text-[var(--ouro)]">18</span><p class="mt-3 text-sm font-black uppercase tracking-[.12em] text-white/68">aparições Tier 1</p></article>
+          <article class="rounded-[2rem] bg-[var(--verde)] p-5 text-white"><span class="display metric text-5xl text-[var(--ouro)]">68</span><p class="mt-3 text-sm font-black uppercase tracking-[.12em] text-white/72">menções positivas revisadas</p></article>
+          <article class="rounded-[2rem] bg-[var(--barro)] p-5 text-white"><span class="display metric text-5xl text-[var(--ouro)]">69</span><p class="mt-3 text-sm font-black uppercase tracking-[.12em] text-white/72">com mensagem-chave</p></article>
+          <article class="rounded-[2rem] bg-white/60 p-5"><span class="display metric text-5xl text-[var(--barro)]">10</span><p class="mt-3 text-sm font-black uppercase tracking-[.12em] text-black/58">institucionais</p></article>
+          <article class="rounded-[2rem] bg-white/60 p-5"><span class="display metric text-5xl text-[var(--barro)]">434,1</span><p class="mt-3 text-sm font-black uppercase tracking-[.12em] text-black/58">pontos revisados</p></article>
+        </div>
+
+        <div class="mt-8 rounded-[2rem] border border-black/10 bg-white/45 p-5 sm:p-7">
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p class="kicker text-[var(--barro)]">Presença pública mapeada</p>
+              <h3 class="mt-3 text-2xl font-black leading-tight sm:text-3xl">Veículos que já contaram essa história.</h3>
+            </div>
+            <p class="max-w-md text-sm font-bold leading-relaxed text-black/55">Arraste para ver. Cada card abre a matéria ou registro original.</p>
+          </div>
+          <div class="trust-carousel mt-6" aria-label="Carrossel de veículos de comunicação com links para matérias sobre Gondwana FC">
+            <a class="media-card" href="https://www.uol.com.br/esporte/futebol/ultimas-noticias/2021/11/19/gondwana-curta-metragem-reconecta-futebol-a-cultura-afro-brasileira.htm" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">UOL</p><p class="media-meta mt-2">Tier 1 · Nacional</p></div><p class="media-title">Curta-metragem reconecta futebol a cultura afro-brasileira.</p></a>
+            <a class="media-card" href="https://exame.com/colunistas/esporte-executivo/gondwana-fc-propoe-falar-sobre-cultura-e-aprendizagem-via-futebol/" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">Exame</p><p class="media-meta mt-2">Tier 1 · Negócios</p></div><p class="media-title">Cultura e aprendizagem via futebol como proposta pública.</p></a>
+            <a class="media-card" href="https://agenciabrasil.ebc.com.br/geral/noticia/2023-07/projeto-expoe-presenca-africana-no-brasil-partir-do-futebol" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">Agência Brasil</p><p class="media-meta mt-2">Tier 1 · Pública</p></div><p class="media-title">Projeto expõe presença africana no Brasil a partir do futebol.</p></a>
+            <a class="media-card" href="https://tvbrasil.ebc.com.br/stadium/2023/07/bola-conecta-pessoas-e-culturas" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">TV Brasil</p><p class="media-meta mt-2">Tier 1 · TV pública</p></div><p class="media-title">A bola conecta pessoas e culturas.</p></a>
+            <a class="media-card" href="https://www.goal-click.com/football-photography-stories/brazil-monica-saraiva" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">Goal Click</p><p class="media-meta mt-2">Tier 1 · Internacional</p></div><p class="media-title">The Beach, The Street, The Soul: relato visual de Mônica Saraiva.</p></a>
+            <a class="media-card" href="https://lnfoficial.com.br/noticias/lnf-lanca-projeto-social-que-une-futsal-educacao-e-cultura/" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">LNF</p><p class="media-meta mt-2">Tier 1 · Esporte</p></div><p class="media-title">Projeto social une futsal, educação e cultura.</p></a>
+            <a class="media-card" href="https://www.estadao.com.br/esportes/copa-do-mundo/imigrantes-se-orgulham-de-campanha-de-cabo-verde-na-copa-faltava-o-brasil-nos-descobrir/" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">Estadão</p><p class="media-meta mt-2">Tier 1 · Nacional</p></div><p class="media-title">Imigrantes se orgulham de campanha de Cabo Verde na Copa.</p></a>
+            <a class="media-card" href="https://www.gazetaesportiva.com/futebol/a-historia-da-cultura-afro-brasileira-contada-atraves-do-futebol-e-das-lentes-de-uma-camera/" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">Gazeta Esportiva</p><p class="media-meta mt-2">Esporte · Nacional</p></div><p class="media-title">Cultura afro-brasileira contada pelo futebol e pela câmera.</p></a>
+            <a class="media-card" href="https://www.bahianoticias.com.br/esportes/noticia/60194-a-bola-conecta-curta-aborda-cultura-sob-o-olhar-do-futebol-no-mes-da-consciencia-negra" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">Bahia Notícias</p><p class="media-meta mt-2">Regional · Bahia</p></div><p class="media-title">A Bola Conecta aborda cultura sob o olhar do futebol.</p></a>
+            <a class="media-card" href="https://www.folhape.com.br/esportes/criadores-do-projeto-gondwana-promovem-acao-envolvendo-futebol-e/224100/" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">Folha PE</p><p class="media-meta mt-2">Regional · Pernambuco</p></div><p class="media-title">Criadores do projeto promovem ação com futebol e cultura em escola pública.</p></a>
+          </div>
+          <p class="mt-5 text-sm font-bold leading-relaxed text-black/58">O clipping reúne imprensa nacional, regional, internacional, esportiva, cultural e institucional. Cada registro ajuda a contar como a Gondwana circula entre futebol, educação, cultura e território.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="partidas-comprovadas" class="bg-[var(--areia)] py-16 text-[var(--grafite)] sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid gap-10 lg:grid-cols-[.88fr_1.12fr] lg:items-end">
+          <div>
+            <p class="kicker text-[var(--barro)]">Histórias reais</p>
+            <h2 class="display section-title mt-4">Onde a bola virou escola, câmera e memória.</h2>
+          </div>
+          <p class="serif text-xl leading-relaxed text-black/68 sm:text-2xl sm:leading-snug">O Time da Educação já realizou experiências em escolas, projetos sociais, instituições culturais e redes públicas. Cada partida deixou registros, cartas, vídeos, depoimentos e imagens.</p>
+        </div>
+
+        <div class="mt-10 overflow-hidden rounded-[2.5rem] bg-[var(--grafite)] text-[var(--areia)] photo-shadow">
+          <div class="grid lg:grid-cols-[1.05fr_.95fr]">
+            <div class="relative min-h-[330px] bg-[linear-gradient(135deg,rgba(242,194,48,.55),rgba(46,111,70,.45)),url('/assets/curadoria/escola-mobile-abc.jpg')] bg-cover bg-center p-7 sm:p-10">
+              <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[var(--grafite)]/80 to-transparent"></div>
+              <div class="relative flex h-full flex-col justify-between">
+                <p class="kicker text-[var(--grafite)]">Partida 01 · EMEF Pedro Américo · São Paulo</p>
+                <div>
+                  <h3 class="display story-title max-w-2xl text-[var(--grafite)]">A escola como estádio</h3>
+                  <p class="mt-4 max-w-xl text-lg font-black leading-snug text-[var(--grafite)]/78">Na EMEF Pedro Américo, estudantes viveram oficinas com bola e câmera dentro de uma proposta de educação antirracista.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-7 sm:p-10">
+              <p class="kicker text-[var(--ouro)]">O que aconteceu</p>
+              <blockquote class="serif mt-5 text-2xl leading-snug text-[var(--areia)]/86">Mais de duzentos estudantes viveram oficinas com bola e câmera. A metodologia ABC entrou na rotina escolar como experiência de corpo, imagem e conversa.</blockquote>
+              <div class="mt-7 grid gap-3 sm:grid-cols-3">
+                <div class="rounded-2xl border border-white/15 p-4"><p class="kicker text-[var(--ouro)]">Registro</p><p class="mt-2 text-sm font-black text-white/70">Carta formal</p></div>
+                <div class="rounded-2xl border border-white/15 p-4"><p class="kicker text-[var(--ouro)]">Voz</p><p class="mt-2 text-sm font-black text-white/70">Coordenação pedagógica</p></div>
+                <div class="rounded-2xl border border-white/15 p-4"><p class="kicker text-[var(--ouro)]">Arquivo</p><p class="mt-2 text-sm font-black text-white/70">Vídeo de campo</p></div>
+              </div>
+              <p class="mt-7 text-sm font-bold leading-relaxed text-white/58">A partida combina escola pública, carta de referência, depoimento e imagem. Por isso funciona como porta de entrada para entender o Time da Educação pela primeira vez.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 grid gap-4 md:grid-cols-3">
+          <article class="proof-card">
+            <p class="place">São Paulo/SP · Escola · 2023/2024</p>
+            <h3 class="mt-4 text-2xl font-black leading-tight">Escola Móbile</h3>
+            <blockquote class="mt-5">Oficinas de "Fútbol Callejero" e "Futebol, Bola e Câmera" reconhecidas em atestado profissional.</blockquote>
+            <p class="mt-5 text-sm font-black uppercase tracking-[.12em] text-[var(--barro)]">Carta · Móbile Convida · famílias e estudantes</p>
+          </article>
+          <article class="proof-card">
+            <p class="place">São Paulo/SP · Projeto social · 2024</p>
+            <h3 class="mt-4 text-2xl font-black leading-tight">Circo Social Grajaú</h3>
+            <blockquote class="mt-5">Crianças e adolescentes viveram uma experiência integrada a oficinas culturais e bem avaliada pelos participantes.</blockquote>
+            <p class="mt-5 text-sm font-black uppercase tracking-[.12em] text-[var(--barro)]">Cultura · esporte · pensamento crítico</p>
+          </article>
+          <article class="proof-card">
+            <p class="place">Pereiro/CE · Escola rural · 2025</p>
+            <h3 class="mt-4 text-2xl font-black leading-tight">Secretaria de Educação</h3>
+            <blockquote class="mt-5">Jovens do 9º ano trabalharam câmera e bola como ferramentas de habilidades socioemocionais.</blockquote>
+            <p class="mt-5 text-sm font-black uppercase tracking-[.12em] text-[var(--barro)]">Poder público · zona rural · carta recente</p>
+          </article>
+        </div>
+
+        <div class="mt-8 rounded-[2.3rem] bg-[var(--ouro)] p-6 text-[var(--grafite)] sm:p-8">
+          <p class="kicker text-[var(--barro)]">Territórios onde o time já entrou em campo</p>
+          <div class="mt-5 flex flex-wrap gap-3 text-sm font-black uppercase tracking-[.12em]">
+            <span class="rounded-full bg-[var(--grafite)] px-4 py-3 text-[var(--areia)]">São Paulo</span>
+            <span class="rounded-full bg-[var(--grafite)] px-4 py-3 text-[var(--areia)]">Pereiro/CE</span>
+            <span class="rounded-full bg-[var(--grafite)] px-4 py-3 text-[var(--areia)]">Paraíba</span>
+            <span class="rounded-full bg-[var(--grafite)] px-4 py-3 text-[var(--areia)]">Pernambuco</span>
+            <span class="rounded-full bg-[var(--grafite)] px-4 py-3 text-[var(--areia)]">Moçambique</span>
+            <span class="rounded-full bg-[var(--grafite)] px-4 py-3 text-[var(--areia)]">Chile</span>
+            <span class="rounded-full bg-[var(--grafite)] px-4 py-3 text-[var(--areia)]">Paraguai</span>
+          </div>
+        </div>
+
+        <div class="mt-5 grid gap-4 lg:grid-cols-[1fr_1fr]">
+          <div class="rounded-[2rem] bg-[var(--grafite)] p-6 text-[var(--areia)] sm:p-8">
+            <p class="kicker text-[var(--ouro)]">Vozes de quem viu de perto</p>
+            <h3 class="mt-4 text-3xl font-black leading-tight">Professoras, coordenadoras, psicóloga e parceiros institucionais registram o que aconteceu em depoimentos.</h3>
+          </div>
+          <div class="rounded-[2rem] bg-[var(--verde)] p-6 text-white sm:p-8">
+            <p class="kicker text-[var(--ouro)]">O que fica depois da partida</p>
+            <h3 class="mt-4 text-3xl font-black leading-tight">Ficam imagens, relatos, cartas, vídeos e caminhos para a instituição continuar a experiência.</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="patrocinio" class="bg-[var(--grafite)] py-16 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid gap-10 lg:grid-cols-[.9fr_1.1fr] lg:items-end">
+          <div>
+            <p class="kicker text-[var(--ouro)]">Retorno para patrocinadores</p>
+            <h2 class="display section-title mt-4">Sua marca aparece onde há método, imagem e continuidade.</h2>
+          </div>
+          <p class="serif text-xl leading-relaxed text-[var(--areia)]/78 sm:text-2xl sm:leading-snug">O retorno não está apenas em aparecer. Está em ter uma história legítima para contar, com pessoas, território, imprensa, conteúdo e legado.</p>
+        </div>
+        <div class="mt-8 grid gap-5 lg:grid-cols-4">
+          <article class="roi-card"><p class="kicker text-[var(--ouro)]">Reputação</p><h3 class="mt-5 text-2xl font-black">Associação positiva</h3><p class="mt-3 text-sm font-bold leading-relaxed text-white/66">Educação, esporte, cultura, juventudes, diversidade, território e inovação social em uma mesma narrativa.</p></article>
+          <article class="roi-card"><p class="kicker text-[var(--ouro)]">Conteúdo</p><h3 class="mt-5 text-2xl font-black">Ativos reutilizáveis</h3><p class="mt-3 text-sm font-bold leading-relaxed text-white/66">Fotos, relatos, cards, minidocs, clipping, síntese narrativa e materiais para comunicação institucional.</p></article>
+          <article class="roi-card"><p class="kicker text-[var(--ouro)]">Relacionamento</p><h3 class="mt-5 text-2xl font-black">Presença no território</h3><p class="mt-3 text-sm font-bold leading-relaxed text-white/66">A marca entra em contato com escolas, clubes, comunidades, gestores, famílias e redes parceiras.</p></article>
+          <article class="roi-card"><p class="kicker text-[var(--ouro)]">Legado</p><h3 class="mt-5 text-2xl font-black">Mais que logotipo</h3><p class="mt-3 text-sm font-bold leading-relaxed text-white/66">O patrocínio deixa método, registro, memória e próximos passos para quem participou.</p></article>
+        </div>
+        <div class="mt-8 grid gap-4 lg:grid-cols-[1fr_auto] lg:items-center rounded-[2rem] bg-[var(--ouro)] p-6 text-[var(--grafite)] sm:p-8">
+          <div><p class="kicker text-[var(--barro)]">Como começa</p><h3 class="mt-3 text-3xl font-black leading-tight">Escolhemos um formato, entendemos o território, definimos entregáveis e combinamos como registrar o que aconteceu.</h3></div>
+          <a href="#convite" class="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--grafite)] px-6 py-3 text-sm font-black uppercase tracking-[.14em] text-[var(--areia)]">Conversar sobre parceria</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="diario" class="bg-[var(--grafite)] py-16 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid gap-8 lg:grid-cols-[1fr_1fr]">
+          <div class="tilt rounded-[2.5rem] bg-[var(--barro)] p-8 photo-shadow">
+            <p class="kicker text-[var(--ouro)]">Diário de campo</p>
+            <h2 class="display story-title mt-5">Histórias de quem aprende em campo.</h2>
+          </div>
+          <div class="tilt-rev overflow-hidden rounded-[2.5rem] photo-shadow">
+            <img src="/legacy-assets/27a017d7-encuentro-manos.jpg" alt="Encontro com bola e mãos" class="h-full min-h-[420px] w-full object-cover" />
+          </div>
+        </div>
+        <div class="mt-6 grid gap-4 lg:grid-cols-3">
+          <article class="rounded-[2rem] border border-white/15 p-6"><p class="kicker text-[var(--ouro)]">Relato</p><h3 class="mt-5 text-2xl sm:text-3xl font-black leading-tight">Quando a bola abre conversa.</h3></article>
+          <article class="rounded-[2rem] border border-white/15 p-6"><p class="kicker text-[var(--ouro)]">Arquivo</p><h3 class="mt-5 text-2xl sm:text-3xl font-black leading-tight">Método, memória e imagem.</h3></article>
+          <article class="rounded-[2rem] border border-white/15 p-6"><p class="kicker text-[var(--ouro)]">Convocação</p><h3 class="mt-5 text-2xl sm:text-3xl font-black leading-tight">Quem quer jogar a temporada?</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="formulario" class="bg-[var(--areia)] py-16 text-[var(--grafite)] sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[.82fr_1.18fr] lg:items-start">
+        <div>
+          <p class="kicker text-[var(--barro)]">Formulário</p>
+          <h2 class="display section-title mt-4">Conte que partida você quer desenhar.</h2>
+          <p class="serif mt-6 text-xl leading-relaxed text-black/68">Este formulário ajuda o Time da Educação a entender seu contexto antes da primeira conversa: quem participa, onde acontece, qual desafio educativo está em jogo e que formato parece fazer sentido.</p>
+          <div class="mt-8 rounded-[2rem] bg-[var(--grafite)] p-6 text-[var(--areia)]">
+            <p class="kicker text-[var(--ouro)]">Como funciona agora</p>
+            <p class="mt-4 text-sm font-bold leading-relaxed text-white/70">Ao enviar, a página abre seu e-mail com a mensagem organizada. Assim o formulário já funciona dentro do site, sem expor dados em uma base pública.</p>
+          </div>
+        </div>
+
+        <form id="lead-form" class="rounded-[2.4rem] border border-black/10 bg-white/50 p-5 shadow-2xl shadow-black/10 sm:p-8">
+          <div class="grid gap-5 sm:grid-cols-2">
+            <label><span class="contact-label">Nome</span><input class="contact-field" name="nome" autocomplete="name" required placeholder="Seu nome" /></label>
+            <label><span class="contact-label">Instituição</span><input class="contact-field" name="instituicao" required placeholder="Escola, clube, projeto..." /></label>
+            <label><span class="contact-label">E-mail</span><input class="contact-field" type="email" name="email" autocomplete="email" required placeholder="seu@email.com" /></label>
+            <label><span class="contact-label">Cidade / país</span><input class="contact-field" name="territorio" required placeholder="Ex: São Paulo, Brasil" /></label>
+          </div>
+
+          <div class="mt-5">
+            <span class="contact-label">Formato de interesse</span>
+            <div class="grid gap-3 sm:grid-cols-2">
+              <label class="contact-option"><input type="checkbox" name="formato" value="Vivência ABC" /> Vivência ABC</label>
+              <label class="contact-option"><input type="checkbox" name="formato" value="Oficina Bola e Câmera" /> Oficina Bola e Câmera</label>
+              <label class="contact-option"><input type="checkbox" name="formato" value="Formação de Educadora/es" /> Formação de Educadora/es</label>
+              <label class="contact-option"><input type="checkbox" name="formato" value="Palestra" /> Palestra</label>
+              <label class="contact-option"><input type="checkbox" name="formato" value="Consultoria" /> Consultoria</label>
+              <label class="contact-option"><input type="checkbox" name="formato" value="Patrocínio ou parceria" /> Patrocínio ou parceria</label>
+            </div>
+          </div>
+
+          <div class="mt-5 grid gap-5 sm:grid-cols-2">
+            <label><span class="contact-label">Participantes</span><input class="contact-field" name="participantes" placeholder="Faixa etária, grupo, quantidade" /></label>
+            <label><span class="contact-label">Quando</span><input class="contact-field" name="quando" placeholder="Mês, data ou período desejado" /></label>
+          </div>
+
+          <label class="mt-5 block"><span class="contact-label">O que você quer trabalhar?</span><textarea class="contact-field" name="mensagem" rows="6" required placeholder="Conte o contexto, o desafio educativo e o que você imagina para esta partida."></textarea></label>
+
+          <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <button type="submit" class="inline-flex min-h-14 items-center justify-center rounded-full bg-[var(--grafite)] px-7 py-4 text-sm font-black uppercase tracking-[.16em] text-[var(--areia)]">Enviar pedido</button>
+            <p id="form-status" class="contact-hint" aria-live="polite">A mensagem será preparada no seu aplicativo de e-mail.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="convite" class="bg-[var(--ouro)] py-16 text-[var(--grafite)] sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_auto] lg:items-center">
+        <div>
+          <p class="kicker text-[var(--barro)]">Convite institucional</p>
+          <h2 class="display section-title mt-3 max-w-4xl">Leve o Time da Educação para sua escola, clube ou projeto.</h2>
+          <p class="serif mt-5 max-w-3xl text-xl leading-relaxed text-[var(--grafite)]/72">Use o formulário para chamar o Time da Educação. O Caderno do Time reúne manifesto, Método ABC, Copa de Gondwana, biografias e referências para quem quiser aprofundar além desta página.</p>
+        </div>
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:flex-wrap">
+          <a href="#formulario" class="inline-flex min-h-14 items-center justify-center rounded-full bg-[var(--grafite)] px-7 py-4 text-sm font-black uppercase tracking-[.16em] text-[var(--areia)]">Abrir formulário</a>
+          <a href="/caderno/" class="inline-flex min-h-14 items-center justify-center rounded-full border-2 border-[var(--grafite)] px-7 py-4 text-sm font-black uppercase tracking-[.16em] text-[var(--grafite)]">Abrir Caderno do Time</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script is:inline>
+    const leadForm = document.querySelector('#lead-form');
+    const formStatus = document.querySelector('#form-status');
+    leadForm?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const data = new FormData(leadForm);
+      const formats = data.getAll('formato');
+      const lines = [
+        'Pedido pelo site Gondwana FC - Time da Educação',
+        '',
+        `Nome: ${data.get('nome') || ''}`,
+        `Instituição: ${data.get('instituicao') || ''}`,
+        `E-mail: ${data.get('email') || ''}`,
+        `Cidade / país: ${data.get('territorio') || ''}`,
+        `Formato de interesse: ${formats.length ? formats.join(', ') : 'não informado'}`,
+        `Participantes: ${data.get('participantes') || 'não informado'}`,
+        `Quando: ${data.get('quando') || 'não informado'}`,
+        '',
+        'Contexto:',
+        data.get('mensagem') || ''
+      ];
+      const subject = encodeURIComponent('Pedido - Gondwana FC Time da Educação');
+      const body = encodeURIComponent(lines.join('\n'));
+      window.location.href = `mailto:contato.gondwana@gmail.com?subject=${subject}&body=${body}`;
+      formStatus.textContent = 'Mensagem preparada. Se o e-mail não abrir, copie os dados preenchidos e envie para contato.gondwana@gmail.com.';
+    });
+  </script>
+</body>
+</html>
