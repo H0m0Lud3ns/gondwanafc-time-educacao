@@ -877,20 +877,39 @@ import '../styles/tailwind.css';
       </div>
     </section>
 
-    <section id="territorios" class="bg-[#17243a] py-20 sm:py-28 overflow-hidden">
+    <section id="territorios" class="bg-[#17243a] py-14 sm:py-20 overflow-hidden">
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
-        <div class="grid lg:grid-cols-[.9fr_1.1fr] gap-10 items-start">
-          <div data-aos="fade-up" class="lg:sticky lg:top-28">
-            <p class="text-sm uppercase tracking-[0.28em] text-[#f2c230] font-extrabold">Prova qualitativa</p>
-            <h2 class="mt-4 font-display text-4xl sm:text-6xl leading-[0.95] uppercase">O que observamos em campo.</h2>
-            <p class="mt-6 text-lg text-[#f6edd7]/75">A melhor prova, por enquanto, está no que aparece quando a bola, a câmera e a conversa entram na mesma experiência.</p>
-          </div>
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div data-aos="fade-up" class="rounded-[2rem] bg-[#f6edd7] p-6 text-[#11130f]"><span class="font-anton text-7xl">01</span><h3 class="mt-4 text-2xl font-extrabold">Um grupo mais disponível</h3><p class="mt-2">As pessoas entram por uma linguagem simples: jogo, imagem, conversa e criação.</p></div>
-            <div data-aos="fade-up" data-aos-delay="80" class="rounded-[2rem] bg-[#2e6f46] p-6 text-white"><span class="font-anton text-7xl">02</span><h3 class="mt-4 text-2xl font-extrabold">Um registro do encontro</h3><p class="mt-2">A experiência continua em imagem, relato, memória e material de trabalho.</p></div>
-            <div data-aos="fade-up" data-aos-delay="160" class="rounded-[2rem] overflow-hidden sm:col-span-2"><img src="/legacy-assets/99fba4ba-juego-comunidad.jpg" alt="Jogo com comunidade parceira" class="h-[360px] w-full object-cover" loading="lazy" /></div>
-            <div data-aos="fade-up" class="rounded-[2rem] bg-[#9e4a2f] p-6 text-white"><span class="font-anton text-7xl">03</span><h3 class="mt-4 text-2xl font-extrabold">Uma leitura do grupo</h3><p class="mt-2">O que aparece no jogo ajuda a entender vínculos, tensões, lideranças e próximos passos.</p></div>
-            <div data-aos="fade-up" data-aos-delay="80" class="rounded-[2rem] bg-[#f2c230] p-6 text-[#11130f]"><span class="font-anton text-7xl">04</span><h3 class="mt-4 text-2xl font-extrabold">Um próximo passo mais claro</h3><p class="mt-2">A organização sai com pistas para continuar: formação, comunicação, projeto ou aprofundamento.</p></div>
+        <div class="rounded-[2.6rem] border border-[#f6edd7]/15 bg-[#11130f]/35 p-5 shadow-2xl shadow-black/25 sm:p-8 lg:p-10">
+          <div class="grid gap-8 lg:grid-cols-[.78fr_1.22fr] lg:items-stretch">
+            <div data-aos="fade-up" class="flex flex-col justify-between gap-8 rounded-[2rem] bg-[#f6edd7] p-6 text-[#11130f] sm:p-8">
+              <div>
+                <p class="text-sm uppercase tracking-[0.28em] text-[#9e4a2f] font-extrabold">Prova qualitativa</p>
+                <h2 class="mt-4 font-display text-4xl sm:text-6xl leading-[0.95] uppercase">O que aparece em campo.</h2>
+                <p class="mt-6 text-lg leading-relaxed text-[#11130f]/72">A evidência principal está nos sinais que o grupo deixa durante e depois da experiência: presença, registro, leitura e continuidade.</p>
+              </div>
+              <div class="rounded-[1.5rem] bg-[#11130f] p-5 text-[#f6edd7]">
+                <p class="text-xs uppercase tracking-[0.24em] text-[#f2c230] font-extrabold">Como ler esta prova</p>
+                <p class="mt-3 font-serif text-xl leading-snug text-[#f6edd7]/86">Menos promessa abstrata. Mais sinais observáveis para decidir a próxima jogada pedagógica.</p>
+              </div>
+            </div>
+
+            <div class="grid gap-4 lg:grid-cols-[1fr_.82fr]">
+              <figure data-aos="fade-up" class="relative min-h-[380px] overflow-hidden rounded-[2rem] bg-[#11130f] lg:min-h-full">
+                <img src="/legacy-assets/99fba4ba-juego-comunidad.jpg" alt="Jogo com comunidade parceira" class="absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#11130f] via-[#11130f]/42 to-transparent"></div>
+                <figcaption class="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
+                  <p class="text-xs uppercase tracking-[0.24em] text-[#f2c230] font-extrabold">Campo como evidência</p>
+                  <h3 class="mt-3 max-w-xl text-3xl font-extrabold leading-tight text-[#f6edd7] sm:text-4xl">O grupo mostra o que precisa quando joga, registra e conversa.</h3>
+                </figcaption>
+              </figure>
+
+              <div class="grid gap-4">
+                <article data-aos="fade-up" class="rounded-[1.7rem] bg-[#f6edd7] p-5 text-[#11130f]"><span class="text-xs uppercase tracking-[0.22em] text-[#9e4a2f] font-extrabold">01 · Disponibilidade</span><h3 class="mt-3 text-xl font-extrabold">O grupo entra no jogo.</h3><p class="mt-2 text-sm leading-relaxed text-[#11130f]/68">Jogo, imagem e conversa reduzem distância e abrem participação.</p></article>
+                <article data-aos="fade-up" data-aos-delay="60" class="rounded-[1.7rem] bg-[#2e6f46] p-5 text-white"><span class="text-xs uppercase tracking-[0.22em] text-[#f2c230] font-extrabold">02 · Registro</span><h3 class="mt-3 text-xl font-extrabold">O encontro ganha material.</h3><p class="mt-2 text-sm leading-relaxed text-white/74">Imagem, relato e memória continuam o trabalho depois da vivência.</p></article>
+                <article data-aos="fade-up" data-aos-delay="120" class="rounded-[1.7rem] bg-[#9e4a2f] p-5 text-white"><span class="text-xs uppercase tracking-[0.22em] text-[#f2c230] font-extrabold">03 · Leitura</span><h3 class="mt-3 text-xl font-extrabold">A dinâmica fica visível.</h3><p class="mt-2 text-sm leading-relaxed text-white/76">Vínculos, tensões, lideranças e perguntas aparecem com mais clareza.</p></article>
+                <article data-aos="fade-up" data-aos-delay="180" class="rounded-[1.7rem] bg-[#f2c230] p-5 text-[#11130f]"><span class="text-xs uppercase tracking-[0.22em] text-[#9e4a2f] font-extrabold">04 · Continuidade</span><h3 class="mt-3 text-xl font-extrabold">A próxima jogada nasce dali.</h3><p class="mt-2 text-sm leading-relaxed text-[#11130f]/72">A organização sai com pistas para formação, comunicação ou projeto.</p></article>
+              </div>
+            </div>
           </div>
         </div>
       </div>
