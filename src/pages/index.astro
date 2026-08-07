@@ -62,9 +62,16 @@ import '../styles/tailwind.css';
         url('/legacy-assets/enviada-time-campo.jpg') center/cover;
     }
     .cut-card{clip-path:polygon(0 0,100% 0,94% 100%,0 100%)}
-    .ticket{background:linear-gradient(135deg,var(--areia),#e6d5af);color:var(--grafite)}
-    .ticket:before,.ticket:after{content:"";position:absolute;top:50%;width:22px;height:22px;border-radius:999px;background:var(--grafite);transform:translateY(-50%)}
-    .ticket:before{left:-11px}.ticket:after{right:-11px}
+    .match-card{position:relative;overflow:hidden;border-radius:2.4rem;border:1px solid rgba(246,237,215,.18);background:linear-gradient(145deg,rgba(246,237,215,.12),rgba(17,19,15,.36));box-shadow:0 30px 90px rgba(0,0,0,.42)}
+    .match-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 10%,rgba(242,194,48,.24),transparent 16rem),linear-gradient(180deg,transparent,rgba(17,19,15,.86));z-index:1;pointer-events:none}
+    .match-photo{height:clamp(320px,48vh,520px);width:100%;object-fit:cover;filter:saturate(1.05) contrast(1.06);opacity:.92}
+    .match-overlay{position:absolute;inset:auto 0 0;z-index:2;padding:1.25rem}
+    .score-chip{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:.75rem;border:1px solid rgba(246,237,215,.18);border-radius:1.35rem;background:rgba(17,19,15,.72);backdrop-filter:blur(14px);padding:1rem;text-align:center}
+    .score-chip small{display:block;font-size:.62rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:rgba(246,237,215,.52)}
+    .score-chip strong{display:block;margin-top:.35rem;font-size:.95rem;line-height:1.05;font-weight:950;color:var(--areia)}
+    .score-x{font-family:'Archivo Black',sans-serif;font-size:2.05rem;line-height:1;color:var(--ouro)}
+    .page-stamp{display:inline-flex;align-items:center;gap:.75rem;border:1px solid rgba(242,194,48,.38);border-radius:999px;background:rgba(17,19,15,.48);padding:.55rem .8rem .55rem .55rem;backdrop-filter:blur(14px)}
+    .page-stamp img{height:2rem;width:2rem;border-radius:999px;background:var(--areia);object-fit:cover;padding:2px}
     .rule{border-top:1px solid var(--line)}
     .tilt{transform:rotate(-1.2deg)}
     .tilt-rev{transform:rotate(1.2deg)}
@@ -147,10 +154,10 @@ import '../styles/tailwind.css';
   <main id="top">
     <section class="hero-bg field-lines relative min-h-screen overflow-hidden pt-28">
       <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[rgba(17,19,15,.25)] to-[var(--grafite)]"></div>
-      <div class="relative mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[minmax(0,.95fr)_360px] lg:py-16">
+      <div class="relative mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[minmax(0,.98fr)_minmax(360px,.72fr)] lg:py-16">
         <div>
-          <div class="mb-7 inline-flex items-center gap-3 rounded-full border border-[var(--ouro)]/40 bg-black/30 px-4 py-2 backdrop-blur">
-            <span class="h-2 w-2 rounded-full bg-[var(--ouro)]"></span>
+          <div class="mb-7 page-stamp">
+            <img src="/legacy-assets/logo-gondwana-fc-badge-color.jpg" alt="" aria-hidden="true" />
             <span class="kicker text-[var(--ouro)]">Gondwana FC - Time da Educação</span>
           </div>
           <h1 class="display hero-title max-w-4xl">
@@ -162,23 +169,21 @@ import '../styles/tailwind.css';
           </div>
         </div>
 
-        <aside class="ticket relative rounded-[2rem] p-6 photo-shadow">
-          <p class="kicker text-[var(--barro)]">Próxima partida</p>
-          <div class="mt-5 grid grid-cols-[1fr_auto_1fr] items-center gap-3 text-center">
-            <div>
-              <p class="text-xs font-black uppercase tracking-[.18em] text-black/50">Mandante</p>
-              <p class="mt-2 text-lg font-black leading-tight">Escola ou projeto</p>
+        <aside class="match-card">
+          <img src="/legacy-assets/enviada-time-campo.jpg" alt="Atividade do Gondwana FC em campo" class="match-photo" />
+          <div class="match-overlay">
+            <p class="kicker text-[var(--ouro)]">Próxima partida da educação</p>
+            <div class="score-chip mt-4">
+              <div><small>Mandante</small><strong>Escola ou projeto</strong></div>
+              <div class="score-x">x</div>
+              <div><small>Visitante</small><strong>Gondwana FC</strong></div>
             </div>
-            <div class="display text-4xl text-[var(--barro)]">x</div>
-            <div>
-              <p class="text-xs font-black uppercase tracking-[.18em] text-black/50">Visitante</p>
-              <p class="mt-2 text-lg font-black leading-tight">Gondwana FC</p>
+            <div class="mt-4 rounded-[1.35rem] bg-[var(--areia)] p-5 text-[var(--grafite)]">
+              <h2 class="display text-[clamp(1.55rem,2.6vw,2.2rem)] leading-none">Bola + câmera</h2>
+              <p class="mt-3 text-sm font-extrabold leading-relaxed text-black/66">Uma experiência com escuta, jogo, registro audiovisual e devolutiva para continuar o trabalho depois do encontro.</p>
+              <a href="#formulario" class="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[var(--grafite)] px-5 py-3 text-sm font-black uppercase tracking-[.16em] text-[var(--areia)]">Levar o time</a>
             </div>
           </div>
-          <div class="my-6 border-t border-dashed border-black/25"></div>
-          <h2 class="display card-title">Bola + câmera</h2>
-          <p class="mt-4 text-sm font-bold leading-relaxed text-black/70">Uma experiência com escuta, jogo, registro audiovisual e devolutiva para continuar o trabalho depois do encontro.</p>
-          <a href="#formulario" class="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[var(--grafite)] px-5 py-3 text-sm font-black uppercase tracking-[.16em] text-[var(--areia)]">Levar o time</a>
         </aside>
       </div>
     </section>
@@ -194,9 +199,9 @@ import '../styles/tailwind.css';
         <aside class="tactic-card rounded-[2rem] p-6 sm:p-8">
           <p class="kicker relative z-10 text-[var(--ouro)]">Como o time joga</p>
           <div class="relative z-10 mt-8 grid gap-4">
-            <div class="grid grid-cols-[auto_1fr] gap-4 rounded-2xl bg-[var(--areia)] p-5 text-[var(--grafite)]"><span class="tactic-dot">01</span><div><h3 class="text-xl font-black">Escudo</h3><p class="mt-1 text-sm font-bold leading-relaxed text-black/62">Pertencimento para quem entra na partida.</p></div></div>
+            <div class="grid grid-cols-[auto_1fr] gap-4 rounded-2xl bg-[var(--areia)] p-5 text-[var(--grafite)]"><span class="tactic-dot">01</span><div><h3 class="text-xl font-black">Escudo</h3><p class="mt-1 text-sm font-bold leading-relaxed text-black/62">Identidade para entrar junto, vestir a experiência e reconhecer o grupo.</p></div></div>
             <div class="grid grid-cols-[auto_1fr] gap-4 rounded-2xl bg-[var(--verde)] p-5 text-white"><span class="tactic-dot">02</span><div><h3 class="text-xl font-black">Campo</h3><p class="mt-1 text-sm font-bold leading-relaxed text-white/70">Escola, quadra, rua, sala, museu ou clube.</p></div></div>
-            <div class="grid grid-cols-[auto_1fr] gap-4 rounded-2xl bg-[var(--barro)] p-5 text-white"><span class="tactic-dot">03</span><div><h3 class="text-xl font-black">Súmula</h3><p class="mt-1 text-sm font-bold leading-relaxed text-white/72">Registro, leitura e próxima jogada.</p></div></div>
+            <div class="grid grid-cols-[auto_1fr] gap-4 rounded-2xl bg-[var(--barro)] p-5 text-white"><span class="tactic-dot">03</span><div><h3 class="text-xl font-black">Súmula</h3><p class="mt-1 text-sm font-bold leading-relaxed text-white/72">O que foi vivido vira leitura, imagem e próxima jogada.</p></div></div>
             <div class="grid grid-cols-[auto_1fr] gap-4 rounded-2xl bg-[var(--azul)] p-5 text-white"><span class="tactic-dot">04</span><div><h3 class="text-xl font-black">Arquivo</h3><p class="mt-1 text-sm font-bold leading-relaxed text-white/72">Memórias e perguntas para novas práticas.</p></div></div>
           </div>
         </aside>
