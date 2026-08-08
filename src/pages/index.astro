@@ -96,7 +96,27 @@ import '../styles/tailwind.css';
     .tilt{transform:rotate(-1.2deg)}
     .tilt-rev{transform:rotate(1.2deg)}
     .photo-shadow{box-shadow:0 30px 90px rgba(0,0,0,.42)}
-    .nav-blur{background:rgba(17,19,15,.74);backdrop-filter:blur(18px)}
+    .nav-blur{background:rgba(17,19,15,.82);backdrop-filter:blur(18px)}
+    .utility-nav{border-bottom:1px solid rgba(246,237,215,.1);background:rgba(11,13,10,.56)}
+    .utility-link{display:inline-flex;min-height:2.2rem;align-items:center;border-radius:999px;padding:.45rem .75rem;color:rgba(246,237,215,.62);transition:background .2s ease,color .2s ease}
+    .utility-link:hover{background:rgba(246,237,215,.1);color:var(--areia)}
+    .club-rail{display:grid;gap:1px;overflow:hidden;border-top:1px solid rgba(246,237,215,.12);border-bottom:1px solid rgba(246,237,215,.12);background:rgba(246,237,215,.12)}
+    .club-rail a{display:grid;min-height:7.25rem;align-content:space-between;background:rgba(17,19,15,.76);padding:1.15rem;color:var(--areia);transition:background .2s ease,transform .2s ease}
+    .club-rail a:hover{background:rgba(46,111,70,.7);transform:translateY(-1px)}
+    .club-rail small{font-size:.65rem;font-weight:950;letter-spacing:.18em;text-transform:uppercase;color:var(--ouro)}
+    .club-rail strong{font-size:1.35rem;line-height:1;font-weight:950}
+    @media(min-width:900px){.club-rail{grid-template-columns:repeat(5,1fr)}}
+    .headline-stack{display:grid;gap:.8rem}
+    .headline-link{display:grid;gap:.35rem;border:1px solid rgba(246,237,215,.14);border-radius:1.25rem;background:rgba(17,19,15,.58);padding:1rem;color:var(--areia);transition:border-color .2s ease,background .2s ease}
+    .headline-link:hover{border-color:rgba(242,194,48,.55);background:rgba(17,19,15,.78)}
+    .headline-link small{font-size:.64rem;font-weight:950;letter-spacing:.18em;text-transform:uppercase;color:var(--ouro)}
+    .headline-link strong{font-size:1rem;line-height:1.18;font-weight:950}
+    .agenda-card{position:relative;overflow:hidden;border-radius:2rem;border:1px solid rgba(17,19,15,.12);background:rgba(255,255,255,.58);padding:1.35rem;color:var(--grafite);min-height:250px;display:flex;flex-direction:column;justify-content:space-between}
+    .agenda-card:after{content:"";position:absolute;left:1.35rem;right:1.35rem;bottom:0;height:4px;background:var(--barro)}
+    .agenda-card.gold:after{background:var(--ouro)}.agenda-card.green:after{background:var(--verde)}.agenda-card.blue:after{background:var(--azul)}
+    .agenda-card small{font-size:.68rem;font-weight:950;letter-spacing:.16em;text-transform:uppercase;color:rgba(17,19,15,.48)}
+    .agenda-card h3{margin-top:1rem;font-size:clamp(1.65rem,2.8vw,2.35rem);line-height:1;font-weight:950}
+    .agenda-card p{margin-top:1rem;font-size:.95rem;line-height:1.48;font-weight:800;color:rgba(17,19,15,.62)}
     .kicker{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;font-weight:900}
     .metric{font-variant-numeric:tabular-nums}
     .club-section{min-height:calc(100vh - 72px);display:flex;align-items:center}
@@ -182,6 +202,20 @@ import '../styles/tailwind.css';
 </head>
 <body class="grain">
   <header class="fixed left-0 right-0 top-0 z-50 border-b border-white/10 nav-blur">
+    <div class="utility-nav hidden lg:block">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-1.5 text-[.68rem] font-black uppercase tracking-[.16em] sm:px-6">
+        <div class="flex items-center gap-1">
+          <a class="utility-link" href="/blog/">Blog</a>
+          <a class="utility-link" href="/caderno/">Caderno</a>
+          <a class="utility-link" href="#agenda">Agenda</a>
+          <a class="utility-link" href="#patrocinio">Parceiros</a>
+        </div>
+        <div class="flex items-center gap-1">
+          <a class="utility-link" href="https://www.instagram.com/gondwana.fc/" target="_blank" rel="noopener noreferrer">@gondwana.fc</a>
+          <a class="utility-link" href="#partidas-comprovadas">Na mídia</a>
+        </div>
+      </div>
+    </div>
     <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
       <a href="#top" class="flex min-h-12 items-center gap-3">
         <img src="/legacy-assets/logo-gondwana-fc-badge-color.jpg" alt="Gondwana FC" class="h-11 w-11 rounded-full bg-[var(--areia)] object-cover p-1" />
@@ -191,12 +225,12 @@ import '../styles/tailwind.css';
         </div>
       </a>
       <nav class="hidden items-center gap-2 lg:flex text-xs font-black uppercase tracking-[.14em] text-[var(--areia)]/72">
-        <a class="rounded-full px-4 py-3 hover:bg-white/10" href="#clube">Clube</a>
+        <a class="rounded-full px-4 py-3 hover:bg-white/10" href="#clube">O Time</a>
         <a class="rounded-full px-4 py-3 hover:bg-white/10" href="#metodo">Método ABC</a>
         <a class="rounded-full px-4 py-3 hover:bg-white/10" href="#temporada">Temporada</a>
-        <a class="rounded-full px-4 py-3 hover:bg-white/10" href="#partidas-comprovadas">Histórias reais</a>
-        <a class="rounded-full px-4 py-3 hover:bg-white/10" href="/blog/">Blog</a>
-        <a class="rounded-full px-4 py-3 hover:bg-white/10" href="/caderno/">Caderno do Time</a>
+        <a class="rounded-full px-4 py-3 hover:bg-white/10" href="#agenda">Agenda</a>
+        <a class="rounded-full px-4 py-3 hover:bg-white/10" href="/blog/">Notícias</a>
+        <a class="rounded-full px-4 py-3 hover:bg-white/10" href="/caderno/">Caderno</a>
         <a class="rounded-full bg-[var(--ouro)] px-5 py-3 text-[var(--grafite)]" href="#formulario">Entrar para o Time</a>
       </nav>
       <a class="inline-flex min-h-11 items-center justify-center rounded-full bg-[var(--ouro)] px-4 py-2 text-[.68rem] font-black uppercase tracking-[.14em] text-[var(--grafite)] lg:hidden" href="#formulario">Entrar</a>
@@ -212,12 +246,17 @@ import '../styles/tailwind.css';
             <img src="/legacy-assets/logo-gondwana-fc-badge-color.jpg" alt="" aria-hidden="true" />
             <span class="kicker text-[var(--ouro)]">Gondwana FC - Time da Educação</span>
           </div>
-          <h1 class="display hero-title max-w-4xl">
-            Entre em campo com o Time da Educação
+          <p class="kicker mb-4 text-[var(--ouro)]">Capa do clube</p>
+          <h1 class="display hero-title max-w-5xl">
+            O clube que transforma futebol em aprendizagem
           </h1>
-          <div class="mt-7 grid max-w-3xl gap-5 border-l-4 border-[var(--ouro)] pl-5 lg:grid-cols-[1.15fr_.85fr]">
-            <p class="serif text-lg leading-relaxed text-[var(--areia)]/90 sm:text-2xl sm:leading-snug">O Gondwana FC cria experiências educativas com futebol, audiovisual e território para escolas, clubes, projetos sociais e organizações que querem formar pessoas com presença, autoria e vínculo.</p>
-            <p class="text-sm font-extrabold uppercase leading-relaxed tracking-[.14em] text-[var(--ouro)]">Escolha um formato: vivência, oficina, jornada, formação, laboratório ou parceria. A primeira conversa define o grupo, o território e o desenho pedagógico.</p>
+          <div class="mt-7 grid max-w-4xl gap-5 border-l-4 border-[var(--ouro)] pl-5 lg:grid-cols-[1.12fr_.88fr]">
+            <p class="serif text-lg leading-relaxed text-[var(--areia)]/90 sm:text-2xl sm:leading-snug">Gondwana FC é o Time da Educação: uma casa de experiências com bola, câmera, conversa e território para escolas, clubes, projetos sociais, redes públicas, fundações e marcas parceiras.</p>
+            <div class="headline-stack">
+              <a class="headline-link" href="/blog/"><small>Última do Time</small><strong>O blog lê o futebol por dentro da educação e da cultura.</strong></a>
+              <a class="headline-link" href="#agenda"><small>Agenda</small><strong>Vivências, oficinas, formações e laboratórios em campo.</strong></a>
+              <a class="headline-link" href="#patrocinio"><small>Parcerias</small><strong>Marcas e instituições podem apoiar uma temporada educativa.</strong></a>
+            </div>
           </div>
           <div class="belonging-strip" aria-label="Formas de fazer parte do Time da Educação">
             <span>Escola</span><span>Clube</span><span>Projeto social</span><span>Educadora/es</span><span>Fundação</span><span>Empresa parceira</span>
@@ -240,6 +279,16 @@ import '../styles/tailwind.css';
             </div>
           </div>
         </aside>
+      </div>
+    </section>
+
+    <section class="bg-[var(--grafite)]" aria-label="Portas de entrada do ecossistema Gondwana FC">
+      <div class="club-rail">
+        <a href="/blog/"><small>Notícias e ideias</small><strong>Blog do Time</strong></a>
+        <a href="/caderno/"><small>Biblioteca</small><strong>Caderno do Time</strong></a>
+        <a href="#agenda"><small>Próximas partidas</small><strong>Agenda educativa</strong></a>
+        <a href="#partidas-comprovadas"><small>Arquivo vivo</small><strong>Histórias reais</strong></a>
+        <a href="#patrocinio"><small>Institucional</small><strong>Parcerias</strong></a>
       </div>
     </section>
 
@@ -309,6 +358,24 @@ import '../styles/tailwind.css';
               <div class="rounded-2xl bg-white/60 p-5"><strong>Laboratório Territorial</strong><span class="ml-3 text-black/50">desenho de projeto</span></div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="agenda" class="bg-[var(--osso)] py-16 text-[var(--grafite)] sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="grid gap-8 lg:grid-cols-[.92fr_1.08fr] lg:items-end">
+          <div>
+            <p class="kicker text-[var(--barro)]">Agenda do Time</p>
+            <h2 class="display section-title mt-4">Próximas partidas educativas.</h2>
+          </div>
+          <p class="serif text-xl leading-relaxed text-black/68 sm:text-2xl sm:leading-snug">Cada entrada no calendário pode virar vivência, oficina, formação ou laboratório. A agenda pública mostra caminhos para chamar o time, acompanhar o campo e propor parcerias.</p>
+        </div>
+        <div class="mt-8 grid gap-4 lg:grid-cols-4">
+          <article class="agenda-card gold"><div><small>Vivência</small><h3>Primeiro jogo ABC</h3><p>Encontro de entrada para sentir o método com bola, câmera e conversa.</p></div><a href="#formulario" class="mt-6 text-sm font-black uppercase tracking-[.14em] text-[var(--barro)]">Chamar vivência</a></article>
+          <article class="agenda-card green"><div><small>Oficina</small><h3>Bola e câmera</h3><p>Atividade prática para estudantes, educadores, clubes ou projetos sociais.</p></div><a href="#formulario" class="mt-6 text-sm font-black uppercase tracking-[.14em] text-[var(--barro)]">Desenhar oficina</a></article>
+          <article class="agenda-card blue"><div><small>Formação</small><h3>Educadores em campo</h3><p>Formação para equipes que querem usar futebol como linguagem pedagógica.</p></div><a href="#formulario" class="mt-6 text-sm font-black uppercase tracking-[.14em] text-[var(--barro)]">Planejar formação</a></article>
+          <article class="agenda-card"><div><small>Parceria</small><h3>Temporada apoiada</h3><p>Projetos com escolas, redes, fundações, marcas e instituições culturais.</p></div><a href="#patrocinio" class="mt-6 text-sm font-black uppercase tracking-[.14em] text-[var(--barro)]">Ver parceria</a></article>
         </div>
       </div>
     </section>
@@ -479,39 +546,39 @@ import '../styles/tailwind.css';
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <div class="grid gap-10 lg:grid-cols-[.9fr_1.1fr] lg:items-end">
           <div>
-            <p class="kicker text-[var(--ouro)]">Retorno para patrocinadores</p>
-            <h2 class="display section-title mt-4">Sua marca aparece onde há método, imagem e continuidade.</h2>
+            <p class="kicker text-[var(--ouro)]">Parceiros do Time</p>
+            <h2 class="display section-title mt-4">Apoiar uma temporada é entrar no campo com responsabilidade.</h2>
           </div>
-          <p class="serif text-xl leading-relaxed text-[var(--areia)]/78 sm:text-2xl sm:leading-snug">A parceria gera presença territorial, conteúdo com autorização, narrativa institucional e continuidade pedagógica para a comunidade envolvida.</p>
+          <p class="serif text-xl leading-relaxed text-[var(--areia)]/78 sm:text-2xl sm:leading-snug">A parceria viabiliza experiências educativas, registros autorizados, memória para a comunidade e uma presença institucional ligada a esporte, cultura e aprendizagem.</p>
         </div>
         <div class="mt-8 grid gap-5 lg:grid-cols-4">
-          <article class="roi-card"><p class="kicker text-[var(--ouro)]">Reputação</p><h3 class="mt-5 text-2xl font-black">Associação positiva</h3><p class="mt-3 text-sm font-bold leading-relaxed text-white/66">Educação, esporte, cultura, juventudes, diversidade, território e inovação social em uma mesma narrativa.</p></article>
+          <article class="roi-card"><p class="kicker text-[var(--ouro)]">Institucional</p><h3 class="mt-5 text-2xl font-black">Presença com sentido</h3><p class="mt-3 text-sm font-bold leading-relaxed text-white/66">Educação, esporte, cultura, juventudes, diversidade, território e inovação social em uma mesma narrativa.</p></article>
           <article class="roi-card"><p class="kicker text-[var(--ouro)]">Conteúdo</p><h3 class="mt-5 text-2xl font-black">Ativos reutilizáveis</h3><p class="mt-3 text-sm font-bold leading-relaxed text-white/66">Fotos, relatos, cards, minidocs, clipping, síntese narrativa e materiais para comunicação institucional.</p></article>
-          <article class="roi-card"><p class="kicker text-[var(--ouro)]">Relacionamento</p><h3 class="mt-5 text-2xl font-black">Presença no território</h3><p class="mt-3 text-sm font-bold leading-relaxed text-white/66">A marca entra em contato com escolas, clubes, comunidades, gestores, famílias e redes parceiras.</p></article>
-          <article class="roi-card"><p class="kicker text-[var(--ouro)]">Legado</p><h3 class="mt-5 text-2xl font-black">Continuidade real</h3><p class="mt-3 text-sm font-bold leading-relaxed text-white/66">O patrocínio deixa método, registro, memória e próximos passos para quem participou.</p></article>
+          <article class="roi-card"><p class="kicker text-[var(--ouro)]">Campo</p><h3 class="mt-5 text-2xl font-black">Encontro no território</h3><p class="mt-3 text-sm font-bold leading-relaxed text-white/66">A marca entra em contato com escolas, clubes, comunidades, gestores, famílias e redes parceiras.</p></article>
+          <article class="roi-card"><p class="kicker text-[var(--ouro)]">Legado</p><h3 class="mt-5 text-2xl font-black">Continuidade real</h3><p class="mt-3 text-sm font-bold leading-relaxed text-white/66">A parceria deixa método, registro, memória e próximos passos para quem participou.</p></article>
         </div>
         <div class="mt-8 grid gap-4 lg:grid-cols-[1fr_auto] lg:items-center rounded-[2rem] bg-[var(--ouro)] p-6 text-[var(--grafite)] sm:p-8">
           <div><p class="kicker text-[var(--barro)]">Como começa</p><h3 class="mt-3 text-3xl font-black leading-tight">Escolhemos um formato, entendemos o território, definimos entregáveis e combinamos como registrar o que aconteceu.</h3></div>
-          <a href="#convite" class="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--grafite)] px-6 py-3 text-sm font-black uppercase tracking-[.14em] text-[var(--areia)]">Conversar sobre parceria</a>
+          <a href="#formulario" class="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--grafite)] px-6 py-3 text-sm font-black uppercase tracking-[.14em] text-[var(--areia)]">Conversar sobre parceria</a>
         </div>
       </div>
     </section>
 
     <section id="blog" class="bg-[var(--grafite)] py-16 sm:py-24">
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
-        <div class="grid gap-8 lg:grid-cols-[1fr_1fr]">
+        <div class="grid gap-8 lg:grid-cols-[.85fr_1.15fr] lg:items-stretch">
           <div class="tilt rounded-[2.5rem] bg-[var(--barro)] p-8 photo-shadow">
             <p class="kicker text-[var(--ouro)]">Blog do Time</p>
             <h2 class="display story-title mt-5">O campo também pensa.</h2>
+            <p class="serif mt-6 text-xl leading-relaxed text-[var(--areia)]/78">Uma frente pública para ler futebol, educação, cultura, território e memória com fonte, contexto e responsabilidade.</p>
+            <a href="/blog/" class="mt-8 inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--ouro)] px-6 py-3 text-sm font-black uppercase tracking-[.14em] text-[var(--grafite)]">Abrir blog</a>
           </div>
-          <div class="tilt-rev overflow-hidden rounded-[2.5rem] photo-shadow">
-            <img src="/legacy-assets/27a017d7-encuentro-manos.jpg" alt="Encontro com bola e mãos" class="h-full min-h-[420px] w-full object-cover" />
+          <div class="grid gap-4 sm:grid-cols-2">
+            <article class="rounded-[2rem] border border-white/15 bg-white/[.04] p-6"><p class="kicker text-[var(--ouro)]">Análise</p><h3 class="mt-5 text-2xl sm:text-3xl font-black leading-tight">Futebol, educação e sociedade.</h3><p class="mt-4 text-sm font-bold leading-relaxed text-white/62">Leituras para entender o jogo como linguagem pública.</p></article>
+            <article class="rounded-[2rem] border border-white/15 bg-white/[.04] p-6"><p class="kicker text-[var(--ouro)]">Biblioteca</p><h3 class="mt-5 text-2xl sm:text-3xl font-black leading-tight">Livros, filmes e pesquisas.</h3><p class="mt-4 text-sm font-bold leading-relaxed text-white/62">Referências comentadas para estudar e praticar.</p></article>
+            <article class="rounded-[2rem] border border-white/15 bg-white/[.04] p-6"><p class="kicker text-[var(--ouro)]">Campo</p><h3 class="mt-5 text-2xl sm:text-3xl font-black leading-tight">Registros de experiências.</h3><p class="mt-4 text-sm font-bold leading-relaxed text-white/62">Vivências, oficinas, formações e bastidores autorizados.</p></article>
+            <article class="overflow-hidden rounded-[2rem] photo-shadow"><img src="/legacy-assets/27a017d7-encuentro-manos.jpg" alt="Encontro com bola e mãos" class="h-full min-h-[260px] w-full object-cover" /></article>
           </div>
-        </div>
-        <div class="mt-6 grid gap-4 lg:grid-cols-3">
-          <article class="rounded-[2rem] border border-white/15 p-6"><p class="kicker text-[var(--ouro)]">Linha editorial</p><h3 class="mt-5 text-2xl sm:text-3xl font-black leading-tight">Futebol como linguagem educativa.</h3></article>
-          <article class="rounded-[2rem] border border-white/15 p-6"><p class="kicker text-[var(--ouro)]">Repertório</p><h3 class="mt-5 text-2xl sm:text-3xl font-black leading-tight">Cultura, território e memória.</h3></article>
-          <article class="rounded-[2rem] border border-white/15 p-6"><p class="kicker text-[var(--ouro)]">Prática</p><h3 class="mt-5 text-2xl sm:text-3xl font-black leading-tight">Perguntas para quem forma.</h3><a href="/blog/" class="mt-5 inline-flex min-h-11 items-center rounded-full bg-[var(--ouro)] px-5 py-3 text-sm font-black uppercase tracking-[.14em] text-[var(--grafite)]">Abrir blog</a></article>
         </div>
       </div>
     </section>
