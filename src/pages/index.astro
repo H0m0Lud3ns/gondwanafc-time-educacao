@@ -212,21 +212,6 @@ import '../styles/tailwind.css';
 </head>
 <body class="grain">
   <header class="fixed left-0 right-0 top-0 z-50 border-b border-white/10 nav-blur">
-    <div class="utility-nav hidden lg:block">
-      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-1.5 text-[.68rem] font-black uppercase tracking-[.16em] sm:px-6">
-        <div class="flex items-center gap-1">
-          <a class="utility-link" href="/blog/">Blog</a>
-          <a class="utility-link" href="/caderno/">Caderno</a>
-          <a class="utility-link" href="#agenda">Agenda</a>
-          <a class="utility-link" href="#manto">Manto</a>
-          <a class="utility-link" href="#patrocinio">Parceiros</a>
-        </div>
-        <div class="flex items-center gap-1">
-          <a class="utility-link" href="https://www.instagram.com/gondwana.fc/" target="_blank" rel="noopener noreferrer">@gondwana.fc</a>
-          <a class="utility-link" href="#partidas-comprovadas">Na mídia</a>
-        </div>
-      </div>
-    </div>
     <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
       <a href="#top" class="flex min-h-12 items-center gap-3">
         <img src="/legacy-assets/logo-gondwana-fc-badge-color.jpg" alt="Gondwana FC" class="h-11 w-11 rounded-full bg-[var(--areia)] object-cover p-1" />
@@ -237,11 +222,8 @@ import '../styles/tailwind.css';
       </a>
       <nav class="hidden items-center gap-2 lg:flex text-xs font-black uppercase tracking-[.14em] text-[var(--areia)]/72">
         <a class="rounded-full px-4 py-3 hover:bg-white/10" href="#clube">O Time</a>
-        <a class="rounded-full px-4 py-3 hover:bg-white/10" href="#metodo">Método ABC</a>
-        <a class="rounded-full px-4 py-3 hover:bg-white/10" href="#temporada">Temporada</a>
-        <a class="rounded-full px-4 py-3 hover:bg-white/10" href="#agenda">Agenda</a>
         <a class="rounded-full px-4 py-3 hover:bg-white/10" href="#manto">Manto</a>
-        <a class="rounded-full px-4 py-3 hover:bg-white/10" href="/blog/">Notícias</a>
+        <a class="rounded-full px-4 py-3 hover:bg-white/10" href="/blog/">Blog</a>
         <a class="rounded-full px-4 py-3 hover:bg-white/10" href="/caderno/">Caderno</a>
         <a class="rounded-full bg-[var(--ouro)] px-5 py-3 text-[var(--grafite)]" href="#formulario">Entrar para o Time</a>
       </nav>
@@ -250,25 +232,20 @@ import '../styles/tailwind.css';
   </header>
 
   <main id="top">
-    <section class="hero-bg field-lines relative min-h-screen overflow-hidden pt-28">
+    <section class="hero-bg field-lines relative min-h-screen overflow-hidden pt-20">
       <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[rgba(17,19,15,.25)] to-[var(--grafite)]"></div>
-      <div class="relative mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[minmax(0,.98fr)_minmax(360px,.72fr)] lg:py-16">
+      <div class="relative mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(320px,.58fr)] lg:py-18">
         <div>
           <div class="mb-7 page-stamp">
             <img src="/legacy-assets/logo-gondwana-fc-badge-color.jpg" alt="" aria-hidden="true" />
             <span class="kicker text-[var(--ouro)]">Gondwana FC - Time da Educação</span>
           </div>
           <p class="kicker mb-4 text-[var(--ouro)]">Capa do clube</p>
-          <h1 class="display hero-title max-w-5xl">
+          <h1 class="display hero-title max-w-[11.8ch]">
             O clube que transforma futebol em aprendizagem
           </h1>
-          <div class="mt-7 grid max-w-4xl gap-5 border-l-4 border-[var(--ouro)] pl-5 lg:grid-cols-[1.12fr_.88fr]">
-            <p class="serif text-lg leading-relaxed text-[var(--areia)]/90 sm:text-2xl sm:leading-snug">Gondwana FC é o Time da Educação: uma casa de experiências com bola, câmera, conversa e território para escolas, clubes, projetos sociais, redes públicas, fundações e marcas parceiras.</p>
-            <div class="headline-stack">
-              <a class="headline-link" href="/blog/"><small>Última do Time</small><strong>O blog lê o futebol por dentro da educação e da cultura.</strong></a>
-              <a class="headline-link" href="#agenda"><small>Agenda</small><strong>Vivências, oficinas, formações e laboratórios em campo.</strong></a>
-              <a class="headline-link" href="#patrocinio"><small>Parcerias</small><strong>Marcas e instituições podem apoiar uma temporada educativa.</strong></a>
-            </div>
+          <div class="mt-7 max-w-3xl border-l-4 border-[var(--ouro)] pl-5">
+            <p class="serif text-lg leading-relaxed text-[var(--areia)]/90 sm:text-2xl sm:leading-snug">Uma casa de experiências com bola, câmera, conversa e território para escolas, clubes, projetos sociais, redes públicas, fundações e marcas parceiras.</p>
           </div>
           <div class="belonging-strip" aria-label="Formas de fazer parte do Time da Educação">
             <span>Escola</span><span>Clube</span><span>Projeto social</span><span>Educadora/es</span><span>Fundação</span><span>Empresa parceira</span>
@@ -286,8 +263,7 @@ import '../styles/tailwind.css';
             </div>
             <div class="mt-4 rounded-[1.35rem] bg-[var(--areia)] p-5 text-[var(--grafite)]">
               <h2 class="display text-[clamp(1.55rem,2.6vw,2.2rem)] leading-none">Bola + câmera</h2>
-              <p class="mt-3 text-sm font-extrabold leading-relaxed text-black/66">Uma experiência com jogo, escuta, registro audiovisual e síntese para seguir trabalhando depois do encontro.</p>
-              <a href="#formulario" class="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[var(--grafite)] px-5 py-3 text-sm font-black uppercase tracking-[.16em] text-[var(--areia)]">Entrar para o Time</a>
+              <p class="mt-3 text-sm font-extrabold leading-relaxed text-black/66">Jogo, escuta, registro audiovisual e síntese para seguir trabalhando depois do encontro.</p>
             </div>
           </div>
         </aside>
