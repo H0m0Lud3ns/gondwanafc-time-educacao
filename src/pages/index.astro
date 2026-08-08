@@ -3,12 +3,6 @@ import '../styles/tailwind.css';
 import cmsState from '../data/cms-state.json';
 
 const publicPresence = cmsState.publicPresence.filter((item) => item.visible);
-const home = cmsState.home;
-const heroBackground = home?.backgroundImage || '/assets/home/home-hero-comunidade-1800.webp';
-const heroTitle = home?.title || 'Um clube para aprender jogando';
-const heroBody = home?.body || 'Bola, câmera e conversa para escolas, clubes, projetos sociais, redes públicas, fundações e marcas parceiras.';
-const heroCardImage = home?.cardImage || '/legacy-assets/enviada-bolas.jpg';
-const heroCardAlt = home?.cardAlt || 'Bolas reunidas antes de uma atividade educativa';
 ---
 <html lang="pt-BR">
 <head>
@@ -84,9 +78,12 @@ const heroCardAlt = home?.cardAlt || 'Bolas reunidas antes de uma atividade educ
         linear-gradient(90deg,rgba(246,237,215,.09) 1px,transparent 1px);
       background-size:72px 72px;
     }
-    .hero-bg{background:var(--grafite)}
-    .hero-bg:before{content:"";position:absolute;inset:0;background:var(--hero-bg-image) center/cover no-repeat;opacity:.56;filter:saturate(1.05) contrast(1.05);transform:scale(1.01)}
-    .hero-bg:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 14% 18%,rgba(242,194,48,.24),transparent 27rem),radial-gradient(circle at 76% 6%,rgba(46,111,70,.18),transparent 26rem),linear-gradient(90deg,rgba(17,19,15,.96),rgba(17,19,15,.74) 48%,rgba(17,19,15,.22)),linear-gradient(180deg,rgba(17,19,15,.05),var(--grafite) 96%);pointer-events:none}
+    .hero-bg{
+      background:
+        radial-gradient(circle at 14% 18%,rgba(242,194,48,.24),transparent 27rem),
+        radial-gradient(circle at 76% 6%,rgba(46,111,70,.24),transparent 26rem),
+        linear-gradient(120deg,rgba(17,19,15,.94),rgba(23,36,58,.72));
+    }
     .cut-card{clip-path:polygon(0 0,100% 0,94% 100%,0 100%)}
     .match-card{position:relative;overflow:hidden;border-radius:2.4rem;border:1px solid rgba(246,237,215,.18);background:linear-gradient(145deg,rgba(246,237,215,.12),rgba(17,19,15,.36));box-shadow:0 30px 90px rgba(0,0,0,.42)}
     .match-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 10%,rgba(242,194,48,.24),transparent 16rem),linear-gradient(180deg,transparent,rgba(17,19,15,.86));z-index:1;pointer-events:none}
@@ -241,7 +238,8 @@ const heroCardAlt = home?.cardAlt || 'Bolas reunidas antes de uma atividade educ
   </header>
 
   <main id="top">
-    <section class="hero-bg field-lines relative min-h-screen overflow-hidden pt-20" style={`--hero-bg-image:url(${heroBackground})`}>
+    <section class="hero-bg field-lines relative min-h-screen overflow-hidden pt-20">
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[rgba(17,19,15,.25)] to-[var(--grafite)]"></div>
       <div class="relative mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(320px,.58fr)] lg:py-18">
         <div>
           <div class="mb-8 hero-crest">
@@ -253,10 +251,10 @@ const heroCardAlt = home?.cardAlt || 'Bolas reunidas antes de uma atividade educ
           </div>
           <p class="kicker mb-4 text-[var(--ouro)]">Início</p>
           <h1 class="display hero-title max-w-[11.8ch]">
-            {heroTitle}
+            Um clube para aprender jogando
           </h1>
           <div class="mt-7 max-w-3xl border-l-4 border-[var(--ouro)] pl-5">
-            <p class="serif text-lg leading-relaxed text-[var(--areia)]/90 sm:text-2xl sm:leading-snug">{heroBody}</p>
+            <p class="serif text-lg leading-relaxed text-[var(--areia)]/90 sm:text-2xl sm:leading-snug">Bola, câmera e conversa para escolas, clubes, projetos sociais, redes públicas, fundações e marcas parceiras.</p>
           </div>
           <div class="belonging-strip" aria-label="Formas de fazer parte do Time da Educação">
             <span>Escola</span><span>Clube</span><span>Projeto social</span><span>Educadora/es</span><span>Fundação</span><span>Empresa parceira</span>
@@ -264,7 +262,7 @@ const heroCardAlt = home?.cardAlt || 'Bolas reunidas antes de uma atividade educ
         </div>
 
         <aside class="match-card">
-          <img src={heroCardImage} alt={heroCardAlt} class="match-photo" />
+          <img src="/legacy-assets/enviada-bolas.jpg" alt="Bolas reunidas antes de uma atividade educativa" class="match-photo" />
           <div class="match-overlay">
             <p class="kicker text-[var(--ouro)]">Convocação aberta</p>
             <div class="score-chip mt-4">

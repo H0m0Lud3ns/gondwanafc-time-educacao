@@ -80,14 +80,5 @@
       "url": "https://www.folhape.com.br/esportes/criadores-do-projeto-gondwana-promovem-acao-envolvendo-futebol-e/224100/",
       "visible": true
     }
-  ],
-  "home": {
-    "title": "Um clube para aprender jogando",
-    "body": "Bola, câmera e conversa para escolas, clubes, projetos sociais, redes públicas, fundações e marcas parceiras.",
-    "cta": "Entrar para o Time",
-    "backgroundImage": "/assets/home/home-hero-comunidade-1800.webp",
-    "backgroundAlt": "Comunidade reunida em atividade do Gondwana FC",
-    "cardImage": "/legacy-assets/enviada-bolas.jpg",
-    "cardAlt": "Bolas reunidas antes de uma atividade educativa"
-  }
+  ]
 }
