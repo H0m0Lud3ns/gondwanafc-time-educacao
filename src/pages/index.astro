@@ -130,6 +130,7 @@ import '../styles/tailwind.css';
     .manto-copy p{color:rgba(17,19,15,.7)}.manto-points{display:grid;gap:.75rem;margin-top:1.4rem}.manto-points div{border-radius:1.2rem;background:rgba(17,19,15,.08);padding:1rem;font-size:.92rem;font-weight:850;line-height:1.35}
     .site-footer{position:relative;overflow:hidden;background:#0b0d0a;color:var(--areia)}
     .site-footer:before{content:"";position:absolute;right:-8rem;bottom:-9rem;width:30rem;height:30rem;background:url('/legacy-assets/logo-gondwana-fc-badge-white.jpg') center/contain no-repeat;opacity:.055;filter:grayscale(1);pointer-events:none}.footer-badge{height:4.25rem;width:4.25rem;border-radius:999px;background:var(--areia);object-fit:cover;padding:.25rem;box-shadow:0 22px 60px rgba(0,0,0,.32)}
+    .club-footer{position:relative;isolation:isolate;background:radial-gradient(circle at 50% -12%,rgba(242,194,48,.18),transparent 23rem),linear-gradient(180deg,#0b0d0a,var(--grafite))}.club-footer:after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(246,237,215,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(246,237,215,.035) 1px,transparent 1px);background-size:78px 78px;mask-image:linear-gradient(180deg,transparent,black 16%,black 84%,transparent);pointer-events:none;z-index:-1}.footer-crest{width:clamp(6.5rem,12vw,9.5rem);height:clamp(6.5rem,12vw,9.5rem);border-radius:999px;background:var(--areia);object-fit:cover;padding:.55rem;box-shadow:0 30px 90px rgba(0,0,0,.42),0 0 0 1px rgba(242,194,48,.36)}.footer-map{display:grid;gap:1.4rem;border-top:1px solid rgba(246,237,215,.14);border-bottom:1px solid rgba(246,237,215,.14);padding:2rem 0}.footer-column h3{font-size:.72rem;font-weight:950;letter-spacing:.2em;text-transform:uppercase;color:var(--ouro)}.footer-column a{display:block;margin-top:.85rem;color:rgba(246,237,215,.68);font-size:.93rem;font-weight:850;line-height:1.2;transition:color .2s ease,transform .2s ease}.footer-column a:hover{color:var(--areia);transform:translateX(.18rem)}.footer-signature{font-family:'Archivo Black',sans-serif;font-size:clamp(3.2rem,12vw,10.5rem);line-height:.82;letter-spacing:-.055em;text-transform:uppercase;color:rgba(246,237,215,.075);word-break:break-word}.footer-pitch{font-size:clamp(1.8rem,4.2vw,4.2rem);line-height:.95;letter-spacing:-.035em}.footer-action{display:inline-flex;min-height:3.3rem;align-items:center;justify-content:center;border-radius:999px;background:var(--ouro);color:var(--grafite);padding:.9rem 1.25rem;font-size:.78rem;font-weight:950;letter-spacing:.14em;text-transform:uppercase}.footer-action.secondary{border:1px solid rgba(246,237,215,.22);background:rgba(246,237,215,.06);color:var(--areia)}
     .kicker{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;font-weight:900}
     .metric{font-variant-numeric:tabular-nums}
     .club-section{min-height:calc(100vh - 72px);display:flex;align-items:center}
@@ -669,26 +670,58 @@ import '../styles/tailwind.css';
     </section>
   </main>
 
-  <footer class="site-footer px-4 py-14 sm:px-6 sm:py-18">
-    <div class="relative mx-auto grid max-w-7xl gap-9 border-t border-white/10 pt-9 lg:grid-cols-[1.2fr_.75fr_.85fr]">
-      <div>
-        <div class="flex items-center gap-4">
-          <img src="/legacy-assets/logo-gondwana-fc-badge-color.jpg" alt="Gondwana FC" class="footer-badge" />
-          <div><p class="kicker text-[var(--ouro)]">Gondwana FC</p><h2 class="mt-2 text-3xl font-black leading-none">Time da Educação</h2></div>
+  <footer class="site-footer club-footer px-4 py-16 sm:px-6 sm:py-20">
+    <div class="relative mx-auto max-w-7xl">
+      <div class="grid gap-8 text-center justify-items-center">
+        <img src="/legacy-assets/logo-gondwana-fc-badge-color.jpg" alt="Escudo Gondwana FC - Time da Educação" class="footer-crest" />
+        <div>
+          <p class="kicker text-[var(--ouro)]">Gondwana FC - Time da Educação</p>
+          <h2 class="display footer-pitch mx-auto mt-4 max-w-4xl">O futebol como linguagem de educação, cultura e pertencimento.</h2>
+          <p class="serif mx-auto mt-5 max-w-2xl text-xl leading-relaxed text-[var(--areia)]/70">Um clube-plataforma para escolas, territórios, projetos sociais, marcas e comunidades que querem entrar em campo com bola, câmera, conversa e memória.</p>
         </div>
-        <p class="serif mt-6 max-w-2xl text-xl leading-relaxed text-[var(--areia)]/72">Bola, câmera, conversa, território e manto para criar experiências de aprendizagem com identidade própria.</p>
+        <div class="flex flex-col gap-3 sm:flex-row">
+          <a href="#formulario" class="footer-action">Entrar para o Time</a>
+          <a href="https://www.instagram.com/gondwana.fc/" target="_blank" rel="noopener noreferrer" class="footer-action secondary">Seguir @gondwana.fc</a>
+        </div>
       </div>
-      <nav class="grid content-start gap-3 text-sm font-black uppercase tracking-[.12em] text-[var(--areia)]/68" aria-label="Mapa do site">
-        <a class="hover:text-[var(--ouro)]" href="#clube">O Time</a>
-        <a class="hover:text-[var(--ouro)]" href="#manto">Manto Abya Yala</a>
-        <a class="hover:text-[var(--ouro)]" href="#metodo">Método ABC</a>
-        <a class="hover:text-[var(--ouro)]" href="/blog/">Blog</a>
-        <a class="hover:text-[var(--ouro)]" href="/caderno/">Caderno</a>
+
+      <nav class="footer-map mt-12 sm:mt-16 md:grid-cols-4" aria-label="Mapa institucional do Gondwana FC">
+        <div class="footer-column">
+          <h3>O Clube</h3>
+          <a href="#clube">O Time</a>
+          <a href="#metodo">Método ABC</a>
+          <a href="#experiencias">Experiências</a>
+          <a href="#provas">Trajetória pública</a>
+        </div>
+        <div class="footer-column">
+          <h3>Cultura de Jogo</h3>
+          <a href="/manto-abya-yala/">Manto Abya Yala</a>
+          <a href="/caderno/">Caderno do Time</a>
+          <a href="/blog/">Blog editorial</a>
+          <a href="#midia">Na mídia</a>
+        </div>
+        <div class="footer-column">
+          <h3>Entrar em Campo</h3>
+          <a href="#formulario">Escolas e redes</a>
+          <a href="#formulario">Clubes e projetos</a>
+          <a href="#formulario">Marcas e parcerias</a>
+          <a href="https://www.abolaconecta.com.br/camisa-abya-yala" target="_blank" rel="noopener noreferrer">Conhecer a camisa</a>
+        </div>
+        <div class="footer-column">
+          <h3>Canal Vivo</h3>
+          <a href="https://www.instagram.com/gondwana.fc/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="#formulario">Conversar com o Time</a>
+          <a href="/caderno/">Abrir repertório</a>
+          <a href="/blog/">Ler novidades</a>
+        </div>
       </nav>
-      <div class="rounded-[2rem] border border-white/10 bg-white/[.05] p-6">
-        <p class="kicker text-[var(--ouro)]">Canal vivo</p>
-        <a href="https://www.instagram.com/gondwana.fc/" target="_blank" rel="noopener noreferrer" class="mt-4 block text-2xl font-black text-[var(--areia)] hover:text-[var(--ouro)]">@gondwana.fc</a>
-        <a href="#formulario" class="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--ouro)] px-6 py-3 text-sm font-black uppercase tracking-[.14em] text-[var(--grafite)]">Entrar para o Time</a>
+
+      <div class="mt-10 grid gap-5 sm:grid-cols-[1fr_auto] sm:items-end">
+        <p class="footer-signature">Gondwana FC</p>
+        <div class="text-sm font-bold leading-relaxed text-[var(--areia)]/50 sm:max-w-md sm:text-right">
+          <p>© 2026 Gondwana FC. Todos os direitos reservados.</p>
+          <p class="mt-2">Time da Educação é uma plataforma educacional e cultural. Cada parceria define sua estrutura, responsabilidade e território de atuação.</p>
+        </div>
       </div>
     </div>
   </footer>
