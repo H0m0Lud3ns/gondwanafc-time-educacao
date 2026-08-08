@@ -75,16 +75,13 @@ import '../styles/tailwind.css';
         linear-gradient(90deg,rgba(246,237,215,.09) 1px,transparent 1px);
       background-size:72px 72px;
     }
-    .hero-bg{
-      background:
-        radial-gradient(circle at 14% 18%,rgba(242,194,48,.24),transparent 27rem),
-        radial-gradient(circle at 76% 6%,rgba(46,111,70,.24),transparent 26rem),
-        linear-gradient(120deg,rgba(17,19,15,.94),rgba(23,36,58,.72));
-    }
+    .hero-bg{background:var(--grafite)}
+    .hero-bg:before{content:"";position:absolute;inset:0;background:url('/assets/home/home-hero-comunidade-1800.webp') center/cover no-repeat;opacity:.54;filter:saturate(1.05) contrast(1.05);transform:scale(1.01)}
+    .hero-bg:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 18% 20%,rgba(242,194,48,.22),transparent 26rem),linear-gradient(90deg,rgba(17,19,15,.94),rgba(17,19,15,.7) 46%,rgba(17,19,15,.28)),linear-gradient(180deg,rgba(17,19,15,.08),var(--grafite) 96%)}
     .cut-card{clip-path:polygon(0 0,100% 0,94% 100%,0 100%)}
     .match-card{position:relative;overflow:hidden;border-radius:2.4rem;border:1px solid rgba(246,237,215,.18);background:linear-gradient(145deg,rgba(246,237,215,.12),rgba(17,19,15,.36));box-shadow:0 30px 90px rgba(0,0,0,.42)}
-    .match-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 10%,rgba(242,194,48,.24),transparent 16rem),linear-gradient(180deg,transparent,rgba(17,19,15,.86));z-index:1;pointer-events:none}
-    .match-photo{height:clamp(320px,48vh,520px);width:100%;object-fit:cover;filter:saturate(1.05) contrast(1.06);opacity:.92}
+    .match-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 18% 8%,rgba(242,194,48,.18),transparent 15rem),linear-gradient(180deg,rgba(17,19,15,.05),rgba(17,19,15,.9));z-index:1;pointer-events:none}
+    .match-photo{height:clamp(340px,50vh,540px);width:100%;object-fit:cover;filter:saturate(1.04) contrast(1.04);opacity:.96}
     .match-overlay{position:absolute;inset:auto 0 0;z-index:2;padding:1.25rem}
     .score-chip{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:.75rem;border:1px solid rgba(246,237,215,.18);border-radius:1.35rem;background:rgba(17,19,15,.72);backdrop-filter:blur(14px);padding:1rem;text-align:center}
     .score-chip small{display:block;font-size:.62rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:rgba(246,237,215,.52)}
@@ -236,7 +233,6 @@ import '../styles/tailwind.css';
 
   <main id="top">
     <section class="hero-bg field-lines relative min-h-screen overflow-hidden pt-20">
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[rgba(17,19,15,.25)] to-[var(--grafite)]"></div>
       <div class="relative mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(320px,.58fr)] lg:py-18">
         <div>
           <div class="mb-8 hero-crest">
@@ -259,17 +255,17 @@ import '../styles/tailwind.css';
         </div>
 
         <aside class="match-card">
-          <img src="/legacy-assets/enviada-bolas.jpg" alt="Bolas reunidas antes de uma atividade educativa" class="match-photo" />
+          <img src="/assets/home/home-card-camisa-gondwana-1200.webp" alt="Encontro comunitário com Camisa Gondwana e participantes no palco" class="match-photo" />
           <div class="match-overlay">
-            <p class="kicker text-[var(--ouro)]">Convocação aberta</p>
+            <p class="kicker text-[var(--ouro)]">Camisa em comunidade</p>
             <div class="score-chip mt-4">
               <div><small>Mandante</small><strong>Escola ou projeto</strong></div>
               <div class="score-x">x</div>
               <div><small>Visitante</small><strong>Gondwana FC</strong></div>
             </div>
             <div class="mt-4 rounded-[1.35rem] bg-[var(--areia)] p-5 text-[var(--grafite)]">
-              <h2 class="display text-[clamp(1.55rem,2.6vw,2.2rem)] leading-none">Bola + câmera</h2>
-              <p class="mt-3 text-sm font-extrabold leading-relaxed text-black/66">Jogo, escuta, imagem e síntese para continuar depois do encontro.</p>
+              <h2 class="display text-[clamp(1.55rem,2.6vw,2.2rem)] leading-none">Manto + memória</h2>
+              <p class="mt-3 text-sm font-extrabold leading-relaxed text-black/66">A camisa aparece como signo de encontro, pertencimento e continuidade.</p>
             </div>
           </div>
         </aside>
