@@ -6,4 +6,4 @@ Site oficial do Gondwana FC - Time da Educação.
 - Caderno do Time: `/caderno/`
 
 Deploy previsto na Vercel com domínio `gondwanafc.com` / `www.gondwanafc.com`.
-Gondwana 
+Gondwana  
