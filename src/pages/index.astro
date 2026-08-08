@@ -117,11 +117,21 @@ import '../styles/tailwind.css';
     .agenda-card small{font-size:.68rem;font-weight:950;letter-spacing:.16em;text-transform:uppercase;color:rgba(17,19,15,.48)}
     .agenda-card h3{margin-top:1rem;font-size:clamp(1.65rem,2.8vw,2.35rem);line-height:1;font-weight:950}
     .agenda-card p{margin-top:1rem;font-size:.95rem;line-height:1.48;font-weight:800;color:rgba(17,19,15,.62)}
+    .brand-strip{position:relative;overflow:hidden;background:linear-gradient(135deg,#0b0d0a,var(--grafite));border-top:1px solid rgba(246,237,215,.12);border-bottom:1px solid rgba(246,237,215,.12)}
+    .brand-strip:before{content:"";position:absolute;inset:-20% auto -20% -8rem;width:28rem;background:url('/legacy-assets/logo-gondwana-fc-badge-white.jpg') center/contain no-repeat;opacity:.055;filter:grayscale(1);pointer-events:none}
+    .brand-mark{display:inline-flex;align-items:center;gap:.7rem;border:1px solid rgba(242,194,48,.38);border-radius:999px;background:rgba(246,237,215,.06);padding:.5rem .9rem .5rem .55rem}
+    .brand-mark img{width:2.25rem;height:2.25rem;border-radius:999px;background:var(--areia);object-fit:cover;padding:2px}.brand-mark span{font-size:.68rem;font-weight:950;letter-spacing:.18em;text-transform:uppercase;color:var(--ouro)}
+    .manto-card{position:relative;overflow:hidden;border-radius:2.6rem;background:radial-gradient(circle at 18% 18%,rgba(242,194,48,.3),transparent 20rem),linear-gradient(145deg,var(--azul),var(--grafite));border:1px solid rgba(246,237,215,.16);box-shadow:0 30px 90px rgba(0,0,0,.35)}
+    .manto-card:after{content:"";position:absolute;inset:auto 0 0;height:38%;background:linear-gradient(180deg,transparent,rgba(17,19,15,.9));pointer-events:none}.manto-card img{width:100%;height:100%;min-height:440px;object-fit:contain;padding:1.25rem;filter:saturate(1.04) contrast(1.02)}
+    .manto-copy{border-radius:2.6rem;background:var(--ouro);color:var(--grafite);padding:clamp(1.4rem,3vw,2.2rem);box-shadow:0 26px 80px rgba(0,0,0,.2)}
+    .manto-copy p{color:rgba(17,19,15,.7)}.manto-points{display:grid;gap:.75rem;margin-top:1.4rem}.manto-points div{border-radius:1.2rem;background:rgba(17,19,15,.08);padding:1rem;font-size:.92rem;font-weight:850;line-height:1.35}
+    .site-footer{position:relative;overflow:hidden;background:#0b0d0a;color:var(--areia)}
+    .site-footer:before{content:"";position:absolute;right:-8rem;bottom:-9rem;width:30rem;height:30rem;background:url('/legacy-assets/logo-gondwana-fc-badge-white.jpg') center/contain no-repeat;opacity:.055;filter:grayscale(1);pointer-events:none}.footer-badge{height:4.25rem;width:4.25rem;border-radius:999px;background:var(--areia);object-fit:cover;padding:.25rem;box-shadow:0 22px 60px rgba(0,0,0,.32)}
     .kicker{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;font-weight:900}
     .metric{font-variant-numeric:tabular-nums}
     .club-section{min-height:calc(100vh - 72px);display:flex;align-items:center}
     .club-title{font-size:clamp(2rem,4.45vw,4rem);line-height:1.04;letter-spacing:-.028em;max-width:13.5ch}
-    .ghost-badge{position:absolute;right:clamp(1rem,4vw,4rem);top:50%;width:clamp(220px,28vw,380px);opacity:.052;filter:grayscale(1) contrast(1.12);transform:translateY(-50%);pointer-events:none}
+    .ghost-badge{position:absolute;right:clamp(1rem,4vw,4rem);top:50%;width:clamp(220px,28vw,380px);opacity:.085;filter:grayscale(1) contrast(1.12);transform:translateY(-50%);pointer-events:none}
     .tactic-card{position:relative;overflow:hidden;background:linear-gradient(145deg,rgba(246,237,215,.09),rgba(246,237,215,.035));border:1px solid rgba(246,237,215,.16);box-shadow:0 26px 80px rgba(0,0,0,.22)}
     .tactic-card:before{content:"";position:absolute;inset:18px;border:1px solid rgba(246,237,215,.14);border-radius:1.5rem}
     .tactic-dot{width:34px;height:34px;border-radius:999px;display:grid;place-items:center;background:var(--ouro);color:var(--grafite);font-size:.72rem;font-weight:900;box-shadow:0 14px 30px rgba(0,0,0,.28)}
@@ -208,6 +218,7 @@ import '../styles/tailwind.css';
           <a class="utility-link" href="/blog/">Blog</a>
           <a class="utility-link" href="/caderno/">Caderno</a>
           <a class="utility-link" href="#agenda">Agenda</a>
+          <a class="utility-link" href="#manto">Manto</a>
           <a class="utility-link" href="#patrocinio">Parceiros</a>
         </div>
         <div class="flex items-center gap-1">
@@ -229,6 +240,7 @@ import '../styles/tailwind.css';
         <a class="rounded-full px-4 py-3 hover:bg-white/10" href="#metodo">Método ABC</a>
         <a class="rounded-full px-4 py-3 hover:bg-white/10" href="#temporada">Temporada</a>
         <a class="rounded-full px-4 py-3 hover:bg-white/10" href="#agenda">Agenda</a>
+        <a class="rounded-full px-4 py-3 hover:bg-white/10" href="#manto">Manto</a>
         <a class="rounded-full px-4 py-3 hover:bg-white/10" href="/blog/">Notícias</a>
         <a class="rounded-full px-4 py-3 hover:bg-white/10" href="/caderno/">Caderno</a>
         <a class="rounded-full bg-[var(--ouro)] px-5 py-3 text-[var(--grafite)]" href="#formulario">Entrar para o Time</a>
@@ -292,6 +304,14 @@ import '../styles/tailwind.css';
       </div>
     </section>
 
+    <section class="brand-strip py-8 sm:py-10" aria-label="Identidade do Time da Educação">
+      <div class="relative mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-[auto_1fr_auto] lg:items-center">
+        <div class="brand-mark"><img src="/legacy-assets/logo-gondwana-fc-badge-color.jpg" alt="Gondwana FC" /><span>Escudo em campo</span></div>
+        <p class="serif text-xl leading-relaxed text-[var(--areia)]/78 sm:text-2xl">O escudo organiza a experiência: quem participa entra em um time, reconhece uma linguagem e leva uma memória comum para seguir jogando.</p>
+        <a href="#manto" class="inline-flex min-h-12 items-center justify-center rounded-full border border-[var(--areia)]/24 px-5 py-3 text-sm font-black uppercase tracking-[.14em] text-[var(--areia)] hover:bg-white/10">Ver manto</a>
+      </div>
+    </section>
+
     <section id="clube" class="club-section relative overflow-hidden bg-[var(--grafite)] py-20 sm:py-24">
       <img src="/legacy-assets/logo-gondwana-fc-badge-white.jpg" alt="" aria-hidden="true" class="ghost-badge hidden lg:block" />
       <div class="relative mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,.95fr)_minmax(320px,.72fr)] lg:items-center">
@@ -309,6 +329,25 @@ import '../styles/tailwind.css';
             <div class="grid grid-cols-[auto_1fr] gap-4 rounded-2xl bg-[var(--azul)] p-5 text-white"><span class="tactic-dot">04</span><div><h3 class="text-xl font-black">Arquivo</h3><p class="mt-1 text-sm font-bold leading-relaxed text-white/72">Memórias e perguntas para novas práticas.</p></div></div>
           </div>
         </aside>
+      </div>
+    </section>
+
+    <section id="manto" class="bg-[var(--grafite)] py-16 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-7 px-4 sm:px-6 lg:grid-cols-[1.05fr_.95fr] lg:items-center">
+        <figure class="manto-card">
+          <img src="/assets/camisa-abya-yala/camisa-gondwana-fc-abya-yala-frente-costas.png" alt="Camisa Abya Yala do Gondwana FC, frente e costas" loading="lazy" />
+        </figure>
+        <div class="manto-copy">
+          <p class="kicker text-[var(--barro)]">Manto pedagógico</p>
+          <h2 class="display section-title mt-4">A camisa também ensina.</h2>
+          <p class="serif mt-6 text-xl leading-relaxed">A Camisa Abya Yala coloca o Time da Educação no corpo: continente, escudo, número 12, Wiphala, Sul Global e a ideia de que a terra também é professora.</p>
+          <div class="manto-points">
+            <div>Identidad, Gambeta e Abya Yala nas costas: pertencimento, criatividade e território.</div>
+            <div>Gondwana FC + LWGA no peito: parceria esportiva para vestir uma prática educativa.</div>
+            <div>Manual pedagógico incluso: símbolos viram conversa, aula, roda e continuidade.</div>
+          </div>
+          <a href="https://www.abolaconecta.com.br/camisa-abya-yala" target="_blank" rel="noopener noreferrer" class="mt-7 inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--grafite)] px-6 py-3 text-sm font-black uppercase tracking-[.14em] text-[var(--areia)]">Conhecer a camisa</a>
+        </div>
       </div>
     </section>
 
@@ -631,13 +670,14 @@ import '../styles/tailwind.css';
     </section>
 
     <section id="convite" class="convocation py-16 text-[var(--grafite)] sm:py-24">
-      <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_auto] lg:items-center">
+      <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[auto_1fr_auto] lg:items-center">
+        <img src="/legacy-assets/logo-gondwana-fc-badge-color.jpg" alt="Gondwana FC" class="hidden h-24 w-24 rounded-full bg-[var(--areia)] object-cover p-2 shadow-2xl lg:block" />
         <div>
           <p class="kicker text-[var(--barro)]">Convite institucional</p>
           <h2 class="display section-title mt-3 max-w-4xl">Entre para o Time da Educação com sua escola, clube ou projeto.</h2>
-          <p class="serif mt-5 max-w-3xl text-xl leading-relaxed text-[var(--grafite)]/72">O Time da Educação começa quando alguém chama a partida. O Caderno reúne manifesto, Método ABC, Copa de Gondwana, biografias e referências para quem quer conhecer melhor antes de entrar em campo.</p>
+          <p class="serif mt-5 max-w-3xl text-xl leading-relaxed text-[var(--grafite)]/72">O Time da Educação começa quando alguém chama a partida. O Caderno reúne manifesto, Método ABC, manto pedagógico, biografias e referências para quem quer conhecer melhor antes de entrar em campo.</p>
         </div>
-        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:flex-wrap">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:flex-wrap lg:flex-col lg:items-stretch">
           <a href="#formulario" class="inline-flex min-h-14 items-center justify-center rounded-full bg-[var(--grafite)] px-7 py-4 text-sm font-black uppercase tracking-[.16em] text-[var(--areia)]">Entrar para o Time</a>
           <a href="https://www.instagram.com/gondwana.fc/" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-14 items-center justify-center rounded-full bg-[var(--barro)] px-7 py-4 text-sm font-black uppercase tracking-[.16em] text-[var(--areia)]">Seguir @gondwana.fc</a>
           <a href="/caderno/" class="inline-flex min-h-14 items-center justify-center rounded-full border-2 border-[var(--grafite)] px-7 py-4 text-sm font-black uppercase tracking-[.16em] text-[var(--grafite)]">Abrir Caderno do Time</a>
@@ -645,6 +685,30 @@ import '../styles/tailwind.css';
       </div>
     </section>
   </main>
+
+  <footer class="site-footer px-4 py-14 sm:px-6 sm:py-18">
+    <div class="relative mx-auto grid max-w-7xl gap-9 border-t border-white/10 pt-9 lg:grid-cols-[1.2fr_.75fr_.85fr]">
+      <div>
+        <div class="flex items-center gap-4">
+          <img src="/legacy-assets/logo-gondwana-fc-badge-color.jpg" alt="Gondwana FC" class="footer-badge" />
+          <div><p class="kicker text-[var(--ouro)]">Gondwana FC</p><h2 class="mt-2 text-3xl font-black leading-none">Time da Educação</h2></div>
+        </div>
+        <p class="serif mt-6 max-w-2xl text-xl leading-relaxed text-[var(--areia)]/72">Bola, câmera, conversa, território e manto para criar experiências de aprendizagem com identidade própria.</p>
+      </div>
+      <nav class="grid content-start gap-3 text-sm font-black uppercase tracking-[.12em] text-[var(--areia)]/68" aria-label="Mapa do site">
+        <a class="hover:text-[var(--ouro)]" href="#clube">O Time</a>
+        <a class="hover:text-[var(--ouro)]" href="#manto">Manto Abya Yala</a>
+        <a class="hover:text-[var(--ouro)]" href="#metodo">Método ABC</a>
+        <a class="hover:text-[var(--ouro)]" href="/blog/">Blog</a>
+        <a class="hover:text-[var(--ouro)]" href="/caderno/">Caderno</a>
+      </nav>
+      <div class="rounded-[2rem] border border-white/10 bg-white/[.05] p-6">
+        <p class="kicker text-[var(--ouro)]">Canal vivo</p>
+        <a href="https://www.instagram.com/gondwana.fc/" target="_blank" rel="noopener noreferrer" class="mt-4 block text-2xl font-black text-[var(--areia)] hover:text-[var(--ouro)]">@gondwana.fc</a>
+        <a href="#formulario" class="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--ouro)] px-6 py-3 text-sm font-black uppercase tracking-[.14em] text-[var(--grafite)]">Entrar para o Time</a>
+      </div>
+    </div>
+  </footer>
 
   <div class="mobile-join-bar" aria-label="Ação principal">
     <a href="#formulario">Entrar para o Time</a>
