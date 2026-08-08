@@ -114,12 +114,13 @@ import '../styles/tailwind.css';
     .headline-link:hover{border-color:rgba(242,194,48,.55);background:rgba(17,19,15,.78)}
     .headline-link small{font-size:.64rem;font-weight:950;letter-spacing:.18em;text-transform:uppercase;color:var(--ouro)}
     .headline-link strong{font-size:1rem;line-height:1.18;font-weight:950}
-    .season-panel{position:relative;overflow:hidden;border-radius:2.6rem;background:radial-gradient(circle at 12% 12%,rgba(242,194,48,.22),transparent 22rem),linear-gradient(135deg,var(--grafite),var(--azul));color:var(--areia);box-shadow:0 34px 100px rgba(0,0,0,.26)}
-    .season-panel:before{content:"";position:absolute;right:-6rem;bottom:-8rem;width:26rem;height:26rem;background:url('/legacy-assets/logo-gondwana-fc-badge-white.jpg') center/contain no-repeat;opacity:.055;filter:grayscale(1);pointer-events:none}.season-panel>*{position:relative;z-index:1}
-    .season-card{position:relative;overflow:hidden;border-radius:2rem;border:1px solid rgba(17,19,15,.1);background:rgba(255,255,255,.6);padding:1.35rem;color:var(--grafite);min-height:230px;display:flex;flex-direction:column;justify-content:space-between}
-    .season-card:after{content:"";position:absolute;left:1.35rem;right:1.35rem;bottom:0;height:4px;background:var(--barro)}.season-card.gold:after{background:var(--ouro)}.season-card.green:after{background:var(--verde)}.season-card.blue:after{background:var(--azul)}
-    .season-card small{font-size:.68rem;font-weight:950;letter-spacing:.16em;text-transform:uppercase;color:rgba(17,19,15,.48)}.season-card h3{margin-top:1rem;font-size:clamp(1.5rem,2.4vw,2.2rem);line-height:1;font-weight:950}.season-card p{margin-top:1rem;font-size:.95rem;line-height:1.48;font-weight:800;color:rgba(17,19,15,.62)}
-    .season-route{display:grid;gap:.85rem}.season-route div{border-radius:1.25rem;border:1px solid rgba(246,237,215,.14);background:rgba(246,237,215,.07);padding:1rem}.season-route strong{display:block;font-size:1rem;line-height:1.15;font-weight:950}.season-route span{display:block;margin-top:.35rem;font-size:.84rem;line-height:1.42;font-weight:800;color:rgba(246,237,215,.62)}
+    .season-panel{position:relative;overflow:hidden;border-radius:2.6rem;background:radial-gradient(circle at 12% 10%,rgba(242,194,48,.2),transparent 22rem),linear-gradient(135deg,var(--grafite),var(--azul));color:var(--areia);box-shadow:0 34px 100px rgba(0,0,0,.26)}
+    .season-panel:before{content:"";position:absolute;right:-6rem;top:-7rem;width:25rem;height:25rem;background:url('/legacy-assets/logo-gondwana-fc-badge-white.jpg') center/contain no-repeat;opacity:.052;filter:grayscale(1);pointer-events:none}.season-panel>*{position:relative;z-index:1}
+    .season-photo{position:relative;overflow:hidden;border-radius:2.2rem;min-height:100%;background:var(--grafite);box-shadow:0 24px 70px rgba(0,0,0,.3)}.season-photo img{width:100%;height:100%;min-height:520px;object-fit:cover;opacity:.9}.season-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(17,19,15,.78))}.season-caption{position:absolute;left:1.35rem;right:1.35rem;bottom:1.35rem;z-index:2}.season-caption h3{margin-top:.75rem;font-size:clamp(2rem,3.6vw,3.5rem);line-height:.95}
+    .season-card{position:relative;overflow:hidden;border-radius:1.7rem;border:1px solid rgba(17,19,15,.1);background:rgba(250,248,241,.74);padding:1.2rem;color:var(--grafite);min-height:205px;display:flex;flex-direction:column;justify-content:space-between}
+    .season-card:after{content:"";position:absolute;left:1.2rem;right:1.2rem;bottom:0;height:4px;background:var(--barro)}.season-card.gold:after{background:var(--ouro)}.season-card.green:after{background:var(--verde)}.season-card.blue:after{background:var(--azul)}
+    .season-card small{font-size:.66rem;font-weight:950;letter-spacing:.16em;text-transform:uppercase;color:rgba(17,19,15,.48)}.season-card h3{margin-top:.8rem;font-size:clamp(1.42rem,2.1vw,2rem);line-height:1;font-weight:950}.season-card p{margin-top:.9rem;font-size:.92rem;line-height:1.46;font-weight:800;color:rgba(17,19,15,.62)}
+    .season-flow{border-radius:2rem;background:rgba(246,237,215,.92);color:var(--grafite);padding:1.15rem}.season-route{display:grid;gap:.75rem}.season-route div{border-radius:1.15rem;border:1px solid rgba(17,19,15,.08);background:white;padding:.95rem}.season-route strong{display:block;font-size:.95rem;line-height:1.15;font-weight:950}.season-route span{display:block;margin-top:.3rem;font-size:.82rem;line-height:1.38;font-weight:800;color:rgba(17,19,15,.56)}
     .brand-strip{position:relative;overflow:hidden;background:linear-gradient(135deg,#0b0d0a,var(--grafite));border-top:1px solid rgba(246,237,215,.12);border-bottom:1px solid rgba(246,237,215,.12)}
     .brand-strip:before{content:"";position:absolute;inset:-20% auto -20% -8rem;width:28rem;background:url('/legacy-assets/logo-gondwana-fc-badge-white.jpg') center/contain no-repeat;opacity:.055;filter:grayscale(1);pointer-events:none}
     .brand-mark{display:inline-flex;align-items:center;gap:.7rem;border:1px solid rgba(242,194,48,.38);border-radius:999px;background:rgba(246,237,215,.06);padding:.5rem .9rem .5rem .55rem}
@@ -370,28 +371,32 @@ import '../styles/tailwind.css';
           <p class="serif text-xl leading-relaxed text-black/68 sm:text-2xl sm:leading-snug">A temporada reúne formato, agenda e convite em um só gesto. Começa com o grupo: quem participa, onde acontece e que continuidade faz sentido.</p>
         </div>
 
-        <div class="season-panel mt-10 p-4 sm:p-6 lg:p-8">
-          <div class="grid gap-8 lg:grid-cols-[.78fr_1.22fr] lg:items-stretch">
-            <figure class="cut-card overflow-hidden bg-[var(--grafite)] photo-shadow">
-              <img src="/legacy-assets/enviada-oficina-sala.jpg" alt="Oficina Gondwana FC" class="h-full min-h-[460px] w-full object-cover opacity-90" />
+        <div class="season-panel mt-10 p-4 sm:p-5 lg:p-6">
+          <div class="grid gap-5 lg:grid-cols-[.8fr_1.2fr] lg:items-stretch">
+            <figure class="season-photo">
+              <img src="/legacy-assets/enviada-oficina-sala.jpg" alt="Oficina Gondwana FC" />
+              <figcaption class="season-caption">
+                <p class="kicker text-[var(--ouro)]">Como começa</p>
+                <h3 class="display">Um desenho por contexto.</h3>
+              </figcaption>
             </figure>
-            <div class="grid gap-6">
+            <div class="grid content-start gap-4">
               <div class="grid gap-4 md:grid-cols-2">
-                <article class="season-card gold"><div><small>Entrada</small><h3>Vivência ABC</h3><p>Encontro de entrada para sentir o método na prática.</p></div><a href="#formulario" class="mt-6 text-sm font-black uppercase tracking-[.14em] text-[var(--barro)]">Chamar vivência</a></article>
-                <article class="season-card green"><div><small>Prática</small><h3>Bola e câmera</h3><p>Oficina para criar imagem, palavra e leitura coletiva.</p></div><a href="#formulario" class="mt-6 text-sm font-black uppercase tracking-[.14em] text-[var(--barro)]">Desenhar oficina</a></article>
-                <article class="season-card blue"><div><small>Equipe</small><h3>Formação de educadores</h3><p>Trabalho com equipes que querem usar o jogo como linguagem.</p></div><a href="#formulario" class="mt-6 text-sm font-black uppercase tracking-[.14em] text-[var(--barro)]">Planejar formação</a></article>
-                <article class="season-card"><div><small>Continuidade</small><h3>Temporada apoiada</h3><p>Jornada com escolas, redes, fundações, marcas e instituições culturais.</p></div><a href="#patrocinio" class="mt-6 text-sm font-black uppercase tracking-[.14em] text-[var(--barro)]">Ver parceria</a></article>
-              </div>
-              <div class="grid gap-5 rounded-[2rem] border border-white/10 bg-white/[.055] p-5 sm:grid-cols-[1fr_auto] sm:items-center sm:p-6">
-                <div class="season-route sm:grid-cols-4">
-                  <div><strong>01. Contexto</strong><span>Quem participa, onde acontece e por que agora.</span></div>
-                  <div><strong>02. Formato</strong><span>Vivência, oficina, formação ou temporada.</span></div>
-                  <div><strong>03. Registro</strong><span>Imagem, relato, carta ou devolutiva.</span></div>
-                  <div><strong>04. Próxima jogada</strong><span>Como o grupo segue depois.</span></div>
-                </div>
-                <a href="#formulario" class="inline-flex min-h-14 items-center justify-center rounded-full bg-[var(--ouro)] px-7 py-4 text-sm font-black uppercase tracking-[.16em] text-[var(--grafite)]">Chamar uma conversa</a>
+                <article class="season-card gold"><div><small>Entrada</small><h3>Vivência ABC</h3><p>Encontro de entrada para sentir o método na prática.</p></div><a href="#formulario" class="mt-5 text-sm font-black uppercase tracking-[.14em] text-[var(--barro)]">Chamar vivência</a></article>
+                <article class="season-card green"><div><small>Prática</small><h3>Bola e câmera</h3><p>Oficina para criar imagem, palavra e leitura coletiva.</p></div><a href="#formulario" class="mt-5 text-sm font-black uppercase tracking-[.14em] text-[var(--barro)]">Desenhar oficina</a></article>
+                <article class="season-card blue"><div><small>Equipe</small><h3>Formação de educadores</h3><p>Trabalho com equipes que querem usar o jogo como linguagem.</p></div><a href="#formulario" class="mt-5 text-sm font-black uppercase tracking-[.14em] text-[var(--barro)]">Planejar formação</a></article>
+                <article class="season-card"><div><small>Continuidade</small><h3>Temporada apoiada</h3><p>Jornada com escolas, redes, fundações, marcas e instituições culturais.</p></div><a href="#patrocinio" class="mt-5 text-sm font-black uppercase tracking-[.14em] text-[var(--barro)]">Ver parceria</a></article>
               </div>
             </div>
+          </div>
+          <div class="season-flow mt-5 grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div class="season-route sm:grid-cols-4">
+              <div><strong>01. Contexto</strong><span>Quem participa, onde acontece e por que agora.</span></div>
+              <div><strong>02. Formato</strong><span>Vivência, oficina, formação ou temporada.</span></div>
+              <div><strong>03. Registro</strong><span>Imagem, relato, carta ou devolutiva.</span></div>
+              <div><strong>04. Próxima jogada</strong><span>Como o grupo segue depois.</span></div>
+            </div>
+            <a href="#formulario" class="inline-flex min-h-14 items-center justify-center rounded-full bg-[var(--ouro)] px-7 py-4 text-sm font-black uppercase tracking-[.16em] text-[var(--grafite)]">Chamar uma conversa</a>
           </div>
         </div>
       </div>
