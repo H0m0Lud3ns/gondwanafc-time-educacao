@@ -1,0 +1,84 @@
+{
+  "publicPresence": [
+    {
+      "id": "uol",
+      "vehicle": "UOL",
+      "tier": "Tier 1 · Nacional",
+      "title": "Curta-metragem reconecta futebol a cultura afro-brasileira.",
+      "url": "https://www.uol.com.br/esporte/futebol/ultimas-noticias/2021/11/19/gondwana-curta-metragem-reconecta-futebol-a-cultura-afro-brasileira.htm",
+      "visible": true
+    },
+    {
+      "id": "exame",
+      "vehicle": "Exame",
+      "tier": "Tier 1 · Negócios",
+      "title": "Cultura e aprendizagem via futebol como proposta pública.",
+      "url": "https://exame.com/colunistas/esporte-executivo/gondwana-fc-propoe-falar-sobre-cultura-e-aprendizagem-via-futebol/",
+      "visible": true
+    },
+    {
+      "id": "agencia-brasil",
+      "vehicle": "Agência Brasil",
+      "tier": "Tier 1 · Pública",
+      "title": "Projeto expõe presença africana no Brasil a partir do futebol.",
+      "url": "https://agenciabrasil.ebc.com.br/geral/noticia/2023-07/projeto-expoe-presenca-africana-no-brasil-partir-do-futebol",
+      "visible": true
+    },
+    {
+      "id": "tv-brasil",
+      "vehicle": "TV Brasil",
+      "tier": "Tier 1 · TV pública",
+      "title": "A bola conecta pessoas e culturas.",
+      "url": "https://tvbrasil.ebc.com.br/stadium/2023/07/bola-conecta-pessoas-e-culturas",
+      "visible": true
+    },
+    {
+      "id": "goal-click",
+      "vehicle": "Goal Click",
+      "tier": "Tier 1 · Internacional",
+      "title": "The Beach, The Street, The Soul: relato visual de Mônica Saraiva.",
+      "url": "https://www.goal-click.com/football-photography-stories/brazil-monica-saraiva",
+      "visible": true
+    },
+    {
+      "id": "lnf",
+      "vehicle": "LNF",
+      "tier": "Tier 1 · Esporte",
+      "title": "Projeto social une futsal, educação e cultura.",
+      "url": "https://lnfoficial.com.br/noticias/lnf-lanca-projeto-social-que-une-futsal-educacao-e-cultura/",
+      "visible": true
+    },
+    {
+      "id": "estadao",
+      "vehicle": "Estadão",
+      "tier": "Tier 1 · Nacional",
+      "title": "Imigrantes se orgulham de campanha de Cabo Verde na Copa.",
+      "url": "https://www.estadao.com.br/esportes/copa-do-mundo/imigrantes-se-orgulham-de-campanha-de-cabo-verde-na-copa-faltava-o-brasil-nos-descobrir/",
+      "visible": true
+    },
+    {
+      "id": "gazeta-esportiva",
+      "vehicle": "Gazeta Esportiva",
+      "tier": "Esporte · Nacional",
+      "title": "Cultura afro-brasileira contada pelo futebol e pela câmera.",
+      "url": "https://www.gazetaesportiva.com/futebol/a-historia-da-cultura-afro-brasileira-contada-atraves-do-futebol-e-das-lentes-de-uma-camera/",
+      "visible": true
+    },
+    {
+      "id": "bahia-noticias",
+      "vehicle": "Bahia Notícias",
+      "tier": "Regional · Bahia",
+      "title": "A Bola Conecta aborda cultura sob o olhar do futebol.",
+      "url": "https://www.bahianoticias.com.br/esportes/noticia/60194-a-bola-conecta-curta-aborda-cultura-sob-o-olhar-do-futebol-no-mes-da-consciencia-negra",
+      "visible": true
+    },
+    {
+      "id": "folha-pe",
+      "vehicle": "Folha PE",
+      "tier": "Regional · Pernambuco",
+      "title": "Criadores do projeto promovem ação com futebol e cultura em escola pública.",
+      "url": "https://www.folhape.com.br/esportes/criadores-do-projeto-gondwana-promovem-acao-envolvendo-futebol-e/224100/",
+      "visible": true
+    }
+  ]
+}

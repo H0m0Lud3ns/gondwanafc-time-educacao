@@ -1,5 +1,8 @@
 ---
 import '../styles/tailwind.css';
+import cmsState from '../data/cms-state.json';
+
+const publicPresence = cmsState.publicPresence.filter((item) => item.visible);
 ---
 <html lang="pt-BR">
 <head>
@@ -447,16 +450,15 @@ import '../styles/tailwind.css';
           </div>
           <div class="trust-carousel-wrap mt-6">
           <div class="trust-carousel" aria-label="Carrossel de veículos de comunicação com links para matérias sobre Gondwana FC">
-            <a class="media-card" href="https://www.uol.com.br/esporte/futebol/ultimas-noticias/2021/11/19/gondwana-curta-metragem-reconecta-futebol-a-cultura-afro-brasileira.htm" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">UOL</p><p class="media-meta mt-2">Tier 1 · Nacional</p></div><p class="media-title">Curta-metragem reconecta futebol a cultura afro-brasileira.</p></a>
-            <a class="media-card" href="https://exame.com/colunistas/esporte-executivo/gondwana-fc-propoe-falar-sobre-cultura-e-aprendizagem-via-futebol/" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">Exame</p><p class="media-meta mt-2">Tier 1 · Negócios</p></div><p class="media-title">Cultura e aprendizagem via futebol como proposta pública.</p></a>
-            <a class="media-card" href="https://agenciabrasil.ebc.com.br/geral/noticia/2023-07/projeto-expoe-presenca-africana-no-brasil-partir-do-futebol" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">Agência Brasil</p><p class="media-meta mt-2">Tier 1 · Pública</p></div><p class="media-title">Projeto expõe presença africana no Brasil a partir do futebol.</p></a>
-            <a class="media-card" href="https://tvbrasil.ebc.com.br/stadium/2023/07/bola-conecta-pessoas-e-culturas" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">TV Brasil</p><p class="media-meta mt-2">Tier 1 · TV pública</p></div><p class="media-title">A bola conecta pessoas e culturas.</p></a>
-            <a class="media-card" href="https://www.goal-click.com/football-photography-stories/brazil-monica-saraiva" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">Goal Click</p><p class="media-meta mt-2">Tier 1 · Internacional</p></div><p class="media-title">The Beach, The Street, The Soul: relato visual de Mônica Saraiva.</p></a>
-            <a class="media-card" href="https://lnfoficial.com.br/noticias/lnf-lanca-projeto-social-que-une-futsal-educacao-e-cultura/" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">LNF</p><p class="media-meta mt-2">Tier 1 · Esporte</p></div><p class="media-title">Projeto social une futsal, educação e cultura.</p></a>
-            <a class="media-card" href="https://www.estadao.com.br/esportes/copa-do-mundo/imigrantes-se-orgulham-de-campanha-de-cabo-verde-na-copa-faltava-o-brasil-nos-descobrir/" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">Estadão</p><p class="media-meta mt-2">Tier 1 · Nacional</p></div><p class="media-title">Imigrantes se orgulham de campanha de Cabo Verde na Copa.</p></a>
-            <a class="media-card" href="https://www.gazetaesportiva.com/futebol/a-historia-da-cultura-afro-brasileira-contada-atraves-do-futebol-e-das-lentes-de-uma-camera/" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">Gazeta Esportiva</p><p class="media-meta mt-2">Esporte · Nacional</p></div><p class="media-title">Cultura afro-brasileira contada pelo futebol e pela câmera.</p></a>
-            <a class="media-card" href="https://www.bahianoticias.com.br/esportes/noticia/60194-a-bola-conecta-curta-aborda-cultura-sob-o-olhar-do-futebol-no-mes-da-consciencia-negra" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">Bahia Notícias</p><p class="media-meta mt-2">Regional · Bahia</p></div><p class="media-title">A Bola Conecta aborda cultura sob o olhar do futebol.</p></a>
-            <a class="media-card" href="https://www.folhape.com.br/esportes/criadores-do-projeto-gondwana-promovem-acao-envolvendo-futebol-e/224100/" target="_blank" rel="noopener noreferrer"><div><p class="media-logo">Folha PE</p><p class="media-meta mt-2">Regional · Pernambuco</p></div><p class="media-title">Criadores do projeto promovem ação com futebol e cultura em escola pública.</p></a>
+            {publicPresence.map((item) => (
+              <a class="media-card" href={item.url} target="_blank" rel="noopener noreferrer">
+                <div>
+                  <p class="media-logo">{item.vehicle}</p>
+                  <p class="media-meta mt-2">{item.tier}</p>
+                </div>
+                <p class="media-title">{item.title}</p>
+              </a>
+            ))}
           </div>
           </div>
           <p class="mt-5 text-sm font-bold leading-relaxed text-black/58">Levantamento editorial interno a partir de clipping, cartas e arquivo. Cada registro mostra como a Gondwana circula entre esporte, cultura, escola e território.</p>

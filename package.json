@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/check": "latest",
+    "@astrojs/vercel": "^11.0.5",
     "astro": "latest",
     "typescript": "latest"
   },
