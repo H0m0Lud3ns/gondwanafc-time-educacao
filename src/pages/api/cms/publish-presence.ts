@@ -1,104 +1,16 @@
 import type { APIRoute } from 'astro';
 import cmsState from '../../../data/cms-state.json';
+import { normalizeCmsState, validateCmsState } from '../../../lib/cms-schema';
 
 const repo = 'H0m0Lud3ns/gondwanafc-time-educacao';
 const branch = 'main';
 const cmsPath = 'src/data/cms-state.json';
-
-type PresenceItem = {
-  id?: string;
-  vehicle?: string;
-  tier?: string;
-  title?: string;
-  url?: string;
-  visible?: boolean;
-};
-
-type PhotoItem = {
-  id?: string;
-  label?: string;
-  where?: string;
-  src?: string;
-  alt?: string;
-  original?: string;
-  type?: string;
-  usage?: string;
-  risk?: string;
-};
 
 function json(body: unknown, status = 200) {
   return new Response(JSON.stringify(body, null, 2), {
     status,
     headers: { 'content-type': 'application/json; charset=utf-8' },
   });
-}
-
-function cleanItem(item: PresenceItem, index: number) {
-  const vehicle = String(item.vehicle || '').trim();
-  const tier = String(item.tier || '').trim();
-  const title = String(item.title || '').trim();
-  const url = String(item.url || '').trim();
-
-  if (!vehicle || !tier || !title || !url) {
-    throw new Error(`Registro ${index + 1}: veículo, tier, título e URL são obrigatórios.`);
-  }
-
-  try {
-    const parsed = new URL(url);
-    if (!['http:', 'https:'].includes(parsed.protocol)) throw new Error('invalid protocol');
-  } catch {
-    throw new Error(`Registro ${index + 1}: URL inválida.`);
-  }
-
-  const id = String(item.id || vehicle)
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '') || `registro-${index + 1}`;
-
-  return {
-    id,
-    vehicle,
-    tier,
-    title,
-    url,
-    visible: item.visible !== false,
-  };
-}
-
-function cleanPhoto(item: PhotoItem, index: number) {
-  const src = String(item.src || '').trim();
-  const original = String(item.original || item.src || '').trim();
-  const label = String(item.label || `Foto ${index + 1}`).trim();
-
-  if (!src || !original) {
-    throw new Error(`Foto ${index + 1}: src e arquivo original são obrigatórios.`);
-  }
-
-  const isAcceptedSrc = src.startsWith('/legacy-assets/') || src.startsWith('/assets/') || src.startsWith('data:image/') || src.startsWith('https://') || src.startsWith('http://');
-  if (!isAcceptedSrc) {
-    throw new Error(`Foto ${index + 1}: caminho de imagem inválido.`);
-  }
-
-  const id = String(item.id || original)
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '') || `foto-${index + 1}`;
-
-  return {
-    id,
-    label,
-    where: String(item.where || '').trim(),
-    src,
-    alt: String(item.alt || '').trim(),
-    original,
-    type: String(item.type || 'imagem do site').trim(),
-    usage: String(item.usage || 'Imagem usada no site publico').trim(),
-    risk: String(item.risk || 'revisar antes de publicar').trim(),
-  };
 }
 
 async function githubRequest(path: string, init: RequestInit = {}) {
@@ -138,24 +50,16 @@ export const POST: APIRoute = async ({ request }) => {
       return json({ ok: false, error: 'Senha de produção inválida.' }, 401);
     }
 
-    if (!Array.isArray(body.publicPresence)) {
-      return json({ ok: false, error: 'publicPresence precisa ser uma lista.' }, 422);
+    const issues = validateCmsState(body);
+    const errors = issues.filter((issue) => issue.severity === 'error');
+    if (errors.length) {
+      return json({ ok: false, error: 'Validação falhou antes de publicar.', issues }, 422);
     }
 
-    const publicPresence = body.publicPresence.map(cleanItem);
-    const photos = Array.isArray(body.photos) ? body.photos.map(cleanPhoto) : (cmsState as any).photos;
-    const sitePhotos = Array.isArray(body.sitePhotos) ? body.sitePhotos.map(cleanPhoto) : photos;
+    const normalized = normalizeCmsState(body);
     const nextState = {
       ...cmsState,
-      home: body.home && typeof body.home === 'object' ? body.home : (cmsState as any).home,
-      projects: Array.isArray(body.projects) ? body.projects : (cmsState as any).projects,
-      links: Array.isArray(body.links) ? body.links : (cmsState as any).links,
-      siteMap: Array.isArray(body.siteMap) ? body.siteMap : (cmsState as any).siteMap,
-      seo: body.seo && typeof body.seo === 'object' ? body.seo : (cmsState as any).seo,
-      uploads: Array.isArray(body.uploads) ? body.uploads : (cmsState as any).uploads,
-      publicPresence,
-      photos,
-      sitePhotos,
+      ...normalized,
       updatedAt: new Date().toISOString(),
     };
 
@@ -176,8 +80,8 @@ export const POST: APIRoute = async ({ request }) => {
       ok: true,
       commit: result.commit?.sha,
       url: result.commit?.html_url,
-      count: publicPresence.length,
-      photos: photos?.length || 0,
+      count: normalized.publicPresence.length,
+      photos: normalized.sitePhotos.length,
     });
   } catch (error) {
     return json({ ok: false, error: error instanceof Error ? error.message : 'Erro desconhecido.' }, 500);
