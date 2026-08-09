@@ -1,9 +1,8 @@
 import type { APIRoute } from 'astro';
 import cmsState from '../../../data/cms-state.json';
+import { cmsBranch, cmsRepo, githubRequest } from '../../../lib/cms/github';
 import { normalizeCmsState, validateCmsState } from '../../../lib/cms-schema';
 
-const repo = 'H0m0Lud3ns/gondwanafc-time-educacao';
-const branch = 'main';
 const cmsPath = 'src/data/cms-state.json';
 
 function json(body: unknown, status = 200) {
@@ -11,28 +10,6 @@ function json(body: unknown, status = 200) {
     status,
     headers: { 'content-type': 'application/json; charset=utf-8' },
   });
-}
-
-async function githubRequest(path: string, init: RequestInit = {}) {
-  const token = import.meta.env.GITHUB_CONTENT_TOKEN;
-  if (!token) throw new Error('GITHUB_CONTENT_TOKEN ausente no ambiente Vercel.');
-
-  const response = await fetch(`https://api.github.com${path}`, {
-    ...init,
-    headers: {
-      accept: 'application/vnd.github+json',
-      authorization: `Bearer ${token}`,
-      'content-type': 'application/json',
-      'x-github-api-version': '2022-11-28',
-      ...(init.headers || {}),
-    },
-  });
-
-  const data = await response.json().catch(() => ({}));
-  if (!response.ok) {
-    throw new Error(data?.message || `GitHub API falhou com status ${response.status}.`);
-  }
-  return data;
 }
 
 export const prerender = false;
@@ -63,13 +40,13 @@ export const POST: APIRoute = async ({ request }) => {
       updatedAt: new Date().toISOString(),
     };
 
-    const current = await githubRequest(`/repos/${repo}/contents/${cmsPath}?ref=${branch}`);
+    const current = await githubRequest(`/repos/${cmsRepo()}/contents/${cmsPath}?ref=${cmsBranch()}`);
     const content = Buffer.from(`${JSON.stringify(nextState, null, 2)}\n`).toString('base64');
 
-    const result = await githubRequest(`/repos/${repo}/contents/${cmsPath}`, {
+    const result = await githubRequest(`/repos/${cmsRepo()}/contents/${cmsPath}`, {
       method: 'PUT',
       body: JSON.stringify({
-        branch,
+        branch: cmsBranch(),
         message: 'chore: publish cms content',
         content,
         sha: current.sha,
