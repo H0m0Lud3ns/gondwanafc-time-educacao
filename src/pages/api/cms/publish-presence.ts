@@ -14,6 +14,18 @@ type PresenceItem = {
   visible?: boolean;
 };
 
+type PhotoItem = {
+  id?: string;
+  label?: string;
+  where?: string;
+  src?: string;
+  alt?: string;
+  original?: string;
+  type?: string;
+  usage?: string;
+  risk?: string;
+};
+
 function json(body: unknown, status = 200) {
   return new Response(JSON.stringify(body, null, 2), {
     status,
@@ -52,6 +64,40 @@ function cleanItem(item: PresenceItem, index: number) {
     title,
     url,
     visible: item.visible !== false,
+  };
+}
+
+function cleanPhoto(item: PhotoItem, index: number) {
+  const src = String(item.src || '').trim();
+  const original = String(item.original || item.src || '').trim();
+  const label = String(item.label || `Foto ${index + 1}`).trim();
+
+  if (!src || !original) {
+    throw new Error(`Foto ${index + 1}: src e arquivo original são obrigatórios.`);
+  }
+
+  const isAcceptedSrc = src.startsWith('/legacy-assets/') || src.startsWith('/assets/') || src.startsWith('data:image/') || src.startsWith('https://') || src.startsWith('http://');
+  if (!isAcceptedSrc) {
+    throw new Error(`Foto ${index + 1}: caminho de imagem inválido.`);
+  }
+
+  const id = String(item.id || original)
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '') || `foto-${index + 1}`;
+
+  return {
+    id,
+    label,
+    where: String(item.where || '').trim(),
+    src,
+    alt: String(item.alt || '').trim(),
+    original,
+    type: String(item.type || 'imagem do site').trim(),
+    usage: String(item.usage || 'Imagem usada no site publico').trim(),
+    risk: String(item.risk || 'revisar antes de publicar').trim(),
   };
 }
 
@@ -97,9 +143,19 @@ export const POST: APIRoute = async ({ request }) => {
     }
 
     const publicPresence = body.publicPresence.map(cleanItem);
+    const photos = Array.isArray(body.photos) ? body.photos.map(cleanPhoto) : (cmsState as any).photos;
+    const sitePhotos = Array.isArray(body.sitePhotos) ? body.sitePhotos.map(cleanPhoto) : photos;
     const nextState = {
       ...cmsState,
+      home: body.home && typeof body.home === 'object' ? body.home : (cmsState as any).home,
+      projects: Array.isArray(body.projects) ? body.projects : (cmsState as any).projects,
+      links: Array.isArray(body.links) ? body.links : (cmsState as any).links,
+      siteMap: Array.isArray(body.siteMap) ? body.siteMap : (cmsState as any).siteMap,
+      seo: body.seo && typeof body.seo === 'object' ? body.seo : (cmsState as any).seo,
+      uploads: Array.isArray(body.uploads) ? body.uploads : (cmsState as any).uploads,
       publicPresence,
+      photos,
+      sitePhotos,
       updatedAt: new Date().toISOString(),
     };
 
@@ -110,7 +166,7 @@ export const POST: APIRoute = async ({ request }) => {
       method: 'PUT',
       body: JSON.stringify({
         branch,
-        message: 'chore: publish public presence from cms',
+        message: 'chore: publish cms content',
         content,
         sha: current.sha,
       }),
@@ -121,6 +177,7 @@ export const POST: APIRoute = async ({ request }) => {
       commit: result.commit?.sha,
       url: result.commit?.html_url,
       count: publicPresence.length,
+      photos: photos?.length || 0,
     });
   } catch (error) {
     return json({ ok: false, error: error instanceof Error ? error.message : 'Erro desconhecido.' }, 500);
