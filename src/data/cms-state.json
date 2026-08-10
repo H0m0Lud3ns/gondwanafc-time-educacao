@@ -391,7 +391,7 @@
       "risk": "alto: troca afeta identidade e abas do navegador"
     }
   ],
-  "updatedAt": "2026-08-10T03:33:39.184Z",
+  "updatedAt": "2026-08-10T03:34:07.984Z",
   "photos": [
     {
       "id": "56ca6697-02-nao-e-so-chutar-vertical",
@@ -965,33 +965,6 @@
       "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
     },
     {
-      "id": "metodo-6-img-20251210-125224-1-1786325414762-jpg",
-      "label": "Oficina do Método ABC com educadores e participantes",
-      "page": "/",
-      "section": "metodo",
-      "src": "/uploads/cms/2026/08/uniacc-chile-foto-jose-aguilera-1786327777920.jpg",
-      "alt": "Oficina do Método ABC com educadores e participantes",
-      "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
-    },
-    {
-      "id": "temporada-7-img-20251210-125224-1-1786325414762-jpg",
-      "label": "Oficina Gondwana FC",
-      "page": "/",
-      "section": "temporada",
-      "src": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg",
-      "alt": "Oficina Gondwana FC",
-      "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
-    },
-    {
-      "id": "partidas-comprovadas-8-img-20251210-125224-1-1786325414762-jpg",
-      "label": "Oficina educativa com participantes reunidos em sala",
-      "page": "/",
-      "section": "partidas-comprovadas",
-      "src": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg",
-      "alt": "Oficina educativa com participantes reunidos em sala",
-      "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
-    },
-    {
       "id": "home.page.bolas-reunidas-antes-de-uma-atividade-educativ",
       "label": "Bolas reunidas antes de uma atividade educativa",
       "page": "Home",
@@ -1170,6 +1143,33 @@
       "src": "/assets/camisa-abya-yala/camisa-abya-yala.jpg",
       "alt": "Camisa Abya Yala sobre fundo azul",
       "original": "/assets/camisa-abya-yala/camisa-abya-yala.jpg"
+    },
+    {
+      "id": "metodo-6-img-20251210-125224-1-1786325414762-jpg",
+      "label": "Oficina do Método ABC com educadores e participantes",
+      "page": "/",
+      "section": "metodo",
+      "src": "/uploads/cms/2026/08/uniacc-chile-foto-jose-aguilera-1786327777920.jpg",
+      "alt": "Oficina do Método ABC com educadores e participantes",
+      "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
+    },
+    {
+      "id": "temporada-7-img-20251210-125224-1-1786325414762-jpg",
+      "label": "Oficina Gondwana FC",
+      "page": "/",
+      "section": "temporada",
+      "src": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg",
+      "alt": "Oficina Gondwana FC",
+      "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
+    },
+    {
+      "id": "partidas-comprovadas-8-img-20251210-125224-1-1786325414762-jpg",
+      "label": "Oficina educativa com participantes reunidos em sala",
+      "page": "/",
+      "section": "partidas-comprovadas",
+      "src": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg",
+      "alt": "Oficina educativa com participantes reunidos em sala",
+      "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
     }
   ],
   "uploads": [
