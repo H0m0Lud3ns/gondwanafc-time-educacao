@@ -391,7 +391,7 @@
       "risk": "alto: troca afeta identidade e abas do navegador"
     }
   ],
-  "updatedAt": "2026-08-10T04:13:45.762Z",
+  "updatedAt": "2026-08-10T05:15:50.268Z",
   "photos": [
     {
       "id": "56ca6697-02-nao-e-so-chutar-vertical",
@@ -966,11 +966,11 @@
     },
     {
       "id": "home.page.bolas-reunidas-antes-de-uma-atividade-educativ",
-      "label": "Convocação aberta - Bola Unidad",
+      "label": "Bolas reunidas antes de uma atividade educativa",
       "page": "Home",
       "section": "page",
-      "src": "/uploads/cms/2026/08/bola-unidad-convocacao-2026-08-10.jpg",
-      "alt": "Mãos segurando bolas amarelas e pretas durante atividade educativa da Gondwana FC, com a palavra Unidad escrita em uma delas",
+      "src": "/uploads/cms/2026/08/senac-lapa-scipiao-1786304146244.jpg",
+      "alt": "Bolas reunidas antes de uma atividade educativa",
       "original": "/legacy-assets/enviada-bolas.jpg"
     },
     {
@@ -1145,7 +1145,7 @@
       "original": "/assets/camisa-abya-yala/camisa-abya-yala.jpg"
     },
     {
-      "id": "metodo-6-img-20251210-125224-1-1786325414762-jpg",
+      "id": "home.metodo.imagem-principal",
       "label": "Oficina do Método ABC com educadores e participantes",
       "page": "/",
       "section": "metodo",
@@ -1154,7 +1154,7 @@
       "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
     },
     {
-      "id": "temporada-7-img-20251210-125224-1-1786325414762-jpg",
+      "id": "home.temporada.imagem-principal",
       "label": "Oficina Gondwana FC",
       "page": "/",
       "section": "temporada",
@@ -1163,7 +1163,7 @@
       "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
     },
     {
-      "id": "partidas-comprovadas-8-img-20251210-125224-1-1786325414762-jpg",
+      "id": "home.partidas-comprovadas.imagem-principal",
       "label": "Oficina educativa com participantes reunidos em sala",
       "page": "/",
       "section": "partidas-comprovadas",
@@ -1174,12 +1174,12 @@
   ],
   "uploads": [
     {
-      "id": "bola-unidad-convocacao-2026-08-10",
-      "label": "Convocação aberta - Bola Unidad",
-      "src": "/uploads/cms/2026/08/bola-unidad-convocacao-2026-08-10.jpg",
-      "type": "upload",
-      "usage": "Imagem da chamada Convocação aberta na home",
-      "uploadedAt": "2026-08-10T04:42:00.000Z"
+      "id": "img-20250616-081724368-ae-1786338903823",
+      "label": "IMG_20250616_081724368_AE",
+      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786338903823.jpg",
+      "type": "image/jpeg",
+      "usage": "Imagem publicada pelo editor visual",
+      "uploadedAt": "2026-08-10T05:15:03.822Z"
     },
     {
       "id": "emef-pedro-americo-1786332806287",
@@ -1700,9 +1700,7 @@
         "home.partidas-comprovadas.imagem-principal",
         "blog-page-2-img-20251210-125224-1-1786325414762-jpg",
         "caderno.escolas.oficina-educativa-com-participantes-reunidos-e",
-        "blog.linha.oficina-educativa-com-participantes-reunidos-e",
-        "temporada-7-img-20251210-125224-1-1786325414762-jpg",
-        "partidas-comprovadas-8-img-20251210-125224-1-1786325414762-jpg"
+        "blog.linha.oficina-educativa-com-participantes-reunidos-e"
       ]
     },
     {
@@ -1742,6 +1740,15 @@
       "usedBy": [
         "home.partidas-comprovadas.fundo"
       ]
+    },
+    {
+      "id": "img-20250616-081724368-ae-1786338903823",
+      "label": "IMG_20250616_081724368_AE",
+      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786338903823.jpg",
+      "type": "image/jpeg",
+      "usage": "Imagem publicada pelo editor visual",
+      "uploadedAt": "2026-08-10T05:15:03.822Z",
+      "usedBy": []
     },
     {
       "id": "img-20250616-081724368-ae-1786330789131",
@@ -1875,8 +1882,7 @@
       "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg",
       "alt": "Oficina do Método ABC com educadores e participantes",
       "usedBy": [
-        "home.metodo.imagem-principal",
-        "metodo-6-img-20251210-125224-1-1786325414762-jpg"
+        "home.metodo.imagem-principal"
       ]
     },
     {
