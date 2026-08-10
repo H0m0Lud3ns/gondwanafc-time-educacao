@@ -391,7 +391,7 @@
       "risk": "alto: troca afeta identidade e abas do navegador"
     }
   ],
-  "updatedAt": "2026-08-10T03:40:49.742Z",
+  "updatedAt": "2026-08-10T03:41:25.550Z",
   "photos": [
     {
       "id": "56ca6697-02-nao-e-so-chutar-vertical",
@@ -717,7 +717,7 @@
       "label": "Card Audiovisual - Método ABC",
       "page": "Caderno",
       "section": "Método ABC",
-      "src": "/uploads/cms/2026/08/cabaceiras-paraiba-1-1786333222068.jpg",
+      "src": "/uploads/cms/2026/08/senac-lapa-scipiao-1786304146244.jpg",
       "alt": "Bolas reunidas antes de uma atividade educativa",
       "original": "/legacy-assets/enviada-bolas.jpg"
     },
@@ -987,7 +987,7 @@
       "label": "Encontro com bola e mãos",
       "page": "Home",
       "section": "blog",
-      "src": "/uploads/cms/2026/08/uniacc-miercoles-2-dia-32-1786325002543.jpg",
+      "src": "/uploads/cms/2026/08/senac-lapa-scipiao-1786299766436.jpg",
       "alt": "Encontro com bola e mãos",
       "original": "/legacy-assets/27a017d7-encuentro-manos.jpg"
     },
@@ -1173,14 +1173,6 @@
     }
   ],
   "uploads": [
-    {
-      "id": "cabaceiras-paraiba-1-1786333222068",
-      "label": "Cabaceiras Paraíba  (1)",
-      "src": "/uploads/cms/2026/08/cabaceiras-paraiba-1-1786333222068.jpg",
-      "type": "image/jpeg",
-      "usage": "Imagem publicada pela biblioteca CMS",
-      "uploadedAt": "2026-08-10T03:40:22.068Z"
-    },
     {
       "id": "emef-pedro-americo-1786332806287",
       "label": "EMEF Pedro Americo",
