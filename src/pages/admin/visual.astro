@@ -52,7 +52,23 @@ function keepSession(){try{localStorage.setItem(authKey,String(Date.now()))}catc
 function unlock(){keepSession();$('#gate').classList.add('hidden')}
 
 function loadDraft(){try{return JSON.parse(localStorage.getItem('gfc-cms-qa')||'null')}catch{localStorage.removeItem('gfc-cms-qa');return null}}
-function normalizeState(){state.photos=Array.isArray(state.photos)?state.photos:structuredClone(state.sitePhotos||[]);state.sitePhotos=state.photos;state.imageUses=Array.isArray(state.imageUses)?state.imageUses:structuredClone(initial.imageUses||[]);state.uploads=Array.isArray(state.uploads)?state.uploads:[];state.publicPresence=Array.isArray(state.publicPresence)?state.publicPresence:structuredClone(initial.publicPresence||[])}
+const useIdAliases={
+  'caderno-metodo-sesc-logo':'caderno.metodo.sesc-logo',
+  'caderno-metodo-audiovisual':'caderno.metodo.audiovisual',
+  'caderno-metodo-bola':'caderno.metodo.bola',
+  'caderno-metodo-camera':'caderno.metodo.camera',
+  'caderno-escola-estadio-imagem-principal':'caderno.escola-estadio.imagem-principal',
+  'metodo-6-img-20251210-125224-1-1786325414762-jpg':'home.metodo.imagem-principal',
+  'temporada-7-img-20251210-125224-1-1786325414762-jpg':'home.temporada.imagem-principal',
+  'partidas-comprovadas-8-img-20251210-125224-1-1786325414762-jpg':'home.partidas-comprovadas.imagem-principal'
+};
+function migrateImageUseIds(){
+  const byId=new Map();
+  (state.imageUses||[]).forEach(use=>{const id=useIdAliases[use.id]||use.id;byId.set(id,{...use,id})});
+  (initial.imageUses||[]).forEach(use=>{if(!byId.has(use.id))byId.set(use.id,structuredClone(use))});
+  state.imageUses=[...byId.values()];
+}
+function normalizeState(){state.photos=Array.isArray(state.photos)?state.photos:structuredClone(state.sitePhotos||[]);state.sitePhotos=state.photos;state.imageUses=Array.isArray(state.imageUses)?state.imageUses:structuredClone(initial.imageUses||[]);migrateImageUseIds();state.uploads=Array.isArray(state.uploads)?state.uploads:[];state.publicPresence=Array.isArray(state.publicPresence)?state.publicPresence:structuredClone(initial.publicPresence||[])}
 function save(){normalizeState();const clean=structuredClone(state);clean.history=[];clean.uploads=(clean.uploads||[]).filter(item=>!String(item.src||'').startsWith('data:image/'));localStorage.setItem('gfc-cms-qa',JSON.stringify(clean));updatePending()}
 function allPhotos(){normalizeState();return uniqueBy([...state.photos,...state.imageUses,...state.uploads],'src')}
 function pathOf(src){try{return new URL(src,location.origin).pathname}catch{return String(src||'')}}
