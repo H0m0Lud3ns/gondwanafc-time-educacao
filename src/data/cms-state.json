@@ -391,7 +391,7 @@
       "risk": "alto: troca afeta identidade e abas do navegador"
     }
   ],
-  "updatedAt": "2026-08-10T05:15:50.268Z",
+  "updatedAt": "2026-08-10T05:36:39.456Z",
   "photos": [
     {
       "id": "56ca6697-02-nao-e-so-chutar-vertical",
@@ -1143,36 +1143,17 @@
       "src": "/assets/camisa-abya-yala/camisa-abya-yala.jpg",
       "alt": "Camisa Abya Yala sobre fundo azul",
       "original": "/assets/camisa-abya-yala/camisa-abya-yala.jpg"
-    },
-    {
-      "id": "home.metodo.imagem-principal",
-      "label": "Oficina do Método ABC com educadores e participantes",
-      "page": "/",
-      "section": "metodo",
-      "src": "/uploads/cms/2026/08/uniacc-chile-foto-jose-aguilera-1786327777920.jpg",
-      "alt": "Oficina do Método ABC com educadores e participantes",
-      "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
-    },
-    {
-      "id": "home.temporada.imagem-principal",
-      "label": "Oficina Gondwana FC",
-      "page": "/",
-      "section": "temporada",
-      "src": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg",
-      "alt": "Oficina Gondwana FC",
-      "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
-    },
-    {
-      "id": "home.partidas-comprovadas.imagem-principal",
-      "label": "Oficina educativa com participantes reunidos em sala",
-      "page": "/",
-      "section": "partidas-comprovadas",
-      "src": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg",
-      "alt": "Oficina educativa com participantes reunidos em sala",
-      "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
     }
   ],
   "uploads": [
+    {
+      "id": "img-20250616-081724368-ae-1786340189223",
+      "label": "IMG_20250616_081724368_AE",
+      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786340189223.jpg",
+      "type": "image/jpeg",
+      "usage": "Imagem publicada pelo editor visual",
+      "uploadedAt": "2026-08-10T05:36:29.223Z"
+    },
     {
       "id": "bola-unidad-convocacao-2026-08-10",
       "label": "Convocação aberta - Bola Unidad",
@@ -1602,6 +1583,19 @@
       "usedBy": []
     },
     {
+      "id": "home-page-bolas-reunidas-antes-de-uma-atividade-educativ",
+      "label": "Convocação aberta - Bola Unidad",
+      "src": "/uploads/cms/2026/08/bola-unidad-convocacao-2026-08-10.jpg",
+      "type": "slot editorial",
+      "usage": "page",
+      "original": "/legacy-assets/enviada-bolas.jpg",
+      "alt": "Mãos segurando bolas amarelas e pretas durante atividade educativa da Gondwana FC, com a palavra Unidad escrita em uma delas",
+      "uploadedAt": "2026-08-10T04:42:00.000Z",
+      "usedBy": [
+        "home.page.bolas-reunidas-antes-de-uma-atividade-educativ"
+      ]
+    },
+    {
       "id": "dupla-gondwana-unesco",
       "label": "Dupla Gondwana Unesco",
       "src": "/legacy-assets/dupla-gondwana-unesco.jpg",
@@ -1665,7 +1659,6 @@
         "enviada-bolas",
         "caderno.metodo.audiovisual",
         "blog-page-1-senac-lapa-scipiao-1786304146244-jpg",
-        "home.page.bolas-reunidas-antes-de-uma-atividade-educativ",
         "blog.page.bolas-usadas-em-experiencia-educativa-do-gondw"
       ]
     },
@@ -1748,6 +1741,15 @@
       "usedBy": [
         "home.partidas-comprovadas.fundo"
       ]
+    },
+    {
+      "id": "img-20250616-081724368-ae-1786340189223",
+      "label": "IMG_20250616_081724368_AE",
+      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786340189223.jpg",
+      "type": "image/jpeg",
+      "usage": "Imagem publicada pelo editor visual",
+      "uploadedAt": "2026-08-10T05:36:29.223Z",
+      "usedBy": []
     },
     {
       "id": "img-20250616-081724368-ae-1786338903823",
