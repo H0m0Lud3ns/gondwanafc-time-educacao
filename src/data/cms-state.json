@@ -966,11 +966,11 @@
     },
     {
       "id": "home.page.bolas-reunidas-antes-de-uma-atividade-educativ",
-      "label": "Bolas reunidas antes de uma atividade educativa",
+      "label": "Convocação aberta - Bola Unidad",
       "page": "Home",
       "section": "page",
-      "src": "/uploads/cms/2026/08/senac-lapa-scipiao-1786304146244.jpg",
-      "alt": "Bolas reunidas antes de uma atividade educativa",
+      "src": "/uploads/cms/2026/08/bola-unidad-convocacao-2026-08-10.jpg",
+      "alt": "Mãos segurando bolas amarelas e pretas durante atividade educativa da Gondwana FC, com a palavra Unidad escrita em uma delas",
       "original": "/legacy-assets/enviada-bolas.jpg"
     },
     {
@@ -1173,6 +1173,14 @@
     }
   ],
   "uploads": [
+    {
+      "id": "bola-unidad-convocacao-2026-08-10",
+      "label": "Convocação aberta - Bola Unidad",
+      "src": "/uploads/cms/2026/08/bola-unidad-convocacao-2026-08-10.jpg",
+      "type": "upload",
+      "usage": "Imagem da chamada Convocação aberta na home",
+      "uploadedAt": "2026-08-10T04:42:00.000Z"
+    },
     {
       "id": "img-20250616-081724368-ae-1786338903823",
       "label": "IMG_20250616_081724368_AE",
