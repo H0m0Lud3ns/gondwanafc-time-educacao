@@ -1,3 +1,5 @@
+import { resolveImageUseId } from './cms-migrations';
+
 export type PublicPresenceItem = {
   id: string;
   vehicle: string;
@@ -106,7 +108,7 @@ export function cleanPublicPresence(item: Partial<PublicPresenceItem>, index: nu
 export function cleanImageUse(item: Partial<ImageUse>, index: number): ImageUse {
   const src = String(item.src || '').trim();
   const original = String(item.original || item.src || '').trim();
-  const id = String(item.id || `uso-${index + 1}`).trim();
+  const id = resolveImageUseId(String(item.id || `uso-${index + 1}`).trim());
 
   if (!id || !src || !original) {
     throw new Error(`Uso de imagem ${index + 1}: id, src e arquivo original são obrigatórios.`);

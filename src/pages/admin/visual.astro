@@ -45,6 +45,9 @@ const initialState = JSON.stringify(cmsState);
       <div class="panel"><b>Publicação</b><p id="pending" class="muted">Nenhuma troca pendente.</p><p class="muted">Depois de aplicar, clique em Publicar produção. A Vercel atualiza o site após o deploy.</p></div>
     </aside>
   </main>
+<script is:inline>
+window.GFC_CMS={resolveImageUseId(id){return ({'caderno-metodo-sesc-logo':'caderno.metodo.sesc-logo','caderno-metodo-audiovisual':'caderno.metodo.audiovisual','caderno-metodo-bola':'caderno.metodo.bola','caderno-metodo-camera':'caderno.metodo.camera','caderno-escola-estadio-imagem-principal':'caderno.escola-estadio.imagem-principal','metodo-6-img-20251210-125224-1-1786325414762-jpg':'home.metodo.imagem-principal','temporada-7-img-20251210-125224-1-1786325414762-jpg':'home.temporada.imagem-principal','partidas-comprovadas-8-img-20251210-125224-1-1786325414762-jpg':'home.partidas-comprovadas.imagem-principal'}[id]||id)}};
+</script>
 <script define:vars={{ initialState }}>
 const initial=JSON.parse(initialState);
 const baseUpdatedAt=initial.updatedAt||'';
@@ -59,19 +62,9 @@ function keepSession(){try{localStorage.setItem(authKey,String(Date.now()))}catc
 function unlock(){keepSession();$('#gate').classList.add('hidden')}
 
 function loadDraft(){try{return JSON.parse(localStorage.getItem('gfc-cms-qa')||'null')}catch{localStorage.removeItem('gfc-cms-qa');return null}}
-const useIdAliases={
-  'caderno-metodo-sesc-logo':'caderno.metodo.sesc-logo',
-  'caderno-metodo-audiovisual':'caderno.metodo.audiovisual',
-  'caderno-metodo-bola':'caderno.metodo.bola',
-  'caderno-metodo-camera':'caderno.metodo.camera',
-  'caderno-escola-estadio-imagem-principal':'caderno.escola-estadio.imagem-principal',
-  'metodo-6-img-20251210-125224-1-1786325414762-jpg':'home.metodo.imagem-principal',
-  'temporada-7-img-20251210-125224-1-1786325414762-jpg':'home.temporada.imagem-principal',
-  'partidas-comprovadas-8-img-20251210-125224-1-1786325414762-jpg':'home.partidas-comprovadas.imagem-principal'
-};
 function migrateImageUseIds(){
   const byId=new Map();
-  (state.imageUses||[]).forEach(use=>{const id=useIdAliases[use.id]||use.id;byId.set(id,{...use,id})});
+  (state.imageUses||[]).forEach(use=>{const id=window.GFC_CMS.resolveImageUseId(use.id);byId.set(id,{...use,id})});
   (initial.imageUses||[]).forEach(use=>{if(!byId.has(use.id))byId.set(use.id,structuredClone(use))});
   state.imageUses=[...byId.values()];
 }

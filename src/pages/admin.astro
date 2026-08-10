@@ -56,18 +56,13 @@ const initialState = JSON.stringify(cmsState);
         <section class="section" id="media"><span class="pill dark">Mídia</span><h2 class="display">Biblioteca</h2><label class="btn dark">Subir imagem para biblioteca<input id="upload" type="file" accept="image/*" hidden></label><p class="item">A imagem é comprimida no navegador e publicada como arquivo real antes de entrar no rascunho. Nada de base64 em produção.</p><div id="mediaGrid" class="media-grid" style="margin-top:16px"></div></section>
         <section class="section" id="history"><span class="pill dark">Publicação</span><h2 class="display">Validar e publicar</h2><div id="publishNotice" class="item">Nenhuma troca pendente.</div><div id="validationBox" class="item">Validação ainda não executada.</div><button id="validateDraft" class="btn dark" style="margin:0 0 14px" type="button">Validar rascunho</button><div id="historyList" class="cards"></div></section>
       </div><aside><div class="phone"><div id="preview" class="preview"></div></div></aside></section></main>
+<script is:inline>
+window.GFC_CMS={resolveImageUseId(id){return ({'caderno-metodo-sesc-logo':'caderno.metodo.sesc-logo','caderno-metodo-audiovisual':'caderno.metodo.audiovisual','caderno-metodo-bola':'caderno.metodo.bola','caderno-metodo-camera':'caderno.metodo.camera','caderno-escola-estadio-imagem-principal':'caderno.escola-estadio.imagem-principal','metodo-6-img-20251210-125224-1-1786325414762-jpg':'home.metodo.imagem-principal','temporada-7-img-20251210-125224-1-1786325414762-jpg':'home.temporada.imagem-principal','partidas-comprovadas-8-img-20251210-125224-1-1786325414762-jpg':'home.partidas-comprovadas.imagem-principal'}[id]||id)}};
+</script>
 <script define:vars={{ initialState }}>
 const initial=JSON.parse(initialState);
 const baseUpdatedAt=initial.updatedAt||'';
 const legacyPhotoIds=new Set(['hero','oficina','territorio','comunidade']);
-const imageUseAliases={
-  'caderno-metodo-sesc-logo':'caderno.metodo.sesc-logo',
-  'caderno-metodo-audiovisual':'caderno.metodo.audiovisual',
-  'caderno-metodo-bola':'caderno.metodo.bola',
-  'caderno-metodo-camera':'caderno.metodo.camera',
-  'caderno-escola-estadio-imagem-principal':'caderno.escola-estadio.imagem-principal',
-  'metodo-6-img-20251210-125224-1-1786325414762-jpg':'home.metodo.imagem-principal',
-};
 let state=loadDraft()||structuredClone(initial);
 const $=s=>document.querySelector(s);
 const $$=s=>Array.from(document.querySelectorAll(s));
@@ -83,7 +78,7 @@ function mergeImageUses(){
   const byId=new Map();
   (initial.imageUses||[]).forEach(use=>byId.set(use.id,structuredClone(use)));
   (state.imageUses||[]).forEach(use=>{
-    const id=imageUseAliases[use.id]||use.id;
+    const id=window.GFC_CMS.resolveImageUseId(use.id);
     const base=byId.get(id)||{};
     byId.set(id,{...base,...use,id});
   });
