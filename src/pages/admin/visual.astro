@@ -57,8 +57,10 @@ function save(){normalizeState();const clean=structuredClone(state);clean.histor
 function allPhotos(){normalizeState();return uniqueBy([...state.photos,...state.uploads],'src')}
 function pathOf(src){try{return new URL(src,location.origin).pathname}catch{return String(src||'')}}
 function findPhotoForImage(img){const path=pathOf(img.currentSrc||img.src);return state.photos.find(p=>pathOf(p.src)===path||pathOf(p.original)===path)}
-function pendingCount(){return state.photos.filter(p=>p.src&&p.original&&p.src!==p.original).length}
-function updatePending(){const count=pendingCount();$('#pending').textContent=count?`${count} troca(s) pendente(s) no rascunho visual.`:'Nenhuma troca pendente.';$('#status').textContent=count?`${count} troca(s) pendente(s)`:'rascunho visual'}
+function initialPhotoSrc(photo){const source=(initial.sitePhotos||initial.photos||[]).find(item=>item.id===photo.id);return source?.src||photo.original||''}
+function pendingCount(){return state.photos.filter(p=>p.src&&p.src!==initialPhotoSrc(p)).length}
+function pendingPhotos(){return state.photos.filter(p=>p.src&&p.src!==initialPhotoSrc(p))}
+function updatePending(){const items=pendingPhotos();const count=items.length;$('#pending').innerHTML=count?`<b>${count} troca(s) pendente(s) no rascunho visual.</b><br>${items.map(p=>esc(p.label||p.id)).join('<br>')}`:'Nenhuma troca pendente.';$('#status').textContent=count?`${count} troca(s) pendente(s)`:'rascunho visual'}
 function scanImages(){
   const overlay=$('#overlay');overlay.innerHTML='';const frame=$('#siteFrame');const doc=frame.contentDocument;const win=frame.contentWindow;if(!doc||!win)return;
   doc.querySelectorAll('.gfc-visual-hotspot').forEach(item=>item.remove());

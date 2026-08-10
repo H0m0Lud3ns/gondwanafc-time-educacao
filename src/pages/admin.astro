@@ -106,8 +106,10 @@ function save(){
   try{localStorage.setItem('gfc-cms-qa',JSON.stringify(storableState()));$('#status').textContent='rascunho salvo neste navegador'}
   catch{state.history=[];state.uploads=(state.uploads||[]).filter(item=>!String(item.src||'').startsWith('data:image/'));localStorage.setItem('gfc-cms-qa',JSON.stringify(storableState()));$('#status').textContent='rascunho salvo sem histórico pesado'}
 }
-function pendingChangeCount(){return state.photos.filter(p=>p.src&&p.original&&p.src!==p.original).length}
-function updatePublishNotice(){const box=$('#publishNotice');if(!box)return;const count=pendingChangeCount();box.innerHTML=count?`<b>${count} troca(s) de imagem pendente(s)</b><p>Essas mudanças estão no rascunho local. Para aparecer no site público, clique em Validar rascunho e depois Publicar produção.</p>`:'Nenhuma troca pendente. Quando você confirmar uma troca de imagem, ela aparecerá aqui antes de publicar.'}
+function initialPhotoSrc(photo){const source=(initial.sitePhotos||initial.photos||[]).find(item=>item.id===photo.id);return source?.src||photo.original||''}
+function pendingChangeCount(){return state.photos.filter(p=>p.src&&p.src!==initialPhotoSrc(p)).length}
+function pendingPhotos(){return state.photos.filter(p=>p.src&&p.src!==initialPhotoSrc(p))}
+function updatePublishNotice(){const box=$('#publishNotice');if(!box)return;const items=pendingPhotos();const count=items.length;box.innerHTML=count?`<b>${count} troca(s) de imagem pendente(s)</b><p>Essas mudanças estão no rascunho local. Para aparecer no site público, clique em Validar rascunho e depois Publicar produção.</p><p>${items.map(p=>esc(p.label||p.id)).join('<br>')}</p>`:'Nenhuma troca pendente. Quando você confirmar uma troca de imagem, ela aparecerá aqui antes de publicar.'}
 function mark(){$('#status').textContent='alterações não salvas';renderPreview()}
 function renderAll(){normalizeState();renderDashboard();renderHome();renderSiteMap();renderProjects();renderPhotos();renderLinks();renderPresence();renderSeo();renderMedia();renderHistory();renderPreview();updatePublishNotice();$('#pub').textContent=state.published?'sim':'não'}
 
