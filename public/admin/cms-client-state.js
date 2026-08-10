@@ -20,6 +20,7 @@ window.GFC_CMS.buildPublishPayload = function buildPublishPayload(state, options
   return {
     password: options.password,
     baseUpdatedAt: options.baseUpdatedAt || '',
+    baseState: options.baseState || null,
     publicPresence: Array.isArray(state.publicPresence) ? state.publicPresence : [],
     sitePhotos,
     photos: sitePhotos,
@@ -37,5 +38,6 @@ window.GFC_CMS.buildValidationPayload = function buildValidationPayload(state) {
   const payload = window.GFC_CMS.buildPublishPayload(state);
   delete payload.password;
   delete payload.baseUpdatedAt;
+  delete payload.baseState;
   return payload;
 };

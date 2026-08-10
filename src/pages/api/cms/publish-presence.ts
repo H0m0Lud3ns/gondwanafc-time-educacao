@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 import cmsState from '../../../data/cms-state.json';
 import { cmsBranch, cmsRepo, githubRequest } from '../../../lib/cms/github';
-import { normalizeCmsState, validateCmsState } from '../../../lib/cms-schema';
+import { normalizeCmsState, validateCmsState, type CmsState } from '../../../lib/cms-schema';
 
 const cmsPath = 'src/data/cms-state.json';
 
@@ -15,6 +15,35 @@ function json(body: unknown, status = 200) {
 function decodeGithubJson(content: string) {
   const normalized = content.replace(/\n/g, '');
   return JSON.parse(Buffer.from(normalized, 'base64').toString('utf8'));
+}
+
+type MergeKey = 'publicPresence' | 'sitePhotos' | 'photos' | 'imageUses' | 'uploads' | 'projects' | 'links' | 'siteMap';
+
+function mergeById<T extends Record<string, unknown>>(current: T[], base: T[], draft: T[]) {
+  const draftById = new Map(draft.map((item) => [String(item.id || ''), item]));
+  const baseById = new Map(base.map((item) => [String(item.id || ''), item]));
+  const currentById = new Map(current.map((item) => [String(item.id || ''), item]));
+  const ids = new Set([...currentById.keys(), ...draftById.keys()]);
+
+  return [...ids].filter(Boolean).map((id) => {
+    const currentItem = currentById.get(id) || {} as T;
+    const baseItem = baseById.get(id) || {} as T;
+    const draftItem = draftById.get(id) || currentItem;
+    return JSON.stringify(baseItem) === JSON.stringify(draftItem) ? currentItem : draftItem;
+  });
+}
+
+function mergeDraftIntoCurrent(current: CmsState, draft: CmsState, base?: Partial<CmsState> | null): CmsState {
+  if (!base || typeof base !== 'object') return { ...current, ...draft };
+  const next = { ...current, ...draft };
+  const keys: MergeKey[] = ['publicPresence', 'sitePhotos', 'photos', 'imageUses', 'uploads', 'projects', 'links', 'siteMap'];
+  for (const key of keys) {
+    const currentItems = Array.isArray(current[key]) ? current[key] as Record<string, unknown>[] : [];
+    const baseItems = Array.isArray(base[key]) ? base[key] as Record<string, unknown>[] : [];
+    const draftItems = Array.isArray(draft[key]) ? draft[key] as Record<string, unknown>[] : [];
+    next[key] = mergeById(currentItems, baseItems, draftItems) as never;
+  }
+  return next;
 }
 
 export const prerender = false;
@@ -43,21 +72,13 @@ export const POST: APIRoute = async ({ request }) => {
     const baseUpdatedAt = String(body.baseUpdatedAt || '').trim();
     const currentUpdatedAt = String(currentState.updatedAt || '').trim();
 
-    if (baseUpdatedAt && currentUpdatedAt && baseUpdatedAt !== currentUpdatedAt) {
-      return json({
-        ok: false,
-        error: 'A produção mudou depois que este rascunho foi aberto. Recarregue o CMS antes de publicar para evitar sobrescrever alterações recentes.',
-        conflict: true,
-        currentUpdatedAt,
-        baseUpdatedAt,
-      }, 409);
-    }
-
     const normalized = normalizeCmsState(body);
     const nextState = {
-      ...cmsState,
-      ...currentState,
-      ...normalized,
+      ...mergeDraftIntoCurrent(
+        { ...cmsState, ...currentState },
+        normalized,
+        body.baseState && typeof body.baseState === 'object' ? body.baseState : null,
+      ),
       updatedAt: new Date().toISOString(),
     };
 
