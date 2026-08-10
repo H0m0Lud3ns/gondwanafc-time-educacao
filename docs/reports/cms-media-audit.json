@@ -1,0 +1,1650 @@
+{
+  "generatedAt": "2026-08-10T06:45:41.127Z",
+  "totals": {
+    "imageUses": 49,
+    "uploads": 36,
+    "assets": 55,
+    "photos": 28,
+    "sitePhotos": 28
+  },
+  "duplicateSrc": [
+    {
+      "src": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png",
+      "count": 14,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "page-0-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+          "label": "Gondwana FC",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "page-1-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+          "label": "Escudo Gondwana FC - Time da Educação",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "page-3-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+          "label": "Gondwana FC",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "convite-10-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+          "label": "Gondwana FC",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "page-11-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+          "label": "Escudo Gondwana FC - Time da Educação",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "manto-abya-yala-page-0-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+          "label": "Gondwana FC",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "manto-abya-yala-page-1-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+          "label": "A camisa também ensina.",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "manto-abya-yala-page-4-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+          "label": "Gondwana FC",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "blog-page-0-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+          "label": "Gondwana FC",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "blog-page-1-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+          "label": "Gondwana FC",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "blog-page-4-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+          "label": "Gondwana FC",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "logo-gondwana-fc-time-educacao-png-sin-borde",
+          "label": "Logo Gondwana Fc Time Educacao Png Sin Borde",
+          "usedBy": [
+            "logo-gondwana-fc-time-educacao-png-sin-borde",
+            "page-0-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+            "page-1-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+            "page-3-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+            "convite-10-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+            "page-11-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+            "manto-abya-yala-page-0-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+            "manto-abya-yala-page-1-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+            "manto-abya-yala-page-4-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+            "blog-page-0-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+            "blog-page-1-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+            "blog-page-4-logo-gondwana-fc-time-educacao-png-sin-borde-png"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "logo-gondwana-fc-time-educacao-png-sin-borde",
+          "label": "Logo Gondwana Fc Time Educacao Png Sin Borde",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "logo-gondwana-fc-time-educacao-png-sin-borde",
+          "label": "Logo Gondwana Fc Time Educacao Png Sin Borde",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/assets/camisa-abya-yala/camisa-abya-yala.jpg",
+      "count": 13,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "manto-5-camisa-abya-yala-jpg",
+          "label": "Camisa Abya Yala do Gondwana FC, frente e costas",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "manto-abya-yala-page-2-camisa-abya-yala-jpg",
+          "label": "Camisa Abya Yala do Gondwana FC, frente e costas",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "manto-abya-yala-page-3-camisa-abya-yala-jpg",
+          "label": "Camisa Abya Yala sobre fundo azul",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "blog-page-2-camisa-abya-yala-jpg",
+          "label": "Camisa Abya Yala do Gondwana FC, frente e costas",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "blog-page-3-camisa-abya-yala-jpg",
+          "label": "Camisa Abya Yala sobre fundo azul",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "home.manto.camisa-abya-yala-do-gondwana-fc-frente-e-costa",
+          "label": "Camisa Abya Yala do Gondwana FC, frente e costas",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "manto.page.camisa-abya-yala-do-gondwana-fc-frente-e-costa",
+          "label": "Camisa Abya Yala do Gondwana FC, frente e costas",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "manto.simbolos.camisa-abya-yala-sobre-fundo-azul",
+          "label": "Camisa Abya Yala sobre fundo azul",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "camisa-gondwana-fc-abya-yala-frente-costas",
+          "label": "Camisa Gondwana FC Abya Yala Frente e Costas",
+          "usedBy": [
+            "camisa-gondwana-fc-abya-yala-frente-costas",
+            "camisa-abya-yala",
+            "manto-5-camisa-abya-yala-jpg",
+            "manto-abya-yala-page-2-camisa-abya-yala-jpg",
+            "manto-abya-yala-page-3-camisa-abya-yala-jpg",
+            "blog-page-2-camisa-abya-yala-jpg",
+            "blog-page-3-camisa-abya-yala-jpg",
+            "home.manto.camisa-abya-yala-do-gondwana-fc-frente-e-costa",
+            "manto.page.camisa-abya-yala-do-gondwana-fc-frente-e-costa",
+            "manto.simbolos.camisa-abya-yala-sobre-fundo-azul"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "camisa-gondwana-fc-abya-yala-frente-costas",
+          "label": "Camisa Gondwana FC Abya Yala Frente e Costas",
+          "usedBy": []
+        },
+        {
+          "collection": "photos",
+          "id": "camisa-abya-yala",
+          "label": "Camisa Abya Yala",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "camisa-gondwana-fc-abya-yala-frente-costas",
+          "label": "Camisa Gondwana FC Abya Yala Frente e Costas",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "camisa-abya-yala",
+          "label": "Camisa Abya Yala",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg",
+      "count": 8,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "home.temporada.imagem-principal",
+          "label": "Oficina Gondwana FC",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "blog-page-2-img-20251210-125224-1-1786325414762-jpg",
+          "label": "Oficina educativa com participantes reunidos em sala",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "caderno.escolas.oficina-educativa-com-participantes-reunidos-e",
+          "label": "Oficina educativa com participantes reunidos em sala",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "blog.linha.oficina-educativa-com-participantes-reunidos-e",
+          "label": "Oficina educativa com participantes reunidos em sala",
+          "usedBy": []
+        },
+        {
+          "collection": "uploads",
+          "id": "img-20251210-125224-1-1786325414762",
+          "label": "Img 20251210 125224 1 1786325414762",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "enviada-oficina-sala",
+          "label": "Enviada Oficina Sala",
+          "usedBy": [
+            "enviada-oficina-sala",
+            "home.temporada.imagem-principal",
+            "home.partidas-comprovadas.imagem-principal",
+            "blog-page-2-img-20251210-125224-1-1786325414762-jpg",
+            "caderno.escolas.oficina-educativa-com-participantes-reunidos-e",
+            "blog.linha.oficina-educativa-com-participantes-reunidos-e"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "enviada-oficina-sala",
+          "label": "Enviada Oficina Sala",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "enviada-oficina-sala",
+          "label": "Enviada Oficina Sala",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/senac-lapa-scipiao-1786304146244.jpg",
+      "count": 7,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "caderno.metodo.audiovisual",
+          "label": "Card Audiovisual - Método ABC",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "blog-page-1-senac-lapa-scipiao-1786304146244-jpg",
+          "label": "Bolas usadas em experiência educativa do Gondwana FC",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "blog.page.bolas-usadas-em-experiencia-educativa-do-gondw",
+          "label": "Bolas usadas em experiência educativa do Gondwana FC",
+          "usedBy": []
+        },
+        {
+          "collection": "uploads",
+          "id": "senac-lapa-scipiao-1786304146244",
+          "label": "Senac Lapa Scipiao 1786304146244",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "enviada-bolas",
+          "label": "Enviada Bolas",
+          "usedBy": [
+            "enviada-bolas",
+            "caderno.metodo.audiovisual",
+            "blog-page-1-senac-lapa-scipiao-1786304146244-jpg",
+            "blog.page.bolas-usadas-em-experiencia-educativa-do-gondw"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "enviada-bolas",
+          "label": "Enviada Bolas",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "enviada-bolas",
+          "label": "Enviada Bolas",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/senac-lapa-scipiao-1786299766436.jpg",
+      "count": 6,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "caderno.metodo.camera",
+          "label": "Card Câmera - Método ABC",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "blog-9-senac-lapa-scipiao-1786299766436-jpg",
+          "label": "Encontro com bola e mãos",
+          "usedBy": []
+        },
+        {
+          "collection": "uploads",
+          "id": "senac-lapa-scipiao-1786299766436",
+          "label": "Senac Lapa Scipiao 1786299766436",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "27a017d7-encuentro-manos",
+          "label": "27A017D7 Encuentro Manos",
+          "usedBy": [
+            "27a017d7-encuentro-manos",
+            "caderno.metodo.camera",
+            "blog-9-senac-lapa-scipiao-1786299766436-jpg"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "27a017d7-encuentro-manos",
+          "label": "27A017D7 Encuentro Manos",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "27a017d7-encuentro-manos",
+          "label": "27A017D7 Encuentro Manos",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/photo-4983517877621165108-y-1786320483241.jpg",
+      "count": 5,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "caderno.escola-estadio.imagem-principal",
+          "label": "Imagem principal - Escola como Estádio",
+          "usedBy": []
+        },
+        {
+          "collection": "uploads",
+          "id": "photo-4983517877621165108-y-1786320483241",
+          "label": "Photo 4983517877621165108 Y 1786320483241",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "bc785a04-frame-02-96-5s",
+          "label": "Bc785A04 Frame 02 96.5S",
+          "usedBy": [
+            "bc785a04-frame-02-96-5s",
+            "caderno.escola-estadio.imagem-principal"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "bc785a04-frame-02-96-5s",
+          "label": "Bc785A04 Frame 02 96.5S",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "bc785a04-frame-02-96-5s",
+          "label": "Bc785A04 Frame 02 96.5S",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/legacy-assets/enviada-bola-maos.jpg",
+      "count": 5,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "caderno.por-que.bola-nas-maos-durante-atividade-educativa-gond",
+          "label": "Bola nas mãos durante atividade educativa Gondwana",
+          "usedBy": []
+        },
+        {
+          "collection": "imageUses",
+          "id": "caderno.escolas.pessoa-segurando-uma-bola-durante-atividade-ed",
+          "label": "Pessoa segurando uma bola durante atividade educativa Gondwana",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "enviada-bola-maos",
+          "label": "Enviada Bola Maos",
+          "usedBy": [
+            "enviada-bola-maos",
+            "caderno.por-que.bola-nas-maos-durante-atividade-educativa-gond",
+            "caderno.escolas.pessoa-segurando-uma-bola-durante-atividade-ed"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "enviada-bola-maos",
+          "label": "Enviada Bola Maos",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "enviada-bola-maos",
+          "label": "Enviada Bola Maos",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/uniacc-miercoles-2-dia-32-1786324739166.jpg",
+      "count": 5,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "caderno.territorios.jogo-com-comunidade-parceira",
+          "label": "Jogo com comunidade parceira",
+          "usedBy": []
+        },
+        {
+          "collection": "uploads",
+          "id": "uniacc-miercoles-2-dia-32-1786324739166",
+          "label": "Uniacc Miercoles 2 Dia 32 1786324739166",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "99fba4ba-juego-comunidad",
+          "label": "99Fba4Ba Juego Comunidad",
+          "usedBy": [
+            "99fba4ba-juego-comunidad",
+            "caderno.territorios.jogo-com-comunidade-parceira"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "99fba4ba-juego-comunidad",
+          "label": "99Fba4Ba Juego Comunidad",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "99fba4ba-juego-comunidad",
+          "label": "99Fba4Ba Juego Comunidad",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/legacy-assets/f719394e-metodologia-balon.jpg",
+      "count": 4,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "caderno.metodo.bola",
+          "label": "Card Bola - Método ABC",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "f719394e-metodologia-balon",
+          "label": "F719394E Metodologia Balon",
+          "usedBy": [
+            "f719394e-metodologia-balon",
+            "caderno.metodo.bola"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "f719394e-metodologia-balon",
+          "label": "F719394E Metodologia Balon",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "f719394e-metodologia-balon",
+          "label": "F719394E Metodologia Balon",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/legacy-assets/logo-gondwana-fc-badge-white.jpg",
+      "count": 4,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "clube-4-logo-gondwana-fc-badge-white-jpg",
+          "label": "Aprender também é uma forma de jogo.",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "logo-gondwana-fc-badge-white",
+          "label": "Logo Gondwana Fc Badge White",
+          "usedBy": [
+            "logo-gondwana-fc-badge-white",
+            "clube-4-logo-gondwana-fc-badge-white-jpg"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "logo-gondwana-fc-badge-white",
+          "label": "Logo Gondwana Fc Badge White",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "logo-gondwana-fc-badge-white",
+          "label": "Logo Gondwana Fc Badge White",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/legacy-assets/dupla-gondwana-unesco.jpg",
+      "count": 4,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "caderno.time.monica-saraiva-e-sebastian-acevedo-na-unesco",
+          "label": "Mônica Saraiva e Sebastián Acevedo na UNESCO",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "dupla-gondwana-unesco",
+          "label": "Dupla Gondwana Unesco",
+          "usedBy": [
+            "dupla-gondwana-unesco",
+            "caderno.time.monica-saraiva-e-sebastian-acevedo-na-unesco"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "dupla-gondwana-unesco",
+          "label": "Dupla Gondwana Unesco",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "dupla-gondwana-unesco",
+          "label": "Dupla Gondwana Unesco",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/legacy-assets/monica-saraiva-time-educacao.png",
+      "count": 4,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "caderno.time.monica-saraiva-da-silva",
+          "label": "Mônica Saraiva da Silva",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "monica-saraiva-time-educacao",
+          "label": "Monica Saraiva Time Educacao",
+          "usedBy": [
+            "monica-saraiva-time-educacao",
+            "caderno.time.monica-saraiva-da-silva"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "monica-saraiva-time-educacao",
+          "label": "Monica Saraiva Time Educacao",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "monica-saraiva-time-educacao",
+          "label": "Monica Saraiva Time Educacao",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/legacy-assets/sebastian-acevedo-time-educacao.jpg",
+      "count": 4,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "caderno.time.sebastian-acevedo-vasquez",
+          "label": "Sebastián Acevedo Vásquez",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "sebastian-acevedo-time-educacao",
+          "label": "Sebastian Acevedo Time Educacao",
+          "usedBy": [
+            "sebastian-acevedo-time-educacao",
+            "caderno.time.sebastian-acevedo-vasquez"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "sebastian-acevedo-time-educacao",
+          "label": "Sebastian Acevedo Time Educacao",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "sebastian-acevedo-time-educacao",
+          "label": "Sebastian Acevedo Time Educacao",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/legacy-assets/enviada-apresentacao.jpg",
+      "count": 4,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "caderno.escolas.apresentacao-publica-sobre-esporte-educacao-e-",
+          "label": "Apresentação pública sobre esporte, educação e comunidade",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "enviada-apresentacao",
+          "label": "Enviada Apresentacao",
+          "usedBy": [
+            "enviada-apresentacao",
+            "caderno.escolas.apresentacao-publica-sobre-esporte-educacao-e-"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "enviada-apresentacao",
+          "label": "Enviada Apresentacao",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "enviada-apresentacao",
+          "label": "Enviada Apresentacao",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/legacy-assets/enviada-grupo-celebracao.jpg",
+      "count": 4,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "caderno.quem-pode.grupo-celebrando-uma-atividade-do-time-da-educ",
+          "label": "Grupo celebrando uma atividade do Time da Educação com bola e bandeira Gondwana",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "enviada-grupo-celebracao",
+          "label": "Enviada Grupo Celebracao",
+          "usedBy": [
+            "enviada-grupo-celebracao",
+            "caderno.quem-pode.grupo-celebrando-uma-atividade-do-time-da-educ"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "enviada-grupo-celebracao",
+          "label": "Enviada Grupo Celebracao",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "enviada-grupo-celebracao",
+          "label": "Enviada Grupo Celebracao",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/legacy-assets/68367e6a-cartaz-gondwana.png",
+      "count": 4,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "caderno.ecossistema.a-bola-conecta",
+          "label": "A Bola Conecta",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "68367e6a-cartaz-gondwana",
+          "label": "68367E6A Cartaz Gondwana",
+          "usedBy": [
+            "68367e6a-cartaz-gondwana",
+            "caderno.ecossistema.a-bola-conecta"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "68367e6a-cartaz-gondwana",
+          "label": "68367E6A Cartaz Gondwana",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "68367e6a-cartaz-gondwana",
+          "label": "68367E6A Cartaz Gondwana",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/legacy-assets/56ca6697-02-nao-e-so-chutar-vertical.jpg",
+      "count": 4,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "caderno.galeria.duas-pessoas-do-time-da-educacao-segurando-uma",
+          "label": "Duas pessoas do Time da Educação segurando uma bola juntas",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "56ca6697-02-nao-e-so-chutar-vertical",
+          "label": "56Ca6697 02 Nao E So Chutar Vertical",
+          "usedBy": [
+            "56ca6697-02-nao-e-so-chutar-vertical",
+            "caderno.galeria.duas-pessoas-do-time-da-educacao-segurando-uma"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "56ca6697-02-nao-e-so-chutar-vertical",
+          "label": "56Ca6697 02 Nao E So Chutar Vertical",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "56ca6697-02-nao-e-so-chutar-vertical",
+          "label": "56Ca6697 02 Nao E So Chutar Vertical",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/legacy-assets/9e1c72dd-mapa-supercontinente-gondwana.jpg",
+      "count": 4,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "caderno.page.fundo",
+          "label": "Caderno - page - fundo",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "mapa-supercontinente-gondwana",
+          "label": "Mapa Supercontinente Gondwana",
+          "usedBy": [
+            "mapa-supercontinente-gondwana",
+            "caderno.page.fundo"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "mapa-supercontinente-gondwana",
+          "label": "Mapa Supercontinente Gondwana",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "mapa-supercontinente-gondwana",
+          "label": "Mapa Supercontinente Gondwana",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/logo-sesc-1786320618808.jpg",
+      "count": 4,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "logo-sesc-1786320618808",
+          "label": "Logo Sesc 1786320618808",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "sesc-logo",
+          "label": "Sesc Logo",
+          "usedBy": [
+            "sesc-logo"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "sesc-logo",
+          "label": "Sesc Logo",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "sesc-logo",
+          "label": "Sesc Logo",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/whatsapp-image-2026-04-23-at-19-46-37-1786320550866.jpg",
+      "count": 4,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "whatsapp-image-2026-04-23-at-19-46-37-1786320550866",
+          "label": "Whatsapp Image 2026 04 23 At 19 46 37 1786320550866",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "escola-mobile-abc",
+          "label": "Escola Mobile ABC",
+          "usedBy": [
+            "escola-mobile-abc"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "escola-mobile-abc",
+          "label": "Escola Mobile ABC",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "escola-mobile-abc",
+          "label": "Escola Mobile ABC",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/sesc-logo-1786331831889.jpg",
+      "count": 3,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "caderno.metodo.sesc-logo",
+          "label": "Logo Sesc - Base publicada",
+          "usedBy": []
+        },
+        {
+          "collection": "uploads",
+          "id": "sesc-logo-1786331831889",
+          "label": "sesc logo",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "caderno-metodo-sesc-logo",
+          "label": "Logo Sesc - Base publicada",
+          "usedBy": [
+            "caderno.metodo.sesc-logo"
+          ]
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/uniacc-miercoles-2-dia-32-1786328899287.jpg",
+      "count": 3,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "page-2-senac-lapa-scipiao-1786304146244-jpg",
+          "label": "Bolas reunidas antes de uma atividade educativa",
+          "usedBy": []
+        },
+        {
+          "collection": "uploads",
+          "id": "uniacc-miercoles-2-dia-32-1786328899287",
+          "label": "uniacc miercoles 2 dia-32",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "page-2-senac-lapa-scipiao-1786304146244-jpg",
+          "label": "Bolas reunidas antes de uma atividade educativa",
+          "usedBy": [
+            "page-2-senac-lapa-scipiao-1786304146244-jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/uniacc-chile-foto-jose-aguilera-1786327777920.jpg",
+      "count": 3,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "home.metodo.imagem-principal",
+          "label": "Oficina do Método ABC com educadores e participantes",
+          "usedBy": []
+        },
+        {
+          "collection": "uploads",
+          "id": "uniacc-chile-foto-jose-aguilera",
+          "label": "UNIACC CHILE _ FOTO JOSÉ AGUILERA",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "home-metodo-imagem-principal",
+          "label": "Oficina do Método ABC com educadores e participantes",
+          "usedBy": [
+            "home.metodo.imagem-principal"
+          ]
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/bola-unidad-convocacao-2026-08-10.jpg",
+      "count": 3,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "home.page.bolas-reunidas-antes-de-uma-atividade-educativ",
+          "label": "Convocação aberta - Bola Unidad",
+          "usedBy": []
+        },
+        {
+          "collection": "uploads",
+          "id": "bola-unidad-convocacao-2026-08-10",
+          "label": "Convocação aberta - Bola Unidad",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "home-page-bolas-reunidas-antes-de-uma-atividade-educativ",
+          "label": "Convocação aberta - Bola Unidad",
+          "usedBy": [
+            "home.page.bolas-reunidas-antes-de-uma-atividade-educativ"
+          ]
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/uniacc-miercoles-2-dia-32-1786325002543.jpg",
+      "count": 3,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "home.blog.encontro-com-bola-e-maos",
+          "label": "Encontro com bola e mãos",
+          "usedBy": []
+        },
+        {
+          "collection": "uploads",
+          "id": "uniacc-miercoles-2-dia-32-1786325002543",
+          "label": "Uniacc Miercoles 2 Dia 32 1786325002543",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "home-blog-encontro-com-bola-e-maos",
+          "label": "Encontro com bola e mãos",
+          "usedBy": [
+            "home.blog.encontro-com-bola-e-maos"
+          ]
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/emef-pedro-americo-1786332806287.jpg",
+      "count": 3,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "home.partidas-comprovadas.fundo",
+          "label": "Home - partidas-comprovadas - fundo",
+          "usedBy": []
+        },
+        {
+          "collection": "uploads",
+          "id": "emef-pedro-americo-1786332806287",
+          "label": "EMEF Pedro Americo",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "home-partidas-comprovadas-fundo",
+          "label": "Home - partidas-comprovadas - fundo",
+          "usedBy": [
+            "home.partidas-comprovadas.fundo"
+          ]
+        }
+      ]
+    },
+    {
+      "src": "/legacy-assets/2423ec38-reel-09.jpg",
+      "count": 3,
+      "items": [
+        {
+          "collection": "assets",
+          "id": "2423ec38-reel-09",
+          "label": "2423Ec38 Reel 09",
+          "usedBy": [
+            "2423ec38-reel-09"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "2423ec38-reel-09",
+          "label": "2423Ec38 Reel 09",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "2423ec38-reel-09",
+          "label": "2423Ec38 Reel 09",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/legacy-assets/26245046-comunidad-gondwana.jpg",
+      "count": 3,
+      "items": [
+        {
+          "collection": "assets",
+          "id": "26245046-comunidad-gondwana",
+          "label": "26245046 Comunidad Gondwana",
+          "usedBy": [
+            "26245046-comunidad-gondwana"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "26245046-comunidad-gondwana",
+          "label": "26245046 Comunidad Gondwana",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "26245046-comunidad-gondwana",
+          "label": "26245046 Comunidad Gondwana",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/legacy-assets/34a137cd-reel-05.jpg",
+      "count": 3,
+      "items": [
+        {
+          "collection": "assets",
+          "id": "34a137cd-reel-05",
+          "label": "34A137Cd Reel 05",
+          "usedBy": [
+            "34a137cd-reel-05"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "34a137cd-reel-05",
+          "label": "34A137Cd Reel 05",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "34a137cd-reel-05",
+          "label": "34A137Cd Reel 05",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/legacy-assets/66e243b7-frame_02_3.4s.jpg",
+      "count": 3,
+      "items": [
+        {
+          "collection": "assets",
+          "id": "66e243b7-frame-02-3-4s",
+          "label": "66E243B7 Frame 02 3.4S",
+          "usedBy": [
+            "66e243b7-frame-02-3-4s"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "66e243b7-frame-02-3-4s",
+          "label": "66E243B7 Frame 02 3.4S",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "66e243b7-frame-02-3-4s",
+          "label": "66E243B7 Frame 02 3.4S",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/legacy-assets/8bd00718-frame_02_5.7s.jpg",
+      "count": 3,
+      "items": [
+        {
+          "collection": "assets",
+          "id": "8bd00718-frame-02-5-7s",
+          "label": "8Bd00718 Frame 02 5.7S",
+          "usedBy": [
+            "8bd00718-frame-02-5-7s"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "8bd00718-frame-02-5-7s",
+          "label": "8Bd00718 Frame 02 5.7S",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "8bd00718-frame-02-5-7s",
+          "label": "8Bd00718 Frame 02 5.7S",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/legacy-assets/enviada-estadio.jpg",
+      "count": 3,
+      "items": [
+        {
+          "collection": "assets",
+          "id": "enviada-estadio",
+          "label": "Enviada Estadio",
+          "usedBy": [
+            "enviada-estadio"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "enviada-estadio",
+          "label": "Enviada Estadio",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "enviada-estadio",
+          "label": "Enviada Estadio",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/legacy-assets/logo-gondwana-fc-icon-color.jpg",
+      "count": 3,
+      "items": [
+        {
+          "collection": "assets",
+          "id": "logo-gondwana-fc-icon-color",
+          "label": "Logo Gondwana FC Icone Colorido",
+          "usedBy": [
+            "logo-gondwana-fc-icon-color"
+          ]
+        },
+        {
+          "collection": "photos",
+          "id": "logo-gondwana-fc-icon-color",
+          "label": "Logo Gondwana FC Icone Colorido",
+          "usedBy": []
+        },
+        {
+          "collection": "sitePhotos",
+          "id": "logo-gondwana-fc-icon-color",
+          "label": "Logo Gondwana FC Icone Colorido",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786340582623.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "imageUses",
+          "id": "home.partidas-comprovadas.imagem-principal",
+          "label": "Oficina educativa com participantes reunidos em sala",
+          "usedBy": []
+        },
+        {
+          "collection": "uploads",
+          "id": "img-20250616-081724368-ae-1786340582623",
+          "label": "IMG_20250616_081724368_AE",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786340541078.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "img-20250616-081724368-ae-1786340541078",
+          "label": "IMG_20250616_081724368_AE",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "img-20250616-081724368-ae-1786340541078",
+          "label": "IMG_20250616_081724368_AE",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786340370858.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "img-20250616-081724368-ae-1786340370858",
+          "label": "IMG_20250616_081724368_AE",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "img-20250616-081724368-ae-1786340370858",
+          "label": "IMG_20250616_081724368_AE",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786340189223.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "img-20250616-081724368-ae-1786340189223",
+          "label": "IMG_20250616_081724368_AE",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "img-20250616-081724368-ae-1786340189223",
+          "label": "IMG_20250616_081724368_AE",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786338903823.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "img-20250616-081724368-ae-1786338903823",
+          "label": "IMG_20250616_081724368_AE",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "img-20250616-081724368-ae-1786338903823",
+          "label": "IMG_20250616_081724368_AE",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/museu-do-futebol-1786331051183.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "museu-do-futebol-1786331051183",
+          "label": "Museu do Futebol",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "museu-do-futebol-1786331051183",
+          "label": "Museu do Futebol",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786330789131.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "img-20250616-081724368-ae-1786330789131",
+          "label": "IMG_20250616_081724368_AE",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "img-20250616-081724368-ae-1786330789131",
+          "label": "IMG_20250616_081724368_AE",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786330445972.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "img-20250616-081724368-ae-1786330445972",
+          "label": "IMG_20250616_081724368_AE",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "img-20250616-081724368-ae-1786330445972",
+          "label": "IMG_20250616_081724368_AE",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786330083570.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "img-20250616-081724368-ae-1786330083570",
+          "label": "IMG_20250616_081724368_AE",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "img-20250616-081724368-ae-1786330083570",
+          "label": "IMG_20250616_081724368_AE",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/base-sport-recife-2022-1786325352245.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "base-sport-recife-2022-1786325352245",
+          "label": "Base Sport Recife 2022 1786325352245",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "base-sport-recife-2022-1786325352245",
+          "label": "Base Sport Recife 2022 1786325352245",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/cabaceiras-paraiba-1-1786326559279.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "cabaceiras-paraiba-1-1786326559279",
+          "label": "Cabaceiras Paraiba 1 1786326559279",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "cabaceiras-paraiba-1-1786326559279",
+          "label": "Cabaceiras Paraiba 1 1786326559279",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/chatgpt-image-8-de-ago-de-2026-11-44-33-1786320969960.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "chatgpt-image-8-de-ago-de-2026-11-44-33-1786320969960",
+          "label": "Chatgpt Image 8 De Ago De 2026 11 44 33 1786320969960",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "chatgpt-image-8-de-ago-de-2026-11-44-33-1786320969960",
+          "label": "Chatgpt Image 8 De Ago De 2026 11 44 33 1786320969960",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/chatgpt-image-8-de-ago-de-2026-11-44-33-1786324346191.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "chatgpt-image-8-de-ago-de-2026-11-44-33-1786324346191",
+          "label": "Chatgpt Image 8 De Ago De 2026 11 44 33 1786324346191",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "chatgpt-image-8-de-ago-de-2026-11-44-33-1786324346191",
+          "label": "Chatgpt Image 8 De Ago De 2026 11 44 33 1786324346191",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/sesc-logo-1786320840295.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "sesc-logo-1786320840295",
+          "label": "Sesc Logo 1786320840295",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "sesc-logo-1786320840295",
+          "label": "Sesc Logo 1786320840295",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/sesc-logo-bbf0e029de-seeklogo-com-1786320344360.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "sesc-logo-bbf0e029de-seeklogo-com-1786320344360",
+          "label": "Sesc Logo Bbf0E029De Seeklogo Com 1786320344360",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "sesc-logo-bbf0e029de-seeklogo-com-1786320344360",
+          "label": "Sesc Logo Bbf0E029De Seeklogo Com 1786320344360",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/uniacc-chile-foto-jose-aguilera-1786324911538.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "uniacc-chile-foto-jose-aguilera-1786324911538",
+          "label": "Uniacc Chile Foto Jose Aguilera 1786324911538",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "uniacc-chile-foto-jose-aguilera-1786324911538",
+          "label": "Uniacc Chile Foto Jose Aguilera 1786324911538",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/uniacc-chile-foto-jose-aguilera-1786326520595.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "uniacc-chile-foto-jose-aguilera-1786326520595",
+          "label": "Uniacc Chile Foto Jose Aguilera 1786326520595",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "uniacc-chile-foto-jose-aguilera-1786326520595",
+          "label": "Uniacc Chile Foto Jose Aguilera 1786326520595",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/uniacc-chile-foto-jose-aguilera-1786326646986.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "uniacc-chile-foto-jose-aguilera-1786326646986",
+          "label": "Uniacc Chile Foto Jose Aguilera 1786326646986",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "uniacc-chile-foto-jose-aguilera-1786326646986",
+          "label": "Uniacc Chile Foto Jose Aguilera 1786326646986",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/uniacc-miercoles-2-dia-32-1786325802197.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "uniacc-miercoles-2-dia-32-1786325802197",
+          "label": "Uniacc Miercoles 2 Dia 32 1786325802197",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "uniacc-miercoles-2-dia-32-1786325802197",
+          "label": "Uniacc Miercoles 2 Dia 32 1786325802197",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/uniacc-miercoles-2-dia-32-1786326443554.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "uniacc-miercoles-2-dia-32-1786326443554",
+          "label": "Uniacc Miercoles 2 Dia 32 1786326443554",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "uniacc-miercoles-2-dia-32-1786326443554",
+          "label": "Uniacc Miercoles 2 Dia 32 1786326443554",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/uniacc-miercoles-2-dia-32-1786327722100.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "uniacc-miercoles-2-dia-32-1786327722100",
+          "label": "Uniacc Miercoles 2 Dia 32 1786327722100",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "uniacc-miercoles-2-dia-32-1786327722100",
+          "label": "Uniacc Miercoles 2 Dia 32 1786327722100",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/whatsapp-image-2026-05-02-at-22-11-46-1-1786321811780.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "whatsapp-image-2026-05-02-at-22-11-46-1-1786321811780",
+          "label": "Whatsapp Image 2026 05 02 At 22 11 46 1 1786321811780",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "whatsapp-image-2026-05-02-at-22-11-46-1-1786321811780",
+          "label": "Whatsapp Image 2026 05 02 At 22 11 46 1 1786321811780",
+          "usedBy": []
+        }
+      ]
+    },
+    {
+      "src": "/uploads/cms/2026/08/whatsapp-image-2026-05-02-at-22-11-46-1-1786322060876.jpg",
+      "count": 2,
+      "items": [
+        {
+          "collection": "uploads",
+          "id": "whatsapp-image-2026-05-02-at-22-11-46-1-1786322060876",
+          "label": "Whatsapp Image 2026 05 02 At 22 11 46 1 1786322060876",
+          "usedBy": []
+        },
+        {
+          "collection": "assets",
+          "id": "whatsapp-image-2026-05-02-at-22-11-46-1-1786322060876",
+          "label": "Whatsapp Image 2026 05 02 At 22 11 46 1 1786322060876",
+          "usedBy": []
+        }
+      ]
+    }
+  ],
+  "duplicateUploadsByLabel": [
+    {
+      "label": "img_20250616_081724368_ae",
+      "count": 8,
+      "srcs": [
+        "/uploads/cms/2026/08/img-20250616-081724368-ae-1786340582623.jpg",
+        "/uploads/cms/2026/08/img-20250616-081724368-ae-1786340541078.jpg",
+        "/uploads/cms/2026/08/img-20250616-081724368-ae-1786340370858.jpg",
+        "/uploads/cms/2026/08/img-20250616-081724368-ae-1786340189223.jpg",
+        "/uploads/cms/2026/08/img-20250616-081724368-ae-1786338903823.jpg",
+        "/uploads/cms/2026/08/img-20250616-081724368-ae-1786330789131.jpg",
+        "/uploads/cms/2026/08/img-20250616-081724368-ae-1786330445972.jpg",
+        "/uploads/cms/2026/08/img-20250616-081724368-ae-1786330083570.jpg"
+      ]
+    }
+  ]
+}

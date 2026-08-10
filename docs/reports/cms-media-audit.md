@@ -1,0 +1,197 @@
+# Auditoria de mídia do CMS
+
+Gerado em: 2026-08-10T06:45:41.127Z
+
+## Totais
+
+- imageUses: 49
+- uploads: 36
+- assets: 55
+- photos: 28
+- sitePhotos: 28
+
+## Uploads duplicados por nome
+
+- img_20250616_081724368_ae: 8 arquivos
+  - /uploads/cms/2026/08/img-20250616-081724368-ae-1786340582623.jpg
+  - /uploads/cms/2026/08/img-20250616-081724368-ae-1786340541078.jpg
+  - /uploads/cms/2026/08/img-20250616-081724368-ae-1786340370858.jpg
+  - /uploads/cms/2026/08/img-20250616-081724368-ae-1786340189223.jpg
+  - /uploads/cms/2026/08/img-20250616-081724368-ae-1786338903823.jpg
+  - /uploads/cms/2026/08/img-20250616-081724368-ae-1786330789131.jpg
+  - /uploads/cms/2026/08/img-20250616-081724368-ae-1786330445972.jpg
+  - /uploads/cms/2026/08/img-20250616-081724368-ae-1786330083570.jpg
+
+## Mesma imagem referenciada em várias coleções
+
+- /legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png: 14 referências
+  - imageUses: page-0-logo-gondwana-fc-time-educacao-png-sin-borde-png - Gondwana FC
+  - imageUses: page-1-logo-gondwana-fc-time-educacao-png-sin-borde-png - Escudo Gondwana FC - Time da Educação
+  - imageUses: page-3-logo-gondwana-fc-time-educacao-png-sin-borde-png - Gondwana FC
+  - imageUses: convite-10-logo-gondwana-fc-time-educacao-png-sin-borde-png - Gondwana FC
+  - imageUses: page-11-logo-gondwana-fc-time-educacao-png-sin-borde-png - Escudo Gondwana FC - Time da Educação
+  - imageUses: manto-abya-yala-page-0-logo-gondwana-fc-time-educacao-png-sin-borde-png - Gondwana FC
+  - imageUses: manto-abya-yala-page-1-logo-gondwana-fc-time-educacao-png-sin-borde-png - A camisa também ensina.
+  - imageUses: manto-abya-yala-page-4-logo-gondwana-fc-time-educacao-png-sin-borde-png - Gondwana FC
+  - imageUses: blog-page-0-logo-gondwana-fc-time-educacao-png-sin-borde-png - Gondwana FC
+  - imageUses: blog-page-1-logo-gondwana-fc-time-educacao-png-sin-borde-png - Gondwana FC
+  - imageUses: blog-page-4-logo-gondwana-fc-time-educacao-png-sin-borde-png - Gondwana FC
+  - assets: logo-gondwana-fc-time-educacao-png-sin-borde - Logo Gondwana Fc Time Educacao Png Sin Borde
+  - photos: logo-gondwana-fc-time-educacao-png-sin-borde - Logo Gondwana Fc Time Educacao Png Sin Borde
+  - sitePhotos: logo-gondwana-fc-time-educacao-png-sin-borde - Logo Gondwana Fc Time Educacao Png Sin Borde
+- /assets/camisa-abya-yala/camisa-abya-yala.jpg: 13 referências
+  - imageUses: manto-5-camisa-abya-yala-jpg - Camisa Abya Yala do Gondwana FC, frente e costas
+  - imageUses: manto-abya-yala-page-2-camisa-abya-yala-jpg - Camisa Abya Yala do Gondwana FC, frente e costas
+  - imageUses: manto-abya-yala-page-3-camisa-abya-yala-jpg - Camisa Abya Yala sobre fundo azul
+  - imageUses: blog-page-2-camisa-abya-yala-jpg - Camisa Abya Yala do Gondwana FC, frente e costas
+  - imageUses: blog-page-3-camisa-abya-yala-jpg - Camisa Abya Yala sobre fundo azul
+  - imageUses: home.manto.camisa-abya-yala-do-gondwana-fc-frente-e-costa - Camisa Abya Yala do Gondwana FC, frente e costas
+  - imageUses: manto.page.camisa-abya-yala-do-gondwana-fc-frente-e-costa - Camisa Abya Yala do Gondwana FC, frente e costas
+  - imageUses: manto.simbolos.camisa-abya-yala-sobre-fundo-azul - Camisa Abya Yala sobre fundo azul
+  - assets: camisa-gondwana-fc-abya-yala-frente-costas - Camisa Gondwana FC Abya Yala Frente e Costas
+  - photos: camisa-gondwana-fc-abya-yala-frente-costas - Camisa Gondwana FC Abya Yala Frente e Costas
+  - photos: camisa-abya-yala - Camisa Abya Yala
+  - sitePhotos: camisa-gondwana-fc-abya-yala-frente-costas - Camisa Gondwana FC Abya Yala Frente e Costas
+  - sitePhotos: camisa-abya-yala - Camisa Abya Yala
+- /uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg: 8 referências
+  - imageUses: home.temporada.imagem-principal - Oficina Gondwana FC
+  - imageUses: blog-page-2-img-20251210-125224-1-1786325414762-jpg - Oficina educativa com participantes reunidos em sala
+  - imageUses: caderno.escolas.oficina-educativa-com-participantes-reunidos-e - Oficina educativa com participantes reunidos em sala
+  - imageUses: blog.linha.oficina-educativa-com-participantes-reunidos-e - Oficina educativa com participantes reunidos em sala
+  - uploads: img-20251210-125224-1-1786325414762 - Img 20251210 125224 1 1786325414762
+  - assets: enviada-oficina-sala - Enviada Oficina Sala
+  - photos: enviada-oficina-sala - Enviada Oficina Sala
+  - sitePhotos: enviada-oficina-sala - Enviada Oficina Sala
+- /uploads/cms/2026/08/senac-lapa-scipiao-1786304146244.jpg: 7 referências
+  - imageUses: caderno.metodo.audiovisual - Card Audiovisual - Método ABC
+  - imageUses: blog-page-1-senac-lapa-scipiao-1786304146244-jpg - Bolas usadas em experiência educativa do Gondwana FC
+  - imageUses: blog.page.bolas-usadas-em-experiencia-educativa-do-gondw - Bolas usadas em experiência educativa do Gondwana FC
+  - uploads: senac-lapa-scipiao-1786304146244 - Senac Lapa Scipiao 1786304146244
+  - assets: enviada-bolas - Enviada Bolas
+  - photos: enviada-bolas - Enviada Bolas
+  - sitePhotos: enviada-bolas - Enviada Bolas
+- /uploads/cms/2026/08/senac-lapa-scipiao-1786299766436.jpg: 6 referências
+  - imageUses: caderno.metodo.camera - Card Câmera - Método ABC
+  - imageUses: blog-9-senac-lapa-scipiao-1786299766436-jpg - Encontro com bola e mãos
+  - uploads: senac-lapa-scipiao-1786299766436 - Senac Lapa Scipiao 1786299766436
+  - assets: 27a017d7-encuentro-manos - 27A017D7 Encuentro Manos
+  - photos: 27a017d7-encuentro-manos - 27A017D7 Encuentro Manos
+  - sitePhotos: 27a017d7-encuentro-manos - 27A017D7 Encuentro Manos
+- /uploads/cms/2026/08/photo-4983517877621165108-y-1786320483241.jpg: 5 referências
+  - imageUses: caderno.escola-estadio.imagem-principal - Imagem principal - Escola como Estádio
+  - uploads: photo-4983517877621165108-y-1786320483241 - Photo 4983517877621165108 Y 1786320483241
+  - assets: bc785a04-frame-02-96-5s - Bc785A04 Frame 02 96.5S
+  - photos: bc785a04-frame-02-96-5s - Bc785A04 Frame 02 96.5S
+  - sitePhotos: bc785a04-frame-02-96-5s - Bc785A04 Frame 02 96.5S
+- /legacy-assets/enviada-bola-maos.jpg: 5 referências
+  - imageUses: caderno.por-que.bola-nas-maos-durante-atividade-educativa-gond - Bola nas mãos durante atividade educativa Gondwana
+  - imageUses: caderno.escolas.pessoa-segurando-uma-bola-durante-atividade-ed - Pessoa segurando uma bola durante atividade educativa Gondwana
+  - assets: enviada-bola-maos - Enviada Bola Maos
+  - photos: enviada-bola-maos - Enviada Bola Maos
+  - sitePhotos: enviada-bola-maos - Enviada Bola Maos
+- /uploads/cms/2026/08/uniacc-miercoles-2-dia-32-1786324739166.jpg: 5 referências
+  - imageUses: caderno.territorios.jogo-com-comunidade-parceira - Jogo com comunidade parceira
+  - uploads: uniacc-miercoles-2-dia-32-1786324739166 - Uniacc Miercoles 2 Dia 32 1786324739166
+  - assets: 99fba4ba-juego-comunidad - 99Fba4Ba Juego Comunidad
+  - photos: 99fba4ba-juego-comunidad - 99Fba4Ba Juego Comunidad
+  - sitePhotos: 99fba4ba-juego-comunidad - 99Fba4Ba Juego Comunidad
+- /legacy-assets/f719394e-metodologia-balon.jpg: 4 referências
+  - imageUses: caderno.metodo.bola - Card Bola - Método ABC
+  - assets: f719394e-metodologia-balon - F719394E Metodologia Balon
+  - photos: f719394e-metodologia-balon - F719394E Metodologia Balon
+  - sitePhotos: f719394e-metodologia-balon - F719394E Metodologia Balon
+- /legacy-assets/logo-gondwana-fc-badge-white.jpg: 4 referências
+  - imageUses: clube-4-logo-gondwana-fc-badge-white-jpg - Aprender também é uma forma de jogo.
+  - assets: logo-gondwana-fc-badge-white - Logo Gondwana Fc Badge White
+  - photos: logo-gondwana-fc-badge-white - Logo Gondwana Fc Badge White
+  - sitePhotos: logo-gondwana-fc-badge-white - Logo Gondwana Fc Badge White
+- /legacy-assets/dupla-gondwana-unesco.jpg: 4 referências
+  - imageUses: caderno.time.monica-saraiva-e-sebastian-acevedo-na-unesco - Mônica Saraiva e Sebastián Acevedo na UNESCO
+  - assets: dupla-gondwana-unesco - Dupla Gondwana Unesco
+  - photos: dupla-gondwana-unesco - Dupla Gondwana Unesco
+  - sitePhotos: dupla-gondwana-unesco - Dupla Gondwana Unesco
+- /legacy-assets/monica-saraiva-time-educacao.png: 4 referências
+  - imageUses: caderno.time.monica-saraiva-da-silva - Mônica Saraiva da Silva
+  - assets: monica-saraiva-time-educacao - Monica Saraiva Time Educacao
+  - photos: monica-saraiva-time-educacao - Monica Saraiva Time Educacao
+  - sitePhotos: monica-saraiva-time-educacao - Monica Saraiva Time Educacao
+- /legacy-assets/sebastian-acevedo-time-educacao.jpg: 4 referências
+  - imageUses: caderno.time.sebastian-acevedo-vasquez - Sebastián Acevedo Vásquez
+  - assets: sebastian-acevedo-time-educacao - Sebastian Acevedo Time Educacao
+  - photos: sebastian-acevedo-time-educacao - Sebastian Acevedo Time Educacao
+  - sitePhotos: sebastian-acevedo-time-educacao - Sebastian Acevedo Time Educacao
+- /legacy-assets/enviada-apresentacao.jpg: 4 referências
+  - imageUses: caderno.escolas.apresentacao-publica-sobre-esporte-educacao-e- - Apresentação pública sobre esporte, educação e comunidade
+  - assets: enviada-apresentacao - Enviada Apresentacao
+  - photos: enviada-apresentacao - Enviada Apresentacao
+  - sitePhotos: enviada-apresentacao - Enviada Apresentacao
+- /legacy-assets/enviada-grupo-celebracao.jpg: 4 referências
+  - imageUses: caderno.quem-pode.grupo-celebrando-uma-atividade-do-time-da-educ - Grupo celebrando uma atividade do Time da Educação com bola e bandeira Gondwana
+  - assets: enviada-grupo-celebracao - Enviada Grupo Celebracao
+  - photos: enviada-grupo-celebracao - Enviada Grupo Celebracao
+  - sitePhotos: enviada-grupo-celebracao - Enviada Grupo Celebracao
+- /legacy-assets/68367e6a-cartaz-gondwana.png: 4 referências
+  - imageUses: caderno.ecossistema.a-bola-conecta - A Bola Conecta
+  - assets: 68367e6a-cartaz-gondwana - 68367E6A Cartaz Gondwana
+  - photos: 68367e6a-cartaz-gondwana - 68367E6A Cartaz Gondwana
+  - sitePhotos: 68367e6a-cartaz-gondwana - 68367E6A Cartaz Gondwana
+- /legacy-assets/56ca6697-02-nao-e-so-chutar-vertical.jpg: 4 referências
+  - imageUses: caderno.galeria.duas-pessoas-do-time-da-educacao-segurando-uma - Duas pessoas do Time da Educação segurando uma bola juntas
+  - assets: 56ca6697-02-nao-e-so-chutar-vertical - 56Ca6697 02 Nao E So Chutar Vertical
+  - photos: 56ca6697-02-nao-e-so-chutar-vertical - 56Ca6697 02 Nao E So Chutar Vertical
+  - sitePhotos: 56ca6697-02-nao-e-so-chutar-vertical - 56Ca6697 02 Nao E So Chutar Vertical
+- /legacy-assets/9e1c72dd-mapa-supercontinente-gondwana.jpg: 4 referências
+  - imageUses: caderno.page.fundo - Caderno - page - fundo
+  - assets: mapa-supercontinente-gondwana - Mapa Supercontinente Gondwana
+  - photos: mapa-supercontinente-gondwana - Mapa Supercontinente Gondwana
+  - sitePhotos: mapa-supercontinente-gondwana - Mapa Supercontinente Gondwana
+- /uploads/cms/2026/08/logo-sesc-1786320618808.jpg: 4 referências
+  - uploads: logo-sesc-1786320618808 - Logo Sesc 1786320618808
+  - assets: sesc-logo - Sesc Logo
+  - photos: sesc-logo - Sesc Logo
+  - sitePhotos: sesc-logo - Sesc Logo
+- /uploads/cms/2026/08/whatsapp-image-2026-04-23-at-19-46-37-1786320550866.jpg: 4 referências
+  - uploads: whatsapp-image-2026-04-23-at-19-46-37-1786320550866 - Whatsapp Image 2026 04 23 At 19 46 37 1786320550866
+  - assets: escola-mobile-abc - Escola Mobile ABC
+  - photos: escola-mobile-abc - Escola Mobile ABC
+  - sitePhotos: escola-mobile-abc - Escola Mobile ABC
+- /uploads/cms/2026/08/sesc-logo-1786331831889.jpg: 3 referências
+  - imageUses: caderno.metodo.sesc-logo - Logo Sesc - Base publicada
+  - uploads: sesc-logo-1786331831889 - sesc logo
+  - assets: caderno-metodo-sesc-logo - Logo Sesc - Base publicada
+- /uploads/cms/2026/08/uniacc-miercoles-2-dia-32-1786328899287.jpg: 3 referências
+  - imageUses: page-2-senac-lapa-scipiao-1786304146244-jpg - Bolas reunidas antes de uma atividade educativa
+  - uploads: uniacc-miercoles-2-dia-32-1786328899287 - uniacc miercoles 2 dia-32
+  - assets: page-2-senac-lapa-scipiao-1786304146244-jpg - Bolas reunidas antes de uma atividade educativa
+- /uploads/cms/2026/08/uniacc-chile-foto-jose-aguilera-1786327777920.jpg: 3 referências
+  - imageUses: home.metodo.imagem-principal - Oficina do Método ABC com educadores e participantes
+  - uploads: uniacc-chile-foto-jose-aguilera - UNIACC CHILE _ FOTO JOSÉ AGUILERA
+  - assets: home-metodo-imagem-principal - Oficina do Método ABC com educadores e participantes
+- /uploads/cms/2026/08/bola-unidad-convocacao-2026-08-10.jpg: 3 referências
+  - imageUses: home.page.bolas-reunidas-antes-de-uma-atividade-educativ - Convocação aberta - Bola Unidad
+  - uploads: bola-unidad-convocacao-2026-08-10 - Convocação aberta - Bola Unidad
+  - assets: home-page-bolas-reunidas-antes-de-uma-atividade-educativ - Convocação aberta - Bola Unidad
+- /uploads/cms/2026/08/uniacc-miercoles-2-dia-32-1786325002543.jpg: 3 referências
+  - imageUses: home.blog.encontro-com-bola-e-maos - Encontro com bola e mãos
+  - uploads: uniacc-miercoles-2-dia-32-1786325002543 - Uniacc Miercoles 2 Dia 32 1786325002543
+  - assets: home-blog-encontro-com-bola-e-maos - Encontro com bola e mãos
+- /uploads/cms/2026/08/emef-pedro-americo-1786332806287.jpg: 3 referências
+  - imageUses: home.partidas-comprovadas.fundo - Home - partidas-comprovadas - fundo
+  - uploads: emef-pedro-americo-1786332806287 - EMEF Pedro Americo
+  - assets: home-partidas-comprovadas-fundo - Home - partidas-comprovadas - fundo
+- /legacy-assets/2423ec38-reel-09.jpg: 3 referências
+  - assets: 2423ec38-reel-09 - 2423Ec38 Reel 09
+  - photos: 2423ec38-reel-09 - 2423Ec38 Reel 09
+  - sitePhotos: 2423ec38-reel-09 - 2423Ec38 Reel 09
+- /legacy-assets/26245046-comunidad-gondwana.jpg: 3 referências
+  - assets: 26245046-comunidad-gondwana - 26245046 Comunidad Gondwana
+  - photos: 26245046-comunidad-gondwana - 26245046 Comunidad Gondwana
+  - sitePhotos: 26245046-comunidad-gondwana - 26245046 Comunidad Gondwana
+- /legacy-assets/34a137cd-reel-05.jpg: 3 referências
+  - assets: 34a137cd-reel-05 - 34A137Cd Reel 05
+  - photos: 34a137cd-reel-05 - 34A137Cd Reel 05
+  - sitePhotos: 34a137cd-reel-05 - 34A137Cd Reel 05
+- /legacy-assets/66e243b7-frame_02_3.4s.jpg: 3 referências
+  - assets: 66e243b7-frame-02-3-4s - 66E243B7 Frame 02 3.4S
+  - photos: 66e243b7-frame-02-3-4s - 66E243B7 Frame 02 3.4S
+  - sitePhotos: 66e243b7-frame-02-3-4s - 66E243B7 Frame 02 3.4S
