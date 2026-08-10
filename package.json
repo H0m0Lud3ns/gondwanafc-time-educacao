@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "astro dev --host 127.0.0.1",
     "build": "astro build",
+    "check:cms-slots": "node scripts/check-cms-slots.mjs",
     "preview": "astro preview --host 127.0.0.1"
   },
   "dependencies": {
