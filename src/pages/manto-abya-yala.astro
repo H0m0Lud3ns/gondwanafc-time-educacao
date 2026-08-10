@@ -1,6 +1,6 @@
 ---
 import '../styles/tailwind.css';
-import { altFor, imageFor, publicImageFor } from '../lib/cms-images';
+import { altFor, altUseFor, imageFor, imageUseFor, publicImageFor } from '../lib/cms-images';
 ---
 <html lang="pt-BR">
 <head>
@@ -64,7 +64,7 @@ import { altFor, imageFor, publicImageFor } from '../lib/cms-images';
             <a class="pill pill-ghost" href="#pedido">Ver pedido</a>
           </div>
         </div>
-        <figure class="shirt-stage"><img src={imageFor('/assets/camisa-abya-yala/camisa-gondwana-fc-abya-yala-frente-costas.png')} alt="Camisa Abya Yala do Gondwana FC, frente e costas" /></figure>
+        <figure class="shirt-stage"><img data-cms-use="manto.page.camisa-abya-yala-do-gondwana-fc-frente-e-costa" data-cms-original="/assets/camisa-abya-yala/camisa-gondwana-fc-abya-yala-frente-costas.png" data-cms-label="Camisa Abya Yala do Gondwana FC, frente e costas" src={imageUseFor('manto.page.camisa-abya-yala-do-gondwana-fc-frente-e-costa', '/assets/camisa-abya-yala/camisa-gondwana-fc-abya-yala-frente-costas.png')} alt={altUseFor('manto.page.camisa-abya-yala-do-gondwana-fc-frente-e-costa', '/assets/camisa-abya-yala/camisa-gondwana-fc-abya-yala-frente-costas.png', 'Camisa Abya Yala do Gondwana FC, frente e costas')} /></figure>
       </div>
     </section>
 
@@ -100,7 +100,7 @@ import { altFor, imageFor, publicImageFor } from '../lib/cms-images';
 
     <section class="light">
       <div class="wrap grid two">
-        <figure class="photo-card"><img src={imageFor('/assets/camisa-abya-yala/camisa-abya-yala.jpg')} alt="Camisa Abya Yala sobre fundo azul" loading="lazy" /></figure>
+        <figure class="photo-card"><img data-cms-use="manto.simbolos.camisa-abya-yala-sobre-fundo-azul" data-cms-original="/assets/camisa-abya-yala/camisa-abya-yala.jpg" data-cms-label="Camisa Abya Yala sobre fundo azul" src={imageUseFor('manto.simbolos.camisa-abya-yala-sobre-fundo-azul', '/assets/camisa-abya-yala/camisa-abya-yala.jpg')} alt={altUseFor('manto.simbolos.camisa-abya-yala-sobre-fundo-azul', '/assets/camisa-abya-yala/camisa-abya-yala.jpg', 'Camisa Abya Yala sobre fundo azul')} loading="lazy" /></figure>
         <div>
           <p class="kicker text-[var(--barro)]">Manual pedagógico incluso</p>
           <h2 class="display section-title mt-4">A peça vira aula, roda e conversa.</h2>

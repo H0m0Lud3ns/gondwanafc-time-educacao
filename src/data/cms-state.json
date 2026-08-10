@@ -990,6 +990,186 @@
       "src": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg",
       "alt": "Oficina educativa com participantes reunidos em sala",
       "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
+    },
+    {
+      "id": "home.page.bolas-reunidas-antes-de-uma-atividade-educativ",
+      "label": "Bolas reunidas antes de uma atividade educativa",
+      "page": "Home",
+      "section": "page",
+      "src": "/uploads/cms/2026/08/senac-lapa-scipiao-1786304146244.jpg",
+      "alt": "Bolas reunidas antes de uma atividade educativa",
+      "original": "/legacy-assets/enviada-bolas.jpg"
+    },
+    {
+      "id": "home.manto.camisa-abya-yala-do-gondwana-fc-frente-e-costa",
+      "label": "Camisa Abya Yala do Gondwana FC, frente e costas",
+      "page": "Home",
+      "section": "manto",
+      "src": "/assets/camisa-abya-yala/camisa-abya-yala.jpg",
+      "alt": "Camisa Gondwana FC Abya Yala frente e costas",
+      "original": "/assets/camisa-abya-yala/camisa-gondwana-fc-abya-yala-frente-costas.png"
+    },
+    {
+      "id": "home.blog.encontro-com-bola-e-maos",
+      "label": "Encontro com bola e mãos",
+      "page": "Home",
+      "section": "blog",
+      "src": "/uploads/cms/2026/08/senac-lapa-scipiao-1786299766436.jpg",
+      "alt": "Encontro com bola e mãos",
+      "original": "/legacy-assets/27a017d7-encuentro-manos.jpg"
+    },
+    {
+      "id": "home.partidas-comprovadas.fundo",
+      "label": "Home - partidas-comprovadas - fundo",
+      "page": "Home",
+      "section": "partidas-comprovadas",
+      "src": "/uploads/cms/2026/08/whatsapp-image-2026-04-23-at-19-46-37-1786320550866.jpg",
+      "alt": "Imagem de fundo da seção partidas-comprovadas",
+      "original": "/assets/curadoria/escola-mobile-abc.jpg"
+    },
+    {
+      "id": "caderno.por-que.bola-nas-maos-durante-atividade-educativa-gond",
+      "label": "Bola nas mãos durante atividade educativa Gondwana",
+      "page": "Caderno",
+      "section": "por-que",
+      "src": "/legacy-assets/enviada-bola-maos.jpg",
+      "alt": "Bola nas mãos durante atividade educativa Gondwana",
+      "original": "/legacy-assets/enviada-bola-maos.jpg"
+    },
+    {
+      "id": "caderno.time.monica-saraiva-e-sebastian-acevedo-na-unesco",
+      "label": "Mônica Saraiva e Sebastián Acevedo na UNESCO",
+      "page": "Caderno",
+      "section": "time",
+      "src": "/legacy-assets/dupla-gondwana-unesco.jpg",
+      "alt": "Mônica Saraiva e Sebastián Acevedo na UNESCO",
+      "original": "/legacy-assets/dupla-gondwana-unesco.jpg"
+    },
+    {
+      "id": "caderno.time.monica-saraiva-da-silva",
+      "label": "Mônica Saraiva da Silva",
+      "page": "Caderno",
+      "section": "time",
+      "src": "/legacy-assets/monica-saraiva-time-educacao.png",
+      "alt": "Mônica Saraiva da Silva",
+      "original": "/legacy-assets/monica-saraiva-time-educacao.png"
+    },
+    {
+      "id": "caderno.time.sebastian-acevedo-vasquez",
+      "label": "Sebastián Acevedo Vásquez",
+      "page": "Caderno",
+      "section": "time",
+      "src": "/legacy-assets/sebastian-acevedo-time-educacao.jpg",
+      "alt": "Sebastián Acevedo Vásquez",
+      "original": "/legacy-assets/sebastian-acevedo-time-educacao.jpg"
+    },
+    {
+      "id": "caderno.escolas.pessoa-segurando-uma-bola-durante-atividade-ed",
+      "label": "Pessoa segurando uma bola durante atividade educativa Gondwana",
+      "page": "Caderno",
+      "section": "escolas",
+      "src": "/legacy-assets/enviada-bola-maos.jpg",
+      "alt": "Bola nas mãos durante atividade educativa Gondwana",
+      "original": "/legacy-assets/enviada-bola-maos.jpg"
+    },
+    {
+      "id": "caderno.escolas.apresentacao-publica-sobre-esporte-educacao-e-",
+      "label": "Apresentação pública sobre esporte, educação e comunidade",
+      "page": "Caderno",
+      "section": "escolas",
+      "src": "/legacy-assets/enviada-apresentacao.jpg",
+      "alt": "Apresentação pública sobre esporte, educação e comunidade",
+      "original": "/legacy-assets/enviada-apresentacao.jpg"
+    },
+    {
+      "id": "caderno.escolas.oficina-educativa-com-participantes-reunidos-e",
+      "label": "Oficina educativa com participantes reunidos em sala",
+      "page": "Caderno",
+      "section": "escolas",
+      "src": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg",
+      "alt": "Oficina do Método ABC com educadores e participantes",
+      "original": "/legacy-assets/enviada-oficina-sala.jpg"
+    },
+    {
+      "id": "caderno.quem-pode.grupo-celebrando-uma-atividade-do-time-da-educ",
+      "label": "Grupo celebrando uma atividade do Time da Educação com bola e bandeira Gondwana",
+      "page": "Caderno",
+      "section": "quem-pode",
+      "src": "/legacy-assets/enviada-grupo-celebracao.jpg",
+      "alt": "Grupo celebrando uma atividade do Time da Educação com bola e bandeira Gondwana",
+      "original": "/legacy-assets/enviada-grupo-celebracao.jpg"
+    },
+    {
+      "id": "caderno.territorios.jogo-com-comunidade-parceira",
+      "label": "Jogo com comunidade parceira",
+      "page": "Caderno",
+      "section": "territorios",
+      "src": "/uploads/cms/2026/08/uniacc-miercoles-2-dia-32-1786324739166.jpg",
+      "alt": "Jogo com comunidade parceira",
+      "original": "/legacy-assets/99fba4ba-juego-comunidad.jpg"
+    },
+    {
+      "id": "caderno.ecossistema.a-bola-conecta",
+      "label": "A Bola Conecta",
+      "page": "Caderno",
+      "section": "ecossistema",
+      "src": "/legacy-assets/68367e6a-cartaz-gondwana.png",
+      "alt": "A Bola Conecta",
+      "original": "/legacy-assets/68367e6a-cartaz-gondwana.png"
+    },
+    {
+      "id": "caderno.galeria.duas-pessoas-do-time-da-educacao-segurando-uma",
+      "label": "Duas pessoas do Time da Educação segurando uma bola juntas",
+      "page": "Caderno",
+      "section": "galeria",
+      "src": "/legacy-assets/56ca6697-02-nao-e-so-chutar-vertical.jpg",
+      "alt": "Duas pessoas do Time da Educação segurando uma bola juntas",
+      "original": "/legacy-assets/56ca6697-02-nao-e-so-chutar-vertical.jpg"
+    },
+    {
+      "id": "caderno.page.fundo",
+      "label": "Caderno - page - fundo",
+      "page": "Caderno",
+      "section": "page",
+      "src": "/legacy-assets/9e1c72dd-mapa-supercontinente-gondwana.jpg",
+      "alt": "Imagem de fundo da seção page",
+      "original": "/legacy-assets/9e1c72dd-mapa-supercontinente-gondwana.jpg"
+    },
+    {
+      "id": "blog.page.bolas-usadas-em-experiencia-educativa-do-gondw",
+      "label": "Bolas usadas em experiência educativa do Gondwana FC",
+      "page": "Blog",
+      "section": "page",
+      "src": "/uploads/cms/2026/08/senac-lapa-scipiao-1786304146244.jpg",
+      "alt": "Bolas reunidas antes de uma atividade educativa",
+      "original": "/legacy-assets/enviada-bolas.jpg"
+    },
+    {
+      "id": "blog.linha.oficina-educativa-com-participantes-reunidos-e",
+      "label": "Oficina educativa com participantes reunidos em sala",
+      "page": "Blog",
+      "section": "linha",
+      "src": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg",
+      "alt": "Oficina do Método ABC com educadores e participantes",
+      "original": "/legacy-assets/enviada-oficina-sala.jpg"
+    },
+    {
+      "id": "manto.page.camisa-abya-yala-do-gondwana-fc-frente-e-costa",
+      "label": "Camisa Abya Yala do Gondwana FC, frente e costas",
+      "page": "Manto Abya Yala",
+      "section": "page",
+      "src": "/assets/camisa-abya-yala/camisa-abya-yala.jpg",
+      "alt": "Camisa Gondwana FC Abya Yala frente e costas",
+      "original": "/assets/camisa-abya-yala/camisa-gondwana-fc-abya-yala-frente-costas.png"
+    },
+    {
+      "id": "manto.simbolos.camisa-abya-yala-sobre-fundo-azul",
+      "label": "Camisa Abya Yala sobre fundo azul",
+      "page": "Manto Abya Yala",
+      "section": "simbolos",
+      "src": "/assets/camisa-abya-yala/camisa-abya-yala.jpg",
+      "alt": "Camisa Abya Yala sobre fundo azul",
+      "original": "/assets/camisa-abya-yala/camisa-abya-yala.jpg"
     }
   ],
   "uploads": [
