@@ -391,7 +391,7 @@
       "risk": "alto: troca afeta identidade e abas do navegador"
     }
   ],
-  "updatedAt": "2026-08-10T03:19:49.635Z",
+  "updatedAt": "2026-08-10T03:33:39.184Z",
   "photos": [
     {
       "id": "56ca6697-02-nao-e-so-chutar-vertical",
@@ -1023,7 +1023,7 @@
       "label": "Home - partidas-comprovadas - fundo",
       "page": "Home",
       "section": "partidas-comprovadas",
-      "src": "/uploads/cms/2026/08/whatsapp-image-2026-04-23-at-19-46-37-1786320550866.jpg",
+      "src": "/uploads/cms/2026/08/emef-pedro-americo-1786332806287.jpg",
       "alt": "Imagem de fundo da seção partidas-comprovadas",
       "original": "/assets/curadoria/escola-mobile-abc.jpg"
     },
@@ -1173,6 +1173,14 @@
     }
   ],
   "uploads": [
+    {
+      "id": "emef-pedro-americo-1786332806287",
+      "label": "EMEF Pedro Americo",
+      "src": "/uploads/cms/2026/08/emef-pedro-americo-1786332806287.jpg",
+      "type": "image/jpeg",
+      "usage": "Imagem publicada pela biblioteca CMS",
+      "uploadedAt": "2026-08-10T03:33:26.287Z"
+    },
     {
       "id": "sesc-logo-1786331831889",
       "label": "sesc logo",
