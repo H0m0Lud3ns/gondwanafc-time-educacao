@@ -391,7 +391,7 @@
       "risk": "alto: troca afeta identidade e abas do navegador"
     }
   ],
-  "updatedAt": "2026-08-10T02:09:47.458Z",
+  "updatedAt": "2026-08-10T02:48:23.845Z",
   "photos": [
     {
       "id": "56ca6697-02-nao-e-so-chutar-vertical",
@@ -771,7 +771,7 @@
       "label": "Bolas reunidas antes de uma atividade educativa",
       "page": "/",
       "section": "",
-      "src": "/uploads/cms/2026/08/senac-lapa-scipiao-1786304146244.jpg",
+      "src": "/uploads/cms/2026/08/uniacc-miercoles-2-dia-32-1786328899287.jpg",
       "alt": "Bolas reunidas antes de uma atividade educativa",
       "original": "/uploads/cms/2026/08/senac-lapa-scipiao-1786304146244.jpg"
     },
@@ -803,7 +803,7 @@
       "original": "/assets/camisa-abya-yala/camisa-abya-yala.jpg"
     },
     {
-      "id": "metodo-6-img-20251210-125224-1-1786325414762-jpg",
+      "id": "home.metodo.imagem-principal",
       "label": "Oficina do Método ABC com educadores e participantes",
       "page": "/",
       "section": "metodo",
@@ -812,7 +812,7 @@
       "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
     },
     {
-      "id": "temporada-7-img-20251210-125224-1-1786325414762-jpg",
+      "id": "home.temporada.imagem-principal",
       "label": "Oficina Gondwana FC",
       "page": "/",
       "section": "temporada",
@@ -821,7 +821,7 @@
       "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
     },
     {
-      "id": "partidas-comprovadas-8-img-20251210-125224-1-1786325414762-jpg",
+      "id": "home.partidas-comprovadas.imagem-principal",
       "label": "Oficina educativa com participantes reunidos em sala",
       "page": "/",
       "section": "partidas-comprovadas",
@@ -857,34 +857,50 @@
       "original": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png"
     },
     {
-      "id": "home.metodo.imagem-principal",
-      "label": "Home - Método ABC",
-      "page": "Home",
-      "section": "Método ABC",
+      "id": "metodo-6-img-20251210-125224-1-1786325414762-jpg",
+      "label": "Oficina do Método ABC com educadores e participantes",
+      "page": "/",
+      "section": "metodo",
       "src": "/uploads/cms/2026/08/uniacc-chile-foto-jose-aguilera-1786327777920.jpg",
       "alt": "Oficina do Método ABC com educadores e participantes",
-      "original": "/legacy-assets/enviada-oficina-sala.jpg"
+      "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
     },
     {
-      "id": "home.temporada.imagem-principal",
-      "label": "Home - Temporada pedagógica",
-      "page": "Home",
-      "section": "Temporada pedagógica",
+      "id": "temporada-7-img-20251210-125224-1-1786325414762-jpg",
+      "label": "Oficina Gondwana FC",
+      "page": "/",
+      "section": "temporada",
       "src": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg",
       "alt": "Oficina Gondwana FC",
-      "original": "/legacy-assets/enviada-oficina-sala.jpg"
+      "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
     },
     {
-      "id": "home.partidas-comprovadas.imagem-principal",
-      "label": "Home - Partidas comprovadas",
-      "page": "Home",
-      "section": "Partidas comprovadas",
+      "id": "partidas-comprovadas-8-img-20251210-125224-1-1786325414762-jpg",
+      "label": "Oficina educativa com participantes reunidos em sala",
+      "page": "/",
+      "section": "partidas-comprovadas",
       "src": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg",
       "alt": "Oficina educativa com participantes reunidos em sala",
-      "original": "/legacy-assets/enviada-oficina-sala.jpg"
+      "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
     }
   ],
   "uploads": [
+    {
+      "id": "img-20250616-081724368-ae-1786330083570",
+      "label": "IMG_20250616_081724368_AE",
+      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786330083570.jpg",
+      "type": "image/jpeg",
+      "usage": "Imagem publicada pelo editor visual",
+      "uploadedAt": "2026-08-10T02:48:03.569Z"
+    },
+    {
+      "id": "uniacc-miercoles-2-dia-32-1786328899287",
+      "label": "uniacc miercoles 2 dia-32",
+      "src": "/uploads/cms/2026/08/uniacc-miercoles-2-dia-32-1786328899287.jpg",
+      "type": "image/jpeg",
+      "usage": "Imagem publicada pelo editor visual",
+      "uploadedAt": "2026-08-10T02:28:19.287Z"
+    },
     {
       "id": "uniacc-chile-foto-jose-aguilera",
       "label": "UNIACC CHILE _ FOTO JOSÉ AGUILERA",
