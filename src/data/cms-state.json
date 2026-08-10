@@ -391,7 +391,7 @@
       "risk": "alto: troca afeta identidade e abas do navegador"
     }
   ],
-  "updatedAt": "2026-08-10T01:50:53.824Z",
+  "updatedAt": "2026-08-10T02:09:02.195Z",
   "photos": [
     {
       "id": "56ca6697-02-nao-e-so-chutar-vertical",
@@ -771,7 +771,7 @@
       "label": "Bolas reunidas antes de uma atividade educativa",
       "page": "/",
       "section": "",
-      "src": "/uploads/cms/2026/08/senac-lapa-scipiao-1786304146244.jpg",
+      "src": "/uploads/cms/2026/08/uniacc-miercoles-2-dia-32-1786327722100.jpg",
       "alt": "Bolas reunidas antes de uma atividade educativa",
       "original": "/uploads/cms/2026/08/senac-lapa-scipiao-1786304146244.jpg"
     },
@@ -855,127 +855,6 @@
       "src": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png",
       "alt": "Escudo Gondwana FC - Time da Educação",
       "original": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png"
-    }
-  ],
-  "uploads": [
-    {
-      "id": "base-sport-recife-2022-1786325352245",
-      "label": "Base Sport Recife 2022 1786325352245",
-      "src": "/uploads/cms/2026/08/base-sport-recife-2022-1786325352245.jpg",
-      "type": "upload",
-      "usage": "Biblioteca CMS"
-    },
-    {
-      "id": "chatgpt-image-8-de-ago-de-2026-11-44-33-1786320969960",
-      "label": "Chatgpt Image 8 De Ago De 2026 11 44 33 1786320969960",
-      "src": "/uploads/cms/2026/08/chatgpt-image-8-de-ago-de-2026-11-44-33-1786320969960.jpg",
-      "type": "upload",
-      "usage": "Biblioteca CMS"
-    },
-    {
-      "id": "chatgpt-image-8-de-ago-de-2026-11-44-33-1786324346191",
-      "label": "Chatgpt Image 8 De Ago De 2026 11 44 33 1786324346191",
-      "src": "/uploads/cms/2026/08/chatgpt-image-8-de-ago-de-2026-11-44-33-1786324346191.jpg",
-      "type": "upload",
-      "usage": "Biblioteca CMS"
-    },
-    {
-      "id": "img-20251210-125224-1-1786325414762",
-      "label": "Img 20251210 125224 1 1786325414762",
-      "src": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg",
-      "type": "upload",
-      "usage": "Biblioteca CMS"
-    },
-    {
-      "id": "logo-sesc-1786320618808",
-      "label": "Logo Sesc 1786320618808",
-      "src": "/uploads/cms/2026/08/logo-sesc-1786320618808.jpg",
-      "type": "upload",
-      "usage": "Biblioteca CMS"
-    },
-    {
-      "id": "photo-4983517877621165108-y-1786320483241",
-      "label": "Photo 4983517877621165108 Y 1786320483241",
-      "src": "/uploads/cms/2026/08/photo-4983517877621165108-y-1786320483241.jpg",
-      "type": "upload",
-      "usage": "Biblioteca CMS"
-    },
-    {
-      "id": "senac-lapa-scipiao-1786299766436",
-      "label": "Senac Lapa Scipiao 1786299766436",
-      "src": "/uploads/cms/2026/08/senac-lapa-scipiao-1786299766436.jpg",
-      "type": "upload",
-      "usage": "Biblioteca CMS"
-    },
-    {
-      "id": "senac-lapa-scipiao-1786304146244",
-      "label": "Senac Lapa Scipiao 1786304146244",
-      "src": "/uploads/cms/2026/08/senac-lapa-scipiao-1786304146244.jpg",
-      "type": "upload",
-      "usage": "Biblioteca CMS"
-    },
-    {
-      "id": "sesc-logo-1786320840295",
-      "label": "Sesc Logo 1786320840295",
-      "src": "/uploads/cms/2026/08/sesc-logo-1786320840295.jpg",
-      "type": "upload",
-      "usage": "Biblioteca CMS"
-    },
-    {
-      "id": "sesc-logo-bbf0e029de-seeklogo-com-1786320344360",
-      "label": "Sesc Logo Bbf0E029De Seeklogo Com 1786320344360",
-      "src": "/uploads/cms/2026/08/sesc-logo-bbf0e029de-seeklogo-com-1786320344360.jpg",
-      "type": "upload",
-      "usage": "Biblioteca CMS"
-    },
-    {
-      "id": "uniacc-chile-foto-jose-aguilera-1786324911538",
-      "label": "Uniacc Chile Foto Jose Aguilera 1786324911538",
-      "src": "/uploads/cms/2026/08/uniacc-chile-foto-jose-aguilera-1786324911538.jpg",
-      "type": "upload",
-      "usage": "Biblioteca CMS"
-    },
-    {
-      "id": "uniacc-miercoles-2-dia-32-1786324739166",
-      "label": "Uniacc Miercoles 2 Dia 32 1786324739166",
-      "src": "/uploads/cms/2026/08/uniacc-miercoles-2-dia-32-1786324739166.jpg",
-      "type": "upload",
-      "usage": "Biblioteca CMS"
-    },
-    {
-      "id": "uniacc-miercoles-2-dia-32-1786325002543",
-      "label": "Uniacc Miercoles 2 Dia 32 1786325002543",
-      "src": "/uploads/cms/2026/08/uniacc-miercoles-2-dia-32-1786325002543.jpg",
-      "type": "upload",
-      "usage": "Biblioteca CMS"
-    },
-    {
-      "id": "uniacc-miercoles-2-dia-32-1786325802197",
-      "label": "Uniacc Miercoles 2 Dia 32 1786325802197",
-      "src": "/uploads/cms/2026/08/uniacc-miercoles-2-dia-32-1786325802197.jpg",
-      "type": "upload",
-      "usage": "Biblioteca CMS"
-    },
-    {
-      "id": "whatsapp-image-2026-04-23-at-19-46-37-1786320550866",
-      "label": "Whatsapp Image 2026 04 23 At 19 46 37 1786320550866",
-      "src": "/uploads/cms/2026/08/whatsapp-image-2026-04-23-at-19-46-37-1786320550866.jpg",
-      "type": "upload",
-      "usage": "Biblioteca CMS"
-    },
-    {
-      "id": "whatsapp-image-2026-05-02-at-22-11-46-1-1786321811780",
-      "label": "Whatsapp Image 2026 05 02 At 22 11 46 1 1786321811780",
-      "src": "/uploads/cms/2026/08/whatsapp-image-2026-05-02-at-22-11-46-1-1786321811780.jpg",
-      "type": "upload",
-      "usage": "Biblioteca CMS"
-    },
-    {
-      "id": "whatsapp-image-2026-05-02-at-22-11-46-1-1786322060876",
-      "label": "Whatsapp Image 2026 05 02 At 22 11 46 1 1786322060876",
-      "src": "/uploads/cms/2026/08/whatsapp-image-2026-05-02-at-22-11-46-1-1786322060876.jpg",
-      "type": "upload",
-      "usage": "Biblioteca CMS"
     }
   ]
 }
