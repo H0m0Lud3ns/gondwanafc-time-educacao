@@ -391,7 +391,7 @@
       "risk": "alto: troca afeta identidade e abas do navegador"
     }
   ],
-  "updatedAt": "2026-08-10T02:54:17.219Z",
+  "updatedAt": "2026-08-10T03:00:00.407Z",
   "photos": [
     {
       "id": "56ca6697-02-nao-e-so-chutar-vertical",
@@ -885,6 +885,14 @@
     }
   ],
   "uploads": [
+    {
+      "id": "img-20250616-081724368-ae-1786330789131",
+      "label": "IMG_20250616_081724368_AE",
+      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786330789131.jpg",
+      "type": "image/jpeg",
+      "usage": "Imagem publicada pelo editor visual",
+      "uploadedAt": "2026-08-10T02:59:49.131Z"
+    },
     {
       "id": "img-20250616-081724368-ae-1786330445972",
       "label": "IMG_20250616_081724368_AE",
