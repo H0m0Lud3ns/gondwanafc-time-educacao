@@ -855,6 +855,33 @@
       "src": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png",
       "alt": "Escudo Gondwana FC - Time da Educação",
       "original": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png"
+    },
+    {
+      "id": "home.metodo.imagem-principal",
+      "label": "Home - Método ABC",
+      "page": "Home",
+      "section": "Método ABC",
+      "src": "/uploads/cms/2026/08/uniacc-chile-foto-jose-aguilera-1786327777920.jpg",
+      "alt": "Oficina do Método ABC com educadores e participantes",
+      "original": "/legacy-assets/enviada-oficina-sala.jpg"
+    },
+    {
+      "id": "home.temporada.imagem-principal",
+      "label": "Home - Temporada pedagógica",
+      "page": "Home",
+      "section": "Temporada pedagógica",
+      "src": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg",
+      "alt": "Oficina Gondwana FC",
+      "original": "/legacy-assets/enviada-oficina-sala.jpg"
+    },
+    {
+      "id": "home.partidas-comprovadas.imagem-principal",
+      "label": "Home - Partidas comprovadas",
+      "page": "Home",
+      "section": "Partidas comprovadas",
+      "src": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg",
+      "alt": "Oficina educativa com participantes reunidos em sala",
+      "original": "/legacy-assets/enviada-oficina-sala.jpg"
     }
   ],
   "uploads": [

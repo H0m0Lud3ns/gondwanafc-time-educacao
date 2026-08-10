@@ -1,6 +1,6 @@
 ---
 import '../styles/tailwind.css';
-import { altFor, imageFor, publicImageFor } from '../lib/cms-images';
+import { altFor, altUseFor, imageFor, imageUseFor, publicImageFor } from '../lib/cms-images';
 import cmsState from '../data/cms-state.json';
 
 const publicPresence = cmsState.publicPresence.filter((item) => item.visible);
@@ -342,7 +342,7 @@ const publicPresence = cmsState.publicPresence.filter((item) => item.visible);
         <div class="abc-board p-4 sm:p-6 lg:p-8">
           <div class="relative z-10 grid gap-6 lg:grid-cols-[.82fr_1.18fr] lg:items-stretch">
             <figure class="abc-photo">
-              <img src={imageFor('/legacy-assets/enviada-oficina-sala.jpg')} alt="Oficina do Método ABC com educadores e participantes" />
+              <img data-cms-use="home.metodo.imagem-principal" data-cms-original="/legacy-assets/enviada-oficina-sala.jpg" data-cms-label="Home - Método ABC" src={imageUseFor('home.metodo.imagem-principal', '/legacy-assets/enviada-oficina-sala.jpg')} alt={altUseFor('home.metodo.imagem-principal', '/legacy-assets/enviada-oficina-sala.jpg', 'Oficina do Método ABC com educadores e participantes')} />
               <figcaption class="absolute bottom-6 left-6 right-6 z-10">
                 <p class="kicker text-[var(--ouro)]">Método ABC</p>
                 <h2 class="display mt-3 text-[clamp(2rem,4.4vw,4.2rem)] leading-[1.02]">Bola, câmera, corpo inteiro.</h2>
@@ -376,7 +376,7 @@ const publicPresence = cmsState.publicPresence.filter((item) => item.visible);
         <div class="season-panel mt-10 p-4 sm:p-5 lg:p-6">
           <div class="grid gap-5 lg:grid-cols-[.78fr_1.22fr] lg:items-stretch">
             <figure class="season-photo">
-              <img src={imageFor('/legacy-assets/enviada-oficina-sala.jpg')} alt="Oficina Gondwana FC" />
+              <img data-cms-use="home.temporada.imagem-principal" data-cms-original="/legacy-assets/enviada-oficina-sala.jpg" data-cms-label="Home - Temporada pedagógica" src={imageUseFor('home.temporada.imagem-principal', '/legacy-assets/enviada-oficina-sala.jpg')} alt={altUseFor('home.temporada.imagem-principal', '/legacy-assets/enviada-oficina-sala.jpg', 'Oficina Gondwana FC')} />
               <figcaption class="season-caption">
                 <p class="kicker text-[var(--ouro)]">Como começa</p>
                 <h3 class="display">Um desenho por contexto.</h3>
@@ -509,7 +509,7 @@ const publicPresence = cmsState.publicPresence.filter((item) => item.visible);
             <article class="ledger-row"><p class="kicker text-[var(--barro)]">Pereiro/CE · Escola rural</p><strong>Secretaria de Educação</strong><p>Jovens do 9º ano trabalharam câmera e bola como ferramentas de habilidades socioemocionais.</p></article>
           </div>
           <figure class="story-photo-card">
-            <img src={imageFor('/legacy-assets/enviada-oficina-sala.jpg')} alt="Oficina educativa com participantes reunidos em sala" />
+            <img data-cms-use="home.partidas-comprovadas.imagem-principal" data-cms-original="/legacy-assets/enviada-oficina-sala.jpg" data-cms-label="Home - Partidas comprovadas" src={imageUseFor('home.partidas-comprovadas.imagem-principal', '/legacy-assets/enviada-oficina-sala.jpg')} alt={altUseFor('home.partidas-comprovadas.imagem-principal', '/legacy-assets/enviada-oficina-sala.jpg', 'Oficina educativa com participantes reunidos em sala')} />
             <figcaption>Arquivo visual - atividades, oficinas, cartas e depoimentos disponíveis para curadoria</figcaption>
           </figure>
         </div>
