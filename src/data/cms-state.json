@@ -391,7 +391,7 @@
       "risk": "alto: troca afeta identidade e abas do navegador"
     }
   ],
-  "updatedAt": "2026-08-10T05:38:21.918Z",
+  "updatedAt": "2026-08-10T05:42:29.711Z",
   "photos": [
     {
       "id": "56ca6697-02-nao-e-so-chutar-vertical",
@@ -1147,12 +1147,20 @@
   ],
   "uploads": [
     {
-      "id": "img-20250616-081724368-ae-1786340290070",
+      "id": "img-20250616-081724368-ae-1786340541078",
       "label": "IMG_20250616_081724368_AE",
-      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786340290070.jpg",
+      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786340541078.jpg",
       "type": "image/jpeg",
       "usage": "Imagem publicada pelo editor visual",
-      "uploadedAt": "2026-08-10T05:38:10.069Z"
+      "uploadedAt": "2026-08-10T05:42:21.077Z"
+    },
+    {
+      "id": "img-20250616-081724368-ae-1786340370858",
+      "label": "IMG_20250616_081724368_AE",
+      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786340370858.jpg",
+      "type": "image/jpeg",
+      "usage": "Imagem publicada pelo editor visual",
+      "uploadedAt": "2026-08-10T05:39:30.858Z"
     },
     {
       "id": "img-20250616-081724368-ae-1786340189223",
@@ -1751,12 +1759,21 @@
       ]
     },
     {
-      "id": "img-20250616-081724368-ae-1786340290070",
+      "id": "img-20250616-081724368-ae-1786340541078",
       "label": "IMG_20250616_081724368_AE",
-      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786340290070.jpg",
+      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786340541078.jpg",
       "type": "image/jpeg",
       "usage": "Imagem publicada pelo editor visual",
-      "uploadedAt": "2026-08-10T05:38:10.069Z",
+      "uploadedAt": "2026-08-10T05:42:21.077Z",
+      "usedBy": []
+    },
+    {
+      "id": "img-20250616-081724368-ae-1786340370858",
+      "label": "IMG_20250616_081724368_AE",
+      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786340370858.jpg",
+      "type": "image/jpeg",
+      "usage": "Imagem publicada pelo editor visual",
+      "uploadedAt": "2026-08-10T05:39:30.858Z",
       "usedBy": []
     },
     {
