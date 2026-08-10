@@ -93,10 +93,10 @@ export function cleanPublicPresence(item: Partial<PublicPresenceItem>, index: nu
 export function cleanImageUse(item: Partial<ImageUse>, index: number): ImageUse {
   const src = String(item.src || '').trim();
   const original = String(item.original || item.src || '').trim();
-  const id = slug(String(item.id || original), `uso-${index + 1}`);
+  const id = String(item.id || `uso-${index + 1}`).trim();
 
-  if (!src || !original) {
-    throw new Error(`Uso de imagem ${index + 1}: src e arquivo original são obrigatórios.`);
+  if (!id || !src || !original) {
+    throw new Error(`Uso de imagem ${index + 1}: id, src e arquivo original são obrigatórios.`);
   }
 
   const isAcceptedSrc = src.startsWith('/legacy-assets/') || src.startsWith('/assets/') || src.startsWith('/uploads/cms/') || src.startsWith('https://') || src.startsWith('http://');
