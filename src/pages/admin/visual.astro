@@ -26,6 +26,12 @@ const initialState = JSON.stringify(cmsState);
     </section>
     <aside class="side">
       <span class="pill">Modo visual</span><h1 class="display">Clique numa imagem</h1><p class="muted">O contorno amarelo mostra imagens que o CMS reconhece. Ao clicar, você troca sem mexer em informações técnicas.</p>
+      <div class="panel">
+        <b>Selecionar manualmente</b>
+        <p class="muted">Se o botão não aparecer sobre a imagem, escolha o lugar aqui.</p>
+        <select id="usePicker" class="field"></select>
+        <button id="chooseUse" class="btn dark" style="width:100%;margin-top:10px" type="button">Editar lugar escolhido</button>
+      </div>
       <div id="empty" class="panel">Nenhuma imagem selecionada ainda.</div>
       <div id="editor" class="panel hidden">
         <p class="pill">Imagem selecionada</p>
@@ -89,6 +95,8 @@ function initialPhotoSrc(photo){const source=(initial.imageUses||[]).find(item=>
 function pendingCount(){return state.imageUses.filter(p=>p.src&&p.src!==initialPhotoSrc(p)).length}
 function pendingPhotos(){return state.imageUses.filter(p=>p.src&&p.src!==initialPhotoSrc(p))}
 function updatePending(){const items=pendingPhotos();const count=items.length;$('#pending').innerHTML=count?`<b>${count} troca(s) pendente(s) no rascunho visual.</b><br>${items.map(p=>esc(p.label||p.id)).join('<br>')}`:'Nenhuma troca pendente.';$('#status').textContent=count?`${count} troca(s) pendente(s)`:'rascunho visual'}
+function editableUses(){normalizeState();return (state.imageUses||[]).filter(use=>String(use.id||'').includes('.')||String(use.page||'').toLowerCase().includes('caderno')||String(use.page||'').toLowerCase().includes('home'))}
+function renderUsePicker(){const picker=$('#usePicker');if(!picker)return;const selected=selectedPhoto?.id||'';picker.innerHTML=editableUses().map(use=>`<option value="${esc(use.id)}" ${use.id===selected?'selected':''}>${esc(use.label||use.id)} · ${esc(use.page||'site')}</option>`).join('')}
 function scanImages(){
   syncFrameImages();
   const overlay=$('#overlay');overlay.innerHTML='';const frame=$('#siteFrame');const doc=frame.contentDocument;const win=frame.contentWindow;if(!doc||!win)return;
@@ -111,9 +119,10 @@ function scanImages(){
   });
   $('#status').textContent=visibleCount?`${visibleCount} imagem(ns) editável(is) nesta tela`:'nenhuma imagem editável visível nesta tela';
 }
-function selectPhoto(photo){selectedPhoto=photo;$('#empty').classList.add('hidden');$('#editor').classList.remove('hidden');$('#photoTitle').textContent=photo.label||photo.id;$('#photoWhere').textContent=photo.where||'Uso conectado no site';$('#currentImg').src=photo.src;renderLibrary();$('#nextImg').src=$('#library').value||photo.src}
+function selectPhoto(photo){selectedPhoto=photo;$('#empty').classList.add('hidden');$('#editor').classList.remove('hidden');$('#photoTitle').textContent=photo.label||photo.id;$('#photoWhere').textContent=photo.where||photo.section||'Uso conectado no site';$('#currentImg').src=photo.src;renderLibrary();renderUsePicker();$('#nextImg').src=$('#library').value||photo.src}
 function renderLibrary(){const lib=$('#library');lib.innerHTML=allPhotos().map(p=>`<option value="${esc(p.src)}" ${selectedPhoto&&p.src===selectedPhoto.src?'selected':''}>${esc(p.label||p.src)}</option>`).join('')}
 $('#library').onchange=()=>{$('#nextImg').src=$('#library').value};
+$('#chooseUse').onclick=()=>{const id=$('#usePicker').value;const photo=(state.imageUses||[]).find(use=>use.id===id);if(photo)selectPhoto(photo)};
 $('#apply').onclick=()=>{if(!selectedPhoto)return;selectedPhoto.src=$('#library').value;save();syncFrameImages();selectPhoto(selectedPhoto);scanImages();alert('Troca aplicada no rascunho. Para aparecer no site, clique em Publicar produção.')};
 function resizeImage(file,max=1600,quality=.82){return new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>{const scale=Math.min(1,max/Math.max(img.width,img.height));const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(img.width*scale));canvas.height=Math.max(1,Math.round(img.height*scale));canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);resolve(canvas.toDataURL('image/jpeg',quality))};img.onerror=()=>reject(new Error('Não consegui processar a imagem.'));const reader=new FileReader();reader.onload=()=>{img.src=reader.result};reader.onerror=()=>reject(new Error('Não consegui ler o arquivo.'));reader.readAsDataURL(file)})}
 async function dataUrlToFile(dataUrl,name){const response=await fetch(dataUrl);const blob=await response.blob();return new File([blob],name.replace(/\.[^.]+$/,'')+'.jpg',{type:'image/jpeg'})}
@@ -124,7 +133,7 @@ $('#publish').onclick=async()=>{const password=window.prompt('Senha para publica
 $('#page').onchange=()=>{$('#siteFrame').src=$('#page').value};
 $('#reload').onclick=()=>{$('#siteFrame').contentWindow.location.reload()};
 $('#scan').onclick=()=>scanImages();
-$('#discard').onclick=()=>{localStorage.removeItem('gfc-cms-qa');state=structuredClone(initial);normalizeState();updatePending();location.reload()};
+$('#discard').onclick=()=>{localStorage.removeItem('gfc-cms-qa');state=structuredClone(initial);normalizeState();renderUsePicker();updatePending();location.reload()};
 $('#siteFrame').addEventListener('load',()=>{[300,900,1600,2600].forEach(ms=>setTimeout(scanImages,ms))});
 $('#frameWrap').addEventListener('scroll',()=>requestAnimationFrame(scanImages));
 $('#siteFrame').addEventListener('load',()=>{$('#siteFrame').contentWindow?.addEventListener('scroll',()=>requestAnimationFrame(scanImages),{passive:true})});
@@ -132,7 +141,7 @@ window.addEventListener('resize',()=>requestAnimationFrame(scanImages));
 $('#enter').onclick=()=>{$('#password').value.trim().toLowerCase()==='gondwana'?unlock():$('#loginError').classList.remove('hidden')};
 $('#password').onkeydown=e=>{if(e.key==='Enter')$('#enter').click()};
 if(isAuthed())unlock();
-normalizeState();updatePending();
+normalizeState();renderUsePicker();updatePending();
 </script>
 </body>
 </html>
