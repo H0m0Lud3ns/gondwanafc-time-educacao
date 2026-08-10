@@ -391,7 +391,7 @@
       "risk": "alto: troca afeta identidade e abas do navegador"
     }
   ],
-  "updatedAt": "2026-08-10T03:02:52.342Z",
+  "updatedAt": "2026-08-10T03:04:23.690Z",
   "photos": [
     {
       "id": "56ca6697-02-nao-e-so-chutar-vertical",
@@ -744,8 +744,8 @@
       "label": "Imagem principal - Escola como Estádio",
       "page": "Caderno",
       "section": "Escola como Estádio",
-      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786330789131.jpg",
-      "alt": "Oficina Gondwana em sala de aula com estudantes e banner educativo",
+      "src": "/uploads/cms/2026/08/photo-4983517877621165108-y-1786320483241.jpg",
+      "alt": "Atividade Gondwana com bola, câmera e materiais educativos",
       "original": "/legacy-assets/bc785a04-frame_02_96.5s.jpg"
     },
     {
@@ -857,6 +857,114 @@
       "original": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png"
     },
     {
+      "id": "manto-abya-yala-page-0-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+      "label": "Gondwana FC",
+      "page": "/manto-abya-yala/",
+      "section": "",
+      "src": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png",
+      "alt": "Gondwana FC",
+      "original": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png"
+    },
+    {
+      "id": "manto-abya-yala-page-1-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+      "label": "A camisa também ensina.",
+      "page": "/manto-abya-yala/",
+      "section": "",
+      "src": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png",
+      "alt": "Gondwana FC",
+      "original": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png"
+    },
+    {
+      "id": "manto-abya-yala-page-2-camisa-abya-yala-jpg",
+      "label": "Camisa Abya Yala do Gondwana FC, frente e costas",
+      "page": "/manto-abya-yala/",
+      "section": "",
+      "src": "/assets/camisa-abya-yala/camisa-abya-yala.jpg",
+      "alt": "Camisa Abya Yala do Gondwana FC, frente e costas",
+      "original": "/assets/camisa-abya-yala/camisa-abya-yala.jpg"
+    },
+    {
+      "id": "manto-abya-yala-page-3-camisa-abya-yala-jpg",
+      "label": "Camisa Abya Yala sobre fundo azul",
+      "page": "/manto-abya-yala/",
+      "section": "",
+      "src": "/assets/camisa-abya-yala/camisa-abya-yala.jpg",
+      "alt": "Camisa Abya Yala sobre fundo azul",
+      "original": "/assets/camisa-abya-yala/camisa-abya-yala.jpg"
+    },
+    {
+      "id": "manto-abya-yala-page-4-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+      "label": "Gondwana FC",
+      "page": "/manto-abya-yala/",
+      "section": "",
+      "src": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png",
+      "alt": "Gondwana FC",
+      "original": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png"
+    },
+    {
+      "id": "blog-page-0-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+      "label": "Gondwana FC",
+      "page": "/blog/",
+      "section": "",
+      "src": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png",
+      "alt": "Gondwana FC",
+      "original": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png"
+    },
+    {
+      "id": "blog-page-1-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+      "label": "Gondwana FC",
+      "page": "/blog/",
+      "section": "",
+      "src": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png",
+      "alt": "Gondwana FC",
+      "original": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png"
+    },
+    {
+      "id": "blog-page-2-camisa-abya-yala-jpg",
+      "label": "Camisa Abya Yala do Gondwana FC, frente e costas",
+      "page": "/blog/",
+      "section": "",
+      "src": "/assets/camisa-abya-yala/camisa-abya-yala.jpg",
+      "alt": "Camisa Abya Yala do Gondwana FC, frente e costas",
+      "original": "/assets/camisa-abya-yala/camisa-abya-yala.jpg"
+    },
+    {
+      "id": "blog-page-3-camisa-abya-yala-jpg",
+      "label": "Camisa Abya Yala sobre fundo azul",
+      "page": "/blog/",
+      "section": "",
+      "src": "/assets/camisa-abya-yala/camisa-abya-yala.jpg",
+      "alt": "Camisa Abya Yala sobre fundo azul",
+      "original": "/assets/camisa-abya-yala/camisa-abya-yala.jpg"
+    },
+    {
+      "id": "blog-page-4-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+      "label": "Gondwana FC",
+      "page": "/blog/",
+      "section": "",
+      "src": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png",
+      "alt": "Gondwana FC",
+      "original": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png"
+    },
+    {
+      "id": "blog-page-1-senac-lapa-scipiao-1786304146244-jpg",
+      "label": "Bolas usadas em experiência educativa do Gondwana FC",
+      "page": "/blog/",
+      "section": "",
+      "src": "/uploads/cms/2026/08/senac-lapa-scipiao-1786304146244.jpg",
+      "alt": "Bolas usadas em experiência educativa do Gondwana FC",
+      "original": "/uploads/cms/2026/08/senac-lapa-scipiao-1786304146244.jpg"
+    },
+    {
+      "id": "blog-page-2-img-20251210-125224-1-1786325414762-jpg",
+      "label": "Oficina educativa com participantes reunidos em sala",
+      "page": "/blog/",
+      "section": "",
+      "src": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg",
+      "alt": "Oficina educativa com participantes reunidos em sala",
+      "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
+    },
+    {
       "id": "metodo-6-img-20251210-125224-1-1786325414762-jpg",
       "label": "Oficina do Método ABC com educadores e participantes",
       "page": "/",
@@ -886,12 +994,12 @@
   ],
   "uploads": [
     {
-      "id": "img-20250616-081724368-ae-1786330965125",
-      "label": "IMG_20250616_081724368_AE",
-      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786330965125.jpg",
+      "id": "museu-do-futebol-1786331051183",
+      "label": "Museu do Futebol",
+      "src": "/uploads/cms/2026/08/museu-do-futebol-1786331051183.jpg",
       "type": "image/jpeg",
       "usage": "Imagem publicada pelo editor visual",
-      "uploadedAt": "2026-08-10T03:02:45.124Z"
+      "uploadedAt": "2026-08-10T03:04:11.183Z"
     },
     {
       "id": "img-20250616-081724368-ae-1786330789131",
