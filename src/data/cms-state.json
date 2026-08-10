@@ -391,7 +391,7 @@
       "risk": "alto: troca afeta identidade e abas do navegador"
     }
   ],
-  "updatedAt": "2026-08-10T03:04:23.690Z",
+  "updatedAt": "2026-08-10T03:17:33.921Z",
   "photos": [
     {
       "id": "56ca6697-02-nao-e-so-chutar-vertical",
@@ -708,7 +708,7 @@
       "label": "Logo Sesc - Base publicada",
       "page": "Caderno",
       "section": "Método ABC",
-      "src": "/uploads/cms/2026/08/logo-sesc-1786320618808.jpg",
+      "src": "/uploads/cms/2026/08/sesc-logo-1786331831889.jpg",
       "alt": "Logo Sesc São Paulo",
       "original": "/legacy-assets/sesc-logo.jpg"
     },
@@ -993,6 +993,14 @@
     }
   ],
   "uploads": [
+    {
+      "id": "sesc-logo-1786331831889",
+      "label": "sesc logo",
+      "src": "/uploads/cms/2026/08/sesc-logo-1786331831889.jpg",
+      "type": "image/jpeg",
+      "usage": "Imagem publicada pela biblioteca CMS",
+      "uploadedAt": "2026-08-10T03:17:11.888Z"
+    },
     {
       "id": "museu-do-futebol-1786331051183",
       "label": "Museu do Futebol",
