@@ -295,7 +295,7 @@
       "id": "enviada-bolas",
       "label": "Enviada Bolas",
       "where": "Home L265; Blog L84; Caderno L383; Caderno L388; Caderno L644; Caderno L1264",
-      "src": "/uploads/cms/2026/08/senac-lapa-scipiao-1786304146244.jpg",
+      "src": "/uploads/cms/2026/08/uniacc-miercoles-2-dia-32-1786325802197.jpg",
       "alt": "Bolas reunidas antes de uma atividade educativa",
       "original": "/legacy-assets/enviada-bolas.jpg",
       "type": "imagem do site",
@@ -391,7 +391,7 @@
       "risk": "alto: troca afeta identidade e abas do navegador"
     }
   ],
-  "updatedAt": "2026-08-10T01:30:22.713Z",
+  "updatedAt": "2026-08-10T01:49:32.320Z",
   "photos": [
     {
       "id": "56ca6697-02-nao-e-so-chutar-vertical",
@@ -606,7 +606,7 @@
       "id": "enviada-bolas",
       "label": "Enviada Bolas",
       "where": "Home L265; Blog L84; Caderno L383; Caderno L388; Caderno L644; Caderno L1264",
-      "src": "/uploads/cms/2026/08/senac-lapa-scipiao-1786304146244.jpg",
+      "src": "/uploads/cms/2026/08/uniacc-miercoles-2-dia-32-1786325802197.jpg",
       "alt": "Bolas reunidas antes de uma atividade educativa",
       "original": "/legacy-assets/enviada-bolas.jpg",
       "type": "imagem do site",
@@ -704,7 +704,7 @@
   ],
   "imageUses": [
     {
-      "id": "caderno.metodo.sesc-logo",
+      "id": "caderno-metodo-sesc-logo",
       "label": "Logo Sesc - Base publicada",
       "page": "Caderno",
       "section": "Método ABC",
@@ -713,7 +713,7 @@
       "original": "/legacy-assets/sesc-logo.jpg"
     },
     {
-      "id": "caderno.metodo.audiovisual",
+      "id": "caderno-metodo-audiovisual",
       "label": "Card Audiovisual - Método ABC",
       "page": "Caderno",
       "section": "Método ABC",
@@ -722,7 +722,7 @@
       "original": "/legacy-assets/enviada-bolas.jpg"
     },
     {
-      "id": "caderno.metodo.bola",
+      "id": "caderno-metodo-bola",
       "label": "Card Bola - Método ABC",
       "page": "Caderno",
       "section": "Método ABC",
@@ -731,7 +731,7 @@
       "original": "/legacy-assets/f719394e-metodologia-balon.jpg"
     },
     {
-      "id": "caderno.metodo.camera",
+      "id": "caderno-metodo-camera",
       "label": "Card Câmera - Método ABC",
       "page": "Caderno",
       "section": "Método ABC",
@@ -740,13 +740,121 @@
       "original": "/legacy-assets/27a017d7-encuentro-manos.jpg"
     },
     {
-      "id": "caderno.escola-estadio.imagem-principal",
+      "id": "caderno-escola-estadio-imagem-principal",
       "label": "Imagem principal - Escola como Estádio",
       "page": "Caderno",
       "section": "Escola como Estádio",
       "src": "/uploads/cms/2026/08/photo-4983517877621165108-y-1786320483241.jpg",
       "alt": "Atividade Gondwana com bola, câmera e materiais educativos",
       "original": "/legacy-assets/bc785a04-frame_02_96.5s.jpg"
+    },
+    {
+      "id": "page-0-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+      "label": "Gondwana FC",
+      "page": "/",
+      "section": "",
+      "src": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png",
+      "alt": "Gondwana FC",
+      "original": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png"
+    },
+    {
+      "id": "page-1-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+      "label": "Escudo Gondwana FC - Time da Educação",
+      "page": "/",
+      "section": "",
+      "src": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png",
+      "alt": "Escudo Gondwana FC - Time da Educação",
+      "original": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png"
+    },
+    {
+      "id": "page-2-senac-lapa-scipiao-1786304146244-jpg",
+      "label": "Bolas reunidas antes de uma atividade educativa",
+      "page": "/",
+      "section": "",
+      "src": "/uploads/cms/2026/08/uniacc-miercoles-2-dia-32-1786326443554.jpg",
+      "alt": "Bolas reunidas antes de uma atividade educativa",
+      "original": "/uploads/cms/2026/08/senac-lapa-scipiao-1786304146244.jpg"
+    },
+    {
+      "id": "page-3-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+      "label": "Gondwana FC",
+      "page": "/",
+      "section": "",
+      "src": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png",
+      "alt": "Gondwana FC",
+      "original": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png"
+    },
+    {
+      "id": "clube-4-logo-gondwana-fc-badge-white-jpg",
+      "label": "Aprender também é uma forma de jogo.",
+      "page": "/",
+      "section": "clube",
+      "src": "/legacy-assets/logo-gondwana-fc-badge-white.jpg",
+      "alt": "",
+      "original": "/legacy-assets/logo-gondwana-fc-badge-white.jpg"
+    },
+    {
+      "id": "manto-5-camisa-abya-yala-jpg",
+      "label": "Camisa Abya Yala do Gondwana FC, frente e costas",
+      "page": "/",
+      "section": "manto",
+      "src": "/assets/camisa-abya-yala/camisa-abya-yala.jpg",
+      "alt": "Camisa Abya Yala do Gondwana FC, frente e costas",
+      "original": "/assets/camisa-abya-yala/camisa-abya-yala.jpg"
+    },
+    {
+      "id": "metodo-6-img-20251210-125224-1-1786325414762-jpg",
+      "label": "Oficina do Método ABC com educadores e participantes",
+      "page": "/",
+      "section": "metodo",
+      "src": "/uploads/cms/2026/08/uniacc-chile-foto-jose-aguilera-1786326520595.jpg",
+      "alt": "Oficina do Método ABC com educadores e participantes",
+      "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
+    },
+    {
+      "id": "temporada-7-img-20251210-125224-1-1786325414762-jpg",
+      "label": "Oficina Gondwana FC",
+      "page": "/",
+      "section": "temporada",
+      "src": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg",
+      "alt": "Oficina Gondwana FC",
+      "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
+    },
+    {
+      "id": "partidas-comprovadas-8-img-20251210-125224-1-1786325414762-jpg",
+      "label": "Oficina educativa com participantes reunidos em sala",
+      "page": "/",
+      "section": "partidas-comprovadas",
+      "src": "/uploads/cms/2026/08/cabaceiras-paraiba-1-1786326559279.jpg",
+      "alt": "Oficina educativa com participantes reunidos em sala",
+      "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
+    },
+    {
+      "id": "blog-9-senac-lapa-scipiao-1786299766436-jpg",
+      "label": "Encontro com bola e mãos",
+      "page": "/",
+      "section": "blog",
+      "src": "/uploads/cms/2026/08/senac-lapa-scipiao-1786299766436.jpg",
+      "alt": "Encontro com bola e mãos",
+      "original": "/uploads/cms/2026/08/senac-lapa-scipiao-1786299766436.jpg"
+    },
+    {
+      "id": "convite-10-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+      "label": "Gondwana FC",
+      "page": "/",
+      "section": "convite",
+      "src": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png",
+      "alt": "Gondwana FC",
+      "original": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png"
+    },
+    {
+      "id": "page-11-logo-gondwana-fc-time-educacao-png-sin-borde-png",
+      "label": "Escudo Gondwana FC - Time da Educação",
+      "page": "/",
+      "section": "",
+      "src": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png",
+      "alt": "Escudo Gondwana FC - Time da Educação",
+      "original": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png"
     }
   ]
 }
