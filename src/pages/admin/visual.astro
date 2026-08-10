@@ -1,0 +1,78 @@
+---
+import cmsState from '../../data/cms-state.json';
+const initialState = JSON.stringify(cmsState);
+---
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Editor visual - Gondwana FC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root{--grafite:#11130f;--verde:#2e6f46;--ouro:#f2c230;--areia:#f6edd7;--barro:#9e4a2f;--ink:#171914}
+    *{box-sizing:border-box}body{margin:0;background:var(--grafite);color:var(--areia);font-family:Manrope,sans-serif}button,input,select{font:inherit}.display{font-family:'Archivo Black',sans-serif;letter-spacing:-.05em;text-transform:uppercase}.gate{position:fixed;inset:0;z-index:20;display:grid;place-items:center;background:radial-gradient(circle at 30% 20%,rgba(242,194,48,.22),transparent 28rem),var(--grafite)}.gate.hidden{display:none}.gate-card{width:min(92vw,430px);border:1px solid rgba(246,237,215,.14);border-radius:28px;background:rgba(246,237,215,.08);padding:28px}.field{width:100%;border:1px solid rgba(246,237,215,.18);border-radius:16px;background:rgba(246,237,215,.1);color:var(--areia);padding:13px}.btn{min-height:44px;border:0;border-radius:999px;padding:12px 16px;font-weight:950;cursor:pointer}.btn.gold{background:var(--ouro);color:var(--grafite)}.btn.dark{background:var(--verde);color:white}.btn.ghost{border:1px solid rgba(246,237,215,.22);background:rgba(246,237,215,.07);color:var(--areia)}.shell{display:grid;grid-template-columns:1fr 380px;min-height:100vh}.stage{position:relative;background:#050605}.toolbar{position:sticky;top:0;z-index:8;display:flex;gap:10px;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(246,237,215,.12);background:rgba(17,19,15,.94);padding:12px 14px}.toolbar-left,.toolbar-right{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.toolbar select{width:auto;min-width:170px}.frame-wrap{position:relative;height:calc(100vh - 70px);overflow:auto}iframe{display:block;width:100%;height:100%;border:0;background:white}.overlay{position:absolute;inset:0;pointer-events:none}.hotspot{position:absolute;z-index:5;border:3px solid var(--ouro);border-radius:14px;background:rgba(242,194,48,.1);box-shadow:0 0 0 9999px rgba(0,0,0,.02),0 16px 40px rgba(0,0,0,.32);pointer-events:auto;cursor:pointer}.hotspot span{position:absolute;left:8px;top:8px;border-radius:999px;background:var(--ouro);color:var(--grafite);padding:6px 9px;font-size:11px;font-weight:950}.side{border-left:1px solid rgba(246,237,215,.14);background:linear-gradient(180deg,#171914,#0d0f0c);padding:18px;overflow:auto}.side h1{font-size:34px;line-height:.9;margin:8px 0 10px}.panel{border:1px solid rgba(246,237,215,.13);border-radius:24px;background:rgba(246,237,215,.07);padding:16px;margin-top:14px}.muted{color:rgba(246,237,215,.68);line-height:1.45}.preview-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.preview-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;background:#000}.pill{display:inline-flex;border:1px solid rgba(242,194,48,.5);border-radius:999px;padding:7px 10px;color:var(--ouro);font-size:11px;font-weight:950;letter-spacing:.14em;text-transform:uppercase}.hidden{display:none!important}.status{font-size:13px;color:rgba(246,237,215,.76)}@media(max-width:920px){.shell{grid-template-columns:1fr}.side{border-left:0;border-top:1px solid rgba(246,237,215,.14)}.frame-wrap{height:68vh}}
+  </style>
+</head>
+<body>
+  <section id="gate" class="gate"><div class="gate-card"><span class="pill">Editor visual</span><h1 class="display">Entrar no site editável</h1><p class="muted">Navegue, clique na imagem e troque olhando o lugar real.</p><input id="password" class="field" type="password" placeholder="Senha" /><button id="enter" class="btn gold" style="width:100%;margin-top:12px">Entrar</button><p id="loginError" class="hidden" style="color:var(--ouro);font-weight:950">Senha incorreta. Use: gondwana</p></div></section>
+  <main class="shell">
+    <section class="stage">
+      <div class="toolbar"><div class="toolbar-left"><strong>Gondwana FC</strong><select id="page" class="field"><option value="/">Home</option><option value="/caderno/">Caderno</option><option value="/blog/">Blog</option><option value="/manto-abya-yala/">Manto Abya Yala</option></select><button id="reload" class="btn ghost">Recarregar</button></div><div class="toolbar-right"><span id="status" class="status">rascunho visual</span><button id="publish" class="btn gold">Publicar produção</button></div></div>
+      <div class="frame-wrap" id="frameWrap"><iframe id="siteFrame" src="/"></iframe><div id="overlay" class="overlay"></div></div>
+    </section>
+    <aside class="side">
+      <span class="pill">Modo visual</span><h1 class="display">Clique numa imagem</h1><p class="muted">O contorno amarelo mostra imagens que o CMS reconhece. Ao clicar, você troca sem mexer em informações técnicas.</p>
+      <div id="empty" class="panel">Nenhuma imagem selecionada ainda.</div>
+      <div id="editor" class="panel hidden">
+        <p class="pill">Imagem selecionada</p>
+        <h2 id="photoTitle" class="display" style="font-size:24px;margin:12px 0"></h2>
+        <p id="photoWhere" class="muted"></p>
+        <div class="preview-grid"><div><p><b>Atual</b></p><img id="currentImg" alt="" /></div><div><p><b>Depois</b></p><img id="nextImg" alt="" /></div></div>
+        <label style="display:block;margin-top:14px"><span>Escolher da biblioteca</span><select id="library" class="field"></select></label>
+        <label class="btn dark" style="display:inline-flex;margin-top:12px">Subir nova e aplicar<input id="upload" type="file" accept="image/*" hidden /></label>
+        <button id="apply" class="btn gold" style="width:100%;margin-top:12px">Aplicar troca no rascunho</button>
+      </div>
+      <div class="panel"><b>Publicação</b><p id="pending" class="muted">Nenhuma troca pendente.</p><p class="muted">Depois de aplicar, clique em Publicar produção. A Vercel atualiza o site após o deploy.</p></div>
+    </aside>
+  </main>
+<script define:vars={{ initialState }}>
+const initial=JSON.parse(initialState);
+let state=loadDraft()||structuredClone(initial);
+let selectedPhoto=null;
+const $=s=>document.querySelector(s);
+const esc=v=>String(v??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const uniqueBy=(items,key)=>{const seen=new Set();return items.filter(item=>item&&item[key]&&!seen.has(item[key])&&seen.add(item[key]))};
+function loadDraft(){try{return JSON.parse(localStorage.getItem('gfc-cms-qa')||'null')}catch{localStorage.removeItem('gfc-cms-qa');return null}}
+function normalizeState(){state.photos=Array.isArray(state.photos)?state.photos:structuredClone(state.sitePhotos||[]);state.sitePhotos=state.photos;state.uploads=Array.isArray(state.uploads)?state.uploads:[];state.publicPresence=Array.isArray(state.publicPresence)?state.publicPresence:structuredClone(initial.publicPresence||[])}
+function save(){normalizeState();const clean=structuredClone(state);clean.history=[];clean.uploads=(clean.uploads||[]).filter(item=>!String(item.src||'').startsWith('data:image/'));localStorage.setItem('gfc-cms-qa',JSON.stringify(clean));updatePending()}
+function allPhotos(){normalizeState();return uniqueBy([...state.photos,...state.uploads],'src')}
+function pathOf(src){try{return new URL(src,location.origin).pathname}catch{return String(src||'')}}
+function findPhotoForImage(img){const path=pathOf(img.currentSrc||img.src);return state.photos.find(p=>pathOf(p.src)===path||pathOf(p.original)===path)}
+function pendingCount(){return state.photos.filter(p=>p.src&&p.original&&p.src!==p.original).length}
+function updatePending(){const count=pendingCount();$('#pending').textContent=count?`${count} troca(s) pendente(s) no rascunho visual.`:'Nenhuma troca pendente.';$('#status').textContent=count?`${count} troca(s) pendente(s)`:'rascunho visual'}
+function scanImages(){const overlay=$('#overlay');overlay.innerHTML='';const frame=$('#siteFrame');const doc=frame.contentDocument;if(!doc)return;const wrapRect=$('#frameWrap').getBoundingClientRect();doc.querySelectorAll('img').forEach(img=>{const photo=findPhotoForImage(img);if(!photo)return;const rect=img.getBoundingClientRect();if(rect.width<40||rect.height<40)return;const box=document.createElement('button');box.className='hotspot';box.style.left=`${rect.left+$('#frameWrap').scrollLeft}px`;box.style.top=`${rect.top+$('#frameWrap').scrollTop}px`;box.style.width=`${rect.width}px`;box.style.height=`${rect.height}px`;box.innerHTML='<span>Trocar</span>';box.onclick=()=>selectPhoto(photo);overlay.appendChild(box)})}
+function selectPhoto(photo){selectedPhoto=photo;$('#empty').classList.add('hidden');$('#editor').classList.remove('hidden');$('#photoTitle').textContent=photo.label||photo.id;$('#photoWhere').textContent=photo.where||'Uso conectado no site';$('#currentImg').src=photo.src;renderLibrary();$('#nextImg').src=$('#library').value||photo.src}
+function renderLibrary(){const lib=$('#library');lib.innerHTML=allPhotos().map(p=>`<option value="${esc(p.src)}" ${selectedPhoto&&p.src===selectedPhoto.src?'selected':''}>${esc(p.label||p.src)}</option>`).join('')}
+$('#library').onchange=()=>{$('#nextImg').src=$('#library').value};
+$('#apply').onclick=()=>{if(!selectedPhoto)return;selectedPhoto.src=$('#library').value;if(selectedPhoto.original==='/legacy-assets/enviada-bolas.jpg'&&state.home)state.home.photo=selectedPhoto.src;save();scanImages();alert('Troca aplicada no rascunho. Para aparecer no site, clique em Publicar produção.')};
+function resizeImage(file,max=1600,quality=.82){return new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>{const scale=Math.min(1,max/Math.max(img.width,img.height));const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(img.width*scale));canvas.height=Math.max(1,Math.round(img.height*scale));canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);resolve(canvas.toDataURL('image/jpeg',quality))};img.onerror=()=>reject(new Error('Não consegui processar a imagem.'));const reader=new FileReader();reader.onload=()=>{img.src=reader.result};reader.onerror=()=>reject(new Error('Não consegui ler o arquivo.'));reader.readAsDataURL(file)})}
+async function dataUrlToFile(dataUrl,name){const response=await fetch(dataUrl);const blob=await response.blob();return new File([blob],name.replace(/\.[^.]+$/,'')+'.jpg',{type:'image/jpeg'})}
+async function uploadMedia(file){const password=window.prompt('Senha para publicar a imagem na biblioteca');if(!password)throw new Error('Upload cancelado.');const compressed=await resizeImage(file);const finalFile=await dataUrlToFile(compressed,file.name);const form=new FormData();form.append('password',password);form.append('file',finalFile);const response=await fetch('/api/cms/media',{method:'POST',body:form});const raw=await response.text();const result=raw?JSON.parse(raw):{};if(!response.ok||!result.ok)throw new Error(result.error||'Falha ao publicar imagem');return result.asset}
+$('#upload').onchange=async e=>{const file=e.target.files&&e.target.files[0];if(!file||!selectedPhoto)return;try{$('#status').textContent='subindo imagem...';const asset=await uploadMedia(file);state.uploads.unshift({label:asset.label,src:asset.src,type:'upload',usage:'Imagem publicada pelo editor visual'});selectedPhoto.src=asset.src;if(selectedPhoto.original==='/legacy-assets/enviada-bolas.jpg'&&state.home)state.home.photo=asset.src;save();selectPhoto(selectedPhoto);scanImages();alert('Imagem subida e aplicada no rascunho. Agora publique produção.')}catch(error){alert(error.message||'Falha ao subir imagem')}finally{$('#status').textContent='rascunho visual'}};
+async function validateDraft(){const response=await fetch('/api/cms/validate',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({publicPresence:state.publicPresence,photos:state.photos,sitePhotos:state.photos})});const result=await response.json();if(!result.ok)throw new Error((result.issues||[]).filter(i=>i.severity==='error').map(i=>i.message).join('\n')||'Validação falhou')}
+$('#publish').onclick=async()=>{const password=window.prompt('Senha para publicar em produção');if(!password)return;try{$('#status').textContent='validando...';await validateDraft();$('#status').textContent='publicando produção...';const payload={...state,password,sitePhotos:state.photos,photos:state.photos};const response=await fetch('/api/cms/publish-presence',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});const raw=await response.text();const result=raw?JSON.parse(raw):{};if(!response.ok||!result.ok)throw new Error(result.error||'Falha ao publicar');localStorage.removeItem('gfc-cms-qa');alert('Publicado em produção. Aguarde o deploy da Vercel atualizar o site.');location.reload()}catch(error){alert(error.message||'Falha ao publicar')}finally{updatePending()}};
+$('#page').onchange=()=>{$('#siteFrame').src=$('#page').value};
+$('#reload').onclick=()=>{$('#siteFrame').contentWindow.location.reload()};
+$('#siteFrame').addEventListener('load',()=>{setTimeout(scanImages,450)});
+$('#frameWrap').addEventListener('scroll',()=>requestAnimationFrame(scanImages));
+window.addEventListener('resize',()=>requestAnimationFrame(scanImages));
+$('#enter').onclick=()=>{$('#password').value.trim().toLowerCase()==='gondwana'?$('#gate').classList.add('hidden'):$('#loginError').classList.remove('hidden')};
+$('#password').onkeydown=e=>{if(e.key==='Enter')$('#enter').click()};
+normalizeState();updatePending();
+</script>
+</body>
+</html>
