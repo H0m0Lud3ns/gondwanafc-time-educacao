@@ -19,7 +19,7 @@ const initialState = JSON.stringify(cmsState);
 </head>
 <body>
   <section id="gate" class="gate"><div class="gate-card"><span class="pill">Editor visual</span><h1 class="display">Entrar no site editável</h1><p class="muted">Navegue, clique na imagem e troque olhando o lugar real.</p><input id="password" class="field" type="password" placeholder="Senha" /><button id="enter" class="btn gold" style="width:100%;margin-top:12px">Entrar</button><p id="loginError" class="hidden" style="color:var(--ouro);font-weight:950">Senha incorreta. Use: gondwana</p></div></section>
-  <main class="shell">
+  <main id="editorShell" class="shell hidden">
     <section class="stage">
       <div class="toolbar"><div class="toolbar-left"><strong>Gondwana FC</strong><select id="page" class="field"><option value="/">Home</option><option value="/caderno/">Caderno</option><option value="/blog/">Blog</option><option value="/manto-abya-yala/">Manto Abya Yala</option></select><button id="reload" class="btn ghost">Recarregar</button><button id="scan" class="btn ghost">Mostrar botões</button><button id="discard" class="btn ghost">Descartar rascunho</button></div><div class="toolbar-right"><span id="status" class="status">rascunho visual</span><button id="publish" class="btn gold">Publicar produção</button></div></div>
       <div class="frame-wrap" id="frameWrap"><iframe id="siteFrame" src="/"></iframe><div id="overlay" class="overlay"></div></div>
@@ -57,7 +57,7 @@ const uniqueBy=(items,key)=>{const seen=new Set();return items.filter(item=>item
 const authKey='gfc-cms-auth';
 function isAuthed(){try{return Date.now()-Number(localStorage.getItem(authKey)||0)<1000*60*60*12}catch{return false}}
 function keepSession(){try{localStorage.setItem(authKey,String(Date.now()))}catch{}}
-function unlock(){keepSession();$('#gate').classList.add('hidden')}
+function unlock(){keepSession();$('#gate').classList.add('hidden');$('#editorShell').classList.remove('hidden');[100,500,1200].forEach(ms=>setTimeout(scanImages,ms))}
 
 function loadDraft(){try{return JSON.parse(localStorage.getItem('gfc-cms-qa')||'null')}catch{localStorage.removeItem('gfc-cms-qa');return null}}
 function migrateImageUseIds(){
