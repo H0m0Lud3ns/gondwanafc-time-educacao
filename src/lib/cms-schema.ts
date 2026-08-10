@@ -38,12 +38,25 @@ export type UploadedAsset = {
   uploadedAt?: string;
 };
 
+export type MediaAsset = UploadedAsset & {
+  original?: string;
+  alt?: string;
+  usedBy?: string[];
+};
+
 export type CmsState = {
+  schemaVersion?: number;
   publicPresence: PublicPresenceItem[];
   sitePhotos: SitePhoto[];
   photos?: SitePhoto[];
   imageUses?: ImageUse[];
   uploads?: UploadedAsset[];
+  assets?: MediaAsset[];
+  home?: Record<string, unknown>;
+  seo?: Record<string, unknown>;
+  projects?: Array<Record<string, unknown>>;
+  links?: Array<Record<string, unknown>>;
+  siteMap?: Array<Record<string, unknown>>;
   updatedAt?: string;
 };
 
@@ -161,19 +174,63 @@ export function cleanSitePhoto(item: Partial<SitePhoto>, index: number): SitePho
   };
 }
 
+
+function cloneRecords<T extends Record<string, unknown>>(items: unknown): T[] {
+  return Array.isArray(items) ? items.filter((item): item is T => !!item && typeof item === 'object').map((item) => ({ ...item })) : [];
+}
+
+export function deriveMediaAssets(sitePhotos: SitePhoto[], imageUses: ImageUse[], uploads: UploadedAsset[]): MediaAsset[] {
+  const bySrc = new Map<string, MediaAsset>();
+  const upsert = (item: Partial<MediaAsset>, usedBy?: string) => {
+    const src = String(item.src || '').trim();
+    if (!src) return;
+    const current = bySrc.get(src) || {
+      id: slug(String(item.id || item.label || src), `asset-${bySrc.size + 1}`),
+      label: String(item.label || item.alt || src).trim(),
+      src,
+      type: String(item.type || 'imagem').trim(),
+      usage: String(item.usage || 'Biblioteca CMS').trim(),
+      original: item.original,
+      alt: item.alt,
+      uploadedAt: item.uploadedAt,
+      usedBy: [],
+    };
+    current.label = current.label || String(item.label || item.alt || src).trim();
+    current.original = current.original || item.original;
+    current.alt = current.alt || item.alt;
+    current.uploadedAt = current.uploadedAt || item.uploadedAt;
+    if (usedBy && !current.usedBy?.includes(usedBy)) current.usedBy?.push(usedBy);
+    bySrc.set(src, current);
+  };
+
+  sitePhotos.forEach((photo) => upsert(photo, photo.id));
+  imageUses.forEach((use) => upsert({ ...use, type: 'slot editorial', usage: use.section || use.page }, use.id));
+  uploads.forEach((asset) => upsert(asset));
+
+  return [...bySrc.values()].sort((a, b) => String(a.label || a.src).localeCompare(String(b.label || b.src)));
+}
+
 export function normalizeCmsState(input: Partial<CmsState>): CmsState {
   const publicPresence = Array.isArray(input.publicPresence) ? input.publicPresence.map(cleanPublicPresence) : [];
   const sourcePhotos = Array.isArray(input.sitePhotos) ? input.sitePhotos : Array.isArray(input.photos) ? input.photos : [];
   const sitePhotos = sourcePhotos.map(cleanSitePhoto);
   const imageUses = Array.isArray(input.imageUses) ? input.imageUses.map(cleanImageUse) : [];
   const uploads = Array.isArray(input.uploads) ? input.uploads.map(cleanUploadedAsset) : [];
+  const assets = deriveMediaAssets(sitePhotos, imageUses, uploads);
 
   return {
+    schemaVersion: Math.max(Number(input.schemaVersion || 1), 2),
     publicPresence,
     sitePhotos,
     photos: sitePhotos,
     imageUses,
     uploads,
+    assets,
+    home: input.home && typeof input.home === 'object' ? { ...input.home } : {},
+    seo: input.seo && typeof input.seo === 'object' ? { ...input.seo } : {},
+    projects: cloneRecords(input.projects),
+    links: cloneRecords(input.links),
+    siteMap: cloneRecords(input.siteMap),
     updatedAt: input.updatedAt,
   };
 }
