@@ -391,7 +391,7 @@
       "risk": "alto: troca afeta identidade e abas do navegador"
     }
   ],
-  "updatedAt": "2026-08-10T02:09:02.195Z",
+  "updatedAt": "2026-08-10T02:09:47.458Z",
   "photos": [
     {
       "id": "56ca6697-02-nao-e-so-chutar-vertical",
@@ -771,7 +771,7 @@
       "label": "Bolas reunidas antes de uma atividade educativa",
       "page": "/",
       "section": "",
-      "src": "/uploads/cms/2026/08/uniacc-miercoles-2-dia-32-1786327722100.jpg",
+      "src": "/uploads/cms/2026/08/senac-lapa-scipiao-1786304146244.jpg",
       "alt": "Bolas reunidas antes de uma atividade educativa",
       "original": "/uploads/cms/2026/08/senac-lapa-scipiao-1786304146244.jpg"
     },
@@ -807,7 +807,7 @@
       "label": "Oficina do Método ABC com educadores e participantes",
       "page": "/",
       "section": "metodo",
-      "src": "/uploads/cms/2026/08/uniacc-chile-foto-jose-aguilera-1786326646986.jpg",
+      "src": "/uploads/cms/2026/08/uniacc-chile-foto-jose-aguilera-1786327777920.jpg",
       "alt": "Oficina do Método ABC com educadores e participantes",
       "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
     },
@@ -855,6 +855,15 @@
       "src": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png",
       "alt": "Escudo Gondwana FC - Time da Educação",
       "original": "/legacy-assets/logo-gondwana-fc-time-educacao-png-sin-borde.png"
+    }
+  ],
+  "uploads": [
+    {
+      "id": "uniacc-chile-foto-jose-aguilera",
+      "label": "UNIACC CHILE _ FOTO JOSÉ AGUILERA",
+      "src": "/uploads/cms/2026/08/uniacc-chile-foto-jose-aguilera-1786327777920.jpg",
+      "type": "upload",
+      "usage": "Imagem publicada pelo editor visual"
     }
   ]
 }
