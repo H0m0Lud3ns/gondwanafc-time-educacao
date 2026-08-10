@@ -46,6 +46,11 @@ let selectedPhoto=null;
 const $=s=>document.querySelector(s);
 const esc=v=>String(v??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const uniqueBy=(items,key)=>{const seen=new Set();return items.filter(item=>item&&item[key]&&!seen.has(item[key])&&seen.add(item[key]))};
+const authKey='gfc-cms-auth';
+function isAuthed(){try{return Date.now()-Number(localStorage.getItem(authKey)||0)<1000*60*60*12}catch{return false}}
+function keepSession(){try{localStorage.setItem(authKey,String(Date.now()))}catch{}}
+function unlock(){keepSession();$('#gate').classList.add('hidden')}
+
 function loadDraft(){try{return JSON.parse(localStorage.getItem('gfc-cms-qa')||'null')}catch{localStorage.removeItem('gfc-cms-qa');return null}}
 function normalizeState(){state.photos=Array.isArray(state.photos)?state.photos:structuredClone(state.sitePhotos||[]);state.sitePhotos=state.photos;state.uploads=Array.isArray(state.uploads)?state.uploads:[];state.publicPresence=Array.isArray(state.publicPresence)?state.publicPresence:structuredClone(initial.publicPresence||[])}
 function save(){normalizeState();const clean=structuredClone(state);clean.history=[];clean.uploads=(clean.uploads||[]).filter(item=>!String(item.src||'').startsWith('data:image/'));localStorage.setItem('gfc-cms-qa',JSON.stringify(clean));updatePending()}
@@ -80,8 +85,9 @@ $('#siteFrame').addEventListener('load',()=>{setTimeout(scanImages,450)});
 $('#frameWrap').addEventListener('scroll',()=>requestAnimationFrame(scanImages));
 $('#siteFrame').addEventListener('load',()=>{$('#siteFrame').contentWindow?.addEventListener('scroll',()=>requestAnimationFrame(scanImages),{passive:true})});
 window.addEventListener('resize',()=>requestAnimationFrame(scanImages));
-$('#enter').onclick=()=>{$('#password').value.trim().toLowerCase()==='gondwana'?$('#gate').classList.add('hidden'):$('#loginError').classList.remove('hidden')};
+$('#enter').onclick=()=>{$('#password').value.trim().toLowerCase()==='gondwana'?unlock():$('#loginError').classList.remove('hidden')};
 $('#password').onkeydown=e=>{if(e.key==='Enter')$('#enter').click()};
+if(isAuthed())unlock();
 normalizeState();updatePending();
 </script>
 </body>
