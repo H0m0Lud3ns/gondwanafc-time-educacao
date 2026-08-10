@@ -80,7 +80,7 @@ function allPhotos(){normalizeState();return uniqueBy([...state.photos,...state.
 function pathOf(src){try{return new URL(src,location.origin).pathname}catch{return String(src||'')}}
 function labelFromImage(img){const text=img.alt||img.closest('section')?.querySelector('h1,h2,h3')?.textContent||'Imagem do site';return text.trim().slice(0,80)}
 function useIdFromImage(img,index){if(img.dataset.cmsUse)return img.dataset.cmsUse;const path=pathOf(img.dataset.cmsOriginal||img.getAttribute('src')||img.currentSrc||img.src);const section=img.closest('section')?.id||'page';const page=$('#page')?.value||'/';return `${page.replace(/[^a-z0-9]+/gi,'-')}-${section}-${index}-${path.split('/').pop()}`.replace(/[^a-z0-9]+/gi,'-').replace(/^-|-$/g,'').toLowerCase()}
-function imageUseFor(img,index){const original=pathOf(img.dataset.cmsOriginal||img.getAttribute('src')||img.currentSrc||img.src);const existing=state.imageUses.find(use=>use.id===useIdFromImage(img,index));if(existing)return existing;const photo=state.photos.find(p=>pathOf(p.src)===pathOf(img.currentSrc||img.src)||pathOf(p.original)===original);const use={id:useIdFromImage(img,index),label:img.dataset.cmsLabel||labelFromImage(img),page:$('#page')?.value||'/',section:img.closest('section')?.id||'',src:photo?.src||pathOf(img.currentSrc||img.src),alt:img.alt||photo?.alt||'',original};state.imageUses.push(use);return use}
+function imageUseFor(img,index){const original=pathOf(img.dataset.cmsOriginal||img.getAttribute('src')||img.currentSrc||img.src);const id=useIdFromImage(img,index);const existing=state.imageUses.find(use=>use.id===id);if(existing)return existing;if(!img.dataset.cmsUse)return null;const photo=state.photos.find(p=>pathOf(p.src)===pathOf(img.currentSrc||img.src)||pathOf(p.original)===original);const use={id,label:img.dataset.cmsLabel||labelFromImage(img),page:$('#page')?.value||'/',section:img.closest('section')?.id||'',src:photo?.src||pathOf(img.currentSrc||img.src),alt:img.alt||photo?.alt||'',original};state.imageUses.push(use);return use}
 function findPhotoForImage(img,index){return imageUseFor(img,index)}
 function syncFrameImages(){
   const frame=$('#siteFrame');const doc=frame.contentDocument;if(!doc)return;
@@ -92,10 +92,10 @@ function syncFrameImages(){
   });
 }
 function initialPhotoSrc(photo){const source=(initial.imageUses||[]).find(item=>item.id===photo.id)||(initial.sitePhotos||initial.photos||[]).find(item=>item.id===photo.id);return source?.src||photo.original||''}
-function pendingCount(){return state.imageUses.filter(p=>p.src&&p.src!==initialPhotoSrc(p)).length}
-function pendingPhotos(){return state.imageUses.filter(p=>p.src&&p.src!==initialPhotoSrc(p))}
+function pendingCount(){return editableUses().filter(p=>p.src&&p.src!==initialPhotoSrc(p)).length}
+function pendingPhotos(){return editableUses().filter(p=>p.src&&p.src!==initialPhotoSrc(p))}
 function updatePending(){const items=pendingPhotos();const count=items.length;$('#pending').innerHTML=count?`<b>${count} troca(s) pendente(s) no rascunho visual.</b><br>${items.map(p=>esc(p.label||p.id)).join('<br>')}`:'Nenhuma troca pendente.';$('#status').textContent=count?`${count} troca(s) pendente(s)`:'rascunho visual'}
-function editableUses(){normalizeState();return (state.imageUses||[]).filter(use=>String(use.id||'').includes('.')||String(use.page||'').toLowerCase().includes('caderno')||String(use.page||'').toLowerCase().includes('home'))}
+function editableUses(){normalizeState();return (state.imageUses||[]).filter(use=>String(use.id||'').includes('.')||String(use.page||'').toLowerCase().includes('caderno')||String(use.page||'').toLowerCase().includes('home')).sort((a,b)=>`${a.page||''} ${a.section||''} ${a.label||''}`.localeCompare(`${b.page||''} ${b.section||''} ${b.label||''}`))}
 function renderUsePicker(){const picker=$('#usePicker');if(!picker)return;const selected=selectedPhoto?.id||'';picker.innerHTML=editableUses().map(use=>`<option value="${esc(use.id)}" ${use.id===selected?'selected':''}>${esc(use.label||use.id)} · ${esc(use.page||'site')}</option>`).join('')}
 function scanImages(){
   syncFrameImages();
