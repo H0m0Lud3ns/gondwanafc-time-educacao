@@ -825,7 +825,7 @@
       "label": "Oficina educativa com participantes reunidos em sala",
       "page": "/",
       "section": "partidas-comprovadas",
-      "src": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg",
+      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786340582623.jpg",
       "alt": "Oficina educativa com participantes reunidos em sala",
       "original": "/uploads/cms/2026/08/img-20251210-125224-1-1786325414762.jpg"
     },
@@ -1146,6 +1146,14 @@
     }
   ],
   "uploads": [
+    {
+      "id": "img-20250616-081724368-ae-1786340582623",
+      "label": "IMG_20250616_081724368_AE",
+      "src": "/uploads/cms/2026/08/img-20250616-081724368-ae-1786340582623.jpg",
+      "type": "image/jpeg",
+      "usage": "Imagem publicada pelo editor visual",
+      "uploadedAt": "2026-08-10T05:43:02.623Z"
+    },
     {
       "id": "img-20250616-081724368-ae-1786340541078",
       "label": "IMG_20250616_081724368_AE",
