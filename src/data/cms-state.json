@@ -701,5 +701,52 @@
       "usage": "Favicon e identidade visual do site",
       "risk": "alto: troca afeta identidade e abas do navegador"
     }
+  ],
+  "imageUses": [
+    {
+      "id": "caderno.metodo.sesc-logo",
+      "label": "Logo Sesc - Base publicada",
+      "page": "Caderno",
+      "section": "Método ABC",
+      "src": "/uploads/cms/2026/08/logo-sesc-1786320618808.jpg",
+      "alt": "Logo Sesc São Paulo",
+      "original": "/legacy-assets/sesc-logo.jpg"
+    },
+    {
+      "id": "caderno.metodo.audiovisual",
+      "label": "Card Audiovisual - Método ABC",
+      "page": "Caderno",
+      "section": "Método ABC",
+      "src": "/uploads/cms/2026/08/senac-lapa-scipiao-1786304146244.jpg",
+      "alt": "Bolas reunidas antes de uma atividade educativa",
+      "original": "/legacy-assets/enviada-bolas.jpg"
+    },
+    {
+      "id": "caderno.metodo.bola",
+      "label": "Card Bola - Método ABC",
+      "page": "Caderno",
+      "section": "Método ABC",
+      "src": "/legacy-assets/f719394e-metodologia-balon.jpg",
+      "alt": "Bola",
+      "original": "/legacy-assets/f719394e-metodologia-balon.jpg"
+    },
+    {
+      "id": "caderno.metodo.camera",
+      "label": "Card Câmera - Método ABC",
+      "page": "Caderno",
+      "section": "Método ABC",
+      "src": "/uploads/cms/2026/08/senac-lapa-scipiao-1786299766436.jpg",
+      "alt": "Encontro com bola e mãos",
+      "original": "/legacy-assets/27a017d7-encuentro-manos.jpg"
+    },
+    {
+      "id": "caderno.escola-estadio.imagem-principal",
+      "label": "Imagem principal - Escola como Estádio",
+      "page": "Caderno",
+      "section": "Escola como Estádio",
+      "src": "/uploads/cms/2026/08/photo-4983517877621165108-y-1786320483241.jpg",
+      "alt": "Atividade Gondwana com bola, câmera e materiais educativos",
+      "original": "/legacy-assets/bc785a04-frame_02_96.5s.jpg"
+    }
   ]
 }

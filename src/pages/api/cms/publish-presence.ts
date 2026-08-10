@@ -59,6 +59,7 @@ export const POST: APIRoute = async ({ request }) => {
       url: result.commit?.html_url,
       count: normalized.publicPresence.length,
       photos: normalized.sitePhotos.length,
+      imageUses: normalized.imageUses?.length || 0,
     });
   } catch (error) {
     return json({ ok: false, error: error instanceof Error ? error.message : 'Erro desconhecido.' }, 500);

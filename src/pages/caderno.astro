@@ -1,6 +1,6 @@
 ---
 import '../styles/tailwind.css';
-import { altFor, imageFor, publicImageFor } from '../lib/cms-images';
+import { altFor, altUseFor, imageFor, imageUseFor, publicImageFor } from '../lib/cms-images';
 ---
 <html lang="pt-BR">
 <head>
@@ -613,7 +613,7 @@ import { altFor, imageFor, publicImageFor } from '../lib/cms-images';
             <div>
               <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
                 <div class="inline-flex w-fit rounded-2xl bg-white p-4 shadow-xl shadow-black/20">
-                  <img src={imageFor('/legacy-assets/sesc-logo.jpg')} alt="Logo Sesc São Paulo" class="h-12 w-auto object-contain" />
+                  <img data-cms-use="caderno.metodo.sesc-logo" data-cms-original="/legacy-assets/sesc-logo.jpg" data-cms-label="Logo Sesc - Base publicada" src={imageUseFor('caderno.metodo.sesc-logo', '/legacy-assets/sesc-logo.jpg')} alt={altUseFor('caderno.metodo.sesc-logo', '/legacy-assets/sesc-logo.jpg', 'Logo Sesc São Paulo')} class="h-12 w-auto object-contain" />
                 </div>
                 <p class="text-xs uppercase tracking-[0.25em] text-[#f2c230] font-extrabold">Base publicada - Revista do Centro de Pesquisa e Formação, n. 19</p>
               </div>
@@ -642,17 +642,17 @@ import { altFor, imageFor, publicImageFor } from '../lib/cms-images';
         </div>
         <div class="mt-6 grid lg:grid-cols-3 gap-4">
           <article data-aos="zoom-in" class="min-h-[420px] rounded-[2rem] overflow-hidden relative image-card">
-            <img src={imageFor('/legacy-assets/enviada-bolas.jpg')} alt="Bola de futebol usada em atividade educativa Gondwana" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover object-center" />
+            <img data-cms-use="caderno.metodo.audiovisual" data-cms-original="/legacy-assets/enviada-bolas.jpg" data-cms-label="Card Audiovisual - Método ABC" src={imageUseFor('caderno.metodo.audiovisual', '/legacy-assets/enviada-bolas.jpg')} alt={altUseFor('caderno.metodo.audiovisual', '/legacy-assets/enviada-bolas.jpg', 'Bola de futebol usada em atividade educativa Gondwana')} loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover object-center" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#11130f] via-[#11130f]/52 to-transparent"></div>
             <div class="absolute inset-x-0 bottom-0 p-7"><div class="w-fit max-w-full rounded-2xl bg-[#11130f]/78 p-4 shadow-2xl backdrop-blur-sm"><i data-lucide="film" class="mb-4 text-[#f2c230]"></i><h3 class="font-display text-4xl uppercase text-[#f6edd7]">Audiovisual</h3><p class="mt-3 max-w-xs text-[#f6edd7]/88">Repertório, memória, narrativa e leitura crítica.</p></div></div>
           </article>
           <article data-aos="zoom-in" data-aos-delay="100" class="min-h-[420px] rounded-[2rem] overflow-hidden relative image-card">
-            <img src={imageFor('/legacy-assets/f719394e-metodologia-balon.jpg')} alt="Bola" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover" />
+            <img data-cms-use="caderno.metodo.bola" data-cms-original="/legacy-assets/f719394e-metodologia-balon.jpg" data-cms-label="Card Bola - Método ABC" src={imageUseFor('caderno.metodo.bola', '/legacy-assets/f719394e-metodologia-balon.jpg')} alt={altUseFor('caderno.metodo.bola', '/legacy-assets/f719394e-metodologia-balon.jpg', 'Bola')} loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#11130f] via-[#11130f]/35 to-transparent"></div>
             <div class="absolute bottom-0 p-7"><i data-lucide="circle-dot" class="mb-4 text-[#f2c230]"></i><h3 class="font-display text-4xl uppercase">Bola</h3><p class="mt-3 text-[#f6edd7]/80">Corpo, cooperação, decisão, jogo coletivo e convivência.</p></div>
           </article>
           <article data-aos="zoom-in" data-aos-delay="200" class="min-h-[420px] rounded-[2rem] overflow-hidden relative image-card">
-            <img src={imageFor('/legacy-assets/27a017d7-encuentro-manos.jpg')} alt="Câmera" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover" />
+            <img data-cms-use="caderno.metodo.camera" data-cms-original="/legacy-assets/27a017d7-encuentro-manos.jpg" data-cms-label="Card Câmera - Método ABC" src={imageUseFor('caderno.metodo.camera', '/legacy-assets/27a017d7-encuentro-manos.jpg')} alt={altUseFor('caderno.metodo.camera', '/legacy-assets/27a017d7-encuentro-manos.jpg', 'Câmera')} loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#11130f] via-[#11130f]/35 to-transparent"></div>
             <div class="absolute bottom-0 p-7"><i data-lucide="camera" class="mb-4 text-[#f2c230]"></i><h3 class="font-display text-4xl uppercase">Câmera</h3><p class="mt-3 text-[#f6edd7]/80">Autoria, escuta, registro e olhar para o lugar onde a experiência acontece.</p></div>
           </article>
@@ -677,7 +677,7 @@ import { altFor, imageFor, publicImageFor } from '../lib/cms-images';
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <div class="copa-feature-grid grid lg:grid-cols-[.95fr_1.05fr] gap-10 items-center">
           <div data-aos="fade-right" class="project-visual">
-            <img src={imageFor('/legacy-assets/bc785a04-frame_02_96.5s.jpg')} alt="Atividade Gondwana com bola, câmera e materiais educativos" class="photo-mask h-[520px] w-full object-cover object-center image-card" loading="lazy" />
+            <img data-cms-use="caderno.escola-estadio.imagem-principal" data-cms-original="/legacy-assets/bc785a04-frame_02_96.5s.jpg" data-cms-label="Imagem principal - Escola como Estádio" src={imageUseFor('caderno.escola-estadio.imagem-principal', '/legacy-assets/bc785a04-frame_02_96.5s.jpg')} alt={altUseFor('caderno.escola-estadio.imagem-principal', '/legacy-assets/bc785a04-frame_02_96.5s.jpg', 'Atividade Gondwana com bola, câmera e materiais educativos')} class="photo-mask h-[520px] w-full object-cover object-center image-card" loading="lazy" />
             <div class="project-caption rounded-3xl bg-[#11130f] p-6 text-[#f6edd7] shadow-2xl">
               <p class="text-xs uppercase tracking-[0.25em] text-[#f2c230]">Projeto conectado</p>
               <p class="mt-3 font-serif text-2xl italic">A Copa vira mapa de aprendizagem: países, migrações, memórias, culturas e bola.</p>

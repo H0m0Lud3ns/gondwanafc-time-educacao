@@ -19,10 +19,21 @@ export type SitePhoto = {
   risk: string;
 };
 
+export type ImageUse = {
+  id: string;
+  label: string;
+  page: string;
+  section: string;
+  src: string;
+  alt: string;
+  original: string;
+};
+
 export type CmsState = {
   publicPresence: PublicPresenceItem[];
   sitePhotos: SitePhoto[];
   photos?: SitePhoto[];
+  imageUses?: ImageUse[];
   updatedAt?: string;
 };
 
@@ -69,6 +80,31 @@ export function cleanPublicPresence(item: Partial<PublicPresenceItem>, index: nu
   };
 }
 
+export function cleanImageUse(item: Partial<ImageUse>, index: number): ImageUse {
+  const src = String(item.src || '').trim();
+  const original = String(item.original || item.src || '').trim();
+  const id = slug(String(item.id || original), `uso-${index + 1}`);
+
+  if (!src || !original) {
+    throw new Error(`Uso de imagem ${index + 1}: src e arquivo original são obrigatórios.`);
+  }
+
+  const isAcceptedSrc = src.startsWith('/legacy-assets/') || src.startsWith('/assets/') || src.startsWith('/uploads/cms/') || src.startsWith('https://') || src.startsWith('http://');
+  if (!isAcceptedSrc) {
+    throw new Error(`Uso de imagem ${index + 1}: publique a imagem primeiro na biblioteca de mídia.`);
+  }
+
+  return {
+    id,
+    label: String(item.label || `Uso ${index + 1}`).trim(),
+    page: String(item.page || '').trim(),
+    section: String(item.section || '').trim(),
+    src,
+    alt: String(item.alt || '').trim(),
+    original,
+  };
+}
+
 export function cleanSitePhoto(item: Partial<SitePhoto>, index: number): SitePhoto {
   const src = String(item.src || '').trim();
   const original = String(item.original || item.src || '').trim();
@@ -100,11 +136,13 @@ export function normalizeCmsState(input: Partial<CmsState>): CmsState {
   const publicPresence = Array.isArray(input.publicPresence) ? input.publicPresence.map(cleanPublicPresence) : [];
   const sourcePhotos = Array.isArray(input.sitePhotos) ? input.sitePhotos : Array.isArray(input.photos) ? input.photos : [];
   const sitePhotos = sourcePhotos.map(cleanSitePhoto);
+  const imageUses = Array.isArray(input.imageUses) ? input.imageUses.map(cleanImageUse) : [];
 
   return {
     publicPresence,
     sitePhotos,
     photos: sitePhotos,
+    imageUses,
     updatedAt: input.updatedAt,
   };
 }
@@ -121,6 +159,12 @@ export function validateCmsState(input: Partial<CmsState>): ValidationIssue[] {
   }
 
   const photos = Array.isArray(input.sitePhotos) ? input.sitePhotos : Array.isArray(input.photos) ? input.photos : [];
+  const imageUses = Array.isArray(input.imageUses) ? input.imageUses : [];
+  imageUses.forEach((use, index) => {
+    if (!use.alt) issues.push({ path: `imageUses.${index}.alt`, message: `Uso "${use.label || index + 1}" está sem alt text.`, severity: 'warning' });
+    if (String(use.src || '').startsWith('data:image/')) issues.push({ path: `imageUses.${index}.src`, message: 'Imagem em base64 não pode ir para produção. Publique pela biblioteca de mídia.', severity: 'error' });
+  });
+
   photos.forEach((photo, index) => {
     if (!photo.alt) issues.push({ path: `sitePhotos.${index}.alt`, message: `Foto "${photo.label || index + 1}" está sem alt text.`, severity: 'warning' });
     if (String(photo.src || '').startsWith('data:image/')) issues.push({ path: `sitePhotos.${index}.src`, message: 'Imagem em base64 não pode ir para produção. Publique pela biblioteca de mídia.', severity: 'error' });
