@@ -76,6 +76,13 @@ function labelFromImage(img){const text=img.alt||img.closest('section')?.querySe
 function useIdFromImage(img,index){if(img.dataset.cmsUse)return img.dataset.cmsUse;const path=pathOf(img.dataset.cmsOriginal||img.getAttribute('src')||img.currentSrc||img.src);const section=img.closest('section')?.id||'page';const page=$('#page')?.value||'/';return `${page.replace(/[^a-z0-9]+/gi,'-')}-${section}-${index}-${path.split('/').pop()}`.replace(/[^a-z0-9]+/gi,'-').replace(/^-|-$/g,'').toLowerCase()}
 function imageUseFor(img,index){const original=pathOf(img.dataset.cmsOriginal||img.getAttribute('src')||img.currentSrc||img.src);const id=useIdFromImage(img,index);const existing=state.imageUses.find(use=>use.id===id);if(existing)return existing;if(!img.dataset.cmsUse)return null;const photo=state.photos.find(p=>pathOf(p.src)===pathOf(img.currentSrc||img.src)||pathOf(p.original)===original);const use={id,label:img.dataset.cmsLabel||labelFromImage(img),page:$('#page')?.value||'/',section:img.closest('section')?.id||'',src:photo?.src||pathOf(img.currentSrc||img.src),alt:img.alt||photo?.alt||'',original};state.imageUses.push(use);return use}
 function findPhotoForImage(img,index){return imageUseFor(img,index)}
+function useForElement(el,index){
+  const id=el.dataset.cmsUse;if(!id)return null;
+  const existing=state.imageUses.find(use=>use.id===id);if(existing)return existing;
+  const original=pathOf(el.dataset.cmsOriginal||'');
+  const use={id,label:el.dataset.cmsLabel||labelFromImage(el),page:$('#page')?.value||'/',section:el.closest('section')?.id||'',src:original,alt:el.getAttribute('aria-label')||'',original};
+  state.imageUses.push(use);return use;
+}
 function syncFrameImages(){
   const frame=$('#siteFrame');const doc=frame.contentDocument;if(!doc)return;
   doc.querySelectorAll('img').forEach((img,index)=>{
@@ -83,6 +90,10 @@ function syncFrameImages(){
     const photo=findPhotoForImage(img,index);if(!photo||!photo.src)return;
     if(pathOf(img.getAttribute('src')||img.currentSrc||img.src)!==pathOf(photo.src))img.setAttribute('src',photo.src);
     if(photo.alt)img.setAttribute('alt',photo.alt);
+  });
+  doc.querySelectorAll('[data-cms-kind="background"][data-cms-use]').forEach((el,index)=>{
+    const photo=useForElement(el,index);if(!photo||!photo.src)return;
+    el.style.backgroundImage=`linear-gradient(135deg,rgba(242,194,48,.55),rgba(46,111,70,.45)),url('${photo.src}')`;
   });
 }
 function basePhotoSrc(photo){const source=(draftBaseState.imageUses||[]).find(item=>item.id===photo.id)||(draftBaseState.sitePhotos||draftBaseState.photos||[]).find(item=>item.id===photo.id);return source?.src||photo.original||''}
@@ -98,12 +109,14 @@ function scanImages(){
   const styleId='gfc-visual-hotspot-style';
   if(!doc.getElementById(styleId)){const style=doc.createElement('style');style.id=styleId;style.textContent='.gfc-visual-hotspot{position:absolute;z-index:2147483647;border:0;border-radius:999px;background:#f2c230;color:#11130f;padding:8px 12px;font:900 12px Manrope,Arial,sans-serif;box-shadow:0 8px 22px rgba(0,0,0,.28);cursor:pointer}.gfc-visual-hotspot:hover{transform:translateY(-1px) scale(1.03)}.gfc-visual-editable{outline:3px solid #f2c230!important;outline-offset:-3px!important;cursor:pointer!important}';doc.head.appendChild(style)}
   let visibleCount=0;
-  doc.querySelectorAll('img').forEach((img,index)=>{
-    const photo=findPhotoForImage(img,index);if(!photo)return;
-    img.classList.add('gfc-visual-editable');
-    img.onclick=(event)=>{event.preventDefault();event.stopPropagation();selectPhoto(photo)};
-    if(!img.complete){img.addEventListener('load',()=>requestAnimationFrame(scanImages),{once:true});return}
-    const rect=img.getBoundingClientRect();if(rect.width<28||rect.height<28)return;if(rect.bottom<0||rect.top>win.innerHeight)return;
+  const editableElements=[...doc.querySelectorAll('img'),...doc.querySelectorAll('[data-cms-kind="background"][data-cms-use]')];
+  editableElements.forEach((el,index)=>{
+    const isImg=el.tagName.toLowerCase()==='img';
+    const photo=isImg?findPhotoForImage(el,index):useForElement(el,index);if(!photo)return;
+    el.classList.add('gfc-visual-editable');
+    el.onclick=(event)=>{event.preventDefault();event.stopPropagation();selectPhoto(photo)};
+    if(isImg&&!el.complete){el.addEventListener('load',()=>requestAnimationFrame(scanImages),{once:true});return}
+    const rect=el.getBoundingClientRect();if(rect.width<28||rect.height<28)return;if(rect.bottom<0||rect.top>win.innerHeight)return;
     visibleCount+=1;
     const btn=doc.createElement('button');btn.type='button';btn.className='gfc-visual-hotspot';btn.textContent='Trocar';
     const left=Math.max(8,rect.left+win.scrollX+Math.min(Math.max(rect.width-82,8),Math.max(8,rect.width*.08)));
