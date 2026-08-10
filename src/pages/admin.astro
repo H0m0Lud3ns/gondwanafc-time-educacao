@@ -61,7 +61,9 @@ const initialState = JSON.stringify(cmsState);
 const initial=JSON.parse(initialState);
 const baseUpdatedAt=initial.updatedAt||'';
 const legacyPhotoIds=new Set(['hero','oficina','territorio','comunidade']);
-let state=loadDraft()||structuredClone(initial);
+const draftEnvelope=loadDraftEnvelope();
+let state=draftEnvelope?.state||structuredClone(initial);
+let draftBaseState=draftEnvelope?.baseState||structuredClone(initial);
 const $=s=>document.querySelector(s);
 const $$=s=>Array.from(document.querySelectorAll(s));
 const esc=v=>String(v??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -111,7 +113,7 @@ function normalizeState(){
   state.uploads=Array.isArray(state.uploads)?state.uploads:[];
   state.history=Array.isArray(state.history)?state.history:[];
 }
-function loadDraft(){try{return JSON.parse(localStorage.getItem('gfc-cms-qa')||'null')}catch{localStorage.removeItem('gfc-cms-qa');return null}}
+function loadDraftEnvelope(){try{const raw=JSON.parse(localStorage.getItem('gfc-cms-qa')||'null');if(!raw)return null;if(raw.__cmsDraftVersion===2&&raw.state&&raw.baseState)return raw;if(raw.updatedAt&&raw.updatedAt!==initial.updatedAt)return null;return {__cmsDraftVersion:2,state:raw,baseState:structuredClone(initial)}}catch{localStorage.removeItem('gfc-cms-qa');return null}}
 function storableState(){
   const clean=structuredClone(state);
   clean.sitePhotos=clean.photos;
@@ -122,12 +124,12 @@ function storableState(){
 function allPhotos(){return uniqueBy([...state.photos,...state.imageUses,...state.uploads], 'src')}
 function save(){
   state.sitePhotos=state.photos;
-  try{localStorage.setItem('gfc-cms-qa',JSON.stringify(storableState()));$('#status').textContent='rascunho salvo neste navegador'}
-  catch{state.history=[];state.uploads=(state.uploads||[]).filter(item=>!String(item.src||'').startsWith('data:image/'));localStorage.setItem('gfc-cms-qa',JSON.stringify(storableState()));$('#status').textContent='rascunho salvo sem histórico pesado'}
+  try{localStorage.setItem('gfc-cms-qa',JSON.stringify({__cmsDraftVersion:2,baseState:draftBaseState,state:storableState(),savedAt:new Date().toISOString()}));$('#status').textContent='rascunho salvo neste navegador'}
+  catch{state.history=[];state.uploads=(state.uploads||[]).filter(item=>!String(item.src||'').startsWith('data:image/'));localStorage.setItem('gfc-cms-qa',JSON.stringify({__cmsDraftVersion:2,baseState:draftBaseState,state:storableState(),savedAt:new Date().toISOString()}));$('#status').textContent='rascunho salvo sem histórico pesado'}
 }
-function initialPhotoSrc(photo){const source=(initial.imageUses||[]).find(item=>item.id===photo.id)||(initial.sitePhotos||initial.photos||[]).find(item=>item.id===photo.id);return source?.src||photo.original||''}
-function pendingChangeCount(){return editableImageUses().filter(p=>p.src&&p.src!==initialPhotoSrc(p)).length}
-function pendingPhotos(){return editableImageUses().filter(p=>p.src&&p.src!==initialPhotoSrc(p))}
+function basePhotoSrc(photo){const source=(draftBaseState.imageUses||[]).find(item=>item.id===photo.id)||(draftBaseState.sitePhotos||draftBaseState.photos||[]).find(item=>item.id===photo.id);return source?.src||photo.original||''}
+function pendingChangeCount(){return editableImageUses().filter(p=>p.src&&p.src!==basePhotoSrc(p)).length}
+function pendingPhotos(){return editableImageUses().filter(p=>p.src&&p.src!==basePhotoSrc(p))}
 function updatePublishNotice(){const box=$('#publishNotice');if(!box)return;const items=pendingPhotos();const count=items.length;box.innerHTML=count?`<b>${count} troca(s) de imagem pendente(s)</b><p>Essas mudanças estão no rascunho local. Para aparecer no site público, clique em Validar rascunho e depois Publicar produção.</p><p>${items.map(p=>esc(p.label||p.id)).join('<br>')}</p>`:'Nenhuma troca pendente. Quando você confirmar uma troca de imagem, ela aparecerá aqui antes de publicar.'}
 function mark(){$('#status').textContent='alterações não salvas';renderPreview()}
 function renderAll(){normalizeState();renderDashboard();renderHome();renderSiteMap();renderProjects();renderPhotos();renderLinks();renderPresence();renderSeo();renderMedia();renderHistory();renderPreview();updatePublishNotice();$('#pub').textContent=state.published?'sim':'não'}
@@ -204,8 +206,8 @@ $('#enter').onclick=()=>{$('#password').value.trim().toLowerCase()==='gondwana'?
 $('#password').onkeydown=e=>{if(e.key==='Enter')$('#enter').click()};
 $('#save').onclick=()=>{save();renderAll()};
 $('#publish').onclick=()=>{state.published=new Date().toISOString();state.history.unshift({when:new Date().toLocaleString('pt-BR'),title:state.home.title||'Versão local',snapshot:structuredClone(state)});state.history=state.history.slice(0,8);save();renderAll();window.alert('Versão local salva neste navegador. Ainda não foi publicada em produção.')};
-$('#publishProduction').onclick=async()=>{const password=window.prompt('Senha para publicar em produção');if(!password)return;$('#status').textContent='comprimindo imagens e publicando...';try{await compressStateImages();save();const isValid=await validateDraft(false);if(!isValid)throw new Error('Corrija os erros de validação antes de publicar.');const payload=window.GFC_CMS.buildPublishPayload(state,{password,baseUpdatedAt,baseState:initial});const response=await fetch('/api/cms/publish',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});const raw=await response.text();let result={};try{result=raw?JSON.parse(raw):{}}catch{throw new Error(responseErrorMessage(raw,response.status))}if(!response.ok||!result.ok)throw new Error(result.error||responseErrorMessage(raw,response.status));$('#status').textContent=`produção publicada: ${result.count} registros e ${result.photos||0} fotos`;state.history.unshift({when:new Date().toLocaleString('pt-BR'),title:'Publicação produção',snapshot:structuredClone(state),commit:result.commit});state.history=state.history.slice(0,8);save();renderAll();window.alert('Publicado em produção. A Vercel vai atualizar o site após o deploy automático.');}catch(error){$('#status').textContent='falha ao publicar em produção';window.alert(error.message||'Falha ao publicar em produção')}};
-$('#reset').onclick=()=>{state=structuredClone(initial);localStorage.removeItem('gfc-cms-qa');renderAll()};
+$('#publishProduction').onclick=async()=>{const password=window.prompt('Senha para publicar em produção');if(!password)return;$('#status').textContent='comprimindo imagens e publicando...';try{await compressStateImages();save();const isValid=await validateDraft(false);if(!isValid)throw new Error('Corrija os erros de validação antes de publicar.');const payload=window.GFC_CMS.buildPublishPayload(state,{password,baseUpdatedAt,baseState:draftBaseState});const response=await fetch('/api/cms/publish',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});const raw=await response.text();let result={};try{result=raw?JSON.parse(raw):{}}catch{throw new Error(responseErrorMessage(raw,response.status))}if(!response.ok||!result.ok)throw new Error(result.error||responseErrorMessage(raw,response.status));$('#status').textContent=`produção publicada: ${result.count} registros e ${result.photos||0} fotos`;state.history.unshift({when:new Date().toLocaleString('pt-BR'),title:'Publicação produção',snapshot:structuredClone(state),commit:result.commit});state.history=state.history.slice(0,8);save();renderAll();window.alert('Publicado em produção. A Vercel vai atualizar o site após o deploy automático.');}catch(error){$('#status').textContent='falha ao publicar em produção';window.alert(error.message||'Falha ao publicar em produção')}};
+$('#reset').onclick=()=>{state=structuredClone(initial);draftBaseState=structuredClone(initial);localStorage.removeItem('gfc-cms-qa');renderAll()};
 $('#validateDraft').onclick=()=>validateDraft(true);
 $('#imageSearch')?.addEventListener('input',()=>renderPhotos());
 $('#imagePageFilter')?.addEventListener('change',()=>renderPhotos());

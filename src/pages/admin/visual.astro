@@ -49,7 +49,9 @@ const initialState = JSON.stringify(cmsState);
 <script define:vars={{ initialState }}>
 const initial=JSON.parse(initialState);
 const baseUpdatedAt=initial.updatedAt||'';
-let state=loadDraft()||structuredClone(initial);
+const draftEnvelope=loadDraftEnvelope();
+let state=draftEnvelope?.state||structuredClone(initial);
+let draftBaseState=draftEnvelope?.baseState||structuredClone(initial);
 let selectedPhoto=null;
 const $=s=>document.querySelector(s);
 const esc=v=>String(v??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -59,7 +61,7 @@ function isAuthed(){try{return Date.now()-Number(localStorage.getItem(authKey)||
 function keepSession(){try{localStorage.setItem(authKey,String(Date.now()))}catch{}}
 function unlock(){keepSession();$('#gate').classList.add('hidden');$('#editorShell').classList.remove('hidden');[100,500,1200].forEach(ms=>setTimeout(scanImages,ms))}
 
-function loadDraft(){try{return JSON.parse(localStorage.getItem('gfc-cms-qa')||'null')}catch{localStorage.removeItem('gfc-cms-qa');return null}}
+function loadDraftEnvelope(){try{const raw=JSON.parse(localStorage.getItem('gfc-cms-qa')||'null');if(!raw)return null;if(raw.__cmsDraftVersion===2&&raw.state&&raw.baseState)return raw;if(raw.updatedAt&&raw.updatedAt!==initial.updatedAt)return null;return {__cmsDraftVersion:2,state:raw,baseState:structuredClone(initial)}}catch{localStorage.removeItem('gfc-cms-qa');return null}}
 function migrateImageUseIds(){
   const byId=new Map();
   (state.imageUses||[]).forEach(use=>{const id=window.GFC_CMS.resolveImageUseId(use.id);byId.set(id,{...use,id})});
@@ -67,7 +69,7 @@ function migrateImageUseIds(){
   state.imageUses=[...byId.values()];
 }
 function normalizeState(){state.photos=Array.isArray(state.photos)?state.photos:structuredClone(state.sitePhotos||[]);state.sitePhotos=state.photos;state.imageUses=Array.isArray(state.imageUses)?state.imageUses:structuredClone(initial.imageUses||[]);migrateImageUseIds();state.uploads=Array.isArray(state.uploads)?state.uploads:[];state.publicPresence=Array.isArray(state.publicPresence)?state.publicPresence:structuredClone(initial.publicPresence||[])}
-function save(){normalizeState();const clean=structuredClone(state);clean.history=[];clean.uploads=(clean.uploads||[]).filter(item=>!String(item.src||'').startsWith('data:image/'));localStorage.setItem('gfc-cms-qa',JSON.stringify(clean));updatePending()}
+function save(){normalizeState();const clean=structuredClone(state);clean.history=[];clean.uploads=(clean.uploads||[]).filter(item=>!String(item.src||'').startsWith('data:image/'));localStorage.setItem('gfc-cms-qa',JSON.stringify({__cmsDraftVersion:2,baseState:draftBaseState,state:clean,savedAt:new Date().toISOString()}));updatePending()}
 function allPhotos(){normalizeState();return uniqueBy([...state.photos,...state.imageUses,...state.uploads],'src')}
 function pathOf(src){try{return new URL(src,location.origin).pathname}catch{return String(src||'')}}
 function labelFromImage(img){const text=img.alt||img.closest('section')?.querySelector('h1,h2,h3')?.textContent||'Imagem do site';return text.trim().slice(0,80)}
@@ -83,9 +85,9 @@ function syncFrameImages(){
     if(photo.alt)img.setAttribute('alt',photo.alt);
   });
 }
-function initialPhotoSrc(photo){const source=(initial.imageUses||[]).find(item=>item.id===photo.id)||(initial.sitePhotos||initial.photos||[]).find(item=>item.id===photo.id);return source?.src||photo.original||''}
-function pendingCount(){return editableUses().filter(p=>p.src&&p.src!==initialPhotoSrc(p)).length}
-function pendingPhotos(){return editableUses().filter(p=>p.src&&p.src!==initialPhotoSrc(p))}
+function basePhotoSrc(photo){const source=(draftBaseState.imageUses||[]).find(item=>item.id===photo.id)||(draftBaseState.sitePhotos||draftBaseState.photos||[]).find(item=>item.id===photo.id);return source?.src||photo.original||''}
+function pendingCount(){return editableUses().filter(p=>p.src&&p.src!==basePhotoSrc(p)).length}
+function pendingPhotos(){return editableUses().filter(p=>p.src&&p.src!==basePhotoSrc(p))}
 function updatePending(){const items=pendingPhotos();const count=items.length;$('#pending').innerHTML=count?`<b>${count} troca(s) pendente(s) no rascunho visual.</b><br>${items.map(p=>esc(p.label||p.id)).join('<br>')}`:'Nenhuma troca pendente.';$('#status').textContent=count?`${count} troca(s) pendente(s)`:'rascunho visual'}
 function editableUses(){normalizeState();return (state.imageUses||[]).filter(use=>String(use.id||'').includes('.')||String(use.page||'').toLowerCase().includes('caderno')||String(use.page||'').toLowerCase().includes('home')).sort((a,b)=>`${a.page||''} ${a.section||''} ${a.label||''}`.localeCompare(`${b.page||''} ${b.section||''} ${b.label||''}`))}
 function renderUsePicker(){const picker=$('#usePicker');if(!picker)return;const selected=selectedPhoto?.id||'';picker.innerHTML=editableUses().map(use=>`<option value="${esc(use.id)}" ${use.id===selected?'selected':''}>${esc(use.label||use.id)} · ${esc(use.page||'site')}</option>`).join('')}
@@ -121,11 +123,11 @@ async function dataUrlToFile(dataUrl,name){const response=await fetch(dataUrl);c
 async function uploadMedia(file){const password=window.prompt('Senha para publicar a imagem na biblioteca');if(!password)throw new Error('Upload cancelado.');const compressed=await resizeImage(file);const finalFile=await dataUrlToFile(compressed,file.name);const form=new FormData();form.append('password',password);form.append('file',finalFile);const response=await fetch('/api/cms/media',{method:'POST',body:form});const raw=await response.text();const result=raw?JSON.parse(raw):{};if(!response.ok||!result.ok)throw new Error(result.error||'Falha ao publicar imagem');return result.asset}
 $('#upload').onchange=async e=>{const file=e.target.files&&e.target.files[0];if(!file||!selectedPhoto)return;try{$('#status').textContent='subindo imagem...';const asset=await uploadMedia(file);state.uploads.unshift({id:asset.id,label:asset.label,src:asset.src,type:asset.type||'upload',usage:'Imagem publicada pelo editor visual',uploadedAt:asset.uploadedAt});selectedPhoto.src=asset.src;save();syncFrameImages();selectPhoto(selectedPhoto);scanImages();alert('Imagem subida e aplicada no rascunho. Agora publique produção.')}catch(error){alert(error.message||'Falha ao subir imagem')}finally{$('#status').textContent='rascunho visual'}};
 async function validateDraft(){const response=await fetch('/api/cms/validate',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(window.GFC_CMS.buildValidationPayload(state))});const result=await response.json();if(!result.ok)throw new Error((result.issues||[]).filter(i=>i.severity==='error').map(i=>i.message).join('\n')||'Validação falhou')}
-$('#publish').onclick=async()=>{const password=window.prompt('Senha para publicar em produção');if(!password)return;try{$('#status').textContent='validando...';await validateDraft();$('#status').textContent='publicando produção...';const payload=window.GFC_CMS.buildPublishPayload(state,{password,baseUpdatedAt,baseState:initial});const response=await fetch('/api/cms/publish',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});const raw=await response.text();const result=raw?JSON.parse(raw):{};if(!response.ok||!result.ok)throw new Error(result.error||'Falha ao publicar');localStorage.removeItem('gfc-cms-qa');alert('Publicado em produção. Aguarde o deploy da Vercel atualizar o site.');location.reload()}catch(error){alert(error.message||'Falha ao publicar')}finally{updatePending()}};
+$('#publish').onclick=async()=>{const password=window.prompt('Senha para publicar em produção');if(!password)return;try{$('#status').textContent='validando...';await validateDraft();$('#status').textContent='publicando produção...';const payload=window.GFC_CMS.buildPublishPayload(state,{password,baseUpdatedAt,baseState:draftBaseState});const response=await fetch('/api/cms/publish',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});const raw=await response.text();const result=raw?JSON.parse(raw):{};if(!response.ok||!result.ok)throw new Error(result.error||'Falha ao publicar');localStorage.removeItem('gfc-cms-qa');alert('Publicado em produção. Aguarde o deploy da Vercel atualizar o site.');location.reload()}catch(error){alert(error.message||'Falha ao publicar')}finally{updatePending()}};
 $('#page').onchange=()=>{$('#siteFrame').src=$('#page').value};
 $('#reload').onclick=()=>{$('#siteFrame').contentWindow.location.reload()};
 $('#scan').onclick=()=>scanImages();
-$('#discard').onclick=()=>{localStorage.removeItem('gfc-cms-qa');state=structuredClone(initial);normalizeState();renderUsePicker();updatePending();location.reload()};
+$('#discard').onclick=()=>{localStorage.removeItem('gfc-cms-qa');state=structuredClone(initial);draftBaseState=structuredClone(initial);normalizeState();renderUsePicker();updatePending();location.reload()};
 $('#siteFrame').addEventListener('load',()=>{[300,900,1600,2600].forEach(ms=>setTimeout(scanImages,ms))});
 $('#frameWrap').addEventListener('scroll',()=>requestAnimationFrame(scanImages));
 $('#siteFrame').addEventListener('load',()=>{$('#siteFrame').contentWindow?.addEventListener('scroll',()=>requestAnimationFrame(scanImages),{passive:true})});
