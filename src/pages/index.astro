@@ -190,11 +190,12 @@ const publicPresence = cmsState.publicPresence.filter((item) => item.visible);
     .abc-board:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 18% 20%,rgba(242,194,48,.24),transparent 20rem),radial-gradient(circle at 82% 16%,rgba(46,111,70,.2),transparent 22rem),linear-gradient(rgba(246,237,215,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(246,237,215,.06) 1px,transparent 1px);background-size:auto,auto,58px 58px,58px 58px;pointer-events:none}
     .abc-photo{position:relative;min-height:520px;overflow:hidden;border-radius:2.1rem;background:#000}.abc-photo img{height:100%;min-height:520px;width:100%;object-fit:cover;filter:saturate(1.08) contrast(1.06);opacity:.9}.abc-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(17,19,15,.84))}
     .abc-sequence{position:relative;z-index:1;display:grid;gap:.75rem}.abc-step{display:grid;grid-template-columns:auto 1fr;gap:1rem;border:1px solid rgba(246,237,215,.14);border-radius:1.45rem;background:rgba(246,237,215,.065);padding:1rem}.abc-step span{display:grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:999px;background:var(--ouro);color:var(--grafite);font-size:.78rem;font-weight:950}.abc-step h3{font-size:1.45rem;line-height:1;font-weight:950}.abc-step p{margin-top:.35rem;font-size:.9rem;line-height:1.45;font-weight:800;color:rgba(246,237,215,.64)}
-    .story-ledger{display:grid;gap:1px;overflow:hidden;border-radius:2.2rem;background:rgba(17,19,15,.16);border:1px solid rgba(17,19,15,.12)}
-    .ledger-row{display:grid;gap:1rem;background:rgba(255,255,255,.55);padding:1.1rem;color:var(--grafite)}
-    .ledger-row strong{font-size:1.25rem;line-height:1.1;font-weight:950}.ledger-row p{font-size:.86rem;line-height:1.42;font-weight:800;color:rgba(17,19,15,.58)}
-    .story-photo-card{position:relative;overflow:hidden;border-radius:2.2rem;background:#111;min-height:360px;box-shadow:0 24px 70px rgba(0,0,0,.24)}.story-photo-card img{height:100%;width:100%;object-fit:cover;filter:saturate(1.05) contrast(1.03)}.story-photo-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(17,19,15,.8))}.story-photo-card figcaption{position:absolute;left:1.2rem;right:1.2rem;bottom:1.2rem;z-index:1;color:var(--areia);font-size:.78rem;font-weight:950;letter-spacing:.12em;text-transform:uppercase}
-    @media(min-width:900px){.story-ledger{grid-template-columns:repeat(3,1fr)}.ledger-row{min-height:220px}.story-photo-card{min-height:480px}}
+    .story-board{position:relative;overflow:hidden;border-radius:2.8rem;background:linear-gradient(135deg,rgba(17,19,15,.96),rgba(46,111,70,.9));color:var(--areia);box-shadow:0 30px 90px rgba(0,0,0,.24)}
+    .story-board:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 12%,rgba(242,194,48,.28),transparent 18rem),linear-gradient(rgba(246,237,215,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(246,237,215,.055) 1px,transparent 1px);background-size:auto,52px 52px,52px 52px;pointer-events:none}.story-board>*{position:relative;z-index:1}
+    .story-ledger{display:grid;gap:.9rem}.ledger-row{position:relative;display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:start;border:1px solid rgba(246,237,215,.15);border-radius:1.7rem;background:rgba(246,237,215,.075);padding:1rem;color:var(--areia);backdrop-filter:blur(10px)}
+    .ledger-row .number{display:grid;place-items:center;width:2.65rem;height:2.65rem;border-radius:999px;background:var(--ouro);color:var(--grafite);font-size:.72rem;font-weight:950;letter-spacing:.08em}.ledger-row strong{display:block;font-size:clamp(1.35rem,2vw,1.9rem);line-height:1;font-weight:950}.ledger-row p{font-size:.9rem;line-height:1.46;font-weight:800;color:rgba(246,237,215,.66)}.ledger-row .kicker{color:var(--ouro)}
+    .story-photo-card{position:relative;overflow:hidden;border-radius:2rem;background:#111;min-height:420px;box-shadow:0 24px 70px rgba(0,0,0,.28)}.story-photo-card img{height:100%;width:100%;object-fit:cover;filter:saturate(1.05) contrast(1.03)}.story-photo-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 28%,rgba(17,19,15,.84))}.story-photo-card figcaption{position:absolute;left:1.2rem;right:1.2rem;bottom:1.2rem;z-index:1;color:var(--areia);font-size:.78rem;font-weight:950;letter-spacing:.12em;text-transform:uppercase}.archive-tags{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1rem}.archive-tags span{border-radius:999px;background:rgba(246,237,215,.12);border:1px solid rgba(246,237,215,.14);padding:.55rem .75rem;font-size:.66rem;font-weight:950;letter-spacing:.12em;text-transform:uppercase;color:rgba(246,237,215,.78)}
+    @media(min-width:900px){.story-board-grid{display:grid;grid-template-columns:.98fr 1.02fr;gap:1.1rem;align-items:stretch}.story-photo-card{min-height:560px}.ledger-row{min-height:150px}}
 
     .section-copy{max-width:52rem}.section-copy p{margin-top:1.35rem}.method-panel{position:relative;overflow:hidden;border-radius:2.4rem;background:rgba(255,255,255,.54);border:1px solid rgba(17,19,15,.1);padding:clamp(1.1rem,2vw,1.5rem)}.method-panel:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 14%,rgba(242,194,48,.26),transparent 18rem),radial-gradient(circle at 88% 10%,rgba(46,111,70,.16),transparent 20rem);pointer-events:none}.method-card{position:relative;z-index:1;min-height:220px;border-radius:1.7rem;background:rgba(255,255,255,.64);border:1px solid rgba(17,19,15,.1);padding:1.35rem;display:flex;flex-direction:column;justify-content:space-between}.method-card span{width:2.55rem;height:2.55rem;border-radius:999px;background:var(--grafite);color:var(--ouro);display:grid;place-items:center;font-size:.76rem;font-weight:900;letter-spacing:.08em}.method-card h3{margin-top:1.35rem;font-size:clamp(1.55rem,2.5vw,2.2rem);line-height:1;font-weight:900}.method-card p{margin-top:.75rem;font-size:.98rem;line-height:1.45;font-weight:800;color:rgba(17,19,15,.62)}.section-band{border-radius:2.4rem;padding:clamp(1.35rem,3vw,2.2rem)}
     @media (max-width:760px){
@@ -502,16 +503,23 @@ const publicPresence = cmsState.publicPresence.filter((item) => item.visible);
           </div>
         </div>
 
-        <div class="mt-5 grid gap-5 lg:grid-cols-[.9fr_1.1fr]">
-          <div class="story-ledger">
-            <article class="ledger-row"><p class="kicker text-[var(--barro)]">São Paulo/SP · Escola</p><strong>Escola Móbile</strong><p>Oficinas de Fútbol Callejero e Futebol, Bola e Câmera reconhecidas em atestado profissional.</p></article>
-            <article class="ledger-row"><p class="kicker text-[var(--barro)]">São Paulo/SP · Projeto social</p><strong>Circo Social Grajaú</strong><p>Crianças e adolescentes viveram uma experiência integrada a oficinas culturais e bem avaliada pelos participantes.</p></article>
-            <article class="ledger-row"><p class="kicker text-[var(--barro)]">Pereiro/CE · Escola rural</p><strong>Secretaria de Educação</strong><p>Jovens do 9º ano trabalharam câmera e bola como ferramentas de habilidades socioemocionais.</p></article>
+        <div class="story-board mt-10 p-5 sm:p-7">
+          <div class="story-board-grid">
+            <div class="story-ledger">
+              <article class="ledger-row"><span class="number">01</span><div><p class="kicker">São Paulo/SP · Escola</p><strong>Escola Móbile</strong><p>Oficinas de Fútbol Callejero e Futebol, Bola e Câmera reconhecidas em atestado profissional.</p></div></article>
+              <article class="ledger-row"><span class="number">02</span><div><p class="kicker">São Paulo/SP · Projeto social</p><strong>Circo Social Grajaú</strong><p>Crianças e adolescentes viveram uma experiência integrada a oficinas culturais e bem avaliada pelos participantes.</p></div></article>
+              <article class="ledger-row"><span class="number">03</span><div><p class="kicker">Pereiro/CE · Escola rural</p><strong>Secretaria de Educação</strong><p>Jovens do 9º ano trabalharam câmera e bola como ferramentas de habilidades socioemocionais.</p></div></article>
+              <div class="rounded-[1.7rem] bg-[var(--ouro)] p-5 text-[var(--grafite)]">
+                <p class="kicker text-[var(--barro)]">Arquivo vivo</p>
+                <h3 class="mt-3 text-3xl font-black leading-none">Atividades, oficinas, cartas e depoimentos prontos para curadoria.</h3>
+                <div class="archive-tags"><span>Imagens</span><span>Cartas</span><span>Vídeos</span><span>Depoimentos</span></div>
+              </div>
+            </div>
+            <figure class="story-photo-card">
+              <img data-cms-use="home.partidas-comprovadas.imagem-principal" data-cms-original="/legacy-assets/enviada-oficina-sala.jpg" data-cms-label="Home - Partidas comprovadas" src={imageUseFor('home.partidas-comprovadas.imagem-principal', '/legacy-assets/enviada-oficina-sala.jpg')} alt={altUseFor('home.partidas-comprovadas.imagem-principal', '/legacy-assets/enviada-oficina-sala.jpg', 'Oficina educativa com participantes reunidos em sala')} />
+              <figcaption>Arquivo visual - atividades, oficinas, cartas e depoimentos disponíveis para curadoria</figcaption>
+            </figure>
           </div>
-          <figure class="story-photo-card">
-            <img data-cms-use="home.partidas-comprovadas.imagem-principal" data-cms-original="/legacy-assets/enviada-oficina-sala.jpg" data-cms-label="Home - Partidas comprovadas" src={imageUseFor('home.partidas-comprovadas.imagem-principal', '/legacy-assets/enviada-oficina-sala.jpg')} alt={altUseFor('home.partidas-comprovadas.imagem-principal', '/legacy-assets/enviada-oficina-sala.jpg', 'Oficina educativa com participantes reunidos em sala')} />
-            <figcaption>Arquivo visual - atividades, oficinas, cartas e depoimentos disponíveis para curadoria</figcaption>
-          </figure>
         </div>
 
         <div class="mt-8 rounded-[2.3rem] bg-[var(--ouro)] p-6 text-[var(--grafite)] sm:p-8">
