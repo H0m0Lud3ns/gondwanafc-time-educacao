@@ -84,11 +84,11 @@
   "sitePhotos": [
     {
       "id": "56ca6697-02-nao-e-so-chutar-vertical",
-      "label": "56Ca6697 02 Nao E So Chutar Vertical",
+      "label": "Grupo em congresso da Special Olympics com bola e faixa Gondwana",
       "where": "Caderno L1074; Caderno L1251",
-      "src": "/legacy-assets/56ca6697-02-nao-e-so-chutar-vertical.jpg",
-      "alt": "Duas pessoas do Time da Educação segurando uma bola juntas",
-      "original": "/legacy-assets/56ca6697-02-nao-e-so-chutar-vertical.jpg",
+      "src": "/assets/caderno-bola-vinculo-plano-de-jogo.jpg",
+      "alt": "Grupo reunido em congresso da Special Olympics com bola e faixa Gondwana",
+      "original": "/assets/caderno-bola-vinculo-plano-de-jogo.jpg",
       "type": "imagem do site",
       "usage": "Imagem usada no site publico",
       "risk": "revisar proporcao e autorizacao antes de publicar"
@@ -395,11 +395,11 @@
   "photos": [
     {
       "id": "56ca6697-02-nao-e-so-chutar-vertical",
-      "label": "56Ca6697 02 Nao E So Chutar Vertical",
+      "label": "Grupo em congresso da Special Olympics com bola e faixa Gondwana",
       "where": "Caderno L1074; Caderno L1251",
-      "src": "/legacy-assets/56ca6697-02-nao-e-so-chutar-vertical.jpg",
-      "alt": "Duas pessoas do Time da Educação segurando uma bola juntas",
-      "original": "/legacy-assets/56ca6697-02-nao-e-so-chutar-vertical.jpg",
+      "src": "/assets/caderno-bola-vinculo-plano-de-jogo.jpg",
+      "alt": "Grupo reunido em congresso da Special Olympics com bola e faixa Gondwana",
+      "original": "/assets/caderno-bola-vinculo-plano-de-jogo.jpg",
       "type": "imagem do site",
       "usage": "Imagem usada no site publico",
       "risk": "revisar proporcao e autorizacao antes de publicar"
@@ -717,9 +717,9 @@
       "label": "Card Audiovisual - Método ABC",
       "page": "Caderno",
       "section": "Método ABC",
-      "src": "/uploads/cms/2026/08/senac-lapa-scipiao-1786304146244.jpg",
-      "alt": "Bolas reunidas antes de uma atividade educativa",
-      "original": "/legacy-assets/enviada-bolas.jpg"
+      "src": "/assets/caderno-audiovisual-repertorio.jpg",
+      "alt": "Crianças assistem a uma projeção audiovisual durante atividade educativa do Gondwana FC",
+      "original": "/assets/caderno-audiovisual-repertorio.jpg"
     },
     {
       "id": "caderno.metodo.bola",
@@ -1092,12 +1092,12 @@
     },
     {
       "id": "caderno.galeria.duas-pessoas-do-time-da-educacao-segurando-uma",
-      "label": "Duas pessoas do Time da Educação segurando uma bola juntas",
+      "label": "Grupo em congresso da Special Olympics com bola e faixa Gondwana",
       "page": "Caderno",
       "section": "galeria",
-      "src": "/legacy-assets/56ca6697-02-nao-e-so-chutar-vertical.jpg",
-      "alt": "Duas pessoas do Time da Educação segurando uma bola juntas",
-      "original": "/legacy-assets/56ca6697-02-nao-e-so-chutar-vertical.jpg"
+      "src": "/assets/caderno-bola-vinculo-plano-de-jogo.jpg",
+      "alt": "Grupo reunido em congresso da Special Olympics com bola e faixa Gondwana",
+      "original": "/assets/caderno-bola-vinculo-plano-de-jogo.jpg"
     },
     {
       "id": "caderno.page.fundo",
@@ -1466,12 +1466,12 @@
     },
     {
       "id": "56ca6697-02-nao-e-so-chutar-vertical",
-      "label": "56Ca6697 02 Nao E So Chutar Vertical",
-      "src": "/legacy-assets/56ca6697-02-nao-e-so-chutar-vertical.jpg",
+      "label": "Grupo em congresso da Special Olympics com bola e faixa Gondwana",
+      "src": "/assets/caderno-bola-vinculo-plano-de-jogo.jpg",
       "type": "imagem do site",
       "usage": "Imagem usada no site publico",
-      "original": "/legacy-assets/56ca6697-02-nao-e-so-chutar-vertical.jpg",
-      "alt": "Duas pessoas do Time da Educação segurando uma bola juntas",
+      "original": "/assets/caderno-bola-vinculo-plano-de-jogo.jpg",
+      "alt": "Grupo reunido em congresso da Special Olympics com bola e faixa Gondwana",
       "usedBy": [
         "56ca6697-02-nao-e-so-chutar-vertical",
         "caderno.galeria.duas-pessoas-do-time-da-educacao-segurando-uma"
