@@ -44,7 +44,6 @@ const initialState = JSON.stringify(cmsState);
 </style>
 </head>
 <body>
-  <section id="gate" class="gate"><div class="gate-card"><span class="pill">Painel do Time</span><h1 class="display" style="font-size:44px;line-height:.95;margin:18px 0 10px">Entrar no vestiário</h1><p>Área editorial do Gondwana FC. O painel usa a mesma linguagem visual do site público.</p><input id="password" class="field" type="password" placeholder="Senha" /><button id="enter" class="btn dark" style="width:100%;margin-top:12px">Entrar</button><p id="loginError" class="hidden" style="color:var(--ouro);font-weight:900">Senha incorreta. Use: gondwana</p></div></section>
   <main class="wrap"><header class="top"><div><span class="pill">Gondwana FC</span><h1 class="display">Painel do Time</h1><p>Central editorial para manter o site vivo: capa, projetos, fotos, blog, notícias, SEO e versões de publicação.</p></div><div class="top-actions"><a class="btn lime" href="/admin/visual">Editor visual</a><button id="save" class="btn lime">Salvar rascunho local</button><button id="publish" class="btn lime">Criar versão local</button><button id="publishProduction" class="btn lime">Publicar produção</button><button id="reset" class="btn ghost">Descartar rascunho</button></div></header>
     <section class="grid"><nav class="panel nav"><button class="active" data-tab="dashboard">Painel</button><button data-tab="home">Páginas</button><button data-tab="media">Biblioteca de mídia</button><button data-tab="photos">Usos das imagens</button><button data-tab="links">Blog e notícias</button><button data-tab="presence">Presença pública</button><button data-tab="seo">SEO e site</button><button data-tab="sitemap">Mapa do site</button><button data-tab="history">Publicação</button><div class="status"><b>Status:</b> <span id="status">rascunho local</span><br><b>Versão local:</b> <span id="pub">não</span></div></nav>
       <div class="panel">
@@ -75,7 +74,7 @@ const uniqueBy=(items,key)=>{const seen=new Set();return items.filter(item=>item
 const authKey='gfc-cms-auth';
 function isAuthed(){try{return Date.now()-Number(localStorage.getItem(authKey)||0)<1000*60*60*12}catch{return false}}
 function keepSession(){try{localStorage.setItem(authKey,String(Date.now()))}catch{}}
-function unlock(){keepSession();$('#gate').classList.add('hidden')}
+function unlock(){keepSession()}
 
 
 function mergeImageUses(){
@@ -236,8 +235,6 @@ async function uploadMedia(file){const password=window.prompt('Senha para public
 async function handleUpload(e,targetPhoto){const file=e.target.files&&e.target.files[0];if(!file)return;try{$('#status').textContent='publicando imagem na biblioteca...';const asset=await uploadMedia(file);const upload={id:asset.id,label:asset.label,src:asset.src,type:asset.type||'upload',usage:'Imagem publicada pela biblioteca CMS',uploadedAt:asset.uploadedAt};state.uploads.unshift(upload);if(targetPhoto){targetPhoto.src=upload.src;if(!targetPhoto.alt)targetPhoto.alt=upload.label}save();renderAll();$('#status').textContent=targetPhoto?'imagem publicada e aplicada neste lugar':'imagem publicada na biblioteca';window.alert(targetPhoto?'Imagem subida e aplicada neste lugar. Agora vá em Publicação > Validar rascunho > Publicar produção.':'Imagem publicada na biblioteca. Agora selecione onde quer usar.')}catch(error){$('#status').textContent='falha ao subir imagem';window.alert(error.message||'Falha ao processar imagem')}}
 
 $$('.nav button').forEach(b=>b.onclick=()=>{$$('.nav button').forEach(x=>x.classList.remove('active'));b.classList.add('active');$$('.section').forEach(s=>s.classList.remove('active'));$('#'+b.dataset.tab).classList.add('active')});
-$('#enter').onclick=()=>{$('#password').value.trim().toLowerCase()==='gondwana'?unlock():$('#loginError').classList.remove('hidden')};
-$('#password').onkeydown=e=>{if(e.key==='Enter')$('#enter').click()};
 $('#save').onclick=()=>{save();renderAll()};
 $('#publish').onclick=()=>{state.published=new Date().toISOString();state.history.unshift({when:new Date().toLocaleString('pt-BR'),title:state.home.title||'Versão local',snapshot:structuredClone(state)});state.history=state.history.slice(0,8);save();renderAll();window.alert('Versão local salva neste navegador. Ainda não foi publicada em produção.')};
 $('#publishProduction').onclick=async()=>{const password=window.prompt('Senha para publicar em produção');if(!password)return;$('#status').textContent='comprimindo imagens e publicando...';try{await compressStateImages();save();const isValid=await validateDraft(false);if(!isValid)throw new Error('Corrija os erros de validação antes de publicar.');const payload=window.GFC_CMS.buildPublishPayload(state,{password,baseUpdatedAt,baseState:draftBaseState});const response=await fetch('/api/cms/publish',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});const raw=await response.text();let result={};try{result=raw?JSON.parse(raw):{}}catch{throw new Error(responseErrorMessage(raw,response.status))}if(!response.ok||!result.ok)throw new Error(result.error||responseErrorMessage(raw,response.status));$('#status').textContent=`produção publicada: ${result.count} registros e ${result.photos||0} fotos`;state.history.unshift({when:new Date().toLocaleString('pt-BR'),title:'Publicação produção',snapshot:structuredClone(state),commit:result.commit});state.history=state.history.slice(0,8);save();renderAll();window.alert('Publicado em produção. A Vercel vai atualizar o site após o deploy automático.');}catch(error){$('#status').textContent='falha ao publicar em produção';window.alert(error.message||'Falha ao publicar em produção')}};
@@ -249,7 +246,7 @@ $('#addProject').onclick=()=>{state.projects.push({id:'p-'+Date.now(),title:'Nov
 $('#addLink').onclick=()=>{state.links.unshift({id:'l-'+Date.now(),label:'Nova notícia',title:'Nova notícia',url:'https://',type:'notícia',category:'Clipping',date:new Date().toISOString().slice(0,10),source:'',excerpt:'Resumo curto da publicação.',visible:false,featured:false});mark();renderLinks();renderPreview()};
 $('#addPresence').onclick=()=>{state.publicPresence.unshift({id:'p-'+Date.now(),vehicle:'Novo veículo',tier:'Clipping',title:'Título do registro público',url:'https://',visible:true});mark();renderPresence();renderPreview()};
 $('#upload').onchange=e=>handleUpload(e,null);
-if(isAuthed())unlock();
+unlock();
 renderAll();
 </script>
 </body>
