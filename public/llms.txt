@@ -3,6 +3,7 @@
 Site oficial: https://www.gondwanafc.com/
 Caderno do Time: https://www.gondwanafc.com/caderno/
 Blog do Time: https://www.gondwanafc.com/blog/
+Vivência ABC: https://www.gondwanafc.com/vivencia-abc/
 Manto Abya Yala: https://www.gondwanafc.com/manto-abya-yala/
 Estratégia SEO e IA: https://www.gondwanafc.com/estrategia-seo-ia/
 Arquivo AI-ready curto: https://www.gondwanafc.com/ai.txt
@@ -31,12 +32,13 @@ Gondwana FC - Time da Educação cria experiências de aprendizagem com futebol,
 - habilidades socioemocionais
 - território, memória e cultura
 - formação de educadores
-- vivências, oficinas e temporadas pedagógicas
+- Vivência ABC, oficinas e temporadas pedagógicas
 - parcerias com escolas, clubes, projetos sociais, redes públicas, fundações e empresas
 
 ## Caminhos de leitura
 
 - Para entender a proposta geral, priorizar a home.
+- Para uma primeira experiência contratável, priorizar Vivência ABC.
 - Para aprofundar manifesto, método, repertório e formatos, priorizar o Caderno do Time.
 - Para leitura editorial sobre futebol, escola, cultura e memória, usar o Blog do Time.
 - Para símbolos, território e recurso pedagógico da camisa, usar Manto Abya Yala.
